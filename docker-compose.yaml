@@ -1,0 +1,87 @@
+version: '3'
+
+services:
+  duckdns:
+    image: linuxserver/duckdns
+    container_name: duckdns
+    network_mode: "host"
+    restart: always
+    environment:
+      - PGID=999
+      - PUID=999
+      - SUBDOMAINS=st-clair
+      - TZ=Pacific/Auckland
+  couchpotato:
+    image: linuxserver/couchpotato
+    container_name: couchpotato
+    network_mode: "host"
+    restart: always
+    environment:
+      - PGID=999
+      - PUID=999
+      - TZ=Pacific/Auckland
+    volumes:
+      - /home/bradley/.couchpotato:/config
+      - /home/bradley/Downloads:/downloads
+      - /media/bradley/external/Videos:/movies
+  plex:
+    image: linuxserver/plex
+    container_name: plex
+    network_mode: "host"
+    restart: always
+    environment:
+      - VERSION=latest
+      - PGID=999
+      - PUID=999
+      - TZ=Pacific/Auckland
+    volumes:
+      - /home/bradley/.plex:/config
+      - /media/bradley/external/Videos:/movies
+      - /media/bradley/external/TV Shows:/tvshows
+    ports:
+      - "32400:32400"
+      - "32400:32400/udp"
+      - "32469:32469"
+      - "32469:32469/udp"
+      - "1900:1900/udp"
+  transmission:
+    image: linuxserver/transmission
+    container_name: transmission
+    network_mode: "host"
+    restart: always
+    environment:
+      - PGID=999
+      - PUID=999
+      - TZ=Pacific/Auckland
+    volumes:
+      - /home/bradley/.transmission:/config
+      - /home/bradley/Downloads:/downloads
+      - /home/bradley/Torrents:/watch
+    ports:
+      - "9091:9091"
+      - "51413:51413"
+      - "51413:51413/udp"
+  sickrage:
+    image: linuxserver/sickrage
+    container_name: sickrage 
+    network_mode: "host"
+    restart: always
+    environment:
+      - PGID=999
+      - PUID=999
+      - TZ=Pacific/Auckland
+    volumes:
+      - /home/bradley/.sickrage:/config
+      - /home/bradley/Downloads:/downloads
+      - /media/bradley/external/TV Shows:/tv
+  home-assistant:
+    image: homeassistant/home-assistant
+    container_name: hass
+    restart: always
+    network_mode: "host"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /.homeassistant:/config
+    ports: 
+      - "8888:8888"
