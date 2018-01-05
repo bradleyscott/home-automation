@@ -1,0 +1,56 @@
+sensor.owm_temperature:
+  friendly_name: Outside temperature
+
+sensor.owm_wind_speed:
+  friendly_name: Wind
+
+sensor.owm_rain:
+  friendly_name: Rain
+
+sensor.owm_condition:
+  friendly_name: Current conditions
+
+sensor.owm_forecast:
+  friendly_name: Forecast
+
+media_player.tv:
+  friendly_name: Upstairs TV
+  hidden: false
+
+zwave._:
+  friendly_name: Z-Wave Controller
+
+zwave.__2:
+  friendly_name: Z-Wave Multi-sensor
+
+binary_sensor.aeotec_zw100_multisensor_6_sensor:
+  friendly_name: Movement sensor
+  hidden: false
+
+sensor.aeotec_zw100_multisensor_6_alarm_level:
+  hidden: true
+
+sensor.aeotec_zw100_multisensor_6_alarm_type:
+  hidden: true
+
+sensor.aeotec_zw100_multisensor_6_alarm_burglar:
+  hidden: true
+
+sensor.aeotec_zw100_multisensor_6_luminance:
+  friendly_name: Lux sensor
+  hidden: false
+
+sensor.aeotec_zw100_multisensor_6_relative_humidity:
+  friendly_name: Humidity
+  hidden: false
+
+sensor.aeotec_zw100_multisensor_6_sourcenodeid:
+  hidden: true
+
+sensor.aeotec_zw100_multisensor_6_temperature:
+  friendly_name: Temperature
+  hidden: false
+
+sensor.aeotec_zw100_multisensor_6_ultraviolet:
+  friendly_name: UV
+  hidden: false

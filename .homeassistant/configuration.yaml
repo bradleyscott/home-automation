@@ -1,9 +1,9 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Home
+  name: Williamson Ave
   # Location required to calculate the time the sun rises and sets
-  latitude: -36.85
-  longitude: 174.765
+  latitude: -36.8597467
+  longitude: 174.744861
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 16
   # metric for Metric, imperial for Imperial
@@ -14,7 +14,7 @@ homeassistant:
   customize: !include customize.yaml
 
 # Show links to resources in log and frontend
-introduction:
+#introduction:
 
 # Enables the frontend
 frontend:
@@ -61,7 +61,18 @@ sun:
 
 # Weather prediction
 sensor:
-  - platform: yr
+ - platform: openweathermap
+   api_key: !secret owm_api_key
+   forecast: 1
+   monitored_conditions:
+     - weather
+     - temperature
+     - wind_speed
+     - rain
+
+weather:
+  - platform: openweathermap
+    api_key: !secret owm_api_key
 
 # Text to speech
 tts:
@@ -69,6 +80,26 @@ tts:
 
 # Cloud
 cloud:
+
+# Device tracking
+device_tracker:
+ - platform: nmap_tracker
+   hosts: 192.168.1.1/24
+   track_new_devices: false
+
+# Notifications
+notify:
+ - platform: pushbullet
+   api_key: !secret pushbullet_api_key
+
+# IFTT automation
+ifttt:
+  key: !secret ifttt_key
+  
+# Z Wave configuration
+zwave:
+ usb_path: /dev/ttyACM0
+ new_entity_ids: true
 
 group: !include groups.yaml
 automation: !include automations.yaml

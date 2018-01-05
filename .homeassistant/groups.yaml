@@ -1,0 +1,30 @@
+living_room:
+  name: Living room
+  entities:
+    - media_player.compucast
+    - configurator.plex_media_server
+
+master_bedroom:
+  name: Master bedroom
+  entities:    
+    - switch.pedestal_fan
+    - media_player.master_bedroom_home
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor
+    - sensor.aeotec_zw100_multisensor_6_alarm_level
+    - sensor.aeotec_zw100_multisensor_6_alarm_type
+    - sensor.aeotec_zw100_multisensor_6_burglar
+    - sensor.aeotec_zw100_multisensor_6_luminance
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity
+    - sensor.aeotec_zw100_multisensor_6_sourcenodeid
+    - sensor.aeotec_zw100_multisensor_6_temperature
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet
+
+weather:
+  name: Weather forecast
+  entities:
+    - sensor.owm_forecast
+    - sensor.owm_condition
+    - sensor.owm_rain
+    - sensor.owm_temperature
+    - sensor.owm_wind_speed
+    - sun.sun

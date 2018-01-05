@@ -1,0 +1,90 @@
+
+404e36821e2b:
+  hide_if_away: false
+  icon:
+  mac: 40:4E:36:82:1E:2B
+  name: Bradley
+  picture:
+  track: true
+  vendor: HTC Corporation
+
+rtn56u:
+  hide_if_away: false
+  icon:
+  mac: 14:DA:E9:F9:3E:59
+  name: RT-N56U
+  picture:
+  track: false
+  vendor: ASUSTek COMPUTER INC.
+
+ac374352d76c:
+  hide_if_away: false
+  icon:
+  mac: AC:37:43:52:D7:6C
+  name: Nirupa
+  picture:
+  track: true
+  vendor: HTC Corporation
+
+augustconnect:
+  hide_if_away: false
+  icon:
+  mac: 28:24:FF:E1:B0:18
+  name: august-connect
+  picture:
+  track: false
+  vendor: Wistron Neweb Corporation
+
+mediahub:
+  hide_if_away: false
+  icon:
+  mac: 80:C1:6E:EB:F3:A8
+  name: media-hub
+  picture:
+  track: false
+  vendor: Hewlett Packard
+
+googlehome:
+  hide_if_away: false
+  icon:
+  mac: F4:F5:D8:CE:0E:8E
+  name: Google-Home
+  picture:
+  track: false
+  vendor: Google, Inc.
+
+baspire:
+  hide_if_away: false
+  icon:
+  mac: 5C:51:4F:1B:1A:48
+  name: b-aspire
+  picture:
+  track: false
+  vendor: unknown
+
+94103e4bbd61:
+  hide_if_away: false
+  icon:
+  mac: 94:10:3E:4B:BD:61
+  name: Belkin Wemo
+  picture:
+  track: false
+  vendor: unknown
+
+ssdhcpclient:
+  hide_if_away: false
+  icon:
+  mac: DC:53:7C:5D:30:BC
+  name: SSDHCPCLIENT
+  picture:
+  track: false
+  vendor: Compal Broadband Networks, Inc.
+
+garagepi:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:BE:A7:3C
+  name: garage-pi
+  picture:
+  track: false
+  vendor: Raspberry Pi Foundation
