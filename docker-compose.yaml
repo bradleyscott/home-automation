@@ -9,7 +9,7 @@ services:
     environment:
       - PGID=999
       - PUID=999
-      - SUBDOMAINS=st-clair
+      - SUBDOMAINS=williamson-ave
       - TZ=Pacific/Auckland
   couchpotato:
     image: linuxserver/couchpotato
