@@ -3,3 +3,9 @@ docker-compose-secrets.yaml
 .homeassistant/.uuid
 .homeassistant/*.log
 .homeassistant/*.db
+.homeassistant/tts/*
+.homeassistant/secrets.yaml
+.homeassistant/plex.conf
+.homeassistant/options.xml
+.homeassistant/*zw*
+.homeassistant/OZW*
