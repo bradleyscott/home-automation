@@ -79,9 +79,11 @@ services:
     container_name: hass
     restart: always
     network_mode: "host"
+   devices:
+     - /dev/ttyACM0
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - /.homeassistant:/config
+      - ./.homeassistant:/config
     ports: 
       - "8888:8888"
