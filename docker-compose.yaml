@@ -79,8 +79,8 @@ services:
     container_name: hass
     restart: always
     network_mode: "host"
-   devices:
-     - /dev/ttyACM0
+    devices:
+      - /dev/ttyACM0
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
