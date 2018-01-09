@@ -18,7 +18,7 @@ media_player.tv:
   hidden: false
 
 zwave._:
-  friendly_name: Z-Wave Controller
+  friendly_name: Z-Wave Multi-sensor
 
 zwave.__2:
   friendly_name: Z-Wave Multi-sensor
