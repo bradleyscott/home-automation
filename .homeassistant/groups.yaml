@@ -3,12 +3,6 @@ living_room:
   entities:
     - media_player.compucast
     - configurator.plex_media_server
-
-master_bedroom:
-  name: Master bedroom
-  entities:    
-    - switch.pedestal_fan
-    - media_player.master_bedroom_home
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
     - sensor.aeotec_zw100_multisensor_6_alarm_level
     - sensor.aeotec_zw100_multisensor_6_alarm_type
@@ -18,6 +12,12 @@ master_bedroom:
     - sensor.aeotec_zw100_multisensor_6_sourcenodeid
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
+
+master_bedroom:
+  name: Master bedroom
+  entities:    
+    - switch.pedestal_fan
+    - media_player.master_bedroom_home
 
 weather:
   name: Weather forecast
