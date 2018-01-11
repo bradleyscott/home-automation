@@ -88,3 +88,75 @@ garagepi:
   picture:
   track: false
   vendor: Raspberry Pi Foundation
+
+bxps13ubuntu:
+  hide_if_away: false
+  icon:
+  mac: F8:63:3F:0A:57:85
+  name: b-xps-13-ubuntu
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+chromecast:
+  hide_if_away: false
+  icon:
+  mac: D0:E7:82:BD:88:FC
+  name: Chromecast
+  picture:
+  track: false
+  vendor: AzureWave Technology Inc.
+
+ryansiphone:
+  hide_if_away: false
+  icon:
+  mac: D0:33:11:75:0C:9C
+  name: Ryans-iPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+5cg6301zgp:
+  hide_if_away: false
+  icon:
+  mac: E4:A4:71:9A:0C:A9
+  name: 5CG6301ZGP
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+desktop74b9v59:
+  hide_if_away: false
+  icon:
+  mac: 00:DB:DF:12:9F:3F
+  name: DESKTOP-74B9V59
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+konnectedsecuritye88a5f:
+  hide_if_away: false
+  icon:
+  mac: 18:FE:34:E8:8A:5F
+  name: konnected-security-E88A5F
+  picture:
+  track: false
+  vendor: Espressif Inc.
+
+iphone:
+  hide_if_away: false
+  icon:
+  mac: 48:3B:38:7D:D3:F5
+  name: iPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+5cg7261vkz:
+  hide_if_away: false
+  icon:
+  mac: F8:59:71:64:60:72
+  name: 5CG7261VKZ
+  picture:
+  track: false
+  vendor: unknown
