@@ -106,7 +106,7 @@ zwave:
   covers:
     garage:
       host: 192.168.1.130
-      device_key: !secret opendoor_devicekey
+      device_key: !secret opengarage_devicekey
       name: Garage door
 
 group: !include groups.yaml
