@@ -31,3 +31,7 @@ weather:
 
 entrance:
   name: Entrance
+  entities:
+    - cover.garage_door
+    - sensor.garage_status
+    - sensor.garage_car_present
