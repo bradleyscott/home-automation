@@ -168,3 +168,30 @@ iphone:
   picture:
   track: false
   vendor: unknown
+
+esp_805edb:
+  hide_if_away: false
+  icon:
+  mac: DC:4F:22:80:5E:DB
+  name: ESP 805EDB
+  picture:
+  track: false
+  vendor: unknown
+
+esp_9d3f7e:
+  hide_if_away: false
+  icon:
+  mac: 60:01:94:9D:3F:7E
+  name: ESP 9D3F7E
+  picture:
+  track: false
+  vendor: unknown
+
+esp_59f085:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:59:F0:85
+  name: ESP 59F085
+  picture:
+  track: false
+  vendor: Espressif Inc.
