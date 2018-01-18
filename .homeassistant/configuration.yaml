@@ -114,7 +114,7 @@ sensor:
   platform: template
   sensors:
     garage_status:
-      friendly_name: 'Garage door status'
+      friendly_name: Garage door status
       value_template: '{% if states.cover.garage_door %}
               {% if states.cover.garage_door.attributes["door_state"] == "open" %}
                 Open
