@@ -98,10 +98,11 @@ ifttt:
   
 # Z Wave configuration
 zwave:
- usb_path: /dev/ttyACM0
- new_entity_ids: true
+  usb_path: /dev/ttyACM0
+  new_entity_ids: true
 
- cover:
+# OpenGarage
+cover:
   platform: opengarage
   covers:
     garage:
