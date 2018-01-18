@@ -96,6 +96,14 @@ bxps13ubuntu:
   name: b-xps-13-ubuntu
   picture:
   track: false
+
+desktop74b9v59:
+  hide_if_away: false
+  icon:
+  mac: 00:DB:DF:12:9F:3F
+  name: DESKTOP-74B9V59
+  picture:
+  track: false
   vendor: Intel Corporate
 
 chromecast:
@@ -108,12 +116,12 @@ chromecast:
   vendor: AzureWave Technology Inc.
 
 ryansiphone:
-  hide_if_away: false
+  hide_if_away: true
   icon:
   mac: D0:33:11:75:0C:9C
-  name: Ryans-iPhone
+  name: Ryan
   picture:
-  track: false
+  track: true
   vendor: Apple, Inc.
 
 5cg6301zgp:
