@@ -115,7 +115,7 @@ sensor:
   sensors:
     garage_status:
       friendly_name: Garage door status
-      value_template: '{% if states.cover.garage_door %}
+      value_template: {% if states.cover.garage_door %}
               {% if states.cover.garage_door.attributes["door_state"] == "open" %}
                 Open
               {% elif states.cover.garage_door.attributes["door_state"] == "closed" %}
@@ -129,10 +129,10 @@ sensor:
               {% endif %}
               {% else %}
               n/a
-              {% endif %}'
+              {% endif %}
         garage_car_present:
-          friendly_name: 'Car in Garage'
-          value_template: '{% if states.cover.garage_door %}
+          friendly_name: Car in Garage
+          value_template: {% if states.cover.garage_door %}
               {% if states.cover.garage_door.state == "open" %}
                 n/a
               {% elif ((states.cover.garage_door.attributes["distance_sensor"] > 40) and (states.cover.garage_door.attributes["distance_sensor"] < 100)) %}
@@ -142,7 +142,7 @@ sensor:
               {% endif %}
               {% else %}
               n/a
-              {% endif %}'  
+              {% endif %}  
   
 group: !include groups.yaml
 automation: !include automations.yaml
