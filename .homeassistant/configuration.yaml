@@ -101,6 +101,14 @@ zwave:
  usb_path: /dev/ttyACM0
  new_entity_ids: true
 
+ cover:
+  platform: opengarage
+  covers:
+    garage:
+      host: 192.168.1.130
+      device_key: !secret opendoor_devicekey
+      name: Garage door
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

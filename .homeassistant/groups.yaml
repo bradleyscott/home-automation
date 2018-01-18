@@ -28,3 +28,6 @@ weather:
     - sensor.owm_temperature
     - sensor.owm_wind_speed
     - sun.sun
+
+entrance:
+  name: Entrance
