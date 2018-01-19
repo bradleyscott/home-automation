@@ -65,10 +65,10 @@ sensor:
    api_key: !secret owm_api_key
    forecast: 1
    monitored_conditions:
-     - weather
-     - temperature
-     - wind_speed
-     - rain
+    - weather
+    - temperature
+    - wind_speed
+    - rain
 
 weather:
   - platform: openweathermap
