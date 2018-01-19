@@ -145,7 +145,10 @@ sensor:
         {% else %}
         n/a
         {% endif %}  
-  
+
+# Wink to enable August smartlock integration
+wink:
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
