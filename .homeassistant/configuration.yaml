@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Williamson Ave
   # Location required to calculate the time the sun rises and sets
-  latitude: -36.8597467
-  longitude: 174.744861
+  latitude: -36.8594849
+  longitude: 174.7467815
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 16
   # metric for Metric, imperial for Imperial
