@@ -195,3 +195,21 @@ esp_59f085:
   picture:
   track: false
   vendor: Espressif Inc.
+
+androidec12ec55bfdcdb94:
+  hide_if_away: false
+  icon:
+  mac: C0:EE:FB:33:C8:45
+  name: android-ec12ec55bfdcdb94
+  picture:
+  track: true
+  vendor: OnePlus Tech (Shenzhen) Ltd
+
+allynayrsiphone:
+  hide_if_away: false
+  icon:
+  mac: 2C:33:61:94:F1:7E
+  name: allynayrsiPhone
+  picture:
+  track: true
+  vendor: Apple, Inc.
