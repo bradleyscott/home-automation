@@ -146,7 +146,7 @@ konnectedsecuritye88a5f:
   hide_if_away: false
   icon:
   mac: 18:FE:34:E8:8A:5F
-  name: konnected-security-E88A5F
+  name: Konnected smart alarm
   picture:
   track: false
   vendor: Espressif Inc.
@@ -155,7 +155,7 @@ iphone:
   hide_if_away: false
   icon:
   mac: 48:3B:38:7D:D3:F5
-  name: iPhone
+  name: Nirupa's work iPhone
   picture:
   track: false
   vendor: Apple, Inc.
@@ -164,7 +164,7 @@ iphone:
   hide_if_away: false
   icon:
   mac: F8:59:71:64:60:72
-  name: 5CG7261VKZ
+  name: Nirupa's work laptop
   picture:
   track: false
   vendor: unknown
@@ -173,7 +173,7 @@ esp_805edb:
   hide_if_away: false
   icon:
   mac: DC:4F:22:80:5E:DB
-  name: ESP 805EDB
+  name: Sonoff ESP 805EDB
   picture:
   track: false
   vendor: unknown
@@ -182,7 +182,7 @@ esp_9d3f7e:
   hide_if_away: false
   icon:
   mac: 60:01:94:9D:3F:7E
-  name: ESP 9D3F7E
+  name: Sonoff ESP 9D3F7E
   picture:
   track: false
   vendor: unknown
@@ -191,7 +191,7 @@ esp_59f085:
   hide_if_away: false
   icon:
   mac: 5C:CF:7F:59:F0:85
-  name: ESP 59F085
+  name: Sonoff ESP 59F085
   picture:
   track: false
   vendor: Espressif Inc.
@@ -200,16 +200,16 @@ androidec12ec55bfdcdb94:
   hide_if_away: false
   icon:
   mac: C0:EE:FB:33:C8:45
-  name: android-ec12ec55bfdcdb94
+  name: OnePlusOne
   picture:
-  track: true
+  track: false
   vendor: OnePlus Tech (Shenzhen) Ltd
 
 allynayrsiphone:
-  hide_if_away: false
+  hide_if_away: true
   icon:
   mac: 2C:33:61:94:F1:7E
-  name: allynayrsiPhone
+  name: Ally
   picture:
   track: true
   vendor: Apple, Inc.
