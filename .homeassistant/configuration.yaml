@@ -70,9 +70,9 @@ sensor:
     - wind_speed
     - rain
 
-weather:
-  - platform: openweathermap
-    api_key: !secret owm_api_key
+# weather:
+#   - platform: openweathermap
+#     api_key: !secret owm_api_key
 
 # Text to speech
 tts:
