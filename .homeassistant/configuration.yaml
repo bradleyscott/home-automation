@@ -74,7 +74,7 @@ sensor:
     sensors:
     garage_status:
       friendly_name: Garage door status
-      value_template: >
+      value_template: >-
         {% if states.cover.garage_door %}
           {% if states.cover.garage_door.attributes["door_state"] == "open" %}
             Open
@@ -92,7 +92,7 @@ sensor:
         {% endif %}
     garage_car_present:
       friendly_name: Car in Garage
-      value_template: >
+      value_template: >-
         {% if states.cover.garage_door %}
           {% if states.cover.garage_door.state == "open" %}
             N/A
