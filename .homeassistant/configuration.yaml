@@ -59,6 +59,17 @@ map:
 # Track the sun
 sun:
 
+# Covers
+cover:
+# Open Garage
+  platform: opengarage
+  covers:
+    garage:
+      host: 192.168.1.130
+      device_key: !secret opengarage_devicekey
+      name: Garage door
+
+# Sensors      
 sensor:
 # Weather prediction
   - platform: openweathermap
@@ -137,15 +148,6 @@ ifttt:
 zwave:
   usb_path: /dev/ttyACM0
   new_entity_ids: true
-
-# OpenGarage
-cover:
-  platform: opengarage
-  covers:
-    garage:
-      host: 192.168.1.130
-      device_key: !secret opengarage_devicekey
-      name: Garage door
 
 # Wink to enable August smartlock integration
 wink:
