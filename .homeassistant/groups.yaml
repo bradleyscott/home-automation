@@ -5,6 +5,16 @@ entrance:
     - sensor.garage_status
     - sensor.garage_car_present
 
+weather:
+  name: Weather forecast
+  entities:
+    - sensor.owm_forecast
+    - sensor.owm_condition
+    - sensor.owm_rain
+    - sensor.owm_temperature
+    - sensor.owm_wind_speed
+    - sun.sun
+
 master_bedroom:
   name: Master bedroom
   entities:    
@@ -25,13 +35,3 @@ living_room:
     - sensor.aeotec_zw100_multisensor_6_sourcenodeid
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
-
-weather:
-  name: Weather forecast
-  entities:
-    - sensor.owm_forecast
-    - sensor.owm_condition
-    - sensor.owm_rain
-    - sensor.owm_temperature
-    - sensor.owm_wind_speed
-    - sun.sun
