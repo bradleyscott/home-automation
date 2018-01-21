@@ -88,14 +88,14 @@ sensor:
             Unknown
           {% endif %}
         {% else %}
-        n/a
+        N/A
         {% endif %}
     garage_car_present:
       friendly_name: Car in Garage
       value_template: >
         {% if states.cover.garage_door %}
           {% if states.cover.garage_door.state == "open" %}
-            A/A
+            N/A
           {% elif ((states.cover.garage_door.attributes["distance_sensor"] > 50) and (states.cover.garage_door.attributes["distance_sensor"] < 150)) %}
             Yes
           {% else %}
