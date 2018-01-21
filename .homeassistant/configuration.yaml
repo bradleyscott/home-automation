@@ -72,7 +72,7 @@ sensor:
 # Garage Door
   - platform: template
     sensors:
-    - garage_status:
+      garage_status:
         friendly_name: Garage door status
         value_template: >-
           {% if states.cover.garage_door %}
@@ -88,9 +88,10 @@ sensor:
               Unknown
             {% endif %}
           {% else %}
-          N/A
+            N/A
           {% endif %}
-    - garage_car_present:
+
+      garage_car_present:
         friendly_name: Car in Garage
         value_template: >-
           {% if states.cover.garage_door %}
@@ -102,7 +103,7 @@ sensor:
               No
             {% endif %}
           {% else %}
-          N/A
+            N/A
           {% endif %}  
 
 weather:
