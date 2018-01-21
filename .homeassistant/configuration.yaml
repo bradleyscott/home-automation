@@ -61,17 +61,17 @@ sun:
 
 sensor:
 # Weather prediction
- - platform: openweathermap
-   api_key: !secret owm_api_key
-   forecast: true
-   monitored_conditions:
-    - weather
-    - temperature
-    - wind_speed
-    - rain
+  - platform: openweathermap
+    api_key: !secret owm_api_key
+    forecast: true
+    monitored_conditions:
+      - weather
+      - temperature
+      - wind_speed
+      - rain
 # Garage Door
-- platform: template
-  sensors:
+  - platform: template
+    sensors:
     garage_status:
       friendly_name: Garage door status
       value_template: >
