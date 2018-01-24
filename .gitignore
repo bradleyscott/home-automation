@@ -9,3 +9,4 @@ docker-compose-secrets.yaml
 .homeassistant/options.xml
 .homeassistant/*zw*
 .homeassistant/OZW*
+.homeassistant/.wink.conf
