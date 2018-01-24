@@ -1,10 +1,12 @@
-entrance:
-  name: Entrance
+ground:
+  name: Ground floor
   entities:
     - cover.garage_door
     - sensor.garage_status
     - sensor.garage_car_present
     - lock.front_door
+    - binary_sensor.entrance
+    - binary_sensor.guest_bedroom
 
 weather:
   name: Weather forecast

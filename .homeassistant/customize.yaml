@@ -60,3 +60,9 @@ cover.garage_door:
 
 sensor.garage_car_present:
   icon: mdi:car
+
+binary_sensor.entrance:
+  friendly_name: Entrance motion
+
+binary_sensor.guest_bedroom:
+  friendly_name: Guest bedroom motion
