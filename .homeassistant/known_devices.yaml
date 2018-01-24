@@ -133,15 +133,6 @@ ryansiphone:
   track: false
   vendor: Intel Corporate
 
-desktop74b9v59:
-  hide_if_away: false
-  icon:
-  mac: 00:DB:DF:12:9F:3F
-  name: DESKTOP-74B9V59
-  picture:
-  track: false
-  vendor: Intel Corporate
-
 konnectedsecuritye88a5f:
   hide_if_away: false
   icon:
