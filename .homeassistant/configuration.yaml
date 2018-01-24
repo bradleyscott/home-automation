@@ -156,7 +156,7 @@ wink:
 konnected:
   auth_token: !secret konnected_token
   devices:
-    - id: 18FE34E88A5F
+    - id: 18fe34e88a5F
       host: '192.168.1.5'
       port: 17065
       actuators:
@@ -169,7 +169,7 @@ konnected:
         - zone: 2
           type: motion
           name: 'Guest bedroom'
-          
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
