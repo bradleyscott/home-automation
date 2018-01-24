@@ -4,6 +4,7 @@ entrance:
     - cover.garage_door
     - sensor.garage_status
     - sensor.garage_car_present
+    - lock.front_door
 
 weather:
   name: Weather forecast
