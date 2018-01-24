@@ -169,6 +169,9 @@ konnected:
         - zone: 2
           type: motion
           name: 'Guest bedroom'
+        - zone: 3
+          type: motion
+          name: 'Living room'
 
 group: !include groups.yaml
 automation: !include automations.yaml

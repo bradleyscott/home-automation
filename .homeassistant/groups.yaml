@@ -38,3 +38,4 @@ living_room:
     - sensor.aeotec_zw100_multisensor_6_sourcenodeid
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
+    - binary_sensor.living_room
