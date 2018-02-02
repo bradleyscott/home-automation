@@ -10,3 +10,4 @@ docker-compose-secrets.yaml
 .homeassistant/*zw*
 .homeassistant/OZW*
 .homeassistant/.wink.conf
+**/__pycache__/**
