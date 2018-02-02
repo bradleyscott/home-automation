@@ -204,3 +204,30 @@ allynayrsiphone:
   picture:
   track: true
   vendor: Apple, Inc.
+
+ac3743a35306:
+  hide_if_away: false
+  icon:
+  mac: AC:37:43:A3:53:06
+  name: ac3743a35306
+  picture:
+  track: false
+  vendor: unknown
+
+f09fc2c80743:
+  hide_if_away: false
+  icon:
+  mac: F0:9F:C2:C8:07:43
+  name: f09fc2c80743
+  picture:
+  track: false
+  vendor: Ubiquiti Networks Inc.
+
+desktop8hcqfu2:
+  hide_if_away: false
+  icon:
+  mac: BC:83:85:2C:E5:20
+  name: DESKTOP-8HCQFU2
+  picture:
+  track: false
+  vendor: Microsoft Corporation
