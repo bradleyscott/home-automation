@@ -77,3 +77,19 @@ services:
       - ./.homeassistant:/config
     ports: 
       - "8888:8888"
+  unifi:
+    image: linuxserver/unifi
+    restart: always
+    network_mode: "host"
+    volumes: 
+      - ./unifi:/config
+    environment:
+      - PGID=999
+      - PUID=999
+    ports:
+      - "3478:3478/udp"
+      - "10001:10001/udp"
+      - "8080:8080"
+      - "8081:8081"
+      - "8443:8443"
+      - "8880:8880"
