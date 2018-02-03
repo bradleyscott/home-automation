@@ -74,7 +74,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - ./.homeassistant:/config
+      - ./homeassistant:/config
     ports: 
       - "8123:8123"
   unifi:
