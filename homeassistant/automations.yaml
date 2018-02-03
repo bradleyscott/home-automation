@@ -1,4 +1,3 @@
-alarm_trigger_arm_away:
 - alias: Trigger alarm on motion on Arm away
   trigger:
     - platform: state
