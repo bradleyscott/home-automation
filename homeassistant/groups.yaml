@@ -1,3 +1,11 @@
+alarm:
+  name: Burglar alarm
+  entities:
+    - alarm_control_panel.alarm
+    - binary_sensor.entrance
+    - binary_sensor.guest_bedroom
+    - binary_sensor.living_room
+
 ground:
   name: Ground floor
   entities:
@@ -5,8 +13,6 @@ ground:
     - sensor.garage_status
     - sensor.garage_car_present
     - lock.front_door
-    - binary_sensor.entrance
-    - binary_sensor.guest_bedroom
 
 weather:
   name: Weather forecast
@@ -38,4 +44,3 @@ living_room:
     - sensor.aeotec_zw100_multisensor_6_sourcenodeid
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
-    - binary_sensor.living_room
