@@ -1,18 +1,24 @@
 notify_on_alarm:
   alias: Notify on alarm
   sequence:
-  - data:
-      data:
-        target:
-        - channel/williamson-ave-alarm
-        url: https://williamson-ave.duckdns.org:8123
-      message: The {{ trigger }} has triggered the alarm
-      title: Alarm triggered
-    service: notify.notify
+  - alias: Send Push Bullet notification
+    data:
+        data:
+          target:
+          - channel/williamson-ave-alarm
+          url: https://williamson-ave.duckdns.org:8123
+        message: The {{ trigger }} has triggered the alarm
+        title: Alarm triggered
+      service: notify.notify
 panic_button:
   alias: Panic button
   sequence:
-  - data: { "trigger": "Panic button" }
-    service: script.notify_on_alarm
-  - service: alarm_control_panel.alarm_trigger
+  - alias: Notify subscribers
+    service: script.turn_on
+    entity_id: script.notify_on_alarm
+    data: 
+      variables:
+        trigger: "Panic button"
+  - alias: Trigger alarm
+    service: alarm_control_panel.alarm_trigger
 
