@@ -76,7 +76,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - ./.homeassistant:/config
     ports: 
-      - "8888:8888"
+      - "8123:8123"
   unifi:
     image: linuxserver/unifi
     restart: always
