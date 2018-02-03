@@ -184,6 +184,8 @@ alarm_control_panel:
   - platform: manual
     name: Alarm
     code: !secret alarm_code
+    pending_time: 30 # secs to leave after arm
+    delay_time: 30 # secs to disarm 
 
 group: !include groups.yaml
 automation: !include automations.yaml
