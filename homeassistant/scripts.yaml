@@ -4,12 +4,13 @@ notify_on_alarm:
   - alias: Send Push Bullet notification
     service: notify.notify
     data_template:
-      message: The {{ trigger }} has triggered the alarm
+      message: {{ trigger }} has triggered the alarm
       data:
         target: 
         - channel/williamson-ave-alarm
         url: https://williamson-ave.duckdns.org:8123
         title: Alarm triggered
+
 panic_button:
   alias: Panic button
   sequence:
@@ -18,7 +19,7 @@ panic_button:
     entity_id: script.notify_on_alarm
     data: 
       variables:
-        trigger: "Panic button"
+        trigger: "The Panic button"
   - alias: Trigger alarm
     service: alarm_control_panel.alarm_trigger
 

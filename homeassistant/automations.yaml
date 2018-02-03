@@ -1,4 +1,4 @@
-- alias: Trigger alarm on motion on Arm away
+- alias: Trigger alarm on motion when Armed away
   trigger:
     - platform: state
       entity_id: binary_sensor.entrance
@@ -18,6 +18,6 @@
       entity_id: script.notify_on_alarm
       data: 
         variables:
-          trigger: "Motion sensors"
+          trigger: "A Motion sensor"
     - service: alarm_control_panel.alarm_trigger
       entity_id: alarm_control_panel.alarm
