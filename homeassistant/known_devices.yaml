@@ -231,3 +231,12 @@ desktop8hcqfu2:
   picture:
   track: false
   vendor: Microsoft Corporation
+
+bsurface:
+  hide_if_away: false
+  icon:
+  mac: 60:45:BD:DF:3B:52
+  name: b-surface
+  picture:
+  track: false
+  vendor: Microsoft
