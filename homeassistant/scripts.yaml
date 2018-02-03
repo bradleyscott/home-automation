@@ -6,7 +6,8 @@ notify_on_alarm:
     data_template:
       message: The {{ trigger }} has triggered the alarm
       data:
-        target: channel/williamson-ave-alarm
+        target: 
+        - channel/williamson-ave-alarm
         url: https://williamson-ave.duckdns.org:8123
         title: Alarm triggered
 panic_button:
