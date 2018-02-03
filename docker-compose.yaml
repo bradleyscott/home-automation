@@ -79,6 +79,7 @@ services:
       - "8123:8123"
   unifi:
     image: linuxserver/unifi
+    container_name: unifi
     restart: always
     network_mode: "host"
     volumes: 
