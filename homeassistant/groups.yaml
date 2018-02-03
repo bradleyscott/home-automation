@@ -5,6 +5,7 @@ alarm:
     - binary_sensor.entrance
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
+    - script.panic_button
 
 ground:
   name: Ground floor
