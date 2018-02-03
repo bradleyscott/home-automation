@@ -1,1 +1,24 @@
-[]
+alarm_trigger_arm_away:
+- alias: Trigger alarm on motion on Arm away
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.entrance
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.guest_bedroom
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.living_room
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: alarm_control_panel.alarm
+      state: armed_away
+  action:
+    - service: script.turn_on
+      entity_id: script.notify_on_alarm
+      data: 
+        variables:
+          trigger: "Motion sensors"
+    - service: alarm_control_panel.alarm_trigger
+      entity_id: alarm_control_panel.alarm
