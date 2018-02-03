@@ -173,6 +173,12 @@ konnected:
           type: motion
           name: 'Living room'
 
+# Alarm control panel
+alarm_control_panel:
+  - platform: manual
+    name: Alarm
+    code: !secret alarm_code
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
