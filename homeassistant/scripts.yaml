@@ -1,0 +1,18 @@
+notify_on_alarm:
+  alias: Notify on alarm
+  sequence:
+  - data:
+      data:
+        target:
+        - channel/williamson-ave-alarm
+        url: https://williamson-ave.duckdns.org:8123
+      message: The {{ trigger }} has triggered the alarm
+      title: Alarm triggered
+    service: notify.notify
+panic_button:
+  alias: Panic button
+  sequence:
+  - data: { "trigger": "Panic button" }
+    service: script.notify_on_alarm
+  - service: alarm_control_panel.alarm_trigger
+
