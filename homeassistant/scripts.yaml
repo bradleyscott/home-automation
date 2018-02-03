@@ -2,14 +2,14 @@ notify_on_alarm:
   alias: Notify on alarm
   sequence:
   - alias: Send Push Bullet notification
-    service: notify.pushbullet
+    service: notify.notify
     data_template:
+      title: Alarm triggered
       message: "{{ trigger }} has triggered the alarm"
+      target: 
+      - channel/williamson_ave_alarm
       data:
-        target: 
-        - channel/williamson_ave_alarm
         url: https://williamson-ave.duckdns.org:8123
-        title: Alarm triggered
 
 panic_button:
   alias: Panic button
