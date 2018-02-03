@@ -71,11 +71,6 @@ cover:
 
 # Sensors      
 sensor:
-# External connectivity
-  - platform: ping
-    host: google.com
-    name: Internet connection
-    
 # Weather prediction
   - platform: openweathermap
     api_key: !secret owm_api_key
@@ -122,6 +117,12 @@ sensor:
             N/A
           {% endif %}  
 
+binary_sensor:
+# External connectivity
+  - platform: ping
+    host: google.com
+    name: Internet connection
+    
 weather:
   - platform: openweathermap
     api_key: !secret owm_api_key
