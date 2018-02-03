@@ -2,7 +2,7 @@ notify_on_alarm:
   alias: Notify on alarm
   sequence:
   - alias: Send Push Bullet notification
-    service: notify.notify
+    service: notify.pushbullet
     data_template:
       message: "{{ trigger }} has triggered the alarm"
       data:
