@@ -94,3 +94,16 @@ services:
       - "8081:8081"
       - "8443:8443"
       - "8880:8880"
+  pihole:
+    image: diginc/pi-hole:latest
+    container_name: pihole
+    restart: always
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+    environment:
+      ServerIP=210.54.156.181
+    volumes:
+      - ./pihole/:/etc/pihole/'
+      - /var/log/pihole.log:/var/log/pihole.log
