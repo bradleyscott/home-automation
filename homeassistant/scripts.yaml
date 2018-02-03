@@ -20,3 +20,6 @@ panic_button:
     data: 
       variables:
         trigger: "The Panic button"
+  - alias: Trigger alarm
+    service: alarm_control_panel.alarm_trigger
+
