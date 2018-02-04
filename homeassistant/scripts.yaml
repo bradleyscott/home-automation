@@ -17,7 +17,7 @@ notify_on_alarm:
   - alias: Send Push Bullet notification
     service: script.turn_on
     entity_id: script.notify_subscribers
-    data:
+    data_template:
       variables: 
         title: Alarm triggered at Williamson Ave
         message: "{{ trigger }} has triggered the alarm"
