@@ -93,28 +93,15 @@ services:
       - "8081:8081"
       - "8443:8443"
       - "8880:8880"
-  nginx-proxy:
-    image: jwilder/nginx-proxy
-    restart: always
+  nginx:
+    image: linuxserver/nginx
+    container_name: nginx
     volumes:
-      - ./certs:/etc/nginx/certs:ro
-      - /etc/nginx/vhost.d
-      - /usr/share/nginx/html
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    labels:
-      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
-    ports: 
+      - ./nginx:/config
+    environment:
+      - PGID=999
+      - PUID=999
+      - TZ=Pacific/Auckland
+    ports:
       - "80:80"
       - "443:443"
-  https-nginx-proxy-companion:
-    image: jrcs/letsencrypt-nginx-proxy-companion
-    restart: always
-    depends_on: 
-      - nginx-proxy
-    volumes: 
-      - ./certs:/etc/nginx/certs:rw
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    volumes_from: 
-      - nginx-proxy
-    environment:
-      - DEBUG=true
