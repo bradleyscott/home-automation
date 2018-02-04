@@ -65,7 +65,7 @@ services:
     restart: always
     network_mode: "host"
     depends_on:
-      - https-nginx-proxy-companion
+      - nginx
     devices:
       - /dev/ttyACM0
     environment: 
