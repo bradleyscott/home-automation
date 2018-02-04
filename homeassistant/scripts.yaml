@@ -2,14 +2,14 @@ notify_subscribers:
   alias: Notify subscribers by Push notification
   sequence:
     - alias: Send Push Bullet notification
-    service: notify.notify
-    data_template:
-      title: "{{ title }}"
-      message: "{{ message }}"
-      target: 
-      - channel/williamson-ave
-      data:
-        url: https://williamson-ave.duckdns.org
+      service: notify.notify
+      data_template:
+        title: "{{ title }}"
+        message: "{{ message }}"
+        target: 
+        - channel/williamson-ave
+        data:
+          url: https://williamson-ave.duckdns.org
 
 notify_on_alarm:
   alias: Notify on alarm
