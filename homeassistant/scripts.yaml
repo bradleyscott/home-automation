@@ -9,7 +9,7 @@ notify_on_alarm:
       target: 
       - channel/williamson_ave_alarm
       data:
-        url: http://williamson-ave.duckdns.org:8123
+        url: https://williamson-ave.duckdns.org
 
 panic_button:
   alias: Panic button
