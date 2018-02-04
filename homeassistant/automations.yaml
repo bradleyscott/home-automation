@@ -63,12 +63,12 @@
       data:
         variables:
           title: The house is unlocked and no one is home
-          message: >
-          {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
-            The garage door is open and the front door is unlocked
-          {% elif is_state('cover.garage_door', 'open') %}
-            The garage door is open
-          {% else %}
-            The front door is unlocked
-          {% endif %}
+          message: >-
+            {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+              The garage door is open and the front door is unlocked
+            {% elif is_state('cover.garage_door', 'open') %}
+              The garage door is open
+            {% else %}
+              The front door is unlocked
+            {% endif %}
       
