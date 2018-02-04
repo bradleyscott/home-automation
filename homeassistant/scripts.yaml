@@ -1,16 +1,27 @@
+notify_subscribers:
+  alias: Notify subscribers by Push notification
+  sequence:
+    - alias: Send Push Bullet notification
+    service: notify.notify
+    data_template:
+      title: "{{ title }}"
+      message: "{{ message }}"
+      target: 
+      - channel/williamson-ave
+      data:
+        url: https://williamson-ave.duckdns.org
+
 notify_on_alarm:
   alias: Notify on alarm
   sequence:
   - alias: Send Push Bullet notification
-    service: notify.notify
-    data_template:
-      title: Alarm triggered at Williamson Ave
-      message: "{{ trigger }} has triggered the alarm"
-      target: 
-      - channel/williamson_ave_alarm
-      data:
-        url: https://williamson-ave.duckdns.org
-
+    service: script.turn_on
+    entity_id: script.notify_subscribers
+    data:
+      variables: 
+        title: Alarm triggered at Williamson Ave
+        message: "{{ trigger }} has triggered the alarm"
+        
 panic_button:
   alias: Panic button
   sequence:
@@ -19,4 +30,4 @@ panic_button:
     entity_id: script.notify_on_alarm
     data: 
       variables:
-        trigger: "The Panic button"
+        trigger: The Panic button
