@@ -91,3 +91,11 @@ services:
       - "8081:8081"
       - "8443:8443"
       - "8880:8880"
+  caddy:
+    image: abiosoft/caddy
+    container_name: caddy
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./Caddyfile:/etc/CaddyFile
+      - ./caddy:/root/caddy
