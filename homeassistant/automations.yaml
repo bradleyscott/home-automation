@@ -30,90 +30,90 @@
     - service: alarm_control_panel.alarm_trigger
       entity_id: alarm_control_panel.alarm
 
-- alias: Trigger alarm on door open when Armed home
-  trigger:
-    - platform: state
-      entity_id: cover.garage_door
-      to: 'opening'
-    - platform: state
-      entity_id: lock.front_door
-      to: 'unlocked'
-  condition:
-    - condition: state
-      entity_id: alarm_control_panel.alarm
-      state: armed_home
-  action:
-    - service: script.turn_on
-      entity_id: script.notify_on_alarm
-      data_template: 
-        variables:
-          trigger: >-
-            {% if is_state('cover.garage_door', 'opening') and is_state('lock.front_door', 'unlocked') %}
-              The garage door opening and front door unlocking
-            {% elif is_state('cover.garage_door', 'opening') %}
-              The garage door opening
-            {% else %}
-              The front door unlocking
-            {% endif %}
-    - service: alarm_control_panel.alarm_trigger
-      entity_id: alarm_control_panel.alarm
+# - alias: Trigger alarm on door open when Armed home
+#   trigger:
+#     - platform: state
+#       entity_id: cover.garage_door
+#       to: 'opening'
+#     - platform: state
+#       entity_id: lock.front_door
+#       to: 'unlocked'
+#   condition:
+#     - condition: state
+#       entity_id: alarm_control_panel.alarm
+#       state: armed_home
+#   action:
+#     - service: script.turn_on
+#       entity_id: script.notify_on_alarm
+#       data_template: 
+#         variables:
+#           trigger: >-
+#             {% if is_state('cover.garage_door', 'opening') and is_state('lock.front_door', 'unlocked') %}
+#               The garage door opening and front door unlocking
+#             {% elif is_state('cover.garage_door', 'opening') %}
+#               The garage door opening
+#             {% else %}
+#               The front door unlocking
+#             {% endif %}
+#     - service: alarm_control_panel.alarm_trigger
+#       entity_id: alarm_control_panel.alarm
 
-- alias: Notify if door is open when leaving
-  trigger:
-    - platform: state
-      entity_id: group.all_devices
-      to: 'not_home'
-  condition:
-    condition: or
-    conditions:
-    - condition: state
-      entity_id: cover.garage_door
-      state: open
-    - condition: state
-      entity_id: lock.front_door
-      state: unlocked
-  action:
-    - service: script.turn_on
-      entity_id: script.notify_subscribers
-      data_template:
-        variables:
-          title: The house is unlocked and no one is home
-          message: >-
-            {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
-              The garage door is open and the front door is unlocked
-            {% elif is_state('cover.garage_door', 'open') %}
-              The garage door is open
-            {% else %}
-              The front door is unlocked
-            {% endif %}
+# - alias: Notify if door is open when leaving
+#   trigger:
+#     - platform: state
+#       entity_id: group.all_devices
+#       to: 'not_home'
+#   condition:
+#     condition: or
+#     conditions:
+#     - condition: state
+#       entity_id: cover.garage_door
+#       state: open
+#     - condition: state
+#       entity_id: lock.front_door
+#       state: unlocked
+#   action:
+#     - service: script.turn_on
+#       entity_id: script.notify_subscribers
+#       data_template:
+#         variables:
+#           title: The house is unlocked and no one is home
+#           message: >-
+#             {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+#               The garage door is open and the front door is unlocked
+#             {% elif is_state('cover.garage_door', 'open') %}
+#               The garage door is open
+#             {% else %}
+#               The front door is unlocked
+#             {% endif %}
       
-- alias: Notify if door is open when its 1030pm
-  trigger:
-    - platform: time
-      at: '22:30:00'
-  condition:
-    condition: or
-    conditions:
-    - condition: state
-      entity_id: cover.garage_door
-      state: open
-    - condition: state
-      entity_id: lock.front_door
-      state: unlocked
-  action:
-    - service: script.turn_on
-      entity_id: script.notify_subscribers
-      data_template:
-        variables:
-          title: The house is unlocked and its getting late
-          message: >-
-            {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
-              The garage door is open and the front door is unlocked
-            {% elif is_state('cover.garage_door', 'open') %}
-              The garage door is open
-            {% else %}
-              The front door is unlocked
-            {% endif %}
+# - alias: Notify if door is open when its 1030pm
+#   trigger:
+#     - platform: time
+#       at: '22:30:00'
+#   condition:
+#     condition: or
+#     conditions:
+#     - condition: state
+#       entity_id: cover.garage_door
+#       state: open
+#     - condition: state
+#       entity_id: lock.front_door
+#       state: unlocked
+#   action:
+#     - service: script.turn_on
+#       entity_id: script.notify_subscribers
+#       data_template:
+#         variables:
+#           title: The house is unlocked and its getting late
+#           message: >-
+#             {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+#               The garage door is open and the front door is unlocked
+#             {% elif is_state('cover.garage_door', 'open') %}
+#               The garage door is open
+#             {% else %}
+#               The front door is unlocked
+#             {% endif %}
 
 - alias: Remind every 2 hours when the garage door is open
   trigger:
