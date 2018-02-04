@@ -4,7 +4,6 @@ services:
   couchpotato:
     image: linuxserver/couchpotato
     container_name: couchpotato
-    network_mode: "host"
     restart: always
     environment:
       - PGID=999
@@ -14,6 +13,8 @@ services:
       - /home/bradley/.couchpotato:/config
       - /home/bradley/Downloads:/downloads
       - /media/bradley/external/Videos:/movies
+    ports:
+      - "5050:5050"
   plex:
     image: linuxserver/plex
     container_name: plex
@@ -28,16 +29,9 @@ services:
       - /home/bradley/.plex:/config
       - /media/bradley/external/Videos:/movies
       - /media/bradley/external/TV Shows:/tvshows
-    ports:
-      - "32400:32400"
-      - "32400:32400/udp"
-      - "32469:32469"
-      - "32469:32469/udp"
-      - "1900:1900/udp"
   transmission:
     image: linuxserver/transmission
     container_name: transmission
-    network_mode: "host"
     restart: always
     environment:
       - PGID=999
@@ -54,7 +48,6 @@ services:
   sickrage:
     image: linuxserver/sickrage
     container_name: sickrage 
-    network_mode: "host"
     restart: always
     environment:
       - PGID=999
@@ -64,6 +57,8 @@ services:
       - /home/bradley/.sickrage:/config
       - /home/bradley/Downloads:/downloads
       - /media/bradley/external/TV Shows:/tv
+    ports:
+      - "8082:8081"
   home-assistant:
     image: homeassistant/home-assistant
     container_name: hass
@@ -82,13 +77,10 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - ./homeassistant:/config
-    ports: 
-      - "8123:8123"
   unifi:
     image: linuxserver/unifi
     container_name: unifi
     restart: always
-    network_mode: "host"
     volumes: 
       - ./unifi:/config
     environment:
