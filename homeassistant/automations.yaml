@@ -16,9 +16,17 @@
   action:
     - service: script.turn_on
       entity_id: script.notify_on_alarm
-      data: 
+      data_template: 
         variables:
-          trigger: "A Motion sensor"
+          trigger: >-
+            {% if is_state('binary_sensor.entrance', 'on') %}
+              Movement at the entrance
+            {% elif is_state('binary_sensor.guest_bedroom', 'on') %}
+              Movement in the guest bedroom
+            {% else %}
+              Movement in the living room
+            {% endif %}
+
     - service: alarm_control_panel.alarm_trigger
       entity_id: alarm_control_panel.alarm
 
@@ -37,9 +45,16 @@
   action:
     - service: script.turn_on
       entity_id: script.notify_on_alarm
-      data: 
+      data_template: 
         variables:
-          trigger: "The garage or front door"
+          trigger: >-
+            {% if is_state('cover.garage_door', 'opening') and is_state('lock.front_door', 'unlocked') %}
+              The garage door opening and front door unlocking
+            {% elif is_state('cover.garage_door', 'opening') %}
+              The garage door opening
+            {% else %}
+              The front door unlocking
+            {% endif %}
     - service: alarm_control_panel.alarm_trigger
       entity_id: alarm_control_panel.alarm
 
@@ -60,7 +75,7 @@
   action:
     - service: script.turn_on
       entity_id: script.notify_subscribers
-      data:
+      data_template:
         variables:
           title: The house is unlocked and no one is home
           message: >-
@@ -88,7 +103,7 @@
   action:
     - service: script.turn_on
       entity_id: script.notify_subscribers
-      data:
+      data_template:
         variables:
           title: The house is unlocked and its getting late
           message: >-
