@@ -1,3 +1,26 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.alarm
+    - group.doors
+
+weather_view:
+  view: yes
+  icon: mdi:weather-hail
+  entities:
+    - group.weather
+    - group.climate
+    - switch.pedestal_fan
+
+media_view
+  view: yes
+  icon: mdi:music
+  entities:
+    - media_player.master_bedroom_home
+    - media_player.compucast
+    - configurator.plex_media_server
+
 alarm:
   name: Burglar alarm
   entities:
@@ -7,8 +30,8 @@ alarm:
     - binary_sensor.living_room
     - script.panic_button
 
-ground:
-  name: Ground floor
+doors:
+  name: Doors and locks
   entities:
     - cover.garage_door
     - sensor.garage_status
@@ -16,7 +39,7 @@ ground:
     - lock.front_door
 
 weather:
-  name: Weather forecast
+  name: Weather outside
   entities:
     - sensor.owm_forecast
     - sensor.owm_condition
@@ -25,17 +48,9 @@ weather:
     - sensor.owm_wind_speed
     - sun.sun
 
-master_bedroom:
-  name: Master bedroom
-  entities:    
-    - switch.pedestal_fan
-    - media_player.master_bedroom_home
-
-living_room:
-  name: Living room
+climate:
+  name: Climate control
   entities:
-    - media_player.compucast
-    - configurator.plex_media_server
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
     - sensor.aeotec_zw100_multisensor_6_alarm_level
     - sensor.aeotec_zw100_multisensor_6_alarm_type
@@ -45,3 +60,4 @@ living_room:
     - sensor.aeotec_zw100_multisensor_6_sourcenodeid
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
+  
