@@ -118,7 +118,7 @@
 - alias: Remind every 2 hours when the garage door is open
   trigger:
     - platform: time
-      hours: /2
+      minutes: /120
   condition:
     - condition: state
       entity_id: cover.garage_door
