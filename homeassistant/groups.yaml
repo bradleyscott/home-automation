@@ -4,6 +4,7 @@ default_view:
   entities:
     - group.alarm
     - group.doors
+    - group.automation
 
 weather_view:
   view: yes
@@ -21,6 +22,15 @@ media_view:
     - media_player.compucast
     - configurator.plex_media_server
 
+automation:
+  name: Automation
+  entities: 
+    - automation.notify_if_door_is_open_when_its_1030pm	
+    - automation.notify_if_door_is_open_when_leaving	
+    - automation.remind_every_2_hours_when_the_garage_door_is_open
+    - automation.trigger_alarm_on_door_open_when_armed_home	
+    - automation.trigger_alarm_on_motion_when_armed_away	
+  
 alarm:
   name: Burglar alarm
   entities:
