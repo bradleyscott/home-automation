@@ -1,4 +1,5 @@
 docker-compose-secrets.yaml
+certs/
 homeassistant/.HA_VERSION
 homeassistant/.uuid
 homeassistant/*.log
