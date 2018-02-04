@@ -115,18 +115,18 @@
 #               The front door is unlocked
 #             {% endif %}
 
-- alias: Remind every 2 hours when the garage door is open
-  trigger:
-    - platform: time
-      hours: /2
-  condition:
-    - condition: state
-      entity_id: cover.garage_door
-      state: open
-  action:
-    - service: script.turn_on
-      entity_id: script.notify_subscribers
-      data:
-        variables:
-          title: Remember the garage door is open
-          message: The garage door is open. Remember to keep and eye on the garage belongings are secure
+# - alias: Remind every 2 hours when the garage door is open
+#   trigger:
+#     - platform: time
+#       hours: /2
+#   condition:
+#     - condition: state
+#       entity_id: cover.garage_door
+#       state: open
+#   action:
+#     - service: script.turn_on
+#       entity_id: script.notify_subscribers
+#       data:
+#         variables:
+#           title: Remember the garage door is open
+#           message: The garage door is open. Remember to keep and eye on the garage belongings are secure
