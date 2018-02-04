@@ -64,8 +64,6 @@ services:
     container_name: hass
     restart: always
     network_mode: "host"
-    depends_on:
-      - nginx
     devices:
       - /dev/ttyACM0
     environment: 
@@ -93,15 +91,3 @@ services:
       - "8081:8081"
       - "8443:8443"
       - "8880:8880"
-  nginx:
-    image: linuxserver/nginx
-    container_name: nginx
-    volumes:
-      - ./nginx:/config
-    environment:
-      - PGID=999
-      - PUID=999
-      - TZ=Pacific/Auckland
-    ports:
-      - "80:80"
-      - "443:443"
