@@ -69,8 +69,15 @@ services:
     container_name: hass
     restart: always
     network_mode: "host"
+    depends_on:
+      - https-nginx-proxy-companion
     devices:
       - /dev/ttyACM0
+    environment: 
+      - VIRTUAL_PORT=8123
+      - VIRTUAL_HOST=williamson-ave.duckdns.org
+      - LETSENCRYPT_HOST=williamson-ave.duckdns.org
+      - LETSENCRYPT_EMAIL=bradley.s.scott@gmail.com
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
@@ -94,3 +101,28 @@ services:
       - "8081:8081"
       - "8443:8443"
       - "8880:8880"
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    volumes:
+      - ./certs:/etc/nginx/certs:ro
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+    ports: 
+      - "80:80"
+      - "443:443"
+  https-nginx-proxy-companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    depends_on: 
+      - nginx-proxy
+    volumes: 
+      - ./certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    volumes_from: 
+      - nginx-proxy
+    environment:
+      - DEBUG=true
