@@ -72,3 +72,46 @@
               The front door is unlocked
             {% endif %}
       
+- alias: Notify if door is open when its 1030pm
+  trigger:
+    - platform: time
+      at: '22:30:00'
+  condition:
+    condition: or
+    conditions:
+    - condition: state
+      entity_id: cover.garage_door
+      state: open
+    - condition: state
+      entity_id: lock.front_door
+      state: unlocked
+  action:
+    - service: script.turn_on
+      entity_id: script.notify_subscribers
+      data:
+        variables:
+          title: The house is unlocked and its getting late
+          message: >-
+            {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+              The garage door is open and the front door is unlocked
+            {% elif is_state('cover.garage_door', 'open') %}
+              The garage door is open
+            {% else %}
+              The front door is unlocked
+            {% endif %}
+
+- alias: Remind every 2 hours when the garage door is open
+  trigger:
+    - platform: time
+      hours: /2
+  condition:
+    - condition: state
+      entity_id: cover.garage_door
+      state: open
+  action:
+    - service: script.turn_on
+      entity_id: script.notify_subscribers
+      data:
+        variables:
+          title: Remember the garage door is open
+          message: The garage door is open. Remember to keep and eye on the garage belongings are secure
