@@ -29,6 +29,7 @@ media_view:
 
 alarm:
   name: Burglar alarm
+  control: hidden
   entities:
     - alarm_control_panel.alarm
     - binary_sensor.entrance
