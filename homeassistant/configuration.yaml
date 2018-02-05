@@ -28,9 +28,9 @@ http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: williamson-ave.duckdns.org
   trusted_networks:
-    - 127.0.0.1
-    - ::1
-    - 192.168.1.0/24
+#    - 127.0.0.1
+#    - ::1
+#    - 192.168.1.0/24
 
 # Checks for available updates
 # Note: This component will send some information about your system to
