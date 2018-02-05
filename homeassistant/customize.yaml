@@ -69,3 +69,15 @@ binary_sensor.guest_bedroom:
 
 binary_sensor.living_room:
   friendly_name: Living room motion
+
+automation.trigger_alarm_on_door_open_when_armed_home:
+  friendly_name: If Armed home, trigger when front door or garage opens
+
+automation.trigger_alarm_on_motion_when_armed_away:
+  friendly_name: If Armed away, trigger on motion
+
+automation.disarm_alarm_from_armed_away_when_door_unlocked_or_garage_open:
+  friendly_name: If Armed away, disarm when front door unlocks or garage door opens
+
+automation.disarm_alarm_from_armed_away_when_returning_home:
+  friendly_name: Disarm when returning home
