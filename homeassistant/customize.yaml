@@ -69,6 +69,3 @@ binary_sensor.guest_bedroom:
 
 binary_sensor.living_room:
   friendly_name: Living room motion
-
-script.notify_on_alarm:
-  hidden: true

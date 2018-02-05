@@ -38,6 +38,7 @@ alarm:
     - automation.trigger_alarm_on_door_open_when_armed_home
     - automation.trigger_alarm_on_motion_when_armed_away
     - automation.disarm_alarm_from_armed_away_when_door_unlocked_or_garage_open
+    - automation.disarm_alarm_from_armed_away_when_returning_home
 
 doors:
   name: Doors and locks
@@ -49,7 +50,6 @@ doors:
     - automation.notify_if_door_is_open_when_its_1030pm
     - automation.notify_if_door_is_open_when_leaving
     - automation.remind_every_2_hours_when_the_garage_door_is_open
-    - automation.disarm_alarm_from_armed_away_when_returning_home
 
 weather:
   name: Weather outside
