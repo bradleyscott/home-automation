@@ -5,11 +5,18 @@ default_view:
     - group.alarm
     - group.doors
     - group.automation
+    - device_tracker.404e36821e2b
+    - device_tracker.ac374352d76c
+    - device_tracker.ac3743a35306
+    - device_tracker.allynayrsiphone
+    - device_tracker.ryansiphone
+    - zone.home
 
 weather_view:
   view: yes
   icon: mdi:weather-hail
   entities:
+    - weather.openweathermap
     - group.weather
     - group.climate
     - switch.pedestal_fan
