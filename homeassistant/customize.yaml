@@ -25,7 +25,7 @@ zwave.__2:
 
 binary_sensor.aeotec_zw100_multisensor_6_sensor:
   friendly_name: Movement sensor
-  hidden: false
+  hidden: true
 
 sensor.aeotec_zw100_multisensor_6_alarm_level:
   hidden: true
