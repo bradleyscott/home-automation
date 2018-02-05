@@ -155,7 +155,7 @@
     - platform: state
       entity_id: cover.garage_door
       to: opening
-    - condition: state
+    - platform: state
       entity_id: lock.front_door
       to: unlocked
   condition:
