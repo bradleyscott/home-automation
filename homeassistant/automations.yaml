@@ -130,3 +130,49 @@
         variables:
           title: Remember the garage door is open
           message: The garage door is open. Remember to keep and eye on the garage belongings are secure
+
+- alias: Disarm alarm from Armed away when returning home
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'home'
+  condition:
+    - condition: state
+      entity_id: alarm_control_panel.alarm
+      state: armed_away
+  action:
+    - service: alarm_control_panel.alarm_disarm
+      entity_id: alarm_control_panel.alarm
+    - service: script.turn_on
+      entity_id: script.notify_subscribers
+      data:
+        variables:
+          title: Alarm disarmed
+          message: The alarm has disarmed due to someone arriving home
+
+- alias: Disarm alarm from Armed away when door unlocked or garage open
+  trigger:
+    - platform: state
+      entity_id: cover.garage_door
+      to: opening
+    - condition: state
+      entity_id: lock.front_door
+      to: unlocked
+  condition:
+    - condition: state
+      entity_id: alarm_control_panel.alarm
+      state: armed_away
+  action:
+    - service: alarm_control_panel.alarm_disarm
+      entity_id: alarm_control_panel.alarm
+    - service: script.turn_on
+      entity_id: script.notify_subscribers
+      data:
+        variables:
+          title: Alarm disarmed
+          message: >-
+            {% if is_state('cover.garage_door', 'opening') %}
+              The alarm has disarmed due to the garage door opening
+            {% else %}
+              The alarm has disarmed because the front door was unlocked
+            {% endif %}
