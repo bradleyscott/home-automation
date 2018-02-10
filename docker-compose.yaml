@@ -4,7 +4,7 @@ services:
   couchpotato:
     image: linuxserver/couchpotato
     container_name: couchpotato
-    restart: always
+    restart: unless-stopped
     environment:
       - PGID=999
       - PUID=999
@@ -19,7 +19,7 @@ services:
     image: linuxserver/plex
     container_name: plex
     network_mode: "host"
-    restart: always
+    restart: unless-stopped
     environment:
       - VERSION=latest
       - PGID=999
@@ -32,7 +32,7 @@ services:
   transmission:
     image: linuxserver/transmission
     container_name: transmission
-    restart: always
+    restart: unless-stopped
     environment:
       - PGID=999
       - PUID=999
@@ -48,7 +48,7 @@ services:
   sickrage:
     image: linuxserver/sickrage
     container_name: sickrage 
-    restart: always
+    restart: unless-stopped
     environment:
       - PGID=999
       - PUID=999
@@ -62,7 +62,7 @@ services:
   home-assistant:
     image: homeassistant/home-assistant
     container_name: hass
-    restart: always
+    restart: unless-stopped
     network_mode: "host"
     devices:
       - /dev/ttyACM0
@@ -78,7 +78,7 @@ services:
   unifi:
     image: linuxserver/unifi
     container_name: unifi
-    restart: always
+    restart: unless-stopped
     volumes: 
       - ./unifi:/config
     environment:
@@ -94,7 +94,7 @@ services:
   caddy:
     image: abiosoft/caddy
     container_name: caddy
-    restart: always
+    restart: unless-stopped
     network_mode: "host"
     volumes:
       - ./Caddyfile:/etc/Caddyfile
