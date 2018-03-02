@@ -9,6 +9,7 @@ default_view:
     - device_tracker.ac3743a35306
     - device_tracker.allynayrsiphone
     - device_tracker.ryansiphone
+    - binary_sensor.internet_connection
 
 weather_view:
   view: yes
@@ -17,14 +18,15 @@ weather_view:
     - weather.openweathermap
     - group.weather
     - group.climate
-    - switch.pedestal_fan
 
 media_view:
   view: yes
   icon: mdi:music
   entities:
-    - media_player.master_bedroom_home
+    - media_player.bedroom_home_speaker
     - media_player.compucast
+    - media_player.kitchen_speaker
+    - media_player.pixel_2
     - configurator.plex_media_server
 
 alarm:
