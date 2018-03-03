@@ -156,8 +156,6 @@ zwave:
   new_entity_ids: true
 
 # Wink to enable August smartlock integration
-wink:
-
 august:
   login_method: email
   username: !secret august_username
