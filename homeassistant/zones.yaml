@@ -1,0 +1,18 @@
+zone:
+  - name: FaceMe
+    latitude: -36.784415
+    longitude: 174.7521916
+    radius: 250
+    icon: mdi:worker
+
+  - name: 135 Albert St
+    latitude: -36.8498186
+    longitude: 174.7603812
+  
+  - name: Howick
+    latitude: -36.8927385
+    longitude: 174.9302813
+
+  - name: Hillsborough
+    latitude: -36.9214475
+    longitude: 174.7617471
