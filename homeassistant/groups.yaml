@@ -1,6 +1,6 @@
 default_view:
   view: yes
-  icon: mdi:lock_outline
+  icon: mdi:lock-outline
   entities:
     - group.alarm
     - group.doors
