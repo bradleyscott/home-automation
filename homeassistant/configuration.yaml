@@ -158,6 +158,11 @@ zwave:
 # Wink to enable August smartlock integration
 wink:
 
+august:
+  login_method: email
+  username: !secret august_username
+  password: !secret august_password
+
 # Konnected Smart alarm
 konnected:
   auth_token: !secret konnected_token
