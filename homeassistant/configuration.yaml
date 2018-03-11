@@ -172,13 +172,13 @@ konnected:
         - zone: 5
           activation: low
       sensors:
-        - zone: 1
+        - pin: 1
           type: motion
           name: 'Entrance'
-        - zone: 2
+        - pin: 2
           type: motion
           name: 'Guest bedroom'
-        - zone: 3
+        - pin: 3
           type: motion
           name: 'Living room'
 
