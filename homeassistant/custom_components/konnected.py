@@ -7,6 +7,7 @@ from aiohttp.hdrs import AUTHORIZATION
 from aiohttp.web import Request, Response  # NOQA
 
 from homeassistant.components.binary_sensor import DEVICE_CLASSES_SCHEMA
+from homeassistant.components.discovery import SERVICE_KONNECTED
 from homeassistant.components.http import HomeAssistantView
 from homeassistant.const import (
         HTTP_BAD_REQUEST, HTTP_INTERNAL_SERVER_ERROR, HTTP_UNAUTHORIZED)
@@ -14,12 +15,13 @@ from homeassistant.helpers import discovery
 
 _LOGGER = logging.getLogger(__name__)
 
+REQUIREMENTS = ['konnected==0.1.2']
+
 DOMAIN = 'konnected'
 
-PIN_TO_ZONE = {1: 1, 2: 2, 5: 3, 6: 4, 7: 5, 9: 6}
+PIN_TO_ZONE = {1: 1, 2: 2, 5: 3, 6: 4, 7: 5, 8: 'out', 9: 6}
 ZONE_TO_PIN = {zone: pin for pin, zone in PIN_TO_ZONE.items()}
 
-# TODO: Move string literals into constants
 CONFIG_SCHEMA = vol.Schema(
     {
         DOMAIN: {
@@ -32,13 +34,10 @@ CONFIG_SCHEMA = vol.Schema(
                     vol.Exclusive('zone', 's_pin'): vol.Any(*ZONE_TO_PIN),
                     vol.Required('type', default='motion'): DEVICE_CLASSES_SCHEMA,
                     vol.Optional('name'): str,
-                    vol.Inclusive('host', 'manual_host'): str,
-                    vol.Inclusive('port', 'manual_host'): int,
                 }],
                 'actuators': [{
                     vol.Exclusive('pin', 'a_pin'): vol.Any(*PIN_TO_ZONE),
                     vol.Exclusive('zone', 'a_pin'): vol.Any(*ZONE_TO_PIN),
-                    # vol.Required('type', default='motion'): DEVICE_CLASSES_SCHEMA,
                     vol.Optional('name'): str,
                     vol.Required('activation', default='high'): vol.All(vol.Lower, vol.Any('high', 'low'))
                 }],
@@ -57,146 +56,189 @@ UPDATE_ENDPOINT = (
 
 @asyncio.coroutine
 def async_setup(hass, config):
-    # TODO: Add schema
+    """Set up the Konnected platform."""
     cfg = config.get(DOMAIN)
-    devices = {}
-    for d in cfg['devices']:
-        sensors = {}
-        for s in d['sensors']:
-            if 'zone' in s:
-                pin = ZONE_TO_PIN[s['zone']]
-            else:
-                pin = s['pin']
-            sensors[pin] = {
-                'type': s['type'],
-                'name': s.get('name', 'Konnected {} Zone {}'.format(d['id'], PIN_TO_ZONE[pin])),
-                'state': None,
-            }
-        devices[d['id']] = {
-            'host': d.get('host'),
-            'port': d.get('port'),
-            'sensors': sensors,
-            # TODO: actuators
-        }
-    data = {
-        'devices': devices,
-        'auth_token': cfg['auth_token'],
-    }
-    if 'home_assistant_url' in cfg:
-        data['home_assistant_url'] = cfg['home_assistant_url']
-    hass.data[DOMAIN] = data
-    hass.http.register_view(KonnectedView(cfg, data))
-    for d_id in data['devices']:
-        discovery_info = {
-            'device_id': d_id,
-        }
-        hass.async_add_job(
-            discovery.async_load_platform(
-                hass, 'binary_sensor', DOMAIN, discovery_info, config))
-            
+    if cfg is None:
+        cfg = {}
+
+    auth_token = cfg.get('auth_token') or 'supersecret'
+    if DOMAIN not in hass.data:
+        hass.data[DOMAIN] = {'auth_token': auth_token}
 
     @asyncio.coroutine
     def async_device_discovered(service, info):
         """ Called when a Konnected device has been discovered. """
-        session = aiohttp.ClientSession()
-        base_url = 'http://{}:{}'.format(info['host'], info['port'])
-        status = yield from session.get(base_url + '/status')
-        status = yield from status.json(content_type=None)
-        yield from session.close()
-        device_id = status['mac'].replace(':', '')
-        if device_id in data['devices']:
-            device = data['devices'][device_id]
-            if device['host'] is None:
-                device['host'] = info['host']
-                device['port'] = info['port']
-                _LOGGER.info('Set Konnecte %s to %s:%s', device_id, device['host'], device['port'])
-            else:
-                _LOGGER.info('Set Konnecte %s already registered', device_id)
-            return
-        else:
-            # TODO: Do something useful instead of failing
-            _LOGGER.error('Discovered Konnected device %s is not configured', device_id)
-            return
-        # FIXME: This is all unreachable and probably bit-rotted:
-        device_data = {
-            'base_url': base_url,
-            'device_id': device_id,
-            'sensors': {s['pin']: bool(s['state']) for s in status['sensors']},
-            'actuators': {s['pin']: bool(s['state']) for s in status['actuators']},
-            'entities': {},  # Each entity created inserts itself here
-        }
-        data['devices'][device_id] = device_data
-        discovery_info = {
-            'device_id': device_id,
-            'sensors': device_data['sensors'],
-            'actuators': device_data['actuators'],
-        }
-        hass.async_add_job(
-            discovery.async_load_platform(
-                hass, 'binary_sensor', DOMAIN, discovery_info, config))
-        _LOGGER.info("Discovered a new Konnected device: %s", device_id)
+        _LOGGER.info("Discovered a new Konnected device: %s", info)
+        host = info.get('host')
+        port = info.get('port')
 
-    @asyncio.coroutine
-    def async_set_device_config(call):
-        device_id = call.data.get('device_id')
-        if device_id not in data['devices']:
-            _LOGGER.error('Unable to set config for unregistered device %s',
-                          device_id)
-            return False
-        device_data = data['devices'][device_id]
+        device = KonnectedDevice(hass, host, port, cfg)
+        device.setup()
 
-        session = aiohttp.ClientSession()
-        if not (device_data['host'] and device_data['port']):
-            _LOGGER.error('Unable to set config for device %s without configured or discovered host/port', device_id)
-        device_base_url = 'http://{}:{}'.format(device_data['host'], device_data['port'])
-        hass_base_url = data.get('home_assistant_url', hass.config.api.base_url).rstrip('/')
-        request_data = {
-            'sensors': [{'pin': pin_num} for pin_num in device_data['sensors']],
-            'actuators': [], # TODO
-            'token': data['auth_token'],
-            'apiUrl': hass_base_url + ENDPOINT_ROOT
-        }
-        url = device_base_url + '/settings'
-        _LOGGER.info('Sending settings via PUT to %s: %s', url, request_data)
-        response = yield from session.put(url, json=request_data)
-        content = yield from response.text()
-        _LOGGER.info('Got response %s: %s', response.status, content)
-        yield from session.close()
-        # TODO: log and return success/failure
+    discovery.async_listen(
+        hass,
+        SERVICE_KONNECTED,
+        async_device_discovered)
 
-    # TODO: Add schema
-    hass.services.async_register(DOMAIN, 'set_device_config', async_set_device_config)
+    hass.http.register_view(KonnectedView(auth_token))
 
     return True
+
+class KonnectedDevice(object):
+    """ A representation of a single Konnected device """
+
+    def __init__(self, hass, host, port, config):
+        self.hass = hass
+        self.host = host
+        self.port = port
+        self.user_config = config
+
+        import konnected
+        self.client = konnected.Client(host, str(port))
+        self.status = self.client.get_status()
+        _LOGGER.info('Initialized Konnected device %s', self.device_id)
+
+    def setup(self):
+        user_config = self.config()
+        if user_config:
+            _LOGGER.info('Configuring Konnected device %s', self.device_id)
+            self.save_data()
+            self.sync_device()
+            self.hass.async_add_job(
+                discovery.async_load_platform(
+                    self.hass, 'binary_sensor', DOMAIN, {'device_id': self.device_id}
+                ))
+            self.hass.async_add_job(
+                discovery.async_load_platform(
+                    self.hass, 'switch', DOMAIN, {'device_id': self.device_id}
+                ))
+
+    @property
+    def device_id(self):
+        return self.status['mac'].replace(':', '')
+
+    def config(self):
+        device_id = self.device_id
+        valid_keys = [device_id, device_id.upper(), device_id[6:], device_id.upper()[6:]]
+        configured_devices = self.user_config['devices']
+        return next((device for device in configured_devices if device['id'] in valid_keys), None)
+
+    def save_data(self):
+        """ Saves the device configuration merged with the discovered device details to `hass.data`"""
+        sensors = {}
+        for s in self.config().get('sensors'):
+            if 'zone' in s:
+                pin = ZONE_TO_PIN[s['zone']]
+            else:
+                pin = s['pin']
+
+            sensor_status = next((sensor for sensor in self.status.get('sensors') if sensor.get('pin') == pin), {})
+            if sensor_status.get('state'):
+                initial_state = bool(int(sensor_status.get('state')))
+            else:
+                initial_state = None
+
+            sensors[pin] = {
+                'type': s['type'],
+                'name': s.get('name', 'Konnected {} Zone {}'.format(self.device_id[6:], PIN_TO_ZONE[pin])),
+                'state': initial_state
+            }
+            _LOGGER.info('Set up sensor %s (initial state: %s)', sensors[pin].get('name'), sensors[pin].get('state'))
+
+        actuators = {}
+        for s in self.config().get('actuators') or []:
+            if 'zone' in s:  # TODO replace 'zone' with 'actuator'?
+                pin = ZONE_TO_PIN[s['zone']]
+            else:
+                pin = s['pin']
+
+            actuator_status = next((actuator for actuator in self.status.get('actuators') if actuator.get('pin') == pin), {})
+            if actuator_status.get('state'):
+                initial_state = bool(int(actuator_status.get('state')))
+            else:
+                initial_state = None
+
+            actuators[pin] = {
+                'name': s.get('name', 'Konnected {} Actuator {}'.format(self.device_id[6:], PIN_TO_ZONE[pin])),
+                'state': initial_state,
+                'activation': s['activation'],
+            }
+            _LOGGER.info('Set up actuator %s (initial state: %s)', actuators[pin].get('name'), actuators[pin].get('state'))
+
+        device_data = {
+            'client': self.client,
+            'sensors': sensors,
+            'actuators': actuators,
+            'host': self.host,
+            'port': self.port,
+        }
+
+        if 'devices' not in self.hass.data[DOMAIN]:
+            self.hass.data[DOMAIN]['devices'] = {}
+
+        _LOGGER.info('Storing data in hass.data: {}'.format(device_data))
+        self.hass.data[DOMAIN]['devices'][self.device_id] = device_data
+
+    def sensor_configuration(self):
+        return [{'pin': p}
+                for p in self.hass.data[DOMAIN]['devices'][self.device_id]['sensors'].keys()]
+
+    def actuator_configuation(self):
+        return [{'pin': p, 'trigger': (0 if data.get('activation') in [0, 'low'] else 1)}
+                for p, data in self.hass.data[DOMAIN]['devices'][self.device_id]['actuators'].items()]
+
+    def sync_device(self):
+        """ Syncs the new pin configuration to the Konnected device """
+        desired_sensor_configuration = self.sensor_configuration()
+        current_sensor_configuration = [{'pin': s['pin']} for s in self.status.get('sensors')]
+        _LOGGER.info('%s: desired sensor config: %s', self.device_id, desired_sensor_configuration)
+        _LOGGER.info('%s: current sensor config: %s', self.device_id, current_sensor_configuration)
+
+        desired_actuator_config = self.actuator_configuation()
+        current_actuator_config = self.status.get('actuators')
+        _LOGGER.info('%s: desired actuator config: %s', self.device_id, desired_actuator_config)
+        _LOGGER.info('%s: current actuator config: %s', self.device_id, current_actuator_config)
+
+        if (desired_sensor_configuration != current_sensor_configuration) or (current_actuator_config != desired_actuator_config):
+            _LOGGER.info('pushing settings to device %s', self.device_id)
+            self.client.put_settings(
+                desired_sensor_configuration,
+                desired_actuator_config,
+                self.hass.data[DOMAIN].get('auth_token'),
+                self.hass.config.api.base_url + ENDPOINT_ROOT
+            )
+
 
 class KonnectedView(HomeAssistantView):
     url = UPDATE_ENDPOINT
     name = 'api:konnected'
     requires_auth = False  # Uses access token from configuration
 
-    def __init__(self, cfg, data):
-        self.auth_token = cfg.get('auth_token')
-        self.data = data
+    def __init__(self, auth_token):
+        self.auth_token = auth_token
 
     @asyncio.coroutine
     def put(self, request: Request, device_id, pin_num, state) -> Response:
+        hass = request.app['hass']
+        data = hass.data[DOMAIN]
+
         auth = request.headers.get(AUTHORIZATION, None)
         if 'Bearer {}'.format(self.auth_token) != auth:
             return self.json_message(
                 "unauthorized", status_code=HTTP_UNAUTHORIZED)
         pin_num = int(pin_num)
         state = bool(int(state))
-        device = self.data['devices'].get(device_id)
+        device = data['devices'].get(device_id)
         if device is None:
             return self.json_message('unregistered device',
                                      status_code=HTTP_BAD_REQUEST)
-        pin_data = device['sensors'].get(pin_num)
+        pin_data = device['sensors'].get(pin_num) or device['actuators'].get(pin_num)
         if pin_data is None:
-            return self.json_message('unregistered sensor',
+            return self.json_message('unregistered sensor/actuator',
                                      status_code=HTTP_BAD_REQUEST)
         entity = pin_data.get('entity')
         if entity is None:
-            return self.json_message('uninitialized sensor',
+            return self.json_message('uninitialized sensor/actuator',
                                      status_code=HTTP_INTERNAL_SERVER_ERROR)
 
         yield from entity.async_set_state(state)

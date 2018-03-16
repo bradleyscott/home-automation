@@ -2,7 +2,7 @@ import asyncio
 import logging
 
 from homeassistant.components.binary_sensor import BinarySensorDevice
-from custom_components.konnected import (DOMAIN, PIN_TO_ZONE)
+from homeassistant.components.konnected import (DOMAIN, PIN_TO_ZONE)
 from homeassistant.helpers.entity import Entity
 
 _LOGGER = logging.getLogger(__name__)
@@ -55,4 +55,4 @@ class KonnectedBinarySensor(BinarySensorDevice):
         self._state = state
         self._data['state'] = state
         self.async_schedule_update_ha_state()
-        _LOGGER.info('Setting status of %s pin %s to %s', self._device_id, self.name, state)
+        _LOGGER.info('Setting status of %s sensor pin %s to %s', self._device_id, self.name, state)
