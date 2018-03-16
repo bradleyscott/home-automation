@@ -140,6 +140,16 @@ device_tracker:
    hosts: 192.168.1.1/24
    new_device_defaults:
       track_new_devices: false
+ - platform: unifi
+   host: media-hub
+   username: !secret unifi_user
+   password: !secret unifi_password
+   ssid_filter:
+    - 'Unit13-Guests'
+   new_device_defaults:
+    track_new_devices: true
+    hide_if_away: true
+   
 
 # Notifications
 notify:
