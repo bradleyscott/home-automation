@@ -12,3 +12,5 @@ homeassistant/*zw*
 homeassistant/OZW*
 homeassistant/.wink.conf
 **/__pycache__/**
+unifi/*
+caddy/*
