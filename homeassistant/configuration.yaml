@@ -176,10 +176,9 @@ konnected:
   auth_token: !secret konnected_token
   devices:
     - id: 18fe34e88a5F
-      host: '192.168.1.5'
-      port: 17065
       actuators:
-        - zone: 5
+        - pin: 5
+          name: 'Siren'
           activation: low
       sensors:
         - pin: 1
