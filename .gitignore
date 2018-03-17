@@ -11,6 +11,8 @@ homeassistant/options.xml
 homeassistant/*zw*
 homeassistant/OZW*
 homeassistant/.wink.conf
+homeassistant/.august.conf
+homeassistant/entity_registry.yaml
 **/__pycache__/**
 unifi/*
 caddy/*
