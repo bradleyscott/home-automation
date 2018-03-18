@@ -144,6 +144,7 @@ device_tracker:
    host: media-hub
    username: !secret unifi_user
    password: !secret unifi_password
+   verify_ssl: false
    ssid_filter:
     - 'Unit13-Guests'
    new_device_defaults:
