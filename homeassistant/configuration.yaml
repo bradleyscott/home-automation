@@ -160,7 +160,7 @@ notify:
  - name: html5
    platform: html5
    gcm_api_key: !secret gcm_server_key
-   gcm_sender_id: !secret gcm_browser_key
+   gcm_sender_id: !secret gcm_sender_id
 
    # IFTT automation
 ifttt:
