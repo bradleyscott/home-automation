@@ -189,10 +189,10 @@
 
 - alias: HTML5 push notification lock_up action button clicked
   trigger:
-    platform: event
-    event_type: html5_notification.clicked
-    event_data:
-      action: lock_up
+    - platform: event
+      event_type: html5_notification.clicked
+      event_data:
+        action: lock_up
   action:
     - service: cover.close_cover
       entity_id: cover.garage_door
