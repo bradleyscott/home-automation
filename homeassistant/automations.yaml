@@ -84,6 +84,17 @@
           {% else %}
             The front door is unlocked
           {% endif %}
+        data: 
+          actions: 
+          - title: Lock up     
+            action: >-
+              {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+                lock_up
+              {% elif is_state('cover.garage_door', 'open') %}
+                close_garage
+              {% else %}
+                lock_door
+              {% endif %}
       
 - alias: Notify if door is open when its 1030pm
   trigger:
