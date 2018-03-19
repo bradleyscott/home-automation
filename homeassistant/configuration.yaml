@@ -138,6 +138,7 @@ cloud:
 device_tracker:
  - platform: nmap_tracker
    hosts: 192.168.1.1/24
+   interval_seconds: 60
    new_device_defaults:
       track_new_devices: false
  - platform: unifi
