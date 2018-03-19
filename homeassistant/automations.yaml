@@ -75,16 +75,15 @@
   action:
     - service: notify.html5
       data_template:
-        variables:
-          title: The house is unlocked and no one is home
-          message: >-
-            {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
-              The garage door is open and the front door is unlocked
-            {% elif is_state('cover.garage_door', 'open') %}
-              The garage door is open
-            {% else %}
-              The front door is unlocked
-            {% endif %}
+        title: The house is unlocked and no one is home
+        message: >-
+          {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+            The garage door is open and the front door is unlocked
+          {% elif is_state('cover.garage_door', 'open') %}
+            The garage door is open
+          {% else %}
+            The front door is unlocked
+          {% endif %}
       
 - alias: Notify if door is open when its 1030pm
   trigger:
@@ -102,16 +101,15 @@
   action:
     - service: notify.html5
       data_template:
-        variables:
-          title: The house is unlocked and its getting late
-          message: >-
-            {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
-              The garage door is open and the front door is unlocked
-            {% elif is_state('cover.garage_door', 'open') %}
-              The garage door is open
-            {% else %}
-              The front door is unlocked
-            {% endif %}
+        title: The house is unlocked and its getting late
+        message: >-
+          {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+            The garage door is open and the front door is unlocked
+          {% elif is_state('cover.garage_door', 'open') %}
+            The garage door is open
+          {% else %}
+            The front door is unlocked
+          {% endif %}
 
 - alias: Remind every 2 hours when the garage door is open
   trigger:
@@ -125,9 +123,8 @@
   action:
     - service: notify.html5
       data_template:
-        variables:
-          title: Remember the garage door is open
-          message: The garage door is open. Remember to check the garage belongings are secure
+        title: Remember the garage door is open
+        message: The garage door is open. Remember to check the garage belongings are secure
 
 - alias: Disarm alarm from Armed away when returning home
   trigger:
