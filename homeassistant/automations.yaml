@@ -88,14 +88,7 @@
           url: https://williamson-ave.duckdns.org
           actions: 
           - title: Lock up     
-            action: >-
-              {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
-                lock_up
-              {% elif is_state('cover.garage_door', 'open') %}
-                close_garage
-              {% else %}
-                lock_door
-              {% endif %}
+            action: lock_up
       
 - alias: Notify if door is open when its 1030pm
   trigger:
@@ -126,14 +119,7 @@
           url: https://williamson-ave.duckdns.org
           actions: 
           - title: Lock up     
-            action: >-
-              {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
-                lock_up
-              {% elif is_state('cover.garage_door', 'open') %}
-                close_garage
-              {% else %}
-                lock_door
-              {% endif %}
+            action: lock_up
 
 - alias: Remind every 2 hours when the garage door is open
   trigger:
@@ -200,3 +186,15 @@
             {% else %}
               The alarm has disarmed because the front door was unlocked
             {% endif %}
+
+- alias: HTML5 push notification lock_up action button clicked
+  trigger:
+    platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: lock_up
+  action:
+    - service: cover.close_cover
+      entity_id: cover.garage_door
+    - service: lock.lock
+      entity_id: lock.front_door
