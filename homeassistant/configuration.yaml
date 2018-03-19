@@ -179,24 +179,24 @@ august:
   password: !secret august_password
 
 # Konnected Smart alarm
-konnected:
-  auth_token: !secret konnected_token
-  devices:
-    - id: 18fe34e88a5F
-      actuators:
-        - pin: 5
-          name: 'Siren'
-          activation: low
-      sensors:
-        - pin: 1
-          type: motion
-          name: 'Entrance'
-        - pin: 2
-          type: motion
-          name: 'Guest bedroom'
-        - pin: 3
-          type: motion
-          name: 'Living room'
+# konnected:
+#   auth_token: !secret konnected_token
+#   devices:
+#     - id: 18fe34e88a5F
+#       actuators:
+#         - pin: 5
+#           name: 'Siren'
+#           activation: low
+#       sensors:
+#         - pin: 1
+#           type: motion
+#           name: 'Entrance'
+#         - pin: 2
+#           type: motion
+#           name: 'Guest bedroom'
+#         - pin: 3
+#           type: motion
+#           name: 'Living room'
 
 # Alarm control panel
 alarm_control_panel:
