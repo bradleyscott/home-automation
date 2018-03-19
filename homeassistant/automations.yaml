@@ -73,8 +73,7 @@
       entity_id: lock.front_door
       state: unlocked
   action:
-    - service: script.turn_on
-      entity_id: script.notify_subscribers
+    - service: notify.html5
       data_template:
         variables:
           title: The house is unlocked and no one is home
@@ -101,8 +100,7 @@
       entity_id: lock.front_door
       state: unlocked
   action:
-    - service: script.turn_on
-      entity_id: script.notify_subscribers
+    - service: notify.html5
       data_template:
         variables:
           title: The house is unlocked and its getting late
@@ -119,14 +117,14 @@
   trigger:
     - platform: time
       minutes: /120
+      seconds: 0
   condition:
     - condition: state
       entity_id: cover.garage_door
       state: open
   action:
-    - service: script.turn_on
-      entity_id: script.notify_subscribers
-      data:
+    - service: notify.html5
+      data_template:
         variables:
           title: Remember the garage door is open
           message: The garage door is open. Remember to check the garage belongings are secure
