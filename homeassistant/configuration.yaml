@@ -127,7 +127,7 @@ binary_sensor:
     sensors:
       home_occupied:
         friendly_name: Home occupied
-        value_template: {{ states.group.all_devices.state == 'home' }}       
+        value_template: {{ states.group.all_devices.state == "home" }}       
           
 weather:
   - platform: openweathermap
