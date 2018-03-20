@@ -9,6 +9,7 @@ default_view:
     - device_tracker.ac3743a35306
     - device_tracker.allynayrsiphone
     - device_tracker.ryansiphone
+    - binary_sensor.home_occupied
     - binary_sensor.internet_connection
 
 weather_view:
