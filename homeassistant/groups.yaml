@@ -10,6 +10,7 @@ default_view:
     - device_tracker.allynayrsiphone
     - device_tracker.ryansiphone
     - binary_sensor.internet_connection
+    - group.all_devices
 
 weather_view:
   view: yes
