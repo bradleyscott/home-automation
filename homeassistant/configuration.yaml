@@ -123,7 +123,7 @@ binary_sensor:
     host: google.com
     name: Internet connection
 # Presence detection
- - platform: template
+  - platform: template
     sensors:
       home_occupied:
         friendly_name: Home occupied
