@@ -122,3 +122,7 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 zone: !include zones.yaml
+
+intesishome:
+  username: !secret intesis_username
+  password: !secret intesis_password
