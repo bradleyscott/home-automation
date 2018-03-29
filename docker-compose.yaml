@@ -99,7 +99,6 @@ services:
     volumes:
       - ./Caddyfile:/etc/Caddyfile
       - ./caddy:/root/.caddy
-      - ./certs:/etc/caddycerts
   mosquitto:
     image: eclipse-mosquitto
     container_name: mosquitto
