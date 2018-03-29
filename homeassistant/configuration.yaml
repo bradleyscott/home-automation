@@ -69,9 +69,6 @@ cover:
       device_key: !secret opengarage_devicekey
       name: Garage door
 
-# Sensors      
-sensor: !include_dir_list sensors
-binary_sensor: !include binary_sensor.yaml
 
 weather:
   - platform: openweathermap
@@ -83,28 +80,7 @@ tts:
 
 # Cloud
 cloud:
-
-# Device tracking
-device_tracker:
- - platform: nmap_tracker
-   hosts: 192.168.1.1/24
-   interval_seconds: 60
-   consider_home: 300
-   new_device_defaults:
-      track_new_devices: false
- - platform: unifi
-   host: media-hub
-   username: !secret unifi_user
-   password: !secret unifi_password
-   verify_ssl: false
-   ssid_filter:
-    - 'Unit13-Guests'
-   consider_home: 300
-   new_device_defaults:
-    track_new_devices: true
-    hide_if_away: true
    
-
 # Notifications
 notify:
  - name: pushbullet
@@ -157,6 +133,10 @@ alarm_control_panel:
     code: !secret alarm_code
     pending_time: 30 # secs to leave after arm
     delay_time: 30 # secs to disarm 
+
+sensor: !include_dir_list sensors
+binary_sensor: !include binary_sensor.yaml
+device_tracker: !include device_tracker.yaml
 
 group: !include groups.yaml
 automation: !include automations.yaml
