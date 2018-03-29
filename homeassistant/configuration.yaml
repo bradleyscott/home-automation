@@ -70,52 +70,7 @@ cover:
       name: Garage door
 
 # Sensors      
-sensor:
-# Weather prediction
-  - platform: openweathermap
-    api_key: !secret owm_api_key
-    forecast: true
-    monitored_conditions:
-      - weather
-      - temperature
-      - wind_speed
-      - rain
-# Garage Door
-  - platform: template
-    sensors:
-      garage_status:
-        friendly_name: Garage door status
-        value_template: >-
-          {% if states.cover.garage_door %}
-            {% if states.cover.garage_door.attributes["door_state"] == "open" %}
-              Open
-            {% elif states.cover.garage_door.attributes["door_state"] == "closed" %}
-              Closed
-            {% elif states.cover.garage_door.attributes["door_state"] == "opening" %}
-              Opening
-            {% elif states.cover.garage_door.attributes["door_state"] == "closing" %}
-              Closing
-            {% else %}
-              Unknown
-            {% endif %}
-          {% else %}
-            N/A
-          {% endif %}
-
-      garage_car_present:
-        friendly_name: Car in Garage
-        value_template: >-
-          {% if states.cover.garage_door %}
-            {% if states.cover.garage_door.state == "open" %}
-              N/A
-            {% elif ((states.cover.garage_door.attributes["distance_sensor"] > 50) and (states.cover.garage_door.attributes["distance_sensor"] < 150)) %}
-              Yes
-            {% else %}
-              No
-            {% endif %}
-          {% else %}
-            N/A
-          {% endif %}  
+sensor: !include_dir_list sensors
 
 binary_sensor:
 # External connectivity
