@@ -79,11 +79,6 @@ tts:
 
 # Cloud
 cloud:
-
-# MQTT
-mqtt:
-  broker: media-hub
-  port: 1883
    
 # Notifications
 notify:
