@@ -97,7 +97,6 @@ ifttt:
 # Z Wave configuration
 zwave:
   usb_path: /dev/ttyACM0
-  new_entity_ids: true
 
 # Wink to enable August smartlock integration
 august:
