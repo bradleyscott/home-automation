@@ -1,0 +1,8 @@
+platform: rest
+sensors:
+  living_room_ac:
+    resource: http://intesis-rest-sensor:5000/224571441623394
+    unit_of_measurement: 'C'
+  bedroom_ac:
+    resource: http://intesis-rest-sensor:5000/224571441623469
+    unit_of_measurement: 'C'
