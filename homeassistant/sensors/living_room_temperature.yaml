@@ -4,9 +4,3 @@ friendly_name: Living room temperature
 resource: http://media-hub:5000/224571441623394
 unit_of_measurement: '°C'
 force_update: true
-    
-  # bedroom_ac:
-  #   name: Bedroom temperature
-  #   resource: http://intesis-rest-sensor:5000/224571441623469
-  #   unit_of_measurement: 'C'
-  #   force_update: true
