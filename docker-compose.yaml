@@ -92,7 +92,7 @@ services:
       - "8443:8443"
       - "8880:8880"
   caddy:
-    image: abiosoft/caddy
+    image: abiosoft/caddy:0.10.11
     container_name: caddy
     restart: unless-stopped
     network_mode: "host"
