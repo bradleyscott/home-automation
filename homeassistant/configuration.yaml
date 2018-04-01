@@ -116,6 +116,9 @@ alarm_control_panel:
 
 mqtt:
   embedded:
+    listeners:
+      my-ws-1:
+        bind: 0.0.0.0:8085
 
 sensor: !include_dir_list sensors
 climate: !include_dir_list climate
