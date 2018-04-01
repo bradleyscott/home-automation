@@ -115,10 +115,10 @@ alarm_control_panel:
 #   password: !secret intesis_password
 
 mqtt:
-  embedded:
-    listeners:
-      my-ws-1:
-        bind: 0.0.0.0:8085
+  broker: m10.cloudmqtt.com
+  port: 19759
+  username: !secret cloudmqtt_username
+  password: !secret cloudmqtt_password
 
 sensor: !include_dir_list sensors
 climate: !include_dir_list climate
