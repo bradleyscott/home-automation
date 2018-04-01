@@ -1,7 +1,7 @@
 platform: rest
 name: living_room_temperature
 friendly_name: Living room temperature
-resource: http://192.168.1.167:5000/224571441623394
+resource: http://media-hub:5000/224571441623394
 unit_of_measurement: '°C'
 force_update: true
     
