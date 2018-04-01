@@ -112,6 +112,11 @@ alarm_control_panel:
     pending_time: 30 # secs to leave after arm
     delay_time: 30 # secs to disarm 
 
+# IntesisHome
+intesishome:
+  username: !secret intesis_username
+  password: !secret intesis_password
+
 sensor: !include_dir_list sensors
 binary_sensor: !include binary_sensor.yaml
 device_tracker: !include device_tracker.yaml
