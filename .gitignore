@@ -16,3 +16,4 @@ homeassistant/entity_registry.yaml
 **/__pycache__/**
 unifi/*
 caddy/*
+config.ini

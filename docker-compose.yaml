@@ -99,3 +99,12 @@ services:
     volumes:
       - ./Caddyfile:/etc/Caddyfile
       - ./caddy:/root/.caddy
+  intesis-rest-sensor:
+    build: intesis_rest_sensor/.
+    container_name: intesis_rest_sensor
+    restart: unless-stopped
+    volumes:
+      - ./intesis_rest_sensor/config.ini:/app/config.ini
+    ports:
+      - "5000:5000"
+  
