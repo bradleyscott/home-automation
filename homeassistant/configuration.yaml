@@ -115,6 +115,7 @@ alarm_control_panel:
 #   password: !secret intesis_password
 
 sensor: !include_dir_list sensors
+climate: !include_dir_list climate
 binary_sensor: !include binary_sensor.yaml
 device_tracker: !include device_tracker.yaml
 #konnected: !include konnected.yaml

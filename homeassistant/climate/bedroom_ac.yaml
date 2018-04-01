@@ -1,0 +1,23 @@
+platform: mqtt
+name: Living room heat pump
+send_if_off: false
+modes:
+  - auto
+  - cool
+  - dry
+  - fan
+  - heat
+swing_modes:
+  - on
+  - off
+fan_modes:
+  - auto
+  - quiet
+  - low
+  - medium
+  - high
+power_command_topic: 'climate/living_room/power/set'
+mode_command_topic: 'climate/living_room/mode/set'
+temperature_command_topic: 'climate/living_room/temperature/set'
+fan_mode_command_topic: 'climate/living_room/fan/set'
+swing_mode_command_topic: 'climate/bedroom/swing/set'
