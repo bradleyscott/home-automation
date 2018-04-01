@@ -81,3 +81,9 @@ automation.disarm_alarm_from_armed_away_when_door_unlocked_or_garage_open:
 
 automation.disarm_alarm_from_armed_away_when_returning_home:
   friendly_name: Disarm when returning home
+
+sensor.bedroom_temperature:
+  friendly_name: Temperature
+
+sensor.living_room_temperature:
+  friendly_name: Heat pump temperature
