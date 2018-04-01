@@ -48,7 +48,7 @@ sensor.aeotec_zw100_multisensor_6_sourcenodeid:
   hidden: true
 
 sensor.aeotec_zw100_multisensor_6_temperature:
-  friendly_name: Temperature
+  friendly_name: Sensor temperature
   hidden: false
 
 sensor.aeotec_zw100_multisensor_6_ultraviolet:
