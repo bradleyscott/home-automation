@@ -114,6 +114,8 @@ alarm_control_panel:
 #   username: !secret intesis_username
 #   password: !secret intesis_password
 
+mqtt:
+
 sensor: !include_dir_list sensors
 climate: !include_dir_list climate
 binary_sensor: !include binary_sensor.yaml
