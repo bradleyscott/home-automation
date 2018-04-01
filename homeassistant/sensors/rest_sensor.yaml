@@ -1,8 +1,13 @@
 platform: rest
 sensors:
   living_room_ac:
+    name: Living room temperature
     resource: http://intesis-rest-sensor:5000/224571441623394
     unit_of_measurement: 'C'
+    force_update: true
+    
   bedroom_ac:
+    name: Bedroom temperature
     resource: http://intesis-rest-sensor:5000/224571441623469
     unit_of_measurement: 'C'
+    force_update: true
