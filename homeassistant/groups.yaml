@@ -79,8 +79,10 @@ living_room:
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
     - sensor.living_room_temperature
+    _ climate.living_room_heat_pump
   
 bedroom:
   name: Bedroom
   entities:
     - sensor.bedroom_temperature
+    - climate.bedroom_heat_pump
