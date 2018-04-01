@@ -113,9 +113,9 @@ alarm_control_panel:
     delay_time: 30 # secs to disarm 
 
 # IntesisHome
-intesishome:
-  username: !secret intesis_username
-  password: !secret intesis_password
+# intesishome:
+#   username: !secret intesis_username
+#   password: !secret intesis_password
 
 sensor: !include_dir_list sensors
 binary_sensor: !include binary_sensor.yaml
