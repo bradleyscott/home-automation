@@ -115,6 +115,7 @@ alarm_control_panel:
 #   password: !secret intesis_password
 
 mqtt:
+  embedded:
 
 sensor: !include_dir_list sensors
 climate: !include_dir_list climate
