@@ -1,18 +1,5 @@
 - platform: nmap_tracker
   hosts: 192.168.1.1/24
   interval_seconds: 60
-  consider_home: 300
   new_device_defaults:
     track_new_devices: false
-    
-- platform: unifi
-  host: media-hub
-  username: !secret unifi_user
-  password: !secret unifi_password
-  verify_ssl: false
-  ssid_filter:
-  - 'Unit13-Guests'
-  consider_home: 300
-  new_device_defaults:
-  track_new_devices: true
-  hide_if_away: true
