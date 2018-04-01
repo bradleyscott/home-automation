@@ -82,9 +82,6 @@ cloud:
    
 # Notifications
 notify:
- - name: pushbullet
-   platform: pushbullet
-   api_key: !secret pushbullet_api_key
  - name: html5
    platform: html5
    gcm_api_key: !secret gcm_server_key
