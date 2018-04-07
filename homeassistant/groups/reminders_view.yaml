@@ -1,0 +1,7 @@
+- reminders: 
+  view: yes
+  icon: mdi:message-alert
+  entities:
+    - automation.notify_if_insecure_when_late
+    - automation.notify_if_insecure_when_leaving
+    - automation.notify_if_garage_open

@@ -79,7 +79,7 @@ automation.trigger_on_door_when_home:
 automation.trgger_on_motion_when_away:
   friendly_name: If Armed away, trigger on motion
 
-automation.disarm_=when_door_open:
+automation.disarm_when_door_open:
   friendly_name: If Armed away, disarm when door unlocks or opens
 
 automation.disarm_when_home:
