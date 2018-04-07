@@ -99,12 +99,11 @@ services:
     volumes:
       - ./Caddyfile:/etc/Caddyfile
       - ./caddy:/root/.caddy
-  intesis-rest-sensor:
-    build: intesis_rest_sensor/.
-    container_name: intesis_rest_sensor
+  intesis-mqtt:
+    build: intesis_mqtt/.
+    container_name: intesis_mqtt
+    network_mode: "host"
     restart: unless-stopped
     volumes:
-      - ./intesis_rest_sensor/config.ini:/app/config.ini
-    ports:
-      - "5000:5000"
+      - ./intesis_mqtt/config/default.json:/intesis_mqtt/config/default.json
   

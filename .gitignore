@@ -17,3 +17,5 @@ homeassistant/entity_registry.yaml
 unifi/*
 caddy/*
 config.ini
+default.json
+node_modules
