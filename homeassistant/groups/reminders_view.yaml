@@ -1,5 +1,6 @@
 reminders: 
   view: yes
+  name: Reminders
   icon: mdi:message-alert
   entities:
     - automation.notify_if_insecure_when_late
