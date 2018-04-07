@@ -3,8 +3,6 @@ trigger:
   - platform: time
     minutes: /120
     seconds: 0
-  - for:
-      minutes: 30
 condition:
   - condition: state
     entity_id: cover.garage_door
