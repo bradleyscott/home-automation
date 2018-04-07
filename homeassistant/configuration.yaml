@@ -109,11 +109,6 @@ alarm_control_panel:
     pending_time: 30 # secs to leave after arm
     delay_time: 30 # secs to disarm 
 
-# IntesisHome
-# intesishome:
-#   username: !secret intesis_username
-#   password: !secret intesis_password
-
 mqtt:
   broker: m10.cloudmqtt.com
   port: 29759
