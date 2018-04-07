@@ -1,5 +1,4 @@
 default_view:
-  name: Security
   view: yes
   icon: mdi:lock-outline
   entities:
@@ -14,7 +13,6 @@ default_view:
     - binary_sensor.internet_connection
 
 weather_view:
-  name: Climate
   view: yes
   icon: mdi:weather-hail
   entities:
@@ -24,7 +22,6 @@ weather_view:
     - weather.openweathermap
 
 media_view:
-  name: Media
   view: yes
   icon: mdi:music
   entities:
@@ -88,7 +85,6 @@ bedroom:
     - climate.bedroom_heat_pump
 
 notifications: 
-  name: Notifications
   view: yes
   icon: mdi:message-alert
   entities:
