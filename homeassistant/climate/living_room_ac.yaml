@@ -7,10 +7,10 @@ modes:
   - dry
   - fan
   - heat
-  - off
+  - 'off'
 swing_modes:
-  - on
-  - off
+  - swing
+  - auto
 fan_modes:
   - auto
   - quiet
