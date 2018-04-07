@@ -1,0 +1,31 @@
+alias: notify_if_insecure_when_leaving
+trigger:
+  - platform: state
+    entity_id: binary_sensor.home_occupied
+    to: 'off'
+condition:
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: cover.garage_door
+    state: open
+  - condition: state
+    entity_id: lock.front_door
+    state: unlocked
+action:
+  - service: notify.html5
+    data_template:
+      title: The house is unlocked and no one is home
+      message: >-
+        {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+          The garage door is open and the front door is unlocked
+        {% elif is_state('cover.garage_door', 'open') %}
+          The garage door is open
+        {% else %}
+          The front door is unlocked
+        {% endif %}
+      data: 
+        url: https://williamson-ave.duckdns.org
+        actions: 
+        - title: Lock up     
+          action: lock_up

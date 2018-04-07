@@ -1,0 +1,11 @@
+alias: notify_action_lock_up
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: lock_up
+action:
+  - service: cover.close_cover
+    entity_id: cover.garage_door
+  - service: lock.lock
+    entity_id: lock.front_door

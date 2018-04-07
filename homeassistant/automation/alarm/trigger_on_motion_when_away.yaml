@@ -1,0 +1,30 @@
+alias: trigger_on_motion_when_away
+trigger:
+  - platform: state
+    entity_id: binary_sensor.entrance
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.guest_bedroom
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.living_room
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state: armed_away
+action:
+  - service: script.turn_on
+    entity_id: script.notify_on_alarm
+    data_template: 
+      variables:
+        trigger: >-
+          {% if is_state('binary_sensor.entrance', 'on') %}
+            Movement at the entrance
+          {% elif is_state('binary_sensor.guest_bedroom', 'on') %}
+            Movement in the guest bedroom
+          {% else %}
+            Movement in the living room
+          {% endif %}
+  - service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.alarm

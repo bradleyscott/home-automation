@@ -122,6 +122,6 @@ device_tracker: !include device_tracker.yaml
 #konnected: !include konnected.yaml
 
 group: !include groups.yaml
-automation: !include automations.yaml
+automation: !include_dir_list automation
 script: !include scripts.yaml
 zone: !include zones.yaml

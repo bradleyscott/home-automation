@@ -1,0 +1,9 @@
+alias: notify_action_close_garage
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: close_garage
+action:
+  - service: cover.close_cover
+    entity_id: cover.garage_door
