@@ -9,7 +9,7 @@ condition:
   - condition: 
   - condition: state
     entity_id: climate.bedroom_heat_pump
-    value_template: {{ state.attributes.current_temperature - state.attributes.temperature }}
+    value_template: '{{ state.attributes.current_temperature - state.attributes.temperature }}'
     below: 0
   - condition: state
     entity_id: binary_sensor.home_occupied
