@@ -18,6 +18,10 @@ fan_modes:
   - high
 power_command_topic: 'climate/living_room/power/set'
 mode_command_topic: 'climate/living_room/mode/set'
+mode_state_topic: 'climate/living_room/mode/state'
 temperature_command_topic: 'climate/living_room/setpoint/set'
+temperature_state_topic: 'climate/living_room/setpoint/state'
 fan_mode_command_topic: 'climate/living_room/fan/set'
+fan_mode_state_topic: 'climate/living_room/fan/state'
 swing_mode_command_topic: 'climate/living_room/swing/set'
+swing_mode_state_topic: 'climate/living_room/swing/state'
