@@ -8,9 +8,6 @@ modes:
   - fan
   - heat
   - 'off'
-swing_modes:
-  - swing
-  - auto
 fan_modes:
   - auto
   - quiet
@@ -23,6 +20,4 @@ temperature_command_topic: 'climate/living_room/setpoint/set'
 temperature_state_topic: 'climate/living_room/setpoint/state'
 fan_mode_command_topic: 'climate/living_room/fan/set'
 fan_mode_state_topic: 'climate/living_room/fan/state'
-swing_mode_command_topic: 'climate/living_room/swing/set'
-swing_mode_state_topic: 'climate/living_room/swing/state'
 current_temperature_topic: 'climate/living_room/temperature/state'
