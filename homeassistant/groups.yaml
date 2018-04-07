@@ -16,10 +16,10 @@ weather_view:
   view: yes
   icon: mdi:weather-hail
   entities:
-    - weather.openweathermap
-    - group.weather
-    - group.living_room
     - group.bedroom
+    - group.living_room
+    - group.weather
+    - weather.openweathermap
 
 media_view:
   view: yes
