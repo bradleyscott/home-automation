@@ -2,11 +2,8 @@ alias: bedroom_on_in_morning_if_cold
 trigger:
   - platform: time
     at: '05:30:00'
-  # - platform: template
-  #   value_template: {{ (now().month > 5) and (now().month < 9) }}
 condition:
   conditions:
-  - condition: 
   - condition: state
     entity_id: climate.bedroom_heat_pump
     value_template: '{{ state.attributes.current_temperature - state.attributes.temperature }}'
