@@ -1,6 +1,0 @@
-platform: rest
-name: bedroom_temperature
-friendly_name: Bedroom temperature
-resource: http://media-hub:5000/224571441623469
-unit_of_measurement: '°C'
-force_update: true

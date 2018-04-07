@@ -1,6 +1,0 @@
-platform: rest
-name: living_room_temperature
-friendly_name: Living room temperature
-resource: http://media-hub:5000/224571441623394
-unit_of_measurement: '°C'
-force_update: true
