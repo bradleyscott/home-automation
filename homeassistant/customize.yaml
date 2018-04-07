@@ -76,7 +76,7 @@ binary_sensor.living_room:
 automation.trigger_on_door_when_home:
   friendly_name: If Armed home, trigger when door or garage opens
 
-automation.trgger_on_motion_when_away:
+automation.trigger_on_motion_when_away:
   friendly_name: If Armed away, trigger on motion
 
 automation.disarm_when_door_open:
@@ -84,3 +84,12 @@ automation.disarm_when_door_open:
 
 automation.disarm_when_home:
   friendly_name: Disarm when returning home
+
+automation.notify_if_garage_open:
+  friendly_name: Remind me that garage door is open
+
+automation.notify_if_insecure_when_late:
+  friendly_name: Tell me if the house is insecure when its late
+
+automation.notify_if_insecure_when_leaving:
+  friendly_name: Tell me if house is insecure when leaving home
