@@ -1,6 +1,6 @@
 platform: mqtt
 name: Bedroom heat pump
-send_if_off: false
+send_if_off: true
 modes:
   - auto
   - cool
@@ -18,6 +18,6 @@ fan_modes:
   - high
 power_command_topic: 'climate/bedroom/power/set'
 mode_command_topic: 'climate/bedroom/mode/set'
-temperature_command_topic: 'climate/bedroom/temperature/set'
+temperature_command_topic: 'climate/bedroom/setpoint/set'
 fan_mode_command_topic: 'climate/bedroom/fan/set'
 swing_mode_command_topic: 'climate/bedroom/swing/set'
