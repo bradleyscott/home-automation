@@ -42,8 +42,8 @@ alarm:
     - script.panic_button
     - automation.disarm_when_door_open
     - automation.disarm_when_home
-    - automation_trigger_on_door_when_home
-    - automation_trigger_on_motion_when_away
+    - automation.trigger_on_door_when_home
+    - automation.trigger_on_motion_when_away
 
 doors:
   name: Doors and locks
