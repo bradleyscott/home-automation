@@ -1,7 +1,11 @@
-reminders: 
+reminders_view: 
   view: yes
-  name: Reminders
   icon: mdi:message-alert
+  entities: 
+    - reminders
+
+reminders:
+  name: Reminders
   entities:
     - automation.notify_if_insecure_when_late
     - automation.notify_if_insecure_when_leaving
