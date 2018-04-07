@@ -1,34 +1,34 @@
-- default_view:
-    view: yes
-    icon: mdi:lock-outline
-    entities:
-      - group.doors
-      - group.alarm
-      - device_tracker.404e36821e2b
-      - device_tracker.ac374352d76c
-      - device_tracker.ac3743a35306
-      - device_tracker.allynayrsiphone
-      - device_tracker.ryansiphone
-      - binary_sensor.home_occupied
-      - binary_sensor.internet_connection
+default_view:
+  view: yes
+  icon: mdi:lock-outline
+  entities:
+    - group.doors
+    - group.alarm
+    - device_tracker.404e36821e2b
+    - device_tracker.ac374352d76c
+    - device_tracker.ac3743a35306
+    - device_tracker.allynayrsiphone
+    - device_tracker.ryansiphone
+    - binary_sensor.home_occupied
+    - binary_sensor.internet_connection
 
-- doors:
-    name: Doors and locks
-    entities:
-      - cover.garage_door
-      - sensor.garage_status
-      - sensor.garage_car_present
-      - lock.front_door
+doors:
+  name: Doors and locks
+  entities:
+    - cover.garage_door
+    - sensor.garage_status
+    - sensor.garage_car_present
+    - lock.front_door
 
-- alarm:
-    name: Burglar alarm
-    entities:
-      - alarm_control_panel.alarm
-      - binary_sensor.entrance
-      - binary_sensor.guest_bedroom
-      - binary_sensor.living_room
-      - script.panic_button
-      - automation.disarm_when_door_open
-      - automation.disarm_when_home
-      - automation.trigger_on_door_when_home
-      - automation.trigger_on_motion_when_away
+alarm:
+  name: Burglar alarm
+  entities:
+    - alarm_control_panel.alarm
+    - binary_sensor.entrance
+    - binary_sensor.guest_bedroom
+    - binary_sensor.living_room
+    - script.panic_button
+    - automation.disarm_when_door_open
+    - automation.disarm_when_home
+    - automation.trigger_on_door_when_home
+    - automation.trigger_on_motion_when_away

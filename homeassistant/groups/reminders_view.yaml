@@ -1,4 +1,4 @@
-- reminders: 
+reminders: 
   view: yes
   icon: mdi:message-alert
   entities:
