@@ -6,11 +6,14 @@ climate_view:
     - group.living_room
     - group.weather
     - weather.openweathermap
+    - sensor.season_sensor
+    - automation.turn_off_heatpumps_when_leaving
 
 bedroom:
   name: Bedroom
   entities:
     - climate.bedroom_heat_pump
+    - automation.bedroom_on_in_morning_if_cold
 
 living_room:
   name: Living room
@@ -25,6 +28,7 @@ living_room:
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
     - climate.living_room_heat_pump
+    - automation.off_if_heatpump_on_when_late
 
 weather:
   name: Weather outside

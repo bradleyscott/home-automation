@@ -93,3 +93,12 @@ automation.notify_if_insecure_when_late:
 
 automation.notify_if_insecure_when_leaving:
   friendly_name: Tell me if house is insecure when leaving home
+
+automation.bedroom_on_in_morning_if_cold:
+  friendly_name: In Winter, turn on heatpump in the morning
+
+automation.off_if_heatpump_on_when_late:
+  friendly_name: Turn off the living room heatpump when its late
+
+automation.turn_off_heatpumps_when_leaving:
+  friendly_name: Turn off heatpumps when leaving home
