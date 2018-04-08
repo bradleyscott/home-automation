@@ -106,7 +106,7 @@ automation.turn_off_heatpumps_when_leaving:
 climate.bedroom_heat_pump:
   icon: mdi:weather-snowy-rainy
 
-climate:living_room_heat_pump:
+climate.living_room_heat_pump:
   icon: mdi:weather-snowy-rainy
 
 group.default_view:
