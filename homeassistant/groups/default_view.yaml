@@ -28,7 +28,3 @@ alarm:
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
     - script.panic_button
-    - automation.disarm_when_door_open
-    - automation.disarm_when_home
-    - automation.trigger_on_door_when_home
-    - automation.trigger_on_motion_when_away

@@ -3,6 +3,8 @@ automation_view:
   icon: mdi:auto-fix
   entities: 
     - group.climate_automation
+    - group.security_automation
+    - group.alarm_automation
 
 climate_automation:
   name: Climate control
@@ -17,3 +19,11 @@ security_automation:
     - automation.notify_if_insecure_when_late
     - automation.notify_if_insecure_when_leaving
     - automation.notify_if_garage_open
+
+alarm_automation:
+  name: Burglar alarm
+  entities:
+    - automation.disarm_when_door_open
+    - automation.disarm_when_home
+    - automation.trigger_on_door_when_home
+    - automation.trigger_on_motion_when_away
