@@ -102,3 +102,9 @@ automation.off_if_heatpump_on_when_late:
 
 automation.turn_off_heatpumps_when_leaving:
   friendly_name: Turn off heatpumps when leaving home
+
+climate.bedroom_heat_pump
+  icon: mdi:weather-snowy-rainy
+
+climate:living_room_heat_pump
+  icon: mdi:weather-snowy-rainy
