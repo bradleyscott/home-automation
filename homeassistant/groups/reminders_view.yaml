@@ -1,9 +1,0 @@
-# reminders_view: 
-#   view: yes
-#   icon: mdi:message-alert
-#   entities: 
-#     - group.reminders
-
-# reminders:
-#   name: Reminders
-#   entities:

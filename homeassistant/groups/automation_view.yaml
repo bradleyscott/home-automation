@@ -1,0 +1,19 @@
+automation_view: 
+  view: yes
+  icon: mdi:auto-fix
+  entities: 
+    - group.climate_automation
+
+climate_automation:
+  name: Climate control
+  entities:
+    - automation.bedroom_on_in_morning_if_cold
+    - automation.turn_off_heatpumps_when_leaving
+    - automation.off_if_heatpump_on_when_late
+
+security_automation:
+  name: Security
+  entities:
+    - automation.notify_if_insecure_when_late
+    - automation.notify_if_insecure_when_leaving
+    - automation.notify_if_garage_open
