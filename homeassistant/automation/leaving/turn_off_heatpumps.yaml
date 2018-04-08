@@ -17,10 +17,12 @@ action:
     data_template:
       title: Heat pumps turned off automatically
       message: >-
-        {% if is_state('climate.living_room_heat_pump', 'off') %}
-          The bedroom heat pump was left running
-        {% elif is_state('climate.bedroom_heat_pump', 'off') %}
-          The living room heat pump was left running
+        {% if is_state('climate.living_room_heat_pump', 'off') or is_state('climate.bedroom_heat_pump', 'off') %}
+            {% if is_state('climate.living_room_heat_pump', 'off') %}
+              The bedroom heat pump was left running
+            {% else %}
+              The living room heat pump was left running
+            {% endif %}
         {% else %}
           Both the living room and bedroom heat pumps were left running
         {% endif %}
