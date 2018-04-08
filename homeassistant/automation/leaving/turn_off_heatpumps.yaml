@@ -1,0 +1,32 @@
+alias: turn_off_heatpumps_when_leaving
+trigger:
+  - platform: state
+    entity_id: binary_sensor.home_occupied
+    to: 'off'
+    for: 
+      minutes: 2
+condition:
+  condition: or
+  conditions:
+  - condition: template
+    value_template: "{{ states.climate.living_room_heatpump != 'off' }}"
+  - condition: template
+    value_template: "{{ states.climate.bedroom_heatpump != 'off' }}"
+action:
+  - service: notify.html5
+    data_template:
+      title: Heat pumps turned off automatically
+      message: >-
+        {% if (states.climate.bedroom_heatpump != 'off') and (states.climate.living_room_heatpump != 'off') %}
+          Both the living room and bedroom heat pumps were left on
+        {% elif states.climate.bedroom_heatpump != 'off' %}
+          The bedroom heat pump was left running
+        {% else %}
+          The living room heat pump was left running
+        {% endif %}
+      data: 
+        url: https://williamson-ave.duckdns.org
+  - service: climate.turn_off
+    entity_id: climate.bedroom_heat_pump
+  - service: climate.turn_off
+    entity_id: climate.living_room_heat_pump
