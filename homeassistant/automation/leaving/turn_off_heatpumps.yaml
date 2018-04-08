@@ -9,20 +9,20 @@ condition:
   condition: or
   conditions:
   - condition: template
-    value_template: "{{ states.climate.living_room_heatpump != 'off' }}"
+    value_template: '{% if is_state('climate.living_room_heat_pump', 'off') %}false{% else %}true{% endif %}"
   - condition: template
-    value_template: "{{ states.climate.bedroom_heatpump != 'off' }}"
+    value_template: '{% if is_state('climate.bedroomroom_heat_pump', 'off') %}false{% else %}true{% endif %}"
 action:
   - service: notify.html5
     data_template:
       title: Heat pumps turned off automatically
       message: >-
-        {% if (states.climate.bedroom_heatpump != 'off') and (states.climate.living_room_heatpump != 'off') %}
-          Both the living room and bedroom heat pumps were left on
-        {% elif states.climate.bedroom_heatpump != 'off' %}
+        {% if is_state('climate.living_room_heat_pump', 'off') %}
           The bedroom heat pump was left running
-        {% else %}
+        {% elif is_state('climate.bedroom_heat_pump', 'off') %}
           The living room heat pump was left running
+        {% else %}
+          Both the living room and bedroom heat pumps were left running
         {% endif %}
       data: 
         url: https://williamson-ave.duckdns.org
