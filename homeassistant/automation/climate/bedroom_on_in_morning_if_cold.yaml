@@ -3,6 +3,7 @@ trigger:
   - platform: time
     at: '05:30:00'
 condition:
+  condition: and
   conditions:
   - condition: state
     entity_id: sensor.season_sensor
