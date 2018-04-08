@@ -1,12 +1,9 @@
-reminders_view: 
-  view: yes
-  icon: mdi:message-alert
-  entities: 
-    - group.reminders
+# reminders_view: 
+#   view: yes
+#   icon: mdi:message-alert
+#   entities: 
+#     - group.reminders
 
-reminders:
-  name: Reminders
-  entities:
-    - automation.notify_if_insecure_when_late
-    - automation.notify_if_insecure_when_leaving
-    - automation.notify_if_garage_open
+# reminders:
+#   name: Reminders
+#   entities:

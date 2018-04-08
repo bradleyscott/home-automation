@@ -6,14 +6,13 @@ climate_view:
     - group.living_room
     - group.weather
     - weather.openweathermap
-    - sensor.season_sensor
-    - automation.turn_off_heatpumps_when_leaving
 
 bedroom:
   name: Bedroom
   entities:
     - climate.bedroom_heat_pump
     - automation.bedroom_on_in_morning_if_cold
+    - automation.turn_off_heatpumps_when_leaving
 
 living_room:
   name: Living room

@@ -19,6 +19,9 @@ doors:
     - sensor.garage_status
     - sensor.garage_car_present
     - lock.front_door
+    - automation.notify_if_insecure_when_late
+    - automation.notify_if_insecure_when_leaving
+    - automation.notify_if_garage_open
 
 alarm:
   name: Burglar alarm
