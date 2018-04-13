@@ -63,7 +63,7 @@ def request_configuration(hass, config, api, authenticator):
 
     def august_configuration_callback(data):
         """Run when the configuration callback is called."""
-        from august.authenticator import ValidationResult
+        from pyAugust.authenticator import ValidationResult
 
         result = authenticator.validate_verification_code(
             data.get('verification_code'))
@@ -96,7 +96,7 @@ def request_configuration(hass, config, api, authenticator):
 
 def setup_august(hass, config, api, authenticator):
     """Set up the August component."""
-    from august.authenticator import AuthenticationState
+    from pyAugust.authenticator import AuthenticationState
 
     authentication = None
     try:
@@ -134,8 +134,8 @@ def setup_august(hass, config, api, authenticator):
 
 def setup(hass, config):
     """Set up the August component."""
-    from august.api import Api
-    from august.authenticator import Authenticator
+    from pyAugust.api import Api
+    from pyAugust.authenticator import Authenticator
 
     conf = config[DOMAIN]
     api = Api(timeout=conf.get(CONF_TIMEOUT))
