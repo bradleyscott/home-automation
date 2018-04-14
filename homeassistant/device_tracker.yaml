@@ -5,3 +5,14 @@
   new_device_defaults:
     track_new_devices: false
     hide_if_away: true
+- platform: unifi
+  host: media-hub
+  username: !secret unifi_user
+  password: !secret unifi_password
+  verify_ssl: false
+  ssid_filter: 
+  - 'Unit13-Guests'
+  consider_home: 300
+  new_device_defaults:
+    track_new_devices: true
+    hide_if_away: true
