@@ -53,11 +53,11 @@ googlehome:
   track: false
   vendor: Google, Inc.
 
-baspire:
-  hide_if_away: false
+bmacbook:
+  hide_if_away: true
   icon:
-  mac: 5C:51:4F:1B:1A:48
-  name: b-aspire
+  mac: DC:A9:04:7F:D6:55
+  name: B's Macbook
   picture:
   track: false
   vendor: unknown
@@ -89,14 +89,6 @@ garagepi:
   track: false
   vendor: Raspberry Pi Foundation
 
-bxps13ubuntu:
-  hide_if_away: false
-  icon:
-  mac: F8:63:3F:0A:57:85
-  name: b-xps-13-ubuntu
-  picture:
-  track: false
-
 desktop74b9v59:
   hide_if_away: false
   icon:
@@ -123,15 +115,6 @@ ryansiphone:
   picture:
   track: true
   vendor: Apple, Inc.
-
-5cg6301zgp:
-  hide_if_away: false
-  icon:
-  mac: E4:A4:71:9A:0C:A9
-  name: 5CG6301ZGP
-  picture:
-  track: false
-  vendor: Intel Corporate
 
 konnectedsecuritye88a5f:
   hide_if_away: false
@@ -223,20 +206,56 @@ f09fc2c80743:
   track: false
   vendor: Ubiquiti Networks Inc.
 
-desktop8hcqfu2:
-  hide_if_away: false
-  icon:
-  mac: BC:83:85:2C:E5:20
-  name: B's Surface Book
-  picture:
-  track: false
-  vendor: Microsoft Corporation
-
 bsurface:
   hide_if_away: false
   icon:
   mac: 60:45:BD:DF:3B:52
-  name: b-surface
+  name: B's Surface Gen 1
   picture:
   track: false
   vendor: Microsoft
+
+desktop8hcqfu2:
+  hide_if_away: false
+  icon:
+  mac: BC:83:85:2C:E5:20
+  name: B's FaceMe Surface Book
+  picture:
+  track: false
+  vendor: Microsoft Corporation
+
+50dce7b68c23:
+  hide_if_away: true
+  icon:
+  mac: 50:DC:E7:B6:8C:23
+  name: Kindle
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+device_0131ad:
+  hide_if_away: false
+  icon:
+  mac: CC:3F:1D:01:31:AD
+  name: Bedroom heat pump
+  picture:
+  track: false
+  vendor: unknown
+
+device_013162:
+  hide_if_away: false
+  icon:
+  mac: CC:3F:1D:01:31:62
+  name: Living room heatpump
+  picture:
+  track: false
+  vendor: unknown
+
+googlehomemini:
+  hide_if_away: true
+  icon:
+  mac: 20:DF:B9:14:6B:5C
+  name: Google-Home-Mini
+  picture:
+  track: false
+  vendor: Google, Inc.
