@@ -12,7 +12,11 @@
   verify_ssl: false
   ssid_filter: 
   - 'Unit13-Guests'
+  interval_seconds: 60
   consider_home: 300
   new_device_defaults:
     track_new_devices: true
     hide_if_away: true
+- platform: google_maps
+  username: !secret googletrack_username
+  password: googletrack_password
