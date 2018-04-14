@@ -4,13 +4,12 @@ default_view:
   entities:
     - group.doors
     - group.alarm
-    - device_tracker.404e36821e2b
+    - device_tracker.google_maps_115726181286227444765
     - device_tracker.ac374352d76c
     - device_tracker.ac3743a35306
     - device_tracker.allynayrsiphone
     - device_tracker.ryansiphone
     - binary_sensor.home_occupied
-    - binary_sensor.internet_connection
 
 doors:
   name: Doors and locks
