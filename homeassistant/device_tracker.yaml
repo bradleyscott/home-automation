@@ -19,4 +19,4 @@
     hide_if_away: true
 - platform: google_maps
   username: !secret googletrack_username
-  password: googletrack_password
+  password: !secret googletrack_password
