@@ -27,3 +27,11 @@ alarm:
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
     - script.panic_button
+
+nest:
+  name: Smoke Alarm
+  entities: 
+    - binary_sensor.living_room_nest_protect_online
+    - sensor.living_room_nest_protect_battery_health
+    - sensor.living_room_nest_protect_co_status
+    - sensor.living_room_nest_protect_smoke_status

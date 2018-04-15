@@ -117,3 +117,15 @@ group.climate_view:
 
 group.media_view:
   order: 3
+
+binary_sensor.living_room_nest_protect_online:
+  friendly_name: Online
+
+sensor.living_room_nest_protect_battery_health:
+  friendly_name: Battery health
+
+sensor.living_room_nest_protect_co_status:
+  friendly_name: CO2 alarm
+
+sensor.living_room_nest_protect_smoke_status:
+  friendly_name: Smoke alarm
