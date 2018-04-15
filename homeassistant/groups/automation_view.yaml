@@ -5,6 +5,7 @@ automation_view:
     - group.climate_automation
     - group.security_automation
     - group.alarm_automation
+    - group.nest_automation
 
 climate_automation:
   name: Climate control
