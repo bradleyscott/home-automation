@@ -103,6 +103,12 @@ automation.off_if_heatpump_on_when_late:
 automation.turn_off_heatpumps_when_leaving:
   friendly_name: Turn off heatpumps when leaving home
 
+automation.notify_on_co2:
+  friendly_name: Notify if CO2 detected
+
+automation.notify_on_smoke:
+  friendly_name: Notify if smoke detected
+
 climate.bedroom_heat_pump:
   icon: mdi:weather-snowy-rainy
 

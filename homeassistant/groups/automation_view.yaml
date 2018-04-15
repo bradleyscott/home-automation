@@ -27,3 +27,9 @@ alarm_automation:
     - automation.disarm_when_home
     - automation.trigger_on_door_when_home
     - automation.trigger_on_motion_when_away
+
+nest_automation:
+  name: Smoke alarm
+  entities:
+    - automation.notify_on_co2
+    - automation.notify_on_smoke

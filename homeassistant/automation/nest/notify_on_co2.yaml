@@ -1,0 +1,16 @@
+alias: notify_on_co2
+trigger:
+  - platform: state
+    entity_id: sensor.living_room_nest_protect_co_status
+    to: 'Emergency'
+condition:
+  - condition: state
+    entity_id: binary_sensor.home_occupied
+    state: 'off'
+action:
+  - service: notify.html5
+    data_template:
+      title: There is a problem at home
+      message: Carbon dioxide levels are dangerously high
+      data: 
+        url: https://williamson-ave.duckdns.org
