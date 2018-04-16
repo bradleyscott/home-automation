@@ -28,6 +28,7 @@ alarm:
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
     - script.panic_button
+    - camera.entrance_phone
 
 nest:
   name: Smoke Alarm
