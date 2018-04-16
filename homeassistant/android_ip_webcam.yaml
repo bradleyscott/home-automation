@@ -1,14 +1,14 @@
-host: 192.168.1.228
-name: Entrance phone
-username: !secret webcam_username
-password: !secret webcam_password
-sensors:
-  - light
-  - motion
-  - proximity
-  - sound
-settings:
-  - night_vision
-  - overlay
-  - torch
-  - video_recording
+- host: 192.168.1.228
+  name: Entrance phone
+  username: !secret webcam_username
+  password: !secret webcam_password
+  sensors:
+    - light
+    - motion
+    - proximity
+    - sound
+  settings:
+    - night_vision
+    - overlay
+    - torch
+    - video_recording
