@@ -10,7 +10,7 @@ condition:
     state: open
   - condition: state
     entity_id: binary_sensor.front_door_open
-    state: on
+    state: 'on'
 action:
   - service: notify.html5
     data_template:
