@@ -18,6 +18,7 @@ doors:
     - sensor.garage_status
     - sensor.garage_car_present
     - lock.front_door
+    - binary_sensor.front_door_open
 
 alarm:
   name: Burglar alarm
