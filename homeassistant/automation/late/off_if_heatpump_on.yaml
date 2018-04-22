@@ -6,8 +6,10 @@ condition:
   - condition: template
     value_template: "{{ states.climate.living_room_heatpump != 'off' }}"
 action:
-  - service: climate.turn_off
-    entity_id: climate.living_room_heat_pump
+  - service: climate.set_operation_mode
+    data:
+      entity_id: climate.living_room_heat_pump      
+      operation_mode: off
   # - service: notify.html5
   #   data_template:
   #     title: The heat pump is on and its getting late

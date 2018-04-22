@@ -26,7 +26,11 @@ action:
         {% endif %}
       data: 
         url: https://williamson-ave.duckdns.org
-  - service: climate.turn_off
-    entity_id: climate.bedroom_heat_pump
-  - service: climate.turn_off
-    entity_id: climate.living_room_heat_pump
+  - service: climate.set_operation_mode
+    data:
+      entity_id: climate.bedroom_heat_pump
+      operation_mode: off
+  - service: climate.set_operation_mode
+    data:
+      entity_id: climate.living_room_heat_pump      
+      operation_mode: off
