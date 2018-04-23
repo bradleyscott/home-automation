@@ -15,8 +15,6 @@ default_view:
 security_camera:
   name: Front door camera
   entities:
-    - switch.entrance_phone_night_vision
-    - switch.entrance_phone_torch
     - switch.entrance_phone_video_recording
     - camera.entrance_phone
 
