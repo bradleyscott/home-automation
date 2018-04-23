@@ -4,6 +4,7 @@ climate_view:
   entities:
     - group.bedroom
     - group.living_room
+    - group.spare_room
     - group.weather
     - weather.openweathermap
 
@@ -11,6 +12,11 @@ bedroom:
   name: Bedroom
   entities:
     - climate.bedroom_heat_pump
+
+spare_room:
+  name: Spare room
+  entities:
+    - switch.smart_switch
 
 living_room:
   name: Living room

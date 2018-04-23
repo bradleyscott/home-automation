@@ -135,3 +135,6 @@ sensor.living_room_nest_protect_co_status:
 
 sensor.living_room_nest_protect_smoke_status:
   friendly_name: Smoke alarm
+
+switch.smart_switch:
+  friendly_name: Oil heater
