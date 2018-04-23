@@ -4,12 +4,21 @@ default_view:
   entities:
     - group.doors
     - group.alarm
+    - group.security_camera
     - device_tracker.google_maps_115726181286227444765
     - device_tracker.ac374352d76c
     - device_tracker.ac3743a35306
     - device_tracker.allynayrsiphone
     - device_tracker.ryansiphone
     - binary_sensor.home_occupied
+
+security_camera:
+  name: Front door camera
+  entities:
+    - switch.entrance_phone_night_vision
+    - switch.entrance_phone_torch
+    - switch.entrance_phone_video_recording
+    - camera.entrance_phone
 
 doors:
   name: Doors and locks
@@ -28,7 +37,6 @@ alarm:
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
     - script.panic_button
-    - camera.entrance_phone
 
 nest:
   name: Smoke Alarm
