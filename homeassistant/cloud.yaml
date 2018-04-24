@@ -1,0 +1,6 @@
+google_actions:
+  filter:
+    include_domains:
+      - cover
+      - lock
+      - climate
