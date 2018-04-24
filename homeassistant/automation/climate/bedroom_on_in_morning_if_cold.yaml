@@ -12,9 +12,11 @@ condition:
     entity_id: binary_sensor.home_occupied
     state: 'on'
 action:
-  - service: climate.turn_on
-    entity_id: climate.bedroom_heat_pump
   - service: climate.set_operation_mode
-    entity_id: climate.bedroom_heat_pump
     data:
+      entity_id: climate.bedroom_heat_pump
       operation_mode: 'heat' 
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.bedroom_heat_pump
+      operation_mode: 'quiet' 
