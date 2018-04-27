@@ -29,8 +29,8 @@ action:
   - service: climate.set_operation_mode
     data:
       entity_id: climate.bedroom_heat_pump
-      operation_mode: off
+      operation_mode: 'off'
   - service: climate.set_operation_mode
     data:
       entity_id: climate.living_room_heat_pump      
-      operation_mode: off
+      operation_mode: 'off'
