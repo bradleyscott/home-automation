@@ -34,5 +34,8 @@ automation.notify_on_co2:
 automation.notify_on_smoke:
   friendly_name: Notify if smoke detected
 
-automation.notify_if_heater_on:
-  friendly_name: Notify if Oil heater is on
+automation.notify_if_switch_on:
+  friendly_name: Notify if oil heater is on
+
+automation.turn_off_switch_when_leaving:
+  friendly_name: Turn off oil heater when leaving home

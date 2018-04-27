@@ -1,4 +1,4 @@
-alias: notify_if_heater_on
+alias: notify_if_switch_on
 trigger:
   - platform: time
     minutes: /30
