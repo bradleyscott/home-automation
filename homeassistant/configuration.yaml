@@ -112,14 +112,14 @@ mqtt:
   username: !secret cloudmqtt_username
   password: !secret cloudmqtt_password
 
-sensor: !include_dir_list sensors
-climate: !include_dir_list climate
-binary_sensor: !include binary_sensor.yaml
-device_tracker: !include device_tracker.yaml
-#konnected: !include konnected.yaml
-nest: !include nest.yaml
-android_ip_webcam: !include android_ip_webcam.yaml
-cloud: !include cloud.yaml
+sensor: !include_dir_list configuration/sensors
+climate: !include_dir_list configuration/climate
+binary_sensor: !include configuration/binary_sensor.yaml
+device_tracker: !include configuration/device_tracker.yaml
+#konnected: !include configuration/konnected.yaml
+nest: !include configuration/nest.yaml
+android_ip_webcam: !include configuration/android_ip_webcam.yaml
+cloud: !include configuration/cloud.yaml
 
 group: !include_dir_merge_named groups
 automation: !include_dir_list automation
