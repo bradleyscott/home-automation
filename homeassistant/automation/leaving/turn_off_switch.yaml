@@ -6,7 +6,6 @@ trigger:
     for: 
       minutes: 2
 condition:
-  conditions:
   - condition: state
     entity_id: switch.smart_switch
     state: 'on'
