@@ -138,3 +138,6 @@ sensor.living_room_nest_protect_smoke_status:
 
 switch.smart_switch:
   friendly_name: Oil heater
+
+camera.entrance_phone:
+  friendly_name: Entrance camera
