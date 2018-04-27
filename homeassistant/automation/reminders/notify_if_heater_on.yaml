@@ -1,0 +1,19 @@
+alias: notify_if_heater_on
+trigger:
+  - platform: time
+    minutes: /30
+    seconds: 0
+condition:
+  - condition: state
+    entity_id: switch.smart_switch
+    state: 'on'
+action:
+  - service: notify.html5
+    data_template:
+      title: Remember the oil heater is on
+      message: Check to make sure Nirupa hasn't started a fire
+      data: 
+        url: https://williamson-ave.duckdns.org
+        actions: 
+        - title: Turn off 
+          action: switch_off
