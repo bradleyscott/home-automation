@@ -1,0 +1,5 @@
+climate.bedroom_heat_pump:
+  icon: mdi:weather-snowy-rainy
+
+climate.living_room_heat_pump:
+  icon: mdi:weather-snowy-rainy

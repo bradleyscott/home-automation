@@ -1,0 +1,5 @@
+cover.garage_door:
+  friendly_name: Garage door
+
+sensor.garage_car_present:
+  icon: mdi:car

@@ -1,0 +1,14 @@
+sensor.owm_temperature:
+  friendly_name: Outside temperature
+
+sensor.owm_wind_speed:
+  friendly_name: Wind
+
+sensor.owm_rain:
+  friendly_name: Rain
+
+sensor.owm_condition:
+  friendly_name: Current conditions
+
+sensor.owm_forecast:
+  friendly_name: Forecast

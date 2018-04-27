@@ -1,0 +1,8 @@
+binary_sensor.entrance:
+  friendly_name: Entrance motion
+
+binary_sensor.guest_bedroom:
+  friendly_name: Guest bedroom motion
+
+binary_sensor.living_room:
+  friendly_name: Living room motion

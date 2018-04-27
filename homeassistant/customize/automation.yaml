@@ -1,0 +1,38 @@
+automation.trigger_on_door_when_home:
+  friendly_name: If Armed home, trigger when door or garage opens
+
+automation.trigger_on_motion_when_away:
+  friendly_name: If Armed away, trigger on motion
+
+automation.disarm_when_door_open:
+  friendly_name: If Armed away, disarm when door unlocks or opens
+
+automation.disarm_when_home:
+  friendly_name: Disarm when returning home
+
+automation.notify_if_garage_open:
+  friendly_name: Remind me that garage door is open
+
+automation.notify_if_insecure_when_late:
+  friendly_name: Tell me if the house is insecure when its late
+
+automation.notify_if_insecure_when_leaving:
+  friendly_name: Tell me if house is insecure when leaving home
+
+automation.bedroom_on_in_morning_if_cold:
+  friendly_name: Turn on heatpump if its cold in the morning
+
+automation.off_if_heatpump_on_when_late:
+  friendly_name: Turn off the living room heatpump when its late
+
+automation.turn_off_heatpumps_when_leaving:
+  friendly_name: Turn off heatpumps when leaving home
+
+automation.notify_on_co2:
+  friendly_name: Notify if CO2 detected
+
+automation.notify_on_smoke:
+  friendly_name: Notify if smoke detected
+
+automation.notify_if_heater_on:
+  friendly_name: Notify if Oil heater is on

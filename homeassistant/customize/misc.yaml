@@ -1,0 +1,5 @@
+switch.smart_switch:
+  friendly_name: Oil heater
+
+camera.entrance_phone:
+  friendly_name: Entrance camera

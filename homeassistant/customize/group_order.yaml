@@ -1,0 +1,8 @@
+group.default_view:
+  order: 1
+
+group.climate_view:
+  order: 2
+
+group.media_view:
+  order: 3
