@@ -1,0 +1,31 @@
+alias: notify_if_doors_open
+trigger:
+  - platform: time
+    minutes: /120
+    seconds: 0
+condition:
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: cover.garage_door
+    state: open
+  - condition: state
+    entity_id: binary_sensor.front_door_open
+    state: 'on'
+action:
+  - service: notify.html5
+    data_template:
+      title: Remember you have doors open
+      message: >-
+        {% if is_state('cover.garage_door', 'open') and is_state('binary_sensor.front_door_open', 'on') %}
+          Both the garage door and front doors are open. Remember to check the garage belongings are secure
+        {% elif is_state('cover.garage_door', 'open') %}
+          The garage door is open. Remember to check the garage belongings are secure
+        {% else %}
+          The front door is open. Remember to check the garage belongings are secure
+        {% endif %}
+      data: 
+        url: https://williamson-ave.duckdns.org
+        actions: 
+        - title: Close garage   
+          action: close_garage
