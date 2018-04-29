@@ -18,11 +18,11 @@ action:
       title: Remember you have doors open
       message: >-
         {% if is_state('cover.garage_door', 'open') and is_state('binary_sensor.front_door_open', 'on') %}
-          Both the garage door and front doors are open. Remember to check the garage belongings are secure
+          Both the garage door and front doors are open. Remember to check the house belongings are secure
         {% elif is_state('cover.garage_door', 'open') %}
           The garage door is open. Remember to check the garage belongings are secure
         {% else %}
-          The front door is open. Remember to check the garage belongings are secure
+          The front door is open. Remember to check the house belongings are secure
         {% endif %}
       data: 
         url: https://williamson-ave.duckdns.org
