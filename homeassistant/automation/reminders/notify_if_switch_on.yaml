@@ -7,6 +7,10 @@ condition:
   - condition: state
     entity_id: switch.smart_switch
     state: 'on'
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
 action:
   - service: notify.html5
     data_template:
