@@ -21,9 +21,9 @@ ac374352d76c:
   hide_if_away: false
   icon:
   mac: AC:37:43:52:D7:6C
-  name: Nirupa
+  name: Nirupa's Pixel
   picture:
-  track: true
+  track: false
   vendor: HTC Corporation
 
 augustconnect:
@@ -259,3 +259,11 @@ googlehomemini:
   picture:
   track: false
   vendor: Google, Inc.
+
+galaxya82018:
+  hide_if_away: false
+  icon:
+  mac: 68:5A:CF:CF:93:F9
+  name: Nirupa
+  picture:
+  track: true
