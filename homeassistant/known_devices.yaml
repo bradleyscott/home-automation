@@ -3,7 +3,7 @@
   hide_if_away: false
   icon:
   mac: 40:4E:36:82:1E:2B
-  name: Bradley
+  name: Bradley's Pixel 2
   picture:
   track: true
   vendor: HTC Corporation
@@ -259,6 +259,14 @@ googlehomemini:
   picture:
   track: false
   vendor: Google, Inc.
+
+google_maps_115726181286227444765:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Bradley
+  picture: https://lh3.googleusercontent.com/-pTsbC6CliEM/AAAAAAAAAAI/AAAAAAAAsmA/hUx7kYrFmsU/photo.jpg
+  track: true
 
 galaxya82018:
   hide_if_away: false
