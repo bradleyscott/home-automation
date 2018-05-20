@@ -9,3 +9,15 @@ switch.switch_2:
 
 zwave.aeotec_zw132_dual_nano_switch:
   friendly_name: Kitchen lights
+
+zwave.aeotec_zw111_nano_dimmer:
+  friendly_name: Living room lights
+
+switch.switch_3:
+  friendly_name: Living room lights
+
+zwave.aeotec_zw116_nano_switch_2:
+  friendly_name: Deck lights
+
+switch.switch_4:
+  friendly_name: Deck lights
