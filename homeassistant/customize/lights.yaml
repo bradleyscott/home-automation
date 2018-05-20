@@ -1,0 +1,11 @@
+switch.switch:
+  friendly_name: Dining room light
+
+zwave.aeotec_zw116_nano_switch:
+  friendly_name: Dining room light
+
+switch.switch_2:
+  friendly_name: Kitchen lights
+
+zwave.aeotec_zw132_dual_nano_switch:
+  friendly_name: Kitchen lights

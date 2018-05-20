@@ -1,0 +1,7 @@
+lights_view:
+  view: yes
+  icon: mdi-lightbulb-on
+  entities:
+    - switch.switch
+    - switch.switch_2
+
