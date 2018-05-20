@@ -2,9 +2,12 @@ lights_view:
   view: yes
   icon: mdi:lightbulb-on
   entities:
+    - group.lights
+
+lights:
+  name: Lights
+  entities:
     - switch.switch
     - switch.switch_2
     - switch.switch_3
     - switch.switch_4
-    - zwave.aeotec_zw132_dual_nano_switch
-
