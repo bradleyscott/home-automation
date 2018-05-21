@@ -1,0 +1,14 @@
+alias: hide_entrance_camera
+condition:
+  - condition: state
+    entity_id: sensor.entrance_phone_motion
+    state: unavailable
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+action:
+  - service: group.set_visibility
+    entity_id: group.entrance_camera
+    data:
+      visible: False

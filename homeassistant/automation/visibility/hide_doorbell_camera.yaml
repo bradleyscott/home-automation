@@ -1,0 +1,14 @@
+alias: hide_entrance_camera
+condition:
+  - condition: state
+    entity_id: binary_sensor.front_door_doorbell_motion
+    state: 'off'
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+action:
+  - service: group.set_visibility
+    entity_id: camera.front_door_doorbell
+    data:
+      visible: False

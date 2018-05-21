@@ -1,0 +1,9 @@
+alias: show_doorbell_camera
+condition:
+  - condition: template
+    value_template: "{{ is_state('binary_sensor.front_door_doorbell_motion', 'on') }}"
+action:
+  - service: group.set_visibility
+    entity_id: camera.front_door_doorbell
+    data:
+      visible: True

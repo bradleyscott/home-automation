@@ -1,0 +1,9 @@
+alias: show_entrance_camera
+condition:
+  - condition: template
+    value_template: "{{ not is_state('sensor.entrance_phone_motion', 'unavailable') }}"
+action:
+  - service: group.set_visibility
+    entity_id: group.entrance_camera
+    data:
+      visible: True
