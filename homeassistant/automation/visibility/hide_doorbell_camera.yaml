@@ -1,8 +1,8 @@
 alias: hide_entrance_camera
-condition:
-  - condition: state
+trigger:
+  - platform: state
     entity_id: binary_sensor.front_door_doorbell_motion
-    state: 'off'
+    to: 'off'
     for:
       hours: 0
       minutes: 15

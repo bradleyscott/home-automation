@@ -1,8 +1,8 @@
 alias: hide_entrance_camera
-condition:
-  - condition: state
+trigger:
+  - platform: state
     entity_id: sensor.entrance_phone_motion
-    state: unavailable
+    to: unavailable
     for:
       hours: 0
       minutes: 15

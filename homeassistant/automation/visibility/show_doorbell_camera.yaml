@@ -1,6 +1,6 @@
 alias: show_doorbell_camera
-condition:
-  - condition: template
+trigger:
+  - platrofm: template
     value_template: "{{ is_state('binary_sensor.front_door_doorbell_motion', 'on') }}"
 action:
   - service: group.set_visibility
