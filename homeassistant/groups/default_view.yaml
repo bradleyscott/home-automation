@@ -13,8 +13,9 @@ default_view:
     - binary_sensor.home_occupied
 
 security_camera:
-  name: Front door camera
+  name: Security cameras
   entities:
+    - camera.front_door_doorbell
     - camera.entrance_phone
 
 doors:

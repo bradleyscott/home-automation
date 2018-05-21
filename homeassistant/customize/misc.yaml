@@ -3,3 +3,6 @@ switch.smart_switch:
 
 camera.entrance_phone:
   friendly_name: Entrance camera
+
+camera.front_door_doorbell:
+  friendly_name: Doorbell camera
