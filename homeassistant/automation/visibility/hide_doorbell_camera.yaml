@@ -9,6 +9,6 @@ trigger:
       seconds: 0
 action:
   - service: group.set_visibility
-    entity_id: camera.front_door_doorbell
+    entity_id: group.doorbell_camera
     data:
       visible: False
