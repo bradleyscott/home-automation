@@ -2,18 +2,28 @@ lights_view:
   view: yes
   icon: mdi:lightbulb-on
   entities:
-    - group.lights
-
-lights:
-  name: Lights
+    - group.upstairs_lights
+    - group.living_area_lights
+    - group.downstairs_lights
+    
+upstairs_lights:
+  name: Upstairs lights
   entities:
-    - switch.switch
-    - switch.switch_2
-    - switch.switch_3
-    - switch.switch_4
-    - switch.switch_5
+    - switch.switch_8
     - switch.switch_6
     - switch.switch_7
-    - switch.switch_8
+    - switch.switch_5
+  
+downstairs_lights:
+  name: Downstairs lights
+  entities:
     - switch.switch_9
     - switch.switch_10
+
+living_area_lights:
+  name: Living area
+  entities:
+    - switch.switch_3
+    - switch.switch_2
+    - switch.switch
+    - switch.switch_4
