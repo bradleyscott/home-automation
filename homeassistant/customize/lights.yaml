@@ -1,13 +1,13 @@
-switch.switch:
-  friendly_name: Dining room light
-
 zwave.aeotec_zw116_nano_switch:
   friendly_name: Dining room light
 
-switch.switch_2:
-  friendly_name: Kitchen lights
+switch.switch:
+  friendly_name: Dining room light
 
 zwave.aeotec_zw132_dual_nano_switch:
+  friendly_name: Kitchen lights
+
+switch.switch_2:
   friendly_name: Kitchen lights
 
 zwave.aeotec_zw111_nano_dimmer:
@@ -22,20 +22,20 @@ zwave.aeotec_zw116_nano_switch_2:
 switch.switch_4:
   friendly_name: Deck lights
 
-zwave.aeotec_zw132_dual_nano_switch_3:
+zwave.aeotec_zw132_dual_nano_switch_2:
   friendly_name: Upstairs hallway and stairs
 
 switch.switch_5: 
   friendly_name: Upstairs hallway and stairs
 
-zwave.aeotec_zw132_dual_nano_switch_4:
-  friendly_name: Bathroom lights
+zwave.aeotec_zw132_dual_nano_switch_3:
+  friendly_name: Bathroom lights 
 
 switch.switch_6:
-  friendly_name: Bathroom lights
+  friendly_name: Bathroom lights 
 
 zwave.aeotec_zw116_nano_switch_3:
-  friendly_name: Bathroom fan 
+  friendly_name: Bathroom fan
 
 switch.switch_7:
   friendly_name: Bathroom fan
