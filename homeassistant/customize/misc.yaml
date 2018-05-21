@@ -6,3 +6,6 @@ camera.entrance_phone:
 
 camera.front_door_doorbell:
   friendly_name: Doorbell camera
+
+binary_sensor.front_door_doorbell_motion:
+  friendly_name: Doorbell motion sensor
