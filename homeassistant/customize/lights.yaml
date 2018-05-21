@@ -45,3 +45,15 @@ zwave.aeotec_zw132_dual_nano_switch_4:
 
 switch.switch_8:
   friendly_name: Bedroom lights
+
+zwave.aeotec_zw132_dual_nano_switch_5:
+  friendly_name: Downstairs hallway and stairs
+
+switch.switch_9:
+  friendly_name: Downstairs hallway and stairs
+
+zwave.aeotec_zw116_nano_switch_4:
+  friendly_name: Garage lights
+
+switch.switch_10:
+  friendly_name: Garage lights

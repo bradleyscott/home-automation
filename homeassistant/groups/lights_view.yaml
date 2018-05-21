@@ -15,3 +15,5 @@ lights:
     - switch.switch_6
     - switch.switch_7
     - switch.switch_8
+    - switch.switch_9
+    - switch.switch_10
