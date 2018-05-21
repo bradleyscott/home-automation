@@ -1,4 +1,4 @@
-alias: hide_entrance_camera
+alias: hide_doorbell_camera
 trigger:
   - platform: state
     entity_id: binary_sensor.front_door_doorbell_motion
