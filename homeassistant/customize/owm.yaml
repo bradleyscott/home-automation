@@ -4,12 +4,16 @@ sensor.owm_temperature:
 
 sensor.owm_wind_speed:
   friendly_name: Wind
+  icon: mdi:weather-windy
 
 sensor.owm_rain:
   friendly_name: Rain
+  icon: mdi:weather-rainy
 
 sensor.owm_condition:
   friendly_name: Current conditions
+  icon: mdi:weather-snowy-rainy
 
 sensor.owm_forecast:
   friendly_name: Forecast
+  icon: mdi:weather-snowy-rainy

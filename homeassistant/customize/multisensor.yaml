@@ -25,3 +25,4 @@ sensor.aeotec_zw100_multisensor_6_temperature:
 
 sensor.aeotec_zw100_multisensor_6_ultraviolet:
   friendly_name: UV
+  icon: mdi:sunglasses

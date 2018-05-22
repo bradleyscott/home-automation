@@ -4,3 +4,6 @@ cover.garage_door:
 
 sensor.garage_car_present:
   icon: mdi:car
+
+sensor.garage_status:
+  icon: mdi:garage-open
