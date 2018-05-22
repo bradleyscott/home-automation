@@ -1,5 +1,6 @@
 cover.garage_door:
   friendly_name: Garage door
+  device_class: garage
 
 sensor.garage_car_present:
   icon: mdi:car

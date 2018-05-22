@@ -9,3 +9,4 @@ camera.front_door_doorbell:
 
 binary_sensor.front_door_doorbell_motion:
   friendly_name: Doorbell motion sensor
+  device_class: motion

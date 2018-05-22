@@ -1,5 +1,6 @@
 sensor.owm_temperature:
   friendly_name: Outside temperature
+  device_class: temperature
 
 sensor.owm_wind_speed:
   friendly_name: Wind
