@@ -22,12 +22,8 @@ living_room:
   name: Living room
   entities:
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
-    - sensor.aeotec_zw100_multisensor_6_alarm_level
-    - sensor.aeotec_zw100_multisensor_6_alarm_type
-    - sensor.aeotec_zw100_multisensor_6_burglar
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
-    - sensor.aeotec_zw100_multisensor_6_sourcenodeid
     - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw100_multisensor_6_ultraviolet
     - climate.living_room_heat_pump
