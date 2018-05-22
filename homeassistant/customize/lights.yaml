@@ -16,6 +16,9 @@ zwave.aeotec_zw111_nano_dimmer:
 switch.switch_3:
   friendly_name: Living room lights
 
+light.level:
+  friendly_name: Living room lights
+  
 zwave.aeotec_zw116_nano_switch_2:
   friendly_name: Deck lights
 
@@ -57,3 +60,4 @@ zwave.aeotec_zw116_nano_switch_4:
 
 switch.switch_10:
   friendly_name: Garage lights
+

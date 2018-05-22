@@ -23,7 +23,7 @@ downstairs_lights:
 living_area_lights:
   name: Living area
   entities:
-    - switch.switch_3
+    - light.level
     - switch.switch_2
     - switch.switch
     - switch.switch_4
