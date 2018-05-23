@@ -1,0 +1,7 @@
+exclude:
+  domains:
+    - automation
+    - script
+    - zwave
+    - zone
+    - media_player
