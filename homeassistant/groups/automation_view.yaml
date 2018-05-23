@@ -6,6 +6,7 @@ automation_view:
     - group.security_automation
     - group.alarm_automation
     - group.nest_automation
+    - group.visibility_automation
 
 climate_automation:
   name: Climate control
@@ -36,3 +37,9 @@ nest_automation:
   entities:
     - automation.notify_on_co2
     - automation.notify_on_smoke
+  
+visibility_automation:
+  name: UI Visibility
+  entities:
+    - automation.hide_doorbell_camera
+    - automation.hide_entrance_camera
