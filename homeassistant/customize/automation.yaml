@@ -39,3 +39,15 @@ automation.notify_if_switch_on:
 
 automation.turn_off_switch_when_leaving:
   friendly_name: Turn off oil heater when leaving home
+
+automation.hide_entrance_camera:
+  friendly_name: Hide Entrance cam if unavailable
+
+show_entrance_camera:
+  friendly_name: Show Entrance cam if available
+
+automation.show_doorbell_camera:
+  friendly_name: Show doorbell cam on movement
+
+automation.hide_doorbell_camera:
+  friendly_name: Hide doorbell cam if no movement

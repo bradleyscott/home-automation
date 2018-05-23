@@ -42,4 +42,6 @@ visibility_automation:
   name: UI Visibility
   entities:
     - automation.hide_doorbell_camera
+    - automation.show_doorbell_camera
     - automation.hide_entrance_camera
+    - automation.show_entrance_camera
