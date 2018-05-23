@@ -43,7 +43,7 @@ automation.turn_off_switch_when_leaving:
 automation.hide_entrance_camera:
   friendly_name: Hide Entrance cam if unavailable
 
-show_entrance_camera:
+automation.show_entrance_camera:
   friendly_name: Show Entrance cam if available
 
 automation.show_doorbell_camera:
