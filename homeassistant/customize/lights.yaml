@@ -588,7 +588,7 @@ sensor.alarm_level_8:
 sensor.alarm_level_9:
   hidden: true
 
-sensor.alarm_type	0:
+sensor.alarm_type:
   hidden: true
 
 sensor.alarm_type_10:
