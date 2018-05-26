@@ -3,30 +3,34 @@ lights_view:
   icon: mdi:lightbulb-on
   entities:
     - group.bedroom_lights
+    - group.bathroom_lights
     - group.upstairs_lights
     - group.living_area_lights
     - group.downstairs_lights
 
 bedroom_lights:
-  name: Bedroom lights
+  name: Bedroom
   entities: 
     - switch.switch_14 # Bedroom lights
     - switch.aeotec_zw132_dual_nano_switch_switch_7 #Globes
     - switch.aeotec_zw132_dual_nano_switch_switch_8 # Spotlights
 
-upstairs_lights:
-  name: Upstairs lights
-  entities:
-    - switch.switch_5 # Hallway and stairs
-    - switch.aeotec_zw132_dual_nano_switch_switch_4 # Stairway
-    - switch.aeotec_zw132_dual_nano_switch_switch_3 # Hallway
+bathroom_lights:
+  name: Bathroom 
     - switch.switch_7 # Bathroom fan
     - switch.switch_13 # Bathroom lights
     - switch.aeotec_zw132_dual_nano_switch_switch_6 # Shower downlights
     - switch.aeotec_zw132_dual_nano_switch_switch_5 # Bathroom spotlights
 
+upstairs_lights:
+  name: Upstairs
+  entities:
+    - switch.switch_5 # Hallway and stairs
+    - switch.aeotec_zw132_dual_nano_switch_switch_4 # Stairway
+    - switch.aeotec_zw132_dual_nano_switch_switch_3 # Hallway
+
 downstairs_lights:
-  name: Downstairs lights
+  name: Downstairs
   entities:
     - switch.switch_9 # Downstairs lights
     - switch.aeotec_zw132_dual_nano_switch_switch_9 # Downstairs hallway
