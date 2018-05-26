@@ -24,6 +24,7 @@ living_area_lights:
   name: Living area
   entities:
     - light.level
-    - switch.switch_2
+    - switch.aeotec_zw132_dual_nano_switch_switch_2
+    - switch.aeotec_zw132_dual_nano_switch_switch
     - switch.switch
     - switch.switch_4
