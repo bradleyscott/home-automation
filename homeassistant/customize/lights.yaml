@@ -49,7 +49,7 @@ switch.aeotec_zw132_dual_nano_switch_switch_7:
 switch.aeotec_zw132_dual_nano_switch_switch_8:
   friendly_name: Dresser spotlights
 
-switch.switch_9:
+switch.switch_15:
   friendly_name: Entrance, hallway and stairs
 
 switch.aeotec_zw132_dual_nano_switch_switch_9:
