@@ -2,29 +2,43 @@ lights_view:
   view: yes
   icon: mdi:lightbulb-on
   entities:
+    - group.bedroom_lights
     - group.upstairs_lights
     - group.living_area_lights
     - group.downstairs_lights
-    
+
+bedroom_lights:
+  name: Bedroom lights
+  entities: 
+    - switch.switch_14 # Bedroom lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_7 #Globes
+    - switch.aeotec_zw132_dual_nano_switch_switch_8 # Spotlights
+
 upstairs_lights:
   name: Upstairs lights
   entities:
-    - switch.switch_8
-    - switch.switch_6
-    - switch.switch_7
-    - switch.switch_5
-  
+    - switch.switch_5 # Hallway and stairs
+    - switch.aeotec_zw132_dual_nano_switch_switch_4 # Stairway
+    - switch.aeotec_zw132_dual_nano_switch_switch_3 # Hallway
+    - switch.switch_7 # Bathroom fan
+    - switch.switch_13 # Bathroom lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_6 # Shower downlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_5 # Bathroom spotlights
+
 downstairs_lights:
   name: Downstairs lights
   entities:
-    - switch.switch_9
-    - switch.switch_10
+    - switch.switch_9 # Downstairs lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_9 # Downstairs hallway
+    - switch.aeotec_zw132_dual_nano_switch_switch_10 # Entrance and stairs
+    - switch.switch_10 # Garage lights
 
 living_area_lights:
   name: Living area
   entities:
-    - light.level
-    - switch.aeotec_zw132_dual_nano_switch_switch_2
-    - switch.aeotec_zw132_dual_nano_switch_switch
-    - switch.switch
-    - switch.switch_4
+    - light.level # Living room lights
+    - switch.switch_11 # Kitchen lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_2 # Kitchen bench lamps
+    - switch.aeotec_zw132_dual_nano_switch_switch # Kitchen spotlights
+    - switch.switch # Dining room light
+    - switch.switch_4 # Deck lights

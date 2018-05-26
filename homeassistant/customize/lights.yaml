@@ -22,6 +22,12 @@ switch.switch_4:
 switch.switch_5: 
   friendly_name: Upstairs hallway and stairs
 
+switch.aeotec_zw132_dual_nano_switch_switch_4:
+  friendly_name: Upstairs stairway
+
+switch.aeotec_zw132_dual_nano_switch_switch_3:
+  friendly_name: Upstairs hallway
+
 switch.switch_13:
   friendly_name: Bathroom lights
 
@@ -38,16 +44,19 @@ switch.switch_14:
   friendly_name: Bedroom lights
 
 switch.aeotec_zw132_dual_nano_switch_switch_7:
-  friendly_name: Bed lights
+  friendly_name: Bed globes
 
 switch.aeotec_zw132_dual_nano_switch_switch_8:
   friendly_name: Dresser spotlights
 
 switch.switch_9:
-  friendly_name: Downstairs hallway and stairs
+  friendly_name: Entrance, hallway and stairs
 
-zwave.aeotec_zw116_nano_switch_4:
-  friendly_name: Garage lights
+switch.aeotec_zw132_dual_nano_switch_switch_9:
+  friendly_name: Downstairs hallway
+ 
+switch.aeotec_zw132_dual_nano_switch_switch_10:
+  friendly_name: Entrance and stairs
 
 switch.switch_10:
   friendly_name: Garage lights
