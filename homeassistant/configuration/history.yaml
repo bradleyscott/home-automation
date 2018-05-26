@@ -10,11 +10,11 @@ include:
     - binary_sensor.aeotec_zw100_multisensor_6_sensor # Motion sensor
     - binary_sensor.front_door_doorbell_motion
     - binary_sensor.front_door_doorbell_ding
-    - binary_sensor.front_door_doorbell_online	
+    - binary_sensor.front_door_doorbell_online
     - binary_sensor.front_door_open
     - binary_sensor.home_occupied
     - binary_sensor.internet_connection
-    - binary_sensor.living_room_nest_protect_online	
+    - binary_sensor.living_room_nest_protect_online
     - climate.living_room_heat_pump
     - cover.garage_door
     - device_tracker.galaxya82018 # Nirupa
@@ -27,8 +27,8 @@ include:
     - light.level # Living room lights
     - lock.front_door
     - sensor.aeotec_zw100_multisensor_6_luminance
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity	
-    - sensor.aeotec_zw100_multisensor_6_temperature	
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity
+    - sensor.aeotec_zw100_multisensor_6_temperature
     - sensor.aeotec_zw132_dual_nano_switch_power_16
     - sensor.aeotec_zw132_dual_nano_switch_power_17
     - sensor.aeotec_zw132_dual_nano_switch_power_18
@@ -54,7 +54,7 @@ include:
     - sensor.aeotec_zw132_dual_nano_switch_unknown_18
     - sensor.aeotec_zw132_dual_nano_switch_unknown_19
     - sensor.aeotec_zw132_dual_nano_switch_unknown_20
-    - sensor.entrance_phone_battery_level	
+    - sensor.entrance_phone_battery_level
     - sensor.entrance_phone_battery_temperature
     - sensor.entrance_phone_battery_voltage
     - sensor.entrance_phone_light_level
@@ -62,12 +62,12 @@ include:
     - sensor.garage_car_present
     - sensor.garage_status
     - sensor.living_room_nest_protect_battery_health
-    - sensor.living_room_nest_protect_co_status	
+    - sensor.living_room_nest_protect_co_status
     - sensor.living_room_nest_protect_smoke_status
-    - sensor.owm_condition	
+    - sensor.owm_condition
     - sensor.owm_forecast
     - sensor.owm_rain
-    - sensor.owm_temperature	
+    - sensor.owm_temperature
     - sensor.owm_wind_speed
     - switch.aeotec_zw132_dual_nano_switch_switch
     - switch.aeotec_zw132_dual_nano_switch_switch_10
