@@ -5,3 +5,89 @@ exclude:
     - zwave
     - zone
     - media_player
+include:
+  entities:
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor # Motion sensor
+    - binary_sensor.front_door_doorbell_motion
+    - binary_sensor.front_door_doorbell_ding
+    - binary_sensor.front_door_doorbell_online	
+    - binary_sensor.front_door_open
+    - binary_sensor.home_occupied
+    - binary_sensor.internet_connection
+    - binary_sensor.living_room_nest_protect_online	
+    - climate.living_room_heat_pump
+    - cover.garage_door
+    - device_tracker.galaxya82018 # Nirupa
+    - device_tracker.google_maps_115726181286227444765
+    - group.bathroom_lights
+    - group.bedroom_lights
+    - group.downstairs_lights
+    - group.living_area_lights
+    - group.upstairs_lights
+    - light.level # Living room lights
+    - lock.front_door
+    - sensor.aeotec_zw100_multisensor_6_luminance
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity	
+    - sensor.aeotec_zw100_multisensor_6_temperature	
+    - sensor.aeotec_zw132_dual_nano_switch_power_16
+    - sensor.aeotec_zw132_dual_nano_switch_power_17
+    - sensor.aeotec_zw132_dual_nano_switch_power_18
+    - sensor.aeotec_zw132_dual_nano_switch_power_19
+    - sensor.aeotec_zw132_dual_nano_switch_power_20
+    - sensor.aeotec_zw132_dual_nano_switch_power_21
+    - sensor.aeotec_zw132_dual_nano_switch_power_22
+    - sensor.aeotec_zw132_dual_nano_switch_power_23
+    - sensor.aeotec_zw132_dual_nano_switch_power_24
+    - sensor.aeotec_zw132_dual_nano_switch_power_25
+    - sensor.aeotec_zw132_dual_nano_switch_power_26
+    - sensor.aeotec_zw132_dual_nano_switch_power_27
+    - sensor.aeotec_zw132_dual_nano_switch_power_28
+    - sensor.aeotec_zw132_dual_nano_switch_power_29
+    - sensor.aeotec_zw132_dual_nano_switch_power_30
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_11
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_12
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_13
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_14
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_15
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_16
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_17
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_18
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_19
+    - sensor.aeotec_zw132_dual_nano_switch_unknown_20
+    - sensor.entrance_phone_battery_level	
+    - sensor.entrance_phone_battery_temperature
+    - sensor.entrance_phone_battery_voltage
+    - sensor.entrance_phone_light_level
+    - sensor.entrance_phone_motion
+    - sensor.garage_car_present
+    - sensor.garage_status
+    - sensor.living_room_nest_protect_battery_health
+    - sensor.living_room_nest_protect_co_status	
+    - sensor.living_room_nest_protect_smoke_status
+    - sensor.owm_condition	
+    - sensor.owm_forecast
+    - sensor.owm_rain
+    - sensor.owm_temperature	
+    - sensor.owm_wind_speed
+    - switch.aeotec_zw132_dual_nano_switch_switch
+    - switch.aeotec_zw132_dual_nano_switch_switch_10
+    - switch.aeotec_zw132_dual_nano_switch_switch_2
+    - switch.aeotec_zw132_dual_nano_switch_switch_3
+    - switch.aeotec_zw132_dual_nano_switch_switch_4
+    - switch.aeotec_zw132_dual_nano_switch_switch_5
+    - switch.aeotec_zw132_dual_nano_switch_switch_6
+    - switch.aeotec_zw132_dual_nano_switch_switch_7
+    - switch.aeotec_zw132_dual_nano_switch_switch_8
+    - switch.aeotec_zw132_dual_nano_switch_switch_9
+    - switch.entrance_phone_video_recording
+    - switch.smart_switch
+    - switch.switch
+    - switch.switch_10
+    - switch.switch_11
+    - switch.switch_12
+    - switch.switch_13
+    - switch.switch_14
+    - switch.switch_15
+    - switch.switch_3
+    - switch.switch_4
+    - switch.switch_7
