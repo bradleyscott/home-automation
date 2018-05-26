@@ -26,14 +26,14 @@ bathroom_lights:
 upstairs_lights:
   name: Upstairs
   entities:
-    - switch.switch_5 # Hallway and stairs
+    - switch.switch_12 # Hallway and stairs
     - switch.aeotec_zw132_dual_nano_switch_switch_4 # Stairway
     - switch.aeotec_zw132_dual_nano_switch_switch_3 # Hallway
 
 downstairs_lights:
   name: Downstairs
   entities:
-    - switch.switch_9 # Downstairs lights
+    - switch.switch_15 # Downstairs lights
     - switch.aeotec_zw132_dual_nano_switch_switch_9 # Downstairs hallway
     - switch.aeotec_zw132_dual_nano_switch_switch_10 # Entrance and stairs
     - switch.switch_10 # Garage lights
