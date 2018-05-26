@@ -2,17 +2,17 @@ google_actions:
   filter:
     include_entities:
       - lock.front_door
-      - switch.switch
-      - switch.switch_2
-      - switch.switch_3
-      - switch.switch_4
-      - switch.switch_5
-      - switch.switch_6
-      - switch.switch_7
-      - switch.switch_8
-      - switch.switch_9
-      - switch.switch_10
-
+      - cover.garage_door
+      - switch.switch_16 # Bedroom lights
+      - switch.switch_7 # Bathroom fan
+      - switch.switch_13 # Bathroom lights
+      - switch.switch_12 # Hallway and stairs
+      - switch.switch_15 # Downstairs lights
+      - switch.switch_10 # Garage lights
+      - light.level # Living room lights
+      - switch.switch_11 # Kitchen lights
+      - switch.switch # Dining room light
+      - switch.switch_4 # Deck lights
     include_domains:
       - cover
       - lock
