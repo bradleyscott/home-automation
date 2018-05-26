@@ -1,8 +1,6 @@
 google_actions:
   filter:
     include_entities:
-      - lock.front_door
-      - cover.garage_door
       - switch.switch_16 # Bedroom lights
       - switch.switch_7 # Bathroom fan
       - switch.switch_13 # Bathroom lights
@@ -17,4 +15,3 @@ google_actions:
       - cover
       - lock
       - climate
-      - switch
