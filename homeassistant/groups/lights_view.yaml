@@ -11,9 +11,9 @@ lights_view:
 bedroom_lights:
   name: Bedroom
   entities: 
-    - switch.switch_14 # Bedroom lights
-    - switch.aeotec_zw132_dual_nano_switch_switch_7 #Globes
-    - switch.aeotec_zw132_dual_nano_switch_switch_8 # Spotlights
+    - switch.switch_16 # Bedroom lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_12 #Globes
+    - switch.aeotec_zw132_dual_nano_switch_switch_11 # Spotlights
 
 bathroom_lights:
   name: Bathroom 

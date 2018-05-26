@@ -40,13 +40,13 @@ switch.aeotec_zw132_dual_nano_switch_switch_5:
 switch.switch_7:
   friendly_name: Bathroom fan
 
-switch.switch_14:
+switch.switch_16:
   friendly_name: Bedroom lights
 
-switch.aeotec_zw132_dual_nano_switch_switch_7:
+switch.aeotec_zw132_dual_nano_switch_switch_11:
   friendly_name: Bed globes
 
-switch.aeotec_zw132_dual_nano_switch_switch_8:
+switch.aeotec_zw132_dual_nano_switch_switch_12:
   friendly_name: Dresser spotlights
 
 switch.switch_15:
