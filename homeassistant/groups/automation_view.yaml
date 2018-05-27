@@ -17,6 +17,12 @@ climate_automation:
     - automation.notify_if_switch_on
     - automation.turn_off_switch_when_leaving
 
+lights_automation:
+  name: Lights
+  entities:
+    - automation.upstairs_lights_on
+    - automation.upstairs_lights_off
+    
 security_automation:
   name: Security
   entities:

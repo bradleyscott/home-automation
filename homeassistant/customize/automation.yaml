@@ -51,3 +51,9 @@ automation.show_doorbell_camera:
 
 automation.hide_doorbell_camera:
   friendly_name: Hide doorbell cam if no movement
+
+automation.upstairs_lights_on:
+  friendly_name: Turn on upstairs lights on motion
+
+automation.upstairs_lights_off:
+  friendly_name: Turn off upstairs light when vacant
