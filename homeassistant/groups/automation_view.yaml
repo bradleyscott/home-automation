@@ -4,6 +4,7 @@ automation_view:
   entities: 
     - group.climate_automation
     - group.security_automation
+    - group.lights_automation
     - group.alarm_automation
     - group.nest_automation
     - group.visibility_automation
@@ -22,7 +23,7 @@ lights_automation:
   entities:
     - automation.upstairs_lights_on
     - automation.upstairs_lights_off
-    
+
 security_automation:
   name: Security
   entities:
