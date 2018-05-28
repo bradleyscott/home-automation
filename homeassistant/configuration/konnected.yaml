@@ -1,6 +1,6 @@
 access_token: !secret konnected_token
 devices:
-  - id: 18fe34e88a5F
+  - id: 18fe34e88a5f
     switches:
       - pin: 5
         name: 'Siren'
