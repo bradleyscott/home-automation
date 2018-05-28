@@ -1,0 +1,20 @@
+alias: garage_lights_on
+trigger:
+  - platform: state
+    entity_id: cover.garage_door
+    to: 'open'
+condition:
+  - condition: numeric_state
+    entity_id: sensor.aeotec_zw100_multisensor_6_luminance
+    below: 50
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.switch_10
+  - service: switch.turn_on
+    data:
+      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_9
+  - service: switch.turn_on
+    data:
+      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_10
+     

@@ -23,6 +23,8 @@ lights_automation:
   entities:
     - automation.upstairs_lights_on
     - automation.upstairs_lights_off
+    - automation.garage_lights_on
+    - automation.all_lights_off_at_sunrise
 
 security_automation:
   name: Security

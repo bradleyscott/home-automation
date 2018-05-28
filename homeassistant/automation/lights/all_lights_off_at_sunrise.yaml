@@ -1,0 +1,9 @@
+alias: all_lights_off_at_sunrise
+trigger:
+  - platform: sun
+    event: sunrise
+    offset: '00:30:00'
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: group.all_lights
