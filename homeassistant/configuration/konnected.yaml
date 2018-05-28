@@ -1,11 +1,11 @@
-auth_token: !secret konnected_token
+access_token: !secret konnected_token
 devices:
   - id: 18fe34e88a5F
-    actuators:
+    switches:
       - pin: 5
         name: 'Siren'
         activation: low
-    sensors:
+    binary_sensors:
       - pin: 1
         type: motion
         name: 'Entrance'
