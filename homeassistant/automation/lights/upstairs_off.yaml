@@ -3,11 +3,11 @@ trigger:
   - platform: state
     entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
     to: 'off'
-condition:
-  - condition: state
-    entity_id: switch.switch_5
-    state: 'on'
 action:
   - service: switch.turn_off
     data:
-      entity_id: switch.switch_5
+      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_3
+  - service: switch.turn_off
+    data:
+      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_4
+     
