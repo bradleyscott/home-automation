@@ -40,6 +40,7 @@ alarm:
     - binary_sensor.entrance
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor
     - script.panic_button
 
 nest:
