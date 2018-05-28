@@ -12,6 +12,6 @@ devices:
       - pin: 2
         type: motion
         name: 'Guest bedroom'
-      - pin: 3
+      - pin: 5
         type: motion
         name: 'Living room'
