@@ -2,13 +2,13 @@ climate_view:
   view: yes
   icon: mdi:temperature-celsius
   entities:
-    - group.climate_automation
+    - group.climate_scripts
     - group.upstairs
     - group.living_area
     - group.weather
     - weather.openweathermap
 
-climate_automation:
+climate_scripts:
   name: Automation
   entities: 
     - script.get_house_ready
