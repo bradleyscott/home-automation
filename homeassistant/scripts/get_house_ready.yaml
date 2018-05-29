@@ -1,0 +1,27 @@
+get_house_ready:
+  alias: I'm coming home. Get the house ready
+  sequence:
+    - alias: Set Living room heatpump mode
+      service: climate.set_operation_mode
+      entity_id: climate.living_room_heat_pump      
+      data:
+        operation_mode: >-
+          {% if states('sensor.owm_temperature') | float > 25 %}
+            'cool'
+          {% elif states('sensor.owm_temperature') | float < 20 %}
+            'heat'
+          {%- else -%}
+            'off'
+          {%- endif %}
+    - alias: Set bedroom heatpump mode
+      service: climate.set_operation_mode
+      entity_id: climate.bedroom_heat_pump      
+      data:
+        operation_mode: >-
+          {% if states('sensor.owm_temperature') | float > 25 %}
+            'cool'
+          {% elif states('sensor.owm_temperature') | float < 20 %}
+            'heat'
+          {%- else -%}
+            'off'
+          {%- endif %}
