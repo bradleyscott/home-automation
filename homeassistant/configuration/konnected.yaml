@@ -4,7 +4,7 @@ devices:
     switches:
       - pin: 5
         name: 'Siren'
-        activation: low
+        activation: high
     binary_sensors:
       - pin: 1
         type: motion
