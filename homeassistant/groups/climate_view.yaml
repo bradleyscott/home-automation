@@ -2,6 +2,7 @@ climate_view:
   view: yes
   icon: mdi:temperature-celsius
   entities:
+    - script.get_house_ready
     - group.upstairs
     - group.living_area
     - group.weather
