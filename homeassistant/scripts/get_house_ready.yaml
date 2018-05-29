@@ -6,9 +6,9 @@ get_house_ready:
       entity_id: climate.living_room_heat_pump      
       data:
         operation_mode: >-
-          {% if states('sensor.owm_temperature') | float > 25 %}
+          {% if states('sensor.aeotec_zw100_multisensor_6_temperature') | float > 25 %}
             'cool'
-          {% elif states('sensor.owm_temperature') | float < 20 %}
+          {% elif states('sensor.aeotec_zw100_multisensor_6_temperature') | float < 20 %}
             'heat'
           {%- else -%}
             'off'
@@ -18,9 +18,9 @@ get_house_ready:
       entity_id: climate.bedroom_heat_pump      
       data:
         operation_mode: >-
-          {% if states('sensor.owm_temperature') | float > 25 %}
+          {% if states('sensor.aeotec_zw100_multisensor_6_temperature') | float > 25 %}
             'cool'
-          {% elif states('sensor.owm_temperature') | float < 20 %}
+          {% elif states('sensor.aeotec_zw100_multisensor_6_temperature') | float < 20 %}
             'heat'
           {%- else -%}
             'off'
