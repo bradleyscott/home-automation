@@ -2,7 +2,7 @@ access_token: !secret konnected_token
 devices:
   - id: 18fe34e88a5f
     switches:
-      - pin: 5
+      - pin: 6
         name: 'Siren'
         activation: high
     binary_sensors:
