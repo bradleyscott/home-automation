@@ -5,8 +5,9 @@ trigger:
     to: 'open'
 condition:
   - condition: numeric_state
-    entity_id: sensor.aeotec_zw100_multisensor_6_luminance
-    below: 50
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: -6
 action:
   - service: switch.turn_on
     data:
