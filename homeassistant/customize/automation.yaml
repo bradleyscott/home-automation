@@ -65,4 +65,4 @@ automation.all_lights_off_at_sunrise:
   friendly_name: After sunrise, turn all lights off
 
 script.get_house_ready:
-  icon: mdi.home-map-marker
+  icon: mdi:home-map-marker
