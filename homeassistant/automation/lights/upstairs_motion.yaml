@@ -1,10 +1,7 @@
-alias: downstairs_lights_on
+alias: upstairs_motion
 trigger:
   - platform: state
-    entity_id: binary_sensor.front_door_open
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.entrance
+    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
     to: 'on'
 condition:
   - condition: numeric_state
@@ -14,5 +11,5 @@ condition:
 action:
   - service: script.turn_on
     data:
-      entity_id: script.downstairs_lights_on
+      entity_id: script.upstairs_lights_on
      

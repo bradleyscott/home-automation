@@ -21,11 +21,13 @@ climate_automation:
 lights_automation:
   name: Lights
   entities:
-    - automation.upstairs_lights_on
-    - automation.upstairs_lights_off
+    - automation.upstairs_motion
+    - automation.upstairs_vacant
+    - automation.living_motion
+    - automation.living_vacant
+    - automation.downstairs_motion
+    - automation.downstairs_vacant
     - automation.garage_lights_on
-    - automation.downstairs_lights_on
-    - automation.downstairs_lights_off
     - automation.all_lights_off_at_sunrise
 
 security_automation:

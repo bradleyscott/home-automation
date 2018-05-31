@@ -52,10 +52,10 @@ automation.show_doorbell_camera:
 automation.hide_doorbell_camera:
   friendly_name: Hide doorbell cam if no movement
 
-automation.upstairs_lights_on:
+automation.upstairs_motion:
   friendly_name: Turn on upstairs lights on motion
 
-automation.upstairs_lights_off:
+automation.upstairs_vacant:
   friendly_name: Turn off upstairs light when vacant
 
 automation.garage_lights_on:
@@ -67,8 +67,14 @@ automation.all_lights_off_at_sunrise:
 script.get_house_ready:
   icon: mdi:home-map-marker
 
-automation.downstairs_lights_on:
+automation.downstairs_motion:
   friendly_name: Turn on downstairs lights on motion and door
 
-automation.downstairs_lights_off:
+automation.downstairs_vacant:
   friendly_name: Turn off downstairs light when vacant
+
+automation.living_motion:
+  friendly_name: Turn stair lights on on living room motion
+
+automation.living_vacant:
+  friendly_name: Turn stair lights off when living room vacant

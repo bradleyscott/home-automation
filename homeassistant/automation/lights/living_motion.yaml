@@ -1,7 +1,7 @@
-alias: upstairs_lights_on
+alias: living_motion
 trigger:
   - platform: state
-    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
+    entity_id: binary_sensor.living_room
     to: 'on'
 condition:
   - condition: numeric_state
@@ -9,7 +9,7 @@ condition:
     value_template: '{{ state.attributes.elevation }}'
     below: -6
 action:
-  - service: script.turn_on
+  - service: switch.turn_on
     data:
-      entity_id: script.upstairs_lights_on
+      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_4 # Stairs
      

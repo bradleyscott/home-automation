@@ -1,4 +1,4 @@
-alias: downstairs_lights_off
+alias: downstairs_vacant
 trigger:
   - platform: state
     entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor

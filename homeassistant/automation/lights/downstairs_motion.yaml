@@ -1,0 +1,18 @@
+alias: downstairs_motion
+trigger:
+  - platform: state
+    entity_id: binary_sensor.front_door_open
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.entrance
+    to: 'on'
+condition:
+  - condition: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: -6
+action:
+  - service: script.turn_on
+    data:
+      entity_id: script.downstairs_lights_on
+     
