@@ -29,7 +29,6 @@ lights_automation:
     - automation.downstairs_vacant
     - automation.garage_lights_on
     - automation.all_lights_off_at_sunrise
-    - automation.notify_on_arrival
 
 security_automation:
   name: Security
@@ -37,6 +36,7 @@ security_automation:
     - automation.notify_if_insecure_when_late
     - automation.notify_if_insecure_when_leaving
     - automation.notify_if_doors_open
+    - automation.notify_on_arrival
 
 alarm_automation:
   name: Burglar alarm

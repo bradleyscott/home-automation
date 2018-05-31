@@ -13,11 +13,10 @@ condition:
     entity_id: cover.garage_door
     state: 'closed'
 action:
-  - service: notify.html5
+  - service: notify.html5_unnamed_device_2 # B's Pixel 2
     data_template:
       title: Welcome home
       message: The garage is empty and Nirupa isn't home
-      target: unnamed_device_2 # B's Pixel 2
       data: 
         url: https://williamson-ave.duckdns.org
         actions: 
