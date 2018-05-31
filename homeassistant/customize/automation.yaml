@@ -66,3 +66,9 @@ automation.all_lights_off_at_sunrise:
 
 script.get_house_ready:
   icon: mdi:home-map-marker
+
+automation.downstairs_lights_on:
+  friendly_name: Turn on downstairs lights on motion and door
+
+automation.downstairs_lights_off:
+  friendly_name: Turn off downstairs light when vacant

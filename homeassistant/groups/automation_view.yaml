@@ -24,6 +24,8 @@ lights_automation:
     - automation.upstairs_lights_on
     - automation.upstairs_lights_off
     - automation.garage_lights_on
+    - automation.downstairs_lights_on
+    - automation.downstairs_lights_off
     - automation.all_lights_off_at_sunrise
 
 security_automation:

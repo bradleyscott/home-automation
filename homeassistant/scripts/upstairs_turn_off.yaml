@@ -1,0 +1,11 @@
+upstairs_lights_off:
+  alias: Turn upstairs lights off
+  sequence:
+    - alias: Turn off hallway lights
+      service: switch.turn_off
+      data:
+        entity_id: switch.aeotec_zw132_dual_nano_switch_switch_3 # Hallway
+    - alias: Turn off stairs
+      service: switch.turn_off
+      data:
+        entity_id: switch.aeotec_zw132_dual_nano_switch_switch_4 # Stairs
