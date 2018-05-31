@@ -1,0 +1,31 @@
+notify_subscribers:
+  alias: Notify subscribers by Push notification
+  sequence:
+    - alias: Send push notification
+      service: notify.html5
+      data_template:
+        title: "{{ title }}"
+        message: "{{ message }}"
+        data:
+          url: https://williamson-ave.duckdns.org
+
+notify_on_alarm:
+  alias: Notify on alarm
+  sequence:
+  - alias: Send push notification
+    service: script.turn_on
+    entity_id: script.notify_subscribers
+    data_template:
+      variables: 
+        title: Alarm triggered at Williamson Ave
+        message: "{{ trigger }} has triggered the alarm"
+        
+panic_button:
+  alias: Panic button
+  sequence:
+  - alias: Notify subscribers
+    service: script.turn_on
+    entity_id: script.notify_on_alarm
+    data: 
+      variables:
+        trigger: The Panic button
