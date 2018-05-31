@@ -78,3 +78,6 @@ automation.living_motion:
 
 automation.living_vacant:
   friendly_name: Turn stair lights off when living room vacant
+
+automation.notify_on_arrival:
+  friendly_name: Notify on arrival with option to open garage

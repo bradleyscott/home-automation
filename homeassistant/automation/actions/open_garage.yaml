@@ -1,0 +1,9 @@
+alias: notify_action_open_garage
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: open_garage
+action:
+  - service: cover.open_cover
+    entity_id: cover.garage_door
