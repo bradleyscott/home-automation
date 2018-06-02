@@ -12,6 +12,9 @@ condition:
   - condition: state
     entity_id: cover.garage_door
     state: 'closed'
+  - condition: state
+    entity_id: sensor.garage_car_present
+    state: 'No'
 action:
   - service: notify.html5_unnamed_device_2 # B's Pixel 2
     data_template:
