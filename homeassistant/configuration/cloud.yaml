@@ -1,14 +1,17 @@
 google_actions:
   filter:
     include_entities:
-      - switch.switch_16 # Bedroom lights
+      - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bedroom globes
+      - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bedroom spotlights
       - switch.switch_7 # Bathroom fan
-      - switch.switch_13 # Bathroom lights
-      - switch.switch_12 # Hallway and stairs
-      - switch.switch_15 # Downstairs lights
+      - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlight
+      - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlight
+      - switch.aeotec_zw132_dual_nano_switch_switch_15 # Upstairs hallway
+      - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs stairway
+      - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
+      - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
       - switch.switch_10 # Garage lights
       - light.level # Living room lights
-      - switch.switch_11 # Kitchen lights
       - switch.switch # Dining room light
       - switch.switch_4 # Deck lights
     include_domains:
