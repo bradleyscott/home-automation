@@ -265,3 +265,11 @@ diemrssv_walleye:
   name: Bradley
   picture: https://lh3.googleusercontent.com/-pTsbC6CliEM/AAAAAAAAAAI/AAAAAAAAsmA/hUx7kYrFmsU/photo.jpg
   track: true
+
+ccb8a8aca910:
+  hide_if_away: true
+  icon:
+  mac: CC:B8:A8:AC:A9:10
+  name: August doorbell
+  picture:
+  track: false
