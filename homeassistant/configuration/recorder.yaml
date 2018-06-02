@@ -6,12 +6,15 @@ include:
     - media_player
   entities:
     - binary_sensor.aeotec_zw100_multisensor_6_sensor # Motion sensor
+    - binary_sensor.entrance
     - binary_sensor.front_door_doorbell_motion
     - binary_sensor.front_door_doorbell_ding
     - binary_sensor.front_door_doorbell_online
     - binary_sensor.front_door_open
+    - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
     - binary_sensor.internet_connection
+    - binary_sensor.living_room
     - binary_sensor.living_room_nest_protect_online
     - climate.living_room_heat_pump
     - climate.bedroom_heat_pump
@@ -44,6 +47,7 @@ include:
     - sensor.owm_wind_speed
     - switch.entrance_phone_video_recording
     - switch.smart_switch
+    - switch.siren # Alarm siren
     - light.level # Living room lights
     - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bedroom globes
     - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bedroom spotlights
