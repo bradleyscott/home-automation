@@ -1,4 +1,4 @@
-switch.switch:
+switch.aeotec_zw116_nano_switch_switch:
   friendly_name: Dining room light
 
 switch.aeotec_zw132_dual_nano_switch_switch_19:
@@ -10,7 +10,7 @@ switch.aeotec_zw132_dual_nano_switch_switch_20:
 light.level:
   friendly_name: Living room lights
 
-switch.switch_4:
+switch.aeotec_zw116_nano_switch_switch_2:
   friendly_name: Deck lights
 
 switch.aeotec_zw132_dual_nano_switch_switch_16:
@@ -40,7 +40,7 @@ switch.aeotec_zw132_dual_nano_switch_switch_21:
 switch.aeotec_zw132_dual_nano_switch_switch_22:
   friendly_name: Entrance and stairs
 
-switch.switch_10:
+switch.aeotec_zw116_nano_switch_switch_3:
   friendly_name: Garage lights
 
 switch.aeotec_zw132_dual_nano_switch_switch_23: 

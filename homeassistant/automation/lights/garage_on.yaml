@@ -11,7 +11,7 @@ condition:
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.switch_10 # Garage
+      entity_id: switch.aeotec_zw116_nano_switch_switch_3 # Garage
   - service: script.turn_on
     entity_id: script.downstairs_lights_on
      

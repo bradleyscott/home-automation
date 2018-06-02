@@ -32,7 +32,7 @@ downstairs_lights:
   entities:
     - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
     - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
-    - switch.switch_10 # Garage lights
+    - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
 
 living_area_lights:
   name: Living area
@@ -40,5 +40,5 @@ living_area_lights:
     - light.level # Living room lights
     - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
     - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
-    - switch.switch # Dining room light
-    - switch.switch_4 # Deck lights
+    - switch.aeotec_zw116_nano_switch_switch # Dining room light
+    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
