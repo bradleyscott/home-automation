@@ -37,7 +37,7 @@ switch.aeotec_zw132_dual_nano_switch_switch_14:
 switch.aeotec_zw132_dual_nano_switch_switch_21:
   friendly_name: Downstairs hallway
  
- switch.aeotec_zw132_dual_nano_switch_switch_22:
+switch.aeotec_zw132_dual_nano_switch_switch_22:
   friendly_name: Entrance and stairs
 
 switch.switch_10:
