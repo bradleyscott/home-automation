@@ -6,7 +6,7 @@ default_view:
     - group.alarm
     - group.doorbell_camera
     - group.entrance_camera
-    - device_tracker.google_maps_115726181286227444765
+    - device_tracker.diemrssv_walleye
     - device_tracker.galaxya82018
     - device_tracker.ac3743a35306
     - device_tracker.allynayrsiphone
