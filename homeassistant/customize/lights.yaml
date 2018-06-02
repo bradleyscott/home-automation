@@ -42,3 +42,18 @@ switch.aeotec_zw132_dual_nano_switch_switch_22:
 
 switch.switch_10:
   friendly_name: Garage lights
+
+switch.aeotec_zw132_dual_nano_switch_switch_23: 
+  friendly_name: Bedroom lights
+
+switch.aeotec_zw132_dual_nano_switch_switch_24:
+  friendly_name: Upstairs lights
+
+switch.aeotec_zw132_dual_nano_switch_switch_25:
+  friendly_name: Bathroom lights
+
+switch.aeotec_zw132_dual_nano_switch_switch_26:
+  friendly_name: Kitchen lights
+
+switch.aeotec_zw132_dual_nano_switch_switch_27: 
+  friendly_name: Downstairs lights

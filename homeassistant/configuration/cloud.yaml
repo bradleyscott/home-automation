@@ -14,6 +14,11 @@ google_actions:
       - light.level # Living room lights
       - switch.switch # Dining room light
       - switch.switch_4 # Deck lights
+      - switch.aeotec_zw132_dual_nano_switch_switch_23 # Bedroom lights
+      - switch.aeotec_zw132_dual_nano_switch_switch_24 # Upstairs lights
+      - switch.aeotec_zw132_dual_nano_switch_switch_25 # Bathroom lights
+      - switch.aeotec_zw132_dual_nano_switch_switch_26 # Kitchen lights
+      - switch.aeotec_zw132_dual_nano_switch_switch_27 # Downstairs lights
     include_domains:
       - cover
       - lock
