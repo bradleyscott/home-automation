@@ -120,7 +120,7 @@ konnected: !include configuration/konnected.yaml
 nest: !include configuration/nest.yaml
 android_ip_webcam: !include configuration/android_ip_webcam.yaml
 cloud: !include configuration/cloud.yaml
-
+recorder: !include configuration/recorder.yaml
 group: !include_dir_merge_named groups
 automation: !include_dir_list automation
 script: !include_dir_merge_named scripts
