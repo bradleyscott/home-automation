@@ -104,6 +104,3 @@ services:
     container_name: intesis_mqtt
     network_mode: "host"
     restart: unless-stopped
-    volumes:
-      - ./intesis_mqtt/config/default.json:/intesis_mqtt/config/default.json
-  
