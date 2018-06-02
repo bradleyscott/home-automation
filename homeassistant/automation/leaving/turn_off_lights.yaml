@@ -1,0 +1,11 @@
+alias: turn_off_lights_when_leaving
+trigger:
+  - platform: state
+    entity_id: binary_sensor.home_occupied
+    to: 'off'
+    for: 
+      minutes: 2
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: group.all_lights

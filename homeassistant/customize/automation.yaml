@@ -81,3 +81,6 @@ automation.living_vacant:
 
 automation.notify_on_arrival:
   friendly_name: Notify on arrival with option to open garage
+
+automation.turn_off_lights_when_leaving:
+  friendly_name: Turn off all lights when leaving

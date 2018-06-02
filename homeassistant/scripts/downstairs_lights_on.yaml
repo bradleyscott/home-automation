@@ -4,8 +4,8 @@ downstairs_lights_on:
     - alias: Turn on hallway lights
       service: switch.turn_on
       data:
-        entity_id: switch.aeotec_zw132_dual_nano_switch_switch_9 # Hallway
+        entity_id: switch.aeotec_zw132_dual_nano_switch_switch_21 # Hallway
     - alias: Turn on entrance and stairs
       service: switch.turn_on
       data:
-        entity_id: switch.aeotec_zw132_dual_nano_switch_switch_10 # Entrance and stairs
+        entity_id: switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs

@@ -24,36 +24,10 @@ include:
     - group.downstairs_lights
     - group.living_area_lights
     - group.upstairs_lights
-    - light.level # Living room lights
     - lock.front_door
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
     - sensor.aeotec_zw100_multisensor_6_temperature
-    - sensor.aeotec_zw132_dual_nano_switch_power_16
-    - sensor.aeotec_zw132_dual_nano_switch_power_17
-    - sensor.aeotec_zw132_dual_nano_switch_power_18
-    - sensor.aeotec_zw132_dual_nano_switch_power_19
-    - sensor.aeotec_zw132_dual_nano_switch_power_20
-    - sensor.aeotec_zw132_dual_nano_switch_power_21
-    - sensor.aeotec_zw132_dual_nano_switch_power_22
-    - sensor.aeotec_zw132_dual_nano_switch_power_23
-    - sensor.aeotec_zw132_dual_nano_switch_power_24
-    - sensor.aeotec_zw132_dual_nano_switch_power_25
-    - sensor.aeotec_zw132_dual_nano_switch_power_26
-    - sensor.aeotec_zw132_dual_nano_switch_power_27
-    - sensor.aeotec_zw132_dual_nano_switch_power_28
-    - sensor.aeotec_zw132_dual_nano_switch_power_29
-    - sensor.aeotec_zw132_dual_nano_switch_power_30
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_11
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_12
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_13
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_14
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_15
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_16
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_17
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_18
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_19
-    - sensor.aeotec_zw132_dual_nano_switch_unknown_20
     - sensor.entrance_phone_battery_level
     - sensor.entrance_phone_battery_temperature
     - sensor.entrance_phone_battery_voltage
@@ -69,25 +43,20 @@ include:
     - sensor.owm_rain
     - sensor.owm_temperature
     - sensor.owm_wind_speed
-    - switch.aeotec_zw132_dual_nano_switch_switch
-    - switch.aeotec_zw132_dual_nano_switch_switch_10
-    - switch.aeotec_zw132_dual_nano_switch_switch_2
-    - switch.aeotec_zw132_dual_nano_switch_switch_3
-    - switch.aeotec_zw132_dual_nano_switch_switch_4
-    - switch.aeotec_zw132_dual_nano_switch_switch_5
-    - switch.aeotec_zw132_dual_nano_switch_switch_6
-    - switch.aeotec_zw132_dual_nano_switch_switch_7
-    - switch.aeotec_zw132_dual_nano_switch_switch_8
-    - switch.aeotec_zw132_dual_nano_switch_switch_9
     - switch.entrance_phone_video_recording
     - switch.smart_switch
-    - switch.switch
-    - switch.switch_10
-    - switch.switch_11
-    - switch.switch_12
-    - switch.switch_13
-    - switch.switch_14
-    - switch.switch_15
-    - switch.switch_3
-    - switch.switch_4
-    - switch.switch_7
+    - light.level # Living room lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bedroom globes
+    - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bedroom spotlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
+    - switch.aeotec_zw132_dual_nano_switch_switch_15 # Upstairs hallway
+    - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs stairway
+    - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
+    - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
+    - switch.switch # Dining room light
+    - switch.switch_10 # Garage lights
+    - switch.switch_4 # Deck lights
+    - switch.switch_7 # Bathroom fan

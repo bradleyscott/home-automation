@@ -11,5 +11,5 @@ condition:
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_4 # Stairs
+      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_16 # Stairs
      
