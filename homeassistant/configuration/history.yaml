@@ -16,6 +16,7 @@ include:
     - binary_sensor.internet_connection
     - binary_sensor.living_room_nest_protect_online
     - climate.living_room_heat_pump
+    - climate.bedroom_heat_pump
     - cover.garage_door
     - device_tracker.galaxya82018 # Nirupa
     - device_tracker.diemrssv_walleye # Bradley
