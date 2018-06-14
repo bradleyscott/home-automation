@@ -3,6 +3,8 @@ trigger:
   - platform: state
     entity_id: binary_sensor.living_room
     to: 'off'
+    for:
+      minutes: 2
 condition:
   - condition: state
     entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
