@@ -1,7 +1,7 @@
 alias: notify_on_arrival
 trigger:
   - platform: state
-    entity_id: device_tracker.google_maps_115726181286227444765
+    entity_id: device_tracker.diemrssv_walleye
     to: 'home'
 condition:
   condition: and
