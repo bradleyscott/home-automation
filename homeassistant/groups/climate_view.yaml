@@ -10,6 +10,7 @@ climate_view:
 
 climate_scripts:
   name: Automation
+  control: hidden
   entities: 
     - script.get_house_ready
     - script.bedroom_heatpump_off_delayed

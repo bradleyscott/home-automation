@@ -90,3 +90,4 @@ automation.notify_if_bathroom_on:
 
 script.bedroom_heatpump_off_delayed:
   friendly_name: Turn the bedroom heatpump off in 30 mins
+  icon: mdi:av-timer
