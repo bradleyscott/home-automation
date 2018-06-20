@@ -1,0 +1,10 @@
+bedroom_heatpump_off_delayed:
+  alias: Turn off the heatpump in 30 minutes
+  sequence:
+    - alias: Delay for 30 minutes
+      delay: '00:00:30'
+    - alias: Turn off bedroom heatpump
+      service: climate.set_operation_mode
+      entity_id: climate.bedroom_heat_pump
+      data:
+        operation_mode: 'off'

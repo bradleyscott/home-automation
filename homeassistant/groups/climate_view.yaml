@@ -12,6 +12,7 @@ climate_scripts:
   name: Automation
   entities: 
     - script.get_house_ready
+    - script.bedroom_heatpump_off_delayed
 
 upstairs:
   name: Upstairs
