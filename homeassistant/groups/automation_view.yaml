@@ -30,6 +30,7 @@ lights_automation:
     - automation.garage_lights_on
     - automation.all_lights_off_at_sunrise
     - automation.turn_off_lights_when_leaving
+    - automation.notify_if_bathroom_on
 
 security_automation:
   name: Security

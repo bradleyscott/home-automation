@@ -1,0 +1,12 @@
+alias: notify_action_bathroom_off
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: bathroom_off
+action:
+  - service: switch.turn_off
+    entity_id: switch.switch_7 # Bathroom fan
+  - service: switch.turn_off
+    data:
+      entity_id: group.bathroom_lights

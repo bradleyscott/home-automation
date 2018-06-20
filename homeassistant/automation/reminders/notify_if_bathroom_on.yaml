@@ -1,0 +1,31 @@
+alias: notify_if_bathroom_on
+trigger:
+  - platform: time
+    minutes: /30
+    seconds: 0
+condition:
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: group.bathroom_lights
+    state: 'on'
+  - condition: state
+    entity_id: switch.switch_7 # Bathroom fan
+    state: 'on'
+action:
+  - service: notify.html5
+    data_template:
+      title: Bathroom fan or lights are on
+      message: >-
+        {% if is_state('group.bathroom_lights', 'on') and is_state('switch.switch_7', 'on') %}
+          Both the bathroom lights and fan are on. Don't forget to turn them off
+        {% elif is_state('group.bathroom_lights', 'on') %}
+          The bathroom lights are on. Don't forget to turn them off
+        {% else %}
+          The bathroom fan is on. Don't forget to turn it off
+        {% endif %}
+      data: 
+        url: https://williamson-ave.duckdns.org
+        actions: 
+        - title: Turn off 
+          action: bathroom_off
