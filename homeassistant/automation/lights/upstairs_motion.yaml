@@ -4,10 +4,15 @@ trigger:
     entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
     to: 'on'
 condition:
-  - condition: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    below: -6
+  condition: or
+  conditions:
+    - condition: numeric_state
+      entity_id: sensor.aeotec_zw100_multisensor_6_luminance
+      below: 50
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: -6
 action:
   - service: script.turn_on
     data:
