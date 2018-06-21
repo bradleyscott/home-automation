@@ -1,7 +1,7 @@
 alias: notify_if_bathroom_on
 trigger:
   - platform: time
-    minutes: /30
+    minutes: /45
     seconds: 0
 condition:
   condition: or
