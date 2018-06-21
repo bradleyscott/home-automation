@@ -1,13 +1,13 @@
 alias: bedroom_on_in_morning_if_cold
 trigger:
   - platform: time
-    at: '05:30:00'
+    at: '05:45:00'
 condition:
   condition: and
   conditions:
   - condition: numeric_state
-    entity_id: sensor.owm_temperature
-    below: '16'
+    entity_id: sensor.aeotec_zw100_multisensor_6_temperature
+    below: '17'
   - condition: state
     entity_id: binary_sensor.home_occupied
     state: 'on'
