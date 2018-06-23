@@ -10,7 +10,7 @@ devices:
       - pin: 1
         type: motion
         name: 'Entrance'
-      - pin: 5
+      - pin: 7
         type: motion
         name: 'Guest bedroom'
       - pin: 2
