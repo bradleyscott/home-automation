@@ -10,9 +10,9 @@ devices:
       - pin: 1
         type: motion
         name: 'Entrance'
-      - pin: 2
+      - pin: 5
         type: motion
         name: 'Guest bedroom'
-      - pin: 5
+      - pin: 2
         type: motion
         name: 'Living room'
