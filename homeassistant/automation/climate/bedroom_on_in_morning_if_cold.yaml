@@ -11,6 +11,13 @@ condition:
   - condition: state
     entity_id: binary_sensor.home_occupied
     state: 'on'
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
 action:
   - service: climate.set_operation_mode
     data:
