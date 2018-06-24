@@ -13,6 +13,11 @@ homeassistant/OZW*
 homeassistant/.wink.conf
 homeassistant/.august.conf
 homeassistant/entity_registry.yaml
+homeassistant/deps/*
+homeassistant/.cloud/*
+homeassistant/html5_push_registrations.conf
+homeassistant/nest.conf
+
 **/__pycache__/**
 unifi/*
 caddy/*
