@@ -22,7 +22,7 @@ condition:
   - condition: state
     entity_id: alarm_control_panel.alarm
     state: armed_away
-  - platform: state
+  - condition: state
     entity_id: group.all_devices
     to: 'not_home'
 action:
