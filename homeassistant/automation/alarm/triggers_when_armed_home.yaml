@@ -33,7 +33,7 @@ action:
             Movement at the entrance
           {% elif is_state('binary_sensor.guest_bedroom', 'on') %}
             Movement in the guest bedroom
-          {% elif is_state('binary_sensor.living_room', 'on' %}
+          {% else %}
             Movement in the living room
           {% endif %}
   - service: alarm_control_panel.alarm_trigger
