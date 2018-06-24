@@ -13,6 +13,6 @@ devices:
       - pin: 7
         type: motion
         name: 'Guest bedroom'
-      - pin: 2
+      - pin: 6
         type: motion
         name: 'Living room'
