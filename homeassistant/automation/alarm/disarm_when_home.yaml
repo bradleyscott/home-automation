@@ -3,6 +3,9 @@ trigger:
   - platform: state
     entity_id: group.all_devices
     to: 'home'
+    for:
+      minutes: 0
+      seconds: 30
 condition:
   - condition: state
     entity_id: alarm_control_panel.alarm

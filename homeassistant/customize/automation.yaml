@@ -1,14 +1,11 @@
-automation.trigger_on_door_when_home:
-  friendly_name: If Armed home, trigger when door or garage opens
-
-automation.trigger_on_motion_when_away:
-  friendly_name: If Armed away, trigger on motion
-
-automation.disarm_when_door_open:
-  friendly_name: If Armed away, disarm when door unlocks or opens
+automation.triggers_when_armed_away:
+  friendly_name: If Armed away, trigger on doors or motion
 
 automation.disarm_when_home:
   friendly_name: Disarm when returning home
+
+automation.triggers_when_armed_home:
+  friendly_name: If Armed home, trigger on doors or downstairs motion
 
 automation.notify_if_doors_open:
   friendly_name: Remind me that front doors are open

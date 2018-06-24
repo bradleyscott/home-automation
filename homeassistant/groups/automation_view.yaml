@@ -43,10 +43,9 @@ security_automation:
 alarm_automation:
   name: Burglar alarm
   entities:
-    - automation.disarm_when_door_open
     - automation.disarm_when_home
-    - automation.trigger_on_door_when_home
-    - automation.trigger_on_motion_when_away
+    - automation.triggers_when_armed_home
+    - automation.triggers_when_armed_away
 
 nest_automation:
   name: Smoke alarm
