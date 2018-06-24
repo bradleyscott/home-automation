@@ -24,7 +24,7 @@ condition:
     state: armed_away
   - condition: state
     entity_id: group.all_devices
-    to: 'not_home'
+    state: 'not_home'
 action:
   - service: script.turn_on
     entity_id: script.notify_on_alarm
