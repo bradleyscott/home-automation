@@ -1,7 +1,7 @@
  binary_sensor.aeotec_zw112_door_window_sensor_6_sensor:
   friendly_name: Left side deck door
   device_class: door
-
+  
 binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2:
   friendly_name: Right side deck door
   device_class: door
