@@ -31,7 +31,8 @@ doors:
     - sensor.garage_car_present
     - lock.front_door
     - binary_sensor.front_door_open
-    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor
+    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
+    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door
 
 alarm:
   name: Burglar alarm

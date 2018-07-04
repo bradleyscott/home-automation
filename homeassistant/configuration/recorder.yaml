@@ -8,6 +8,7 @@ include:
     - alarm_control_panel.alarm
     - binary_sensor.aeotec_zw100_multisensor_6_sensor # Motion sensor
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left side deck door
+    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right side deck door
     - binary_sensor.entrance
     - binary_sensor.front_door_doorbell_motion
     - binary_sensor.front_door_doorbell_ding
