@@ -254,7 +254,7 @@ galaxya82018:
   hide_if_away: false
   icon:
   mac: 68:5A:CF:CF:93:F9
-  name: Nirupa
+  name: Nirupa's Galaxy A8
   picture: https://lh3.googleusercontent.com/HejYlgKKEnjHz5mbrG0j71rNlQuwr3Op1QgfgWfmGhOpHvmF9HynZr4Oi0TDdvW4kAsToIOsyEljYpk=s3456-rw-no
   track: true
 
@@ -273,3 +273,11 @@ ccb8a8aca910:
   name: August doorbell
   picture:
   track: false
+
+diemrssv_jackpotlte:
+  hide_if_away: true
+  icon:
+  mac:
+  name: NIrupa
+  picture: https://lh3.googleusercontent.com/HejYlgKKEnjHz5mbrG0j71rNlQuwr3Op1QgfgWfmGhOpHvmF9HynZr4Oi0TDdvW4kAsToIOsyEljYpk=s3456-rw-no
+  track: true

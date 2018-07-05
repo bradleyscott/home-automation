@@ -7,7 +7,7 @@ condition:
   condition: and
   conditions:
   - condition: state
-    entity_id: device_tracker.galaxya82018
+    entity_id: device_tracker.diemrssv_jackpotlte
     state: 'not_home'
   - condition: state
     entity_id: cover.garage_door
