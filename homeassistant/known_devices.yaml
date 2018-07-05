@@ -249,14 +249,6 @@ googlehomemini:
   picture:
   track: false
   vendor: Google, Inc.
-  
-galaxya82018:
-  hide_if_away: false
-  icon:
-  mac: 68:5A:CF:CF:93:F9
-  name: Nirupa's Galaxy A8
-  picture: https://lh3.googleusercontent.com/HejYlgKKEnjHz5mbrG0j71rNlQuwr3Op1QgfgWfmGhOpHvmF9HynZr4Oi0TDdvW4kAsToIOsyEljYpk=s3456-rw-no
-  track: true
 
 diemrssv_walleye:
   hide_if_away: false
@@ -275,9 +267,9 @@ ccb8a8aca910:
   track: false
 
 diemrssv_jackpotlte:
-  hide_if_away: true
+  hide_if_away: false
   icon:
-  mac:
+  mac: 68:5A:CF:CF:93:F9
   name: Nirupa
   picture: https://lh3.googleusercontent.com/HejYlgKKEnjHz5mbrG0j71rNlQuwr3Op1QgfgWfmGhOpHvmF9HynZr4Oi0TDdvW4kAsToIOsyEljYpk=s3456-rw-no
   track: true
