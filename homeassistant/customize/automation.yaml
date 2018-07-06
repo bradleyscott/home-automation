@@ -88,3 +88,9 @@ automation.notify_if_bathroom_on:
 script.bedroom_heatpump_off_delayed:
   friendly_name: Turn the bedroom heatpump off in 30 mins
   icon: mdi:av-timer
+
+automation.notify_if_raining_and_door_open:
+  friendly_name: Notify if it rains and the deck doors are open
+
+automation.notify_if_rain_forecast_and_door_open:
+  friendly_name: Notify if rain forecast and deck doors are open

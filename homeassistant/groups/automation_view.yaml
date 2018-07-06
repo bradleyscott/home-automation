@@ -17,6 +17,8 @@ climate_automation:
     - automation.off_if_heatpump_on_when_late
     - automation.notify_if_switch_on
     - automation.turn_off_switch_when_leaving
+    - automation.notify_if_raining_and_door_open
+    - automation.notify_if_rain_forecast_and_door_open
 
 lights_automation:
   name: Lights

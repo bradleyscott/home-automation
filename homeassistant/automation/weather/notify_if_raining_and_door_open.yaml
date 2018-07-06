@@ -1,0 +1,27 @@
+alias: notify_if_raining_and_door_open
+trigger:
+  - platform: template
+    value_template: "{% if is_state('sensor.owm_rain', 'not raining') %}false{% else %}true{% endif %}"
+condition:
+  condition: or
+  conditions:
+  - condition: state
+    entity_id: binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
+    state: open
+  - condition: state
+    entity_id: binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door
+    state: open
+action:
+  - service: notify.html5
+    data_template:
+      title: It is raining the deck doors are open
+      message: >-
+        {% if is_state('binary_sensor.aeotec_zw112_door_window_sensor_6_sensor', 'open') and is_state('binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2', 'open') %}
+          Both the left side and the right side deck doors are open
+        {% elif is_state('binary_sensor.aeotec_zw112_door_window_sensor_6_sensor', 'open') %}
+          The left side deck door is open
+        {% else %}
+          The right side deck door is open
+        {% endif %}
+      data: 
+        url: https://williamson-ave.duckdns.org
