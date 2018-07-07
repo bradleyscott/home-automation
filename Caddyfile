@@ -4,9 +4,3 @@ williamson-ave.duckdns.org {
         transparent
     }
 }
-
-blackhole:80, pi.hole:80, 0.0.0.0:80 {
-    proxy / localhost:88 {
-        transparent
-    }
-}
