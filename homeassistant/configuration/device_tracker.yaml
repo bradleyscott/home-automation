@@ -6,3 +6,6 @@
   new_device_defaults:
     track_new_devices: false
     hide_if_away: true
+  exclude:
+    - "192.168.1.167" # media-hub
+    - "192.168.1.158" # Bradley's mobile
