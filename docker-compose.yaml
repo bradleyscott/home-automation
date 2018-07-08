@@ -104,17 +104,3 @@ services:
     container_name: intesis_mqtt
     network_mode: "host"
     restart: unless-stopped
-  pi-hole:
-    image: diginc/pi-hole
-    container_name: pi-hole
-    restart: unless-stopped
-    volumes:
-      - ./pihole:/etc/pihole
-      - ./dnsmasq.d:/etc/dnsmasq.d
-    environment:
-      - TZ=NZ
-      - ServerIP=192.168.1.167
-    ports:
-      - "88:80"
-      - "53:53/tcp"
-      - "53:53/udp"
