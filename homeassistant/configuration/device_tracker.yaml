@@ -8,4 +8,5 @@
   exclude:
     - "192.168.1.167" # media-hub
 - platform: owntracks
+  max_gps_accuracy: 200
   events_only: true
