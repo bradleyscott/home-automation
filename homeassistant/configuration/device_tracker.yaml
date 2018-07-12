@@ -10,3 +10,4 @@
 - platform: owntracks
   max_gps_accuracy: 200
   events_only: true
+  consider_home: 300
