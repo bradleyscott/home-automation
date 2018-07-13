@@ -82,7 +82,7 @@ automation.notify_on_arrival:
 automation.turn_off_lights_when_leaving:
   friendly_name: Turn off all lights when leaving
 
-automation.notify_if_bathroom_light_on:
+automation.notify_if_bathroom_lights_on:
   friendly_name: Notify if the bathroom lights are on
 
 automation.notify_if_bathroom_fan_on:
