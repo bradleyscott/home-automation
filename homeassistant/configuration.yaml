@@ -47,27 +47,11 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# Enables support for tracking state changes over time
-history: !include configuration/history.yaml
-
-# View all events in a logbook
-logbook:
-
 # Enables a map showing the location of tracked devices
 # map:
 
 # Track the sun
 sun:
-
-# Covers
-cover:
-# Open Garage
-  platform: opengarage
-  covers:
-    garage:
-      host: 192.168.1.130
-      device_key: !secret opengarage_devicekey
-      name: Garage door
 
 weather:
   - platform: openweathermap
@@ -76,13 +60,6 @@ weather:
 # Text to speech
 tts:
   - platform: google
-   
-# Notifications
-notify:
- - name: html5
-   platform: html5
-   gcm_api_key: !secret gcm_server_key
-   gcm_sender_id: !secret gcm_sender_id
 
 # IFTT automation
 ifttt:
@@ -92,36 +69,23 @@ ifttt:
 zwave:
   usb_path: /dev/ttyACM0
 
-# August smartlock integration
-august:
-  login_method: email
-  username: !secret august_username
-  password: !secret august_password
-
-# Alarm control panel
-alarm_control_panel:
-  - platform: manual
-    name: Alarm
-    code: !secret alarm_code
-    pending_time: 30 # secs to leave after arm
-    delay_time: 30 # secs to disarm 
-
-mqtt:
-  broker: m10.cloudmqtt.com
-  port: 29759
-  username: !secret cloudmqtt_username
-  password: !secret cloudmqtt_password
-
-sensor: !include_dir_list configuration/sensors
-climate: !include_dir_list configuration/climate
-binary_sensor: !include configuration/binary_sensor.yaml
-device_tracker: !include configuration/device_tracker.yaml
-konnected: !include configuration/konnected.yaml
-nest: !include configuration/nest.yaml
+alarm_control_panel: !include configuration/alarm_control_panel.yaml
 android_ip_webcam: !include configuration/android_ip_webcam.yaml
-cloud: !include configuration/cloud.yaml
-recorder: !include configuration/recorder.yaml
-group: !include_dir_merge_named groups
+august: !include configuration/august.yaml
 automation: !include_dir_list automation
+binary_sensor: !include configuration/binary_sensor.yaml
+cover: !include configuration/cover.yaml
+cloud: !include configuration/cloud.yaml
+climate: !include_dir_list configuration/climate
+device_tracker: !include configuration/device_tracker.yaml
+group: !include_dir_merge_named groups
+history: !include configuration/history.yaml
+logbook: !include configuration/logbook.yaml
+konnected: !include configuration/konnected.yaml
+mqtt: !include configuration/mqtt.yaml
+nest: !include configuration/nest.yaml
+notify: !include configuration/notify.yaml
+recorder: !include configuration/recorder.yaml
 script: !include_dir_merge_named scripts
+sensor: !include_dir_list configuration/sensors
 zone: !include zones.yaml

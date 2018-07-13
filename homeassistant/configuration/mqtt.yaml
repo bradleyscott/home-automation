@@ -1,0 +1,4 @@
+  broker: m10.cloudmqtt.com
+  port: 29759
+  username: !secret cloudmqtt_username
+  password: !secret cloudmqtt_password

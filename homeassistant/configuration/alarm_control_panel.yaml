@@ -1,0 +1,5 @@
+platform: manual
+name: Alarm
+code: !secret alarm_code
+pending_time: 30 # secs to leave after arm
+delay_time: 30 # secs to disarm 
