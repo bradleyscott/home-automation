@@ -1,8 +1,8 @@
 alias: garage_lights_on
 trigger:
   - platform: state
-    entity_id: cover.garage_door.attributes["door_state"]
-    to: 'opening'
+    entity_id: cover.garage_door
+    to: 'Opening'
 condition:
   condition: or
   conditions:
