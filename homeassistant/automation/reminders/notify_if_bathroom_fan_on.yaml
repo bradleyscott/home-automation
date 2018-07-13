@@ -1,19 +1,19 @@
-alias: notify_if_bathroom_lights_on
+alias: notify_if_bathroom_fan_on
 trigger:
   - platform: time
     minutes: /30
     seconds: 0
 condition:
   - condition: state
-    entity_id: group.bathroom_lights
+    entity_id: switch.switch_7 # Bathroom fan
     state: 'on'
     for:
       minutes: 45
 action:
   - service: notify.html5
     data_template:
-      title: Bathroom lights are on
-      message: The bathroom lights are on. Don't forget to turn them off
+      title: Bathroom fan on
+      message: The bathroom fan is on. Don't forget to turn it off
       data: 
         url: https://williamson-ave.duckdns.org
         actions: 

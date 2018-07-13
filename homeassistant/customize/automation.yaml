@@ -82,8 +82,11 @@ automation.notify_on_arrival:
 automation.turn_off_lights_when_leaving:
   friendly_name: Turn off all lights when leaving
 
-automation.notify_if_bathroom_on:
-  friendly_name: Notify if the bathroom fan or lights are on
+automation.notify_if_bathroom_light_on:
+  friendly_name: Notify if the bathroom lights are on
+
+automation.notify_if_bathroom_fan_on:
+  friendly_name: Notify if the bathroom fan is on
 
 script.bedroom_heatpump_off_delayed:
   friendly_name: Turn the bedroom heatpump off in 30 mins
