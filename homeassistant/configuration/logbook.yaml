@@ -1,0 +1,5 @@
+exclude:
+  domains:
+    - zwave
+    - media
+    - group
