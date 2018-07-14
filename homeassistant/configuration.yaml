@@ -76,7 +76,7 @@ automation: !include_dir_list automation
 binary_sensor: !include configuration/binary_sensor.yaml
 cover: !include configuration/cover.yaml
 cloud: !include configuration/cloud.yaml
-climate: !include_dir_list configuration/climate
+# Remove MQTT climate integration: climate: !include_dir_list configuration/climate
 device_tracker: !include configuration/device_tracker.yaml
 group: !include_dir_merge_named groups
 history: !include configuration/history.yaml

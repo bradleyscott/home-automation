@@ -99,8 +99,3 @@ services:
     volumes:
       - ./Caddyfile:/etc/Caddyfile
       - ./caddy:/root/.caddy
-  intesis-mqtt:
-    build: intesis_mqtt/.
-    container_name: intesis_mqtt
-    network_mode: "host"
-    restart: unless-stopped
