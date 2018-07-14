@@ -1,5 +1,5 @@
 exclude:
   domains:
     - zwave
-    - media
-    - group
+    - zone
+    - media_player
