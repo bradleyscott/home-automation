@@ -98,4 +98,4 @@ services:
     network_mode: "host"
     volumes:
       - ./Caddyfile:/etc/Caddyfile
-      - ./caddy:/root/.caddy
+      - ./.caddy:/root/.caddy
