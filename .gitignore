@@ -17,6 +17,7 @@ homeassistant/deps/*
 homeassistant/.cloud/*
 homeassistant/html5_push_registrations.conf
 homeassistant/nest.conf
+homeassistant/.storage/*
 
 **/__pycache__/**
 unifi/*
@@ -24,3 +25,8 @@ caddy/*
 config.ini
 default.json
 node_modules
+.caddy/*
+.couchpotato/*
+.plex/*
+.sickrage/*
+.transmission/*

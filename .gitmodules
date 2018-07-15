@@ -1,3 +1,0 @@
-[submodule "intesis-mqtt"]
-	path = intesis-mqtt
-	url = https://github.com/bradleyscott/intesis-mqtt
