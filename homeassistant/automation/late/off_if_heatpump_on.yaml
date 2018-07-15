@@ -4,15 +4,15 @@ trigger:
     at: '22:00:00'
 condition:
   - condition: template
-    value_template: "{{ states.climate.living_room_heatpump != 'off' }}"
+    value_template: "{{ states.climate.living_room_heatpump != 'Off' }}"
 action:
   - service: climate.set_operation_mode
     entity_id: climate.living_room_heat_pump      
     data:
-      operation_mode: 'off'
-  # - service: notify.html5
-  #   data_template:
-  #     title: The heat pump is on and its getting late
-  #     message: The living room heatpump is still on
-  #     data: 
-  #       url: https://williamson-ave.duckdns.org
+      operation_mode: 'Off'
+  - service: notify.html5
+    data_template:
+      title: The heat pump was on and it was getting late
+      message: I have turned the living room heatpump off for you
+      data: 
+        url: https://williamson-ave.duckdns.org
