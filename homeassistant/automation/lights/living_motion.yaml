@@ -4,17 +4,22 @@ trigger:
     entity_id: binary_sensor.living_room
     to: 'on'
 condition:
-  condition: or
+  condition: and
   conditions:
-    - condition: numeric_state
-      entity_id: sensor.aeotec_zw100_multisensor_6_luminance
-      below: 50
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: -6
+    - condition: condition: state
+      entity_id: group.living_area_lights
+      state: 'off'
+    - condition: or
+      conditions:
+        - condition: numeric_state
+          entity_id: sensor.aeotec_zw100_multisensor_6_luminance
+          below: 50
+        - condition: numeric_state
+          entity_id: sun.sun
+          value_template: '{{ state.attributes.elevation }}'
+          below: -6
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.aeotec_zw132_dual_nano_switch_switch_16 # Stairs
+      entity_id: switch.aeotec_zw116_nano_switch_switch # Dining room light
      

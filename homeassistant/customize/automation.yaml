@@ -70,8 +70,11 @@ automation.downstairs_motion:
 automation.downstairs_vacant:
   friendly_name: Turn off downstairs light when vacant
 
-automation.living_motion:
+automation.living_motion_stairs_on:
   friendly_name: Turn stair lights on on living room motion
+
+automation.living_motion:
+  friendly_name: Turn lights on on living room motion
 
 automation.living_vacant:
   friendly_name: Turn stair lights off when living room vacant

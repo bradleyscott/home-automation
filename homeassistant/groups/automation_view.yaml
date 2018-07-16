@@ -26,6 +26,7 @@ lights_automation:
     - automation.upstairs_motion
     - automation.upstairs_vacant
     - automation.living_motion
+    - automation.living_motion_stairs_on
     - automation.living_vacant
     - automation.downstairs_motion
     - automation.downstairs_vacant
