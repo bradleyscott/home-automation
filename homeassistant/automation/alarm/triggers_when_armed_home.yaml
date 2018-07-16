@@ -2,7 +2,7 @@ alias: triggers_when_armed_home
 trigger:
   - platform: state
     entity_id: cover.garage_door
-    to: 'opening'
+    to: 'Opening'
   - platform: state
     entity_id: binary_sensor.front_door_open
     to: 'on'
@@ -27,7 +27,7 @@ action:
         trigger: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}
             The front door opening
-          {% elif is_state('cover.garage_door', 'opening') %}
+          {% elif is_state('cover.garage_door', 'Opening') %}
             The garage door opening
           {% elif is_state('binary_sensor.entrance', 'on') %}
             Movement at the entrance
