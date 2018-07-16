@@ -4,7 +4,7 @@ trigger:
     at: '22:00:00'
 condition:
   - condition: template
-    value_template: "{{ states.climate.living_room_heatpump != 'Off' }}"
+    value_template: "{{ states.climate.living_room_heat_pump != 'Off' }}"
 action:
   - service: climate.set_operation_mode
     entity_id: climate.living_room_heat_pump      
