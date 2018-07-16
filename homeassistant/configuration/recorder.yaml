@@ -28,7 +28,9 @@ include:
     - group.bedroom_lights
     - group.downstairs_lights
     - group.living_area_lights
+    - group.motion_sensors
     - group.upstairs_lights
+    - input_boolean.house_motion
     - lock.front_door
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
