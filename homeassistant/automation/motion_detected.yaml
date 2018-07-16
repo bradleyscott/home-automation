@@ -1,0 +1,12 @@
+alias: motion_detected
+trigger:
+  - platform: state
+    entity_id: group.motion_sensors
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: input_boolean.house_motion
+    state: 'off'
+action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.house_motion

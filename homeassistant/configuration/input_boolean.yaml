@@ -1,0 +1,4 @@
+house_motion:
+  name: Motion in the last 5 minutes
+  initial: off
+  icon: mdi:timer

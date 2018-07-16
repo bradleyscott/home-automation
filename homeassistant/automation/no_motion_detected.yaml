@@ -1,0 +1,14 @@
+alias: no_motion_detected
+trigger:
+  - platform: state
+    entity_id: group.motion_sensors
+    to: 'off'
+    for:
+      minutes: 5
+condition:
+  - condition: state
+    entity_id: input_boolean.house_motion
+    state: 'on'
+action:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.house_motion

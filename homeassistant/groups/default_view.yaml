@@ -38,11 +38,7 @@ alarm:
   name: Burglar alarm
   entities:
     - alarm_control_panel.alarm
-    - binary_sensor.front_door_doorbell_motion
-    - binary_sensor.entrance
-    - binary_sensor.guest_bedroom
-    - binary_sensor.living_room
-    - binary_sensor.aeotec_zw100_multisensor_6_sensor
+    - group.motion_sensors
     - script.panic_button
 
 nest:
@@ -52,3 +48,12 @@ nest:
     - sensor.living_room_nest_protect_battery_health
     - sensor.living_room_nest_protect_co_status
     - sensor.living_room_nest_protect_smoke_status
+  
+motion_sensors:
+  name: Motion sensors
+  entities: 
+    - binary_sensor.front_door_doorbell_motion
+    - binary_sensor.entrance
+    - binary_sensor.guest_bedroom
+    - binary_sensor.living_room
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor
