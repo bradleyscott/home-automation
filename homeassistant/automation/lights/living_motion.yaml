@@ -6,7 +6,7 @@ trigger:
 condition:
   condition: and
   conditions:
-    - condition: condition: state
+    - condition: state
       entity_id: group.living_area_lights
       state: 'off'
     - condition: or
