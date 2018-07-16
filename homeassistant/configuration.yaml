@@ -80,7 +80,7 @@ cloud: !include configuration/cloud.yaml
 device_tracker: !include configuration/device_tracker.yaml
 group: !include_dir_merge_named groups
 history: !include configuration/history.yaml
-input_boolean: !include configuration/input.boolean.yaml
+input_boolean: !include configuration/input_boolean.yaml
 intesishome: !include configuration/intesishome.yaml
 logbook: !include configuration/logbook.yaml
 konnected: !include configuration/konnected.yaml
