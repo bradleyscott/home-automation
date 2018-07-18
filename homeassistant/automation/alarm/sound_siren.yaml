@@ -1,0 +1,19 @@
+alias: sound_siren_on_alarm
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: 'triggered'
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.siren
+
+alias: silence_siren
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    from: 'triggered'
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.siren

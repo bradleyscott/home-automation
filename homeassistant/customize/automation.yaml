@@ -97,7 +97,7 @@ script.bedroom_heatpump_off_delayed:
 
 script.panic_button:
   icon: mdi:alarm-bell
-  
+
 automation.notify_if_raining_and_door_open:
   friendly_name: Notify if it rains and the deck doors are open
 
@@ -106,3 +106,6 @@ automation.notify_if_rain_forecast_and_door_open:
 
 automation.arm_alarm_when_leaving:
   friendly_name: Arm the alarm when leaving home
+
+automation.sound_siren_on_alarm:
+  friendly_name: Sound siren on alarm
