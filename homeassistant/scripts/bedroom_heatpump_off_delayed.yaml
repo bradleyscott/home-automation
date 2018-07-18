@@ -7,4 +7,4 @@ bedroom_heatpump_off_delayed:
       service: climate.set_operation_mode
       entity_id: climate.bedroom_heat_pump
       data:
-        operation_mode: 'off'
+        operation_mode: 'Off'
