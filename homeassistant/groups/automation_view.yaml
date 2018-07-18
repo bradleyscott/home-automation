@@ -47,6 +47,7 @@ security_automation:
 alarm_automation:
   name: Burglar alarm
   entities:
+    - automation.arm_alarm_when_leaving
     - automation.disarm_when_home
     - automation.triggers_when_armed_home
     - automation.triggers_when_armed_away

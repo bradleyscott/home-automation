@@ -1,0 +1,22 @@
+alias: arm_alarm_when_leaving
+trigger:
+  - platform: state
+    entity_id: binary_sensor.home_occupied
+    to: 'off'
+    for: 
+      minutes: 10
+condition:
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state: armed_away
+action:
+  - service: alarm_control_panel.alarm_arm_away
+    data:
+      entity_id: alarm_control_panel.alarm
+      code: !secret alarm_code
+  - service: notify.html5
+    data_template:
+      title: I have armed the alarm
+      message: Everyone has left home and the auto-arm setting was on
+      data: 
+        url: https://williamson-ave.duckdns.org

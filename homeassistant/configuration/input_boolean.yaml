@@ -2,3 +2,8 @@ house_motion:
   name: Motion in the last 5 minutes
   initial: off
   icon: mdi:timer
+
+auto_arm_alarm:
+  name: Arm the alarm when leaving home
+  initial: off
+  icon: mdi:alarm-bell
