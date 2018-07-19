@@ -1,0 +1,9 @@
+alias: notify_action_disarm_alarm
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: disarm_alarm
+action:
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.alarm

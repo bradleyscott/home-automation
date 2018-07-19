@@ -13,13 +13,17 @@ notify_on_alarm:
   alias: Notify on alarm
   sequence:
   - alias: Send push notification
-    service: script.turn_on
-    entity_id: script.notify_subscribers
+    service: notify.html5
     data_template:
       variables: 
-        title: Alarm triggered at Williamson Ave
-        message: "{{ trigger }} has triggered the alarm"
-        
+        title: Alarm triggered. The siren will soon sound
+        message: "{{ trigger }} has triggered the alarm and in 30 seconds the siren will sound unless you disarm"
+        data:
+          url: https://williamson-ave.duckdns.org
+          actions: 
+          - title: Disarm   
+            action: disarm_alarm
+
 panic_button:
   alias: Panic button
   sequence:
