@@ -8,7 +8,7 @@ trigger:
 condition:
   - condition: state
     entity_id: alarm_control_panel.alarm
-    state: armed_away
+    state: disarmed
 action:
   - service: alarm_control_panel.alarm_arm_away
     data:
