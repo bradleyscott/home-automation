@@ -1,46 +1,26 @@
 alias: triggers_when_armed_away
 trigger:
   - platform: state
-    entity_id: cover.garage_door
-    to: 'opening'
-  - platform: state
-    entity_id: binary_sensor.front_door_open
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.entrance
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.guest_bedroom
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.living_room
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
+    entity_id: group.motion_sensors
     to: 'on'
 condition:
   - condition: state
     entity_id: alarm_control_panel.alarm
     state: armed_away
-  - condition: state
-    entity_id: group.all_devices
-    state: 'not_home'
 action:
   - service: script.turn_on
     entity_id: script.notify_on_alarm
     data_template: 
       variables:
         trigger: >-
-          {% if is_state('binary_sensor.front_door_open', 'on') %}
-            The front door opening
-          {% elif is_state('cover.garage_door', 'opening') %}
-            The garage door opening
-          {% elif is_state('binary_sensor.entrance', 'on') %}
+          {% if is_state('binary_sensor.entrance', 'on') %}
             Movement at the entrance
           {% elif is_state('binary_sensor.guest_bedroom', 'on') %}
             Movement in the guest bedroom
           {% elif is_state('binary_sensor.living_room', 'on') %}
             Movement in the living room
+          {% elif is_state('binary_sensor.aeotec_zw100_multisensor_6_sensor', 'on') %}
+            Movement upstairs
           {% else %}
             Movement upstairs
           {% endif %}
