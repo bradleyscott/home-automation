@@ -5,8 +5,7 @@ trigger:
     to: 'triggered'
 action:
   - service: switch.turn_on
-    data:
-      entity_id: switch.siren
+    entity_id: switch.siren
 
 alias: silence_siren
 trigger:
@@ -15,5 +14,4 @@ trigger:
     from: 'triggered'
 action:
   - service: switch.turn_off
-    data:
-      entity_id: switch.siren
+    entity_id: switch.siren
