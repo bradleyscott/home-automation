@@ -1,0 +1,17 @@
+# Presence detection
+home_occupied:
+  name: Home occupied
+  platform: bayesian
+  prior: 0.5
+  probability_threshold: 0.75
+  observations:
+    - entity_id: input_boolean.house_motion
+      platform: 'state'
+      to_state: 'on'
+      prob_given_true: 0.95
+      prob_given_false: 0.50
+    - entity_id: group.all_devices
+      platform: 'state'
+      to_state: 'home'
+      prob_given_true: 0.90
+      prob_given_false: 0.20
