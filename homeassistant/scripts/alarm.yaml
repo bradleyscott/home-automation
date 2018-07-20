@@ -15,7 +15,6 @@ notify_on_alarm:
   - alias: Send push notification
     service: notify.html5
     data_template:
-      variables: 
         title: Alarm triggered. The siren will soon sound
         message: "{{ trigger }} has triggered the alarm and in 30 seconds the siren will sound unless you disarm"
         data:
