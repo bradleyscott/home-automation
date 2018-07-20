@@ -36,6 +36,7 @@ doors:
 
 alarm:
   name: Burglar alarm
+  control: hidden
   entities:
     - input_boolean.auto_arm_alarm
     - alarm_control_panel.alarm
