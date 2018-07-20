@@ -249,6 +249,14 @@ ccb8a8aca910:
   picture:
   track: false
 
+18b430aad857:
+  hide_if_away: true
+  icon:
+  mac: 18:B4:30:AA:D8:57
+  name: Nest Protect
+  picture:
+  track: false
+
 diemrssv_walleye:
   hide_if_away: false
   icon:
