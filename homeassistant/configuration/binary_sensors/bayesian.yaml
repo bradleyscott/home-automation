@@ -2,7 +2,7 @@
 name: Home occupied
 platform: bayesian
 prior: 0.5
-probability_threshold: 0.5
+probability_threshold: 0.55
 observations:
   - entity_id: input_boolean.house_motion
     platform: 'state'
