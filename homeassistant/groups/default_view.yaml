@@ -48,6 +48,7 @@ alarm:
     - alarm_control_panel.alarm
     - binary_sensor.front_door_doorbell_motion
     - binary_sensor.entrance
+    - binary_sensor.garage_phone_motion_active
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
@@ -66,6 +67,7 @@ motion_sensors:
   entities: 
     - binary_sensor.front_door_doorbell_motion
     - binary_sensor.entrance
+    - binary_sensor.garage_phone_motion_active
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
