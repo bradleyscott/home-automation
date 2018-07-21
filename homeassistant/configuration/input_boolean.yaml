@@ -5,5 +5,5 @@ house_motion:
 
 auto_arm_alarm:
   name: Arm the alarm when leaving home
-  initial: off
+  initial: on
   icon: mdi:alarm-bell
