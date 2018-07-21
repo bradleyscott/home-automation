@@ -1,0 +1,9 @@
+alias: show_garage_camera
+trigger:
+  - platform: template
+    value_template: "{{ not is_state('sensor.garage_phone_motion', 'unavailable') }}"
+action:
+  - service: group.set_visibility
+    entity_id: group.garage_camera
+    data:
+      visible: True

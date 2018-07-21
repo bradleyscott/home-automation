@@ -1,0 +1,14 @@
+alias: hide_garage_camera
+trigger:
+  - platform: state
+    entity_id: sensor.garage_phone_motion
+    to: unavailable
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+action:
+  - service: group.set_visibility
+    entity_id: group.garage_camera
+    data:
+      visible: False

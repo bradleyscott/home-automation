@@ -23,6 +23,11 @@ entrance_camera:
   entities:
     - camera.entrance_phone
 
+garage_camera:
+  name: Garage camera
+  entities:
+    - camera.garage_phone
+
 doors:
   name: Doors and locks
   entities:
