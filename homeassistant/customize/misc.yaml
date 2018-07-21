@@ -12,7 +12,7 @@ binary_sensor.front_door_doorbell_motion:
   friendly_name: Doorbell motion sensor
   device_class: motion
 
- binary_sensor.garage_phone_motion_active:
+binary_sensor.garage_phone_motion_active:
   friendly_name: Garage motion sensor
   device_class: motion
 
