@@ -6,6 +6,7 @@ default_view:
     - group.alarm
     - group.doorbell_camera
     - group.entrance_camera
+    - group.garage_camera
     - device_tracker.diemrssv_walleye
     - device_tracker.diemrssv_jackpotlte
     - device_tracker.ac3743a35306
