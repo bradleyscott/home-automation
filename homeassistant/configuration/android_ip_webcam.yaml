@@ -35,4 +35,3 @@
   switches:
     - overlay
     - video_recording
-  motion_sensor: true
