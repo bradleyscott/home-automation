@@ -20,3 +20,6 @@ action:
       message: Everyone has left home and the auto-arm setting was on
       data: 
         url: https://williamson-ave.duckdns.org
+        actions: 
+        - title: Disarm   
+          action: disarm_alarm
