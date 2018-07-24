@@ -14,7 +14,6 @@ include:
     - binary_sensor.front_door_doorbell_ding
     - binary_sensor.front_door_doorbell_online
     - binary_sensor.front_door_open
-    - binary_sensor.garage_phone_motion_active
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
     - binary_sensor.internet_connection
@@ -41,6 +40,11 @@ include:
     - sensor.entrance_phone_battery_voltage
     - sensor.entrance_phone_light_level
     - sensor.entrance_phone_motion
+    - sensor.garage_phone_battery_level
+    - sensor.garage_phone_battery_temperature
+    - sensor.garage_phone_battery_voltage
+    - sensor.garage_phone_light_level
+    - sensor.garage_phone_motion
     - sensor.garage_car_present
     - sensor.garage_status
     - sensor.living_room_nest_protect_battery_health
@@ -52,6 +56,7 @@ include:
     - sensor.owm_temperature
     - sensor.owm_wind_speed
     - switch.entrance_phone_video_recording
+    - switch.garage_phone_video_recording
     - switch.smart_switch
     - switch.siren # Alarm siren
     - light.level # Living room lights
