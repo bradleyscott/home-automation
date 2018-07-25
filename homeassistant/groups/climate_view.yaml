@@ -6,7 +6,6 @@ climate_view:
     - group.upstairs
     - group.living_area
     - group.weather
-    - weather.openweathermap
 
 climate_scripts:
   name: Automation
