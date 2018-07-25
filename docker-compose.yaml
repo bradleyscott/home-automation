@@ -75,6 +75,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - ./homeassistant:/config
+    privileged: true
   unifi:
     image: linuxserver/unifi
     container_name: unifi
