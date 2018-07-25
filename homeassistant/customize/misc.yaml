@@ -19,5 +19,11 @@ binary_sensor.garage_phone_motion_active:
 sensor.entrance_phone_battery_temperature:
   unit_of_measurement: '°C'
 
+sensor.garage_phone_battery_temperature:
+  unit_of_measurement: '°C'
+
 sensor.entrance_phone_light_level:
+  unit_of_measurement: 'lux'
+
+sensor.garage_phone_light_level:
   unit_of_measurement: 'lux'
