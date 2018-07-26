@@ -89,13 +89,13 @@ zwave:
   usb_path: /dev/ttyACM0
 
 alarm_control_panel: !include configuration/alarm_control_panel.yaml
+alert: !include !include_dir_merge_named alerts
 android_ip_webcam: !include configuration/android_ip_webcam.yaml
 august: !include configuration/august.yaml
 automation: !include_dir_list automation
 binary_sensor: !include_dir_list configuration/binary_sensors
 cover: !include configuration/cover.yaml
 cloud: !include configuration/cloud.yaml
-# Remove MQTT climate integration: climate: !include_dir_list configuration/climate
 device_tracker: !include configuration/device_tracker.yaml
 group: !include_dir_merge_named groups
 history: !include configuration/history.yaml

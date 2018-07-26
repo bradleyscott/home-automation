@@ -1,0 +1,9 @@
+bathroom_fan:
+  name: The bathroom fan has been left on
+  done_message: Bathroom fan has been switched off
+  entity_id: switch.switch_7 # Bathroom fan
+  state: 'on'
+  repeat: 45
+  skip_first: true
+  notifiers:
+    - html5
