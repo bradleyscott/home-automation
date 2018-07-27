@@ -1,7 +1,7 @@
 alias: notify_if_rain_forecast_and_door_open
 trigger:
   - platform: template
-    value_template: "{% if 'rain' in states('sensor.owm_forecast') %}true{% endif %}"
+    value_template: "{{ not(is_state('sensor.owm_rain', 'not raining')) and not(is_state('sensor.owm_rain', '0.0')) }}"
 condition:
   condition: or
   conditions:
