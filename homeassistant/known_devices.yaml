@@ -272,3 +272,19 @@ diemrssv_jackpotlte:
   name: Nirupa
   picture: https://lh3.googleusercontent.com/HejYlgKKEnjHz5mbrG0j71rNlQuwr3Op1QgfgWfmGhOpHvmF9HynZr4Oi0TDdvW4kAsToIOsyEljYpk=s3456-rw-no
   track: true
+
+android57b4ead1305ce198:
+  hide_if_away: true
+  icon:
+  mac: BC:F5:AC:F9:EB:A8
+  name: Garage camera
+  picture:
+  track: false
+
+5cg8243pvc:
+  hide_if_away: true
+  icon:
+  mac: 5C:5F:67:EA:7F:7C
+  name: Nirupa's work laptop
+  picture:
+  track: true
