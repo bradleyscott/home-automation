@@ -5,11 +5,16 @@ trigger:
     to: 'on'
     for:
       minutes: 0
-      seconds: 30
+      seconds: 45
 condition:
+  condition: or
+  conditions:
   - condition: state
     entity_id: alarm_control_panel.alarm
     state: armed_away
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state: pending
 action:
   - service: alarm_control_panel.alarm_disarm
     data:

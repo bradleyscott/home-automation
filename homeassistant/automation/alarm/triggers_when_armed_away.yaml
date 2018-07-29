@@ -4,9 +4,14 @@ trigger:
     entity_id: group.motion_sensors
     to: 'on'
 condition:
+  condition: and
+  conditions:
   - condition: state
     entity_id: alarm_control_panel.alarm
     state: armed_away
+  - platform: state
+    entity_id: binary_sensor.home_occupied
+    to: 'off'
 action:
   - service: script.turn_on
     entity_id: script.notify_on_alarm
