@@ -9,7 +9,7 @@ condition:
   - condition: state
     entity_id: alarm_control_panel.alarm
     state: armed_away
-  - platform: state
+  - condition: state
     entity_id: binary_sensor.home_occupied
     to: 'off'
 action:
