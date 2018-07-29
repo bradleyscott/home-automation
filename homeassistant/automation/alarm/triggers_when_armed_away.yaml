@@ -11,7 +11,7 @@ condition:
     state: armed_away
   - condition: state
     entity_id: binary_sensor.home_occupied
-    to: 'off'
+    state: 'off'
 action:
   - service: script.turn_on
     entity_id: script.notify_on_alarm
