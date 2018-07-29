@@ -14,6 +14,7 @@ include:
     - binary_sensor.front_door_doorbell_ding
     - binary_sensor.front_door_doorbell_online
     - binary_sensor.front_door_open
+    - binary_sensor.garage_motion
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
     - binary_sensor.internet_connection
