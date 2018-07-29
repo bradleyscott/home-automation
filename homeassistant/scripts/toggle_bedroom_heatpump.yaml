@@ -1,5 +1,5 @@
 toggle_bedroom_heatpump:
-  alias: Toggle bedroom heatpump on/off
+  alias: Turn bedroom heatpump on
   sequence:
     - alias: Set bedroom heatpump mode
       service: climate.set_operation_mode

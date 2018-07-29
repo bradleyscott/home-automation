@@ -1,5 +1,5 @@
 toggle_living_room_heatpump:
-  alias: Toggle living room heatpump on/off
+  alias: Turn living room heatpump on
   sequence:
     - alias: Set Living room heatpump mode
       service: climate.set_operation_mode
