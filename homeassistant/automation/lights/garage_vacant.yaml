@@ -1,0 +1,11 @@
+alias: garage_vacant
+trigger:
+  - platform: state
+    entity_id: binary_sensor.garage_motion
+    to: 'off'
+    for:
+      minutes: 10
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.aeotec_zw116_nano_switch_switch_3 # Garage

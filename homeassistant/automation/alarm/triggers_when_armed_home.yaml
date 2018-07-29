@@ -7,6 +7,9 @@ trigger:
     entity_id: binary_sensor.front_door_open
     to: 'on'
   - platform: state
+    entity_id: binary_sensor.garage_motion
+    to: 'on'
+  - platform: state
     entity_id: binary_sensor.entrance
     to: 'on'
   - platform: state
@@ -29,6 +32,8 @@ action:
             The front door opening
           {% elif is_state('cover.garage_door', 'Opening') %}
             The garage door opening
+          {% elif is_state('binary_sensor.garage_motion', 'on') %}
+            Movement in the garage
           {% elif is_state('binary_sensor.entrance', 'on') %}
             Movement at the entrance
           {% elif is_state('binary_sensor.guest_bedroom', 'on') %}

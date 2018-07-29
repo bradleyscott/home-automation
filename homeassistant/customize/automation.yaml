@@ -56,7 +56,7 @@ automation.upstairs_vacant:
   friendly_name: Turn off upstairs light when vacant
 
 automation.garage_lights_on:
-  friendly_name: Turn downstairs lights on when garage opens
+  friendly_name: Turn on garage lights on motion
 
 automation.all_lights_off_at_sunrise:
   friendly_name: After sunrise, turn all lights off
@@ -109,3 +109,6 @@ automation.arm_alarm_when_leaving:
 
 automation.sound_siren_on_alarm:
   friendly_name: Sound siren on alarm
+
+automation.garage_vacant:
+  friendly_name: Turn garage lights off when vacant

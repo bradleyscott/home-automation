@@ -31,6 +31,7 @@ lights_automation:
     - automation.downstairs_motion
     - automation.downstairs_vacant
     - automation.garage_lights_on
+    - automation.garage_vacant
     - automation.all_lights_off_at_sunrise
     - automation.turn_off_lights_when_leaving
     - automation.notify_if_bathroom_lights_on

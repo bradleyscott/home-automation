@@ -1,0 +1,13 @@
+alias: garage_lights_on
+trigger:
+  - platform: state
+    entity_id: cover.garage_door
+    to: 'Opening'
+  - platform: state
+    entity_id: binary_sensor.garage_motion
+    to: 'on'
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.aeotec_zw116_nano_switch_switch_3 # Garage
+
