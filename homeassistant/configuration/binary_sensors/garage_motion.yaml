@@ -1,6 +1,8 @@
-name: Garage motion
 platform: template
-device_class: motion
-value_template: "{{ states('sensor.garage_phone_motion') | float > 250 }}"
-delay_off:
-  minutes: 2
+sensors:
+  garage_motion:
+    friendly_name: Garage motion
+    device_class: motion
+    value_template: "{{ states('sensor.garage_phone_motion') | float > 250 }}"
+    delay_off:
+      minutes: 2
