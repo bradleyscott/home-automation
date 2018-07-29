@@ -10,11 +10,11 @@ condition:
     entity_id: switch.smart_switch
     state: 'on'
 action:
-  - service: notify.html5
-    data_template:
-      title: Heater turned off automatically
-      message: The oil heater was left running
-      data: 
-        url: https://williamson-ave.duckdns.org
+  # - service: notify.html5
+  #   data_template:
+  #     title: Heater turned off automatically
+  #     message: The oil heater was left running
+  #     data: 
+  #       url: https://williamson-ave.duckdns.org
   - service: switch.turn_off
     entity_id: switch.smart_switch

@@ -13,19 +13,19 @@ condition:
   - condition: template
     value_template: "{% if is_state('climate.bedroom_heat_pump', 'Off') %}false{% else %}true{% endif %}"
 action:
-  - service: notify.html5
-    data_template:
-      title: Heat pumps turned off automatically
-      message: >-
-        {% if is_state('climate.living_room_heat_pump', 'Off') %}
-          The bedroom heat pump was left running
-        {% elif not is_state('climate.bedroom_heat_pump', 'Off') %}
-          The living room heat pump was left running
-        {% else %}
-          Both the living room and bedroom heat pumps were left running
-        {% endif %}
-      data: 
-        url: https://williamson-ave.duckdns.org
+  # - service: notify.html5
+  #   data_template:
+  #     title: Heat pumps turned off automatically
+  #     message: >-
+  #       {% if is_state('climate.living_room_heat_pump', 'Off') %}
+  #         The bedroom heat pump was left running
+  #       {% elif not is_state('climate.bedroom_heat_pump', 'Off') %}
+  #         The living room heat pump was left running
+  #       {% else %}
+  #         Both the living room and bedroom heat pumps were left running
+  #       {% endif %}
+  #     data: 
+  #       url: https://williamson-ave.duckdns.org
   - service: climate.set_operation_mode
     entity_id: climate.bedroom_heat_pump
     data:
