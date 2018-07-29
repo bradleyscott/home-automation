@@ -17,6 +17,7 @@ climate_scripts:
 upstairs:
   name: Upstairs
   entities:
+    - script.toggle_bedroom_heat_pump
     - climate.bedroom_heat_pump
     - switch.smart_switch
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
@@ -27,6 +28,7 @@ upstairs:
 living_area:
   name: Living area
   entities:
+    - script.toggle_living_room_heat_pump
     - climate.living_room_heat_pump
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door

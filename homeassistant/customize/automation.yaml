@@ -112,3 +112,9 @@ automation.sound_siren_on_alarm:
 
 automation.garage_vacant:
   friendly_name: Turn garage lights off when vacant
+
+script.toggle_living_room_heatpump:
+  icon: mdi:fan
+
+script.toggle_bedroom_heatpump:
+  icon: mdi:fan
