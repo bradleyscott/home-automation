@@ -9,6 +9,3 @@ action:
   - service: script.turn_on
     data:
       entity_id: script.downstairs_lights_off
-  - service: switch.turn_off
-    data:
-      entity_id: switch.aeotec_zw116_nano_switch_switch_3 # Garage
