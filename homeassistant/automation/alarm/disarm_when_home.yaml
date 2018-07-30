@@ -1,11 +1,11 @@
 alias: disarm_when_home
 trigger:
   - platform: state
-    entity_id: binary_sensor.home_occupied
-    to: 'on'
-    for:
-      minutes: 0
-      seconds: 45
+    entity_id: device_tracker.diemrssv_jackpotlte
+    to: 'home'
+  - platform: state
+    entity_id: device_tracker.diemrssv_walleye
+    to: 'home'
 condition:
   condition: or
   conditions:
@@ -25,4 +25,9 @@ action:
     data:
       variables:
         title: Alarm disarmed
-        message: The alarm has disarmed due to someone arriving home
+        message: >-
+          {% if is_state('device_tracker.diemrssv_jackpotlte', 'home') %}
+            The alarm has disarmed because Nirupa has arrived home
+          {% else %}
+            The alarm has disarmed because Bradley has arrived home
+          {% endif %}
