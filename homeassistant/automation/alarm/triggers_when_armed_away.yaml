@@ -27,7 +27,7 @@ action:
           {% elif is_state('binary_sensor.aeotec_zw100_multisensor_6_sensor', 'on') %}
             Movement upstairs
           {% else %}
-            Movement upstairs
+            Movement in the garage
           {% endif %}
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.alarm
