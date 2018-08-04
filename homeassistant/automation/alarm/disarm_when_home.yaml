@@ -26,7 +26,9 @@ action:
       variables:
         title: Alarm disarmed
         message: >-
-          {% if is_state('device_tracker.diemrssv_jackpotlte', 'home') %}
+          {% if is_state('device_tracker.diemrssv_jackpotlte', 'home') and is_state('device_tracker.diemrssv_walleye', 'home') %}
+            The alarm has disarmed because everyone is now home
+          {% elif is_state('device_tracker.diemrssv_jackpotlte', 'home') %}
             The alarm has disarmed because Nirupa has arrived home
           {% else %}
             The alarm has disarmed because Bradley has arrived home
