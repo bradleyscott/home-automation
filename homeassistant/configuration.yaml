@@ -109,4 +109,5 @@ notify: !include configuration/notify.yaml
 recorder: !include configuration/recorder.yaml
 script: !include_dir_merge_named scripts
 sensor: !include_dir_list configuration/sensors
+twilio: !include configuration/twilio.yaml
 zone: !include zones.yaml
