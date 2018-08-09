@@ -33,12 +33,12 @@ panic_button:
       variables:
         trigger: The Panic button
 
-alarm_call:	
-  alias: Call on alarm	
-  sequence:	
-  - alias: Call phone	
-    service: notify.phone	
-    data:	
-      message: 'The alarm at home has sounded'	
-      target:	
+alarm_call:
+  alias: Call on alarm
+  sequence:
+  - alias: Call phone
+    service: notify.phone
+    data:
+      message: 'The alarm at home has sounded'
+      target:
         - +6421538400
