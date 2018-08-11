@@ -22,6 +22,8 @@ action:
       message: The garage is empty and Nirupa isn't home
       data: 
         url: https://williamson-ave.duckdns.org
+        tag: ha-notify
+        renotify: true
         actions: 
         - title: Open garage    
           action: open_garage

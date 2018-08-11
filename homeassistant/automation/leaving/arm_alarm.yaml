@@ -14,12 +14,3 @@ action:
     data:
       entity_id: alarm_control_panel.alarm
       code: !secret alarm_code
-  # - service: notify.html5
-  #   data_template:
-  #     title: I have armed the alarm
-  #     message: Everyone has left home and the auto-arm setting was on
-  #     data: 
-  #       url: https://williamson-ave.duckdns.org
-  #       actions: 
-  #       - title: Disarm   
-  #         action: disarm_alarm

@@ -24,7 +24,7 @@ condition:
     state: armed_home
 action:
   - service: script.turn_on
-    entity_id: script.notify_on_alarm
+    entity_id: script.notify_on_motion
     data_template: 
       variables:
         trigger: >-
@@ -41,5 +41,15 @@ action:
           {% else %}
             Movement in the living room
           {% endif %}
+        image: >-
+          {% if is_state('binary_sensor.front_door_open', 'on') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% elif is_state('cover.garage_door', 'Opening') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+          {% elif is_state('binary_sensor.garage_motion', 'on') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+          {% elif is_state('binary_sensor.entrance', 'on') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% endif %}    
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.alarm

@@ -13,4 +13,5 @@ action:
       title: There is a problem at home
       message: The smoke alarm has detected a fire
       data: 
+        tag: ha-notify
         url: https://williamson-ave.duckdns.org

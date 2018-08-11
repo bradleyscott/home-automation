@@ -26,6 +26,7 @@ action:
         {% endif %}
       data: 
         url: https://williamson-ave.duckdns.org
+        tag: ha-notify
         actions: 
         - title: Close garage   
           action: close_garage

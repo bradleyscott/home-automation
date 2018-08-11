@@ -1,44 +1,40 @@
-notify_subscribers:
-  alias: Notify subscribers by Push notification
-  sequence:
-    - alias: Send push notification
-      service: notify.html5
-      data_template:
-        title: "{{ title }}"
-        message: "{{ message }}"
-        data:
-          url: https://williamson-ave.duckdns.org
-
-notify_on_alarm:
-  alias: Notify on alarm
+notify_on_motion:
+  alias: Notify on motion
   sequence:
   - alias: Send push notification
     service: notify.html5
     data_template:
-        title: Alarm triggered. The siren will soon sound
-        message: "{{ trigger }} has triggered the alarm and in 30 seconds the siren will sound unless you disarm"
+        title: Motion detected and alarm is armed
+        message: "{{ trigger }} has triggered the alarm. The siren will sound unless you disarm"
         data:
           url: https://williamson-ave.duckdns.org
+          image: "{{ image or null }}"
+          tag: ha-alarm
           actions: 
           - title: Disarm   
             action: disarm_alarm
+          - title: Sound siren
+            action: sound_siren
 
 panic_button:
   alias: Panic button
   sequence:
-  - alias: Notify subscribers
-    service: script.turn_on
-    entity_id: script.notify_on_alarm
-    data: 
-      variables:
-        trigger: The Panic button
-
-alarm_call:
-  alias: Call on alarm
-  sequence:
-  - alias: Call phone
-    service: notify.phone
-    data:
-      message: 'The alarm at home has sounded'
-      target:
-        - +6421538400
+    - alias: Send push notification
+      service: notify.html5
+      data_template:
+        title: Panic button activated
+        message: The Panic button has been pressed and the siren has been turned on
+        data:
+          url: https://williamson-ave.duckdns.org
+          tag: ha-alarm
+          renotify: "true"
+          actions:
+          - title: Silence siren
+            action: silence_siren
+    - alias: Activate siren
+      service: switch.turn_on
+      data:
+        entity_id: switch.siren
+    - alias: Trigger alarm
+      service: alarm_control_panel.alarm_trigger
+      entity_id: alarm_control_panel.alarm

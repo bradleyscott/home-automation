@@ -16,6 +16,7 @@ action:
       message: The bathroom lights are on. Don't forget to turn them off
       data: 
         url: https://williamson-ave.duckdns.org
+        tag: ha-notify
         actions: 
         - title: Turn off 
           action: bathroom_off

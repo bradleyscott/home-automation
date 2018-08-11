@@ -15,4 +15,5 @@ action:
       title: The heat pump was on and it was getting late
       message: I have turned the living room heatpump off for you
       data: 
+        tag: ha-notify
         url: https://williamson-ave.duckdns.org

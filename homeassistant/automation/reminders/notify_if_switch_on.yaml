@@ -18,6 +18,7 @@ action:
       message: Check to make sure Nirupa hasn't started a fire
       data: 
         url: https://williamson-ave.duckdns.org
+        tag: ha-notify
         actions: 
         - title: Turn off 
           action: switch_off

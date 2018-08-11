@@ -1,0 +1,10 @@
+alias: notify_action_silence_siren
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: silence_siren
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.siren
