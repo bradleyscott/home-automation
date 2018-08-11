@@ -3,7 +3,7 @@ api_host: http://192.168.1.167:8123
 devices:
   - id: 18fe34e88a5f
     switches:
-      - pin: 6
+      - zone: out
         name: 'Siren'
         activation: high
     binary_sensors:
