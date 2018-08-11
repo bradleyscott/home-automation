@@ -1,6 +1,7 @@
 # Presence detection
 name: Home occupied
 platform: bayesian
+device_class: presence
 prior: 0.5
 probability_threshold: 0.6
 observations:
