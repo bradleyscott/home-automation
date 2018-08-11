@@ -4,4 +4,4 @@
   gcm_sender_id: !secret gcm_sender_id
 - name: phone
   platform: twilio_call
-  from_number: +6498889210
+  from_number: "+6498889210"
