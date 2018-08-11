@@ -43,7 +43,7 @@ action:
           {% endif %}
         image: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}
-            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}
           {% elif is_state('cover.garage_door', 'Opening') %}
             https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
           {% elif is_state('binary_sensor.garage_motion', 'on') %}
