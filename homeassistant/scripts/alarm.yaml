@@ -10,6 +10,7 @@ notify_on_motion:
           url: https://williamson-ave.duckdns.org
           image: "{{ image or null }}"
           tag: ha-alarm
+          requireInteraction: "true"
           actions: 
           - title: Disarm   
             action: disarm_alarm
