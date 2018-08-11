@@ -29,6 +29,14 @@ action:
       data: 
         url: https://williamson-ave.duckdns.org
         tag: ha-notify
+        image: >-
+          {% if is_state('lock.front_door', 'unlocked') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% elif is_state('cover.garage_door', 'open') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+          {% else %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% endif %}
         actions: 
         - title: Lock up     
           action: lock_up
