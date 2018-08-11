@@ -3,6 +3,9 @@ trigger:
   - platform: state
     entity_id: alarm_control_panel.alarm
     from: 'triggered'
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: 'disarmed'
 action:
   - service: switch.turn_off
     data:
