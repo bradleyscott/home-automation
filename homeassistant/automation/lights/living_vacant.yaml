@@ -13,6 +13,3 @@ action:
   - service: switch.turn_off
     data:
       entity_id: switch.aeotec_zw132_dual_nano_switch_switch_16 # Stairs
-  - service: switch.turn_off
-    data:
-      entity_id: switch.aeotec_zw116_nano_switch_switch # Dining room light
