@@ -24,7 +24,7 @@ action:
             Movement in the guest bedroom
           {% elif is_state('binary_sensor.living_room', 'on') %}
             Movement in the living room
-          {% elif is_state('binary_sensor.aeotec_zw100_multisensor_6_sensor', 'on') %}
+          {% else %}
             Movement upstairs
           {% endif %}
         image: >-
