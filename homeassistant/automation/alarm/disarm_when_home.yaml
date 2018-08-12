@@ -32,6 +32,6 @@ action:
           The alarm has disarmed because Bradley has arrived home
         {% endif %}
       data:
-        url: https://williamson-ave.duckdns.org
+        url: https://williamson-ave.duckdns.org{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}
         tag: ha-alarm
         image: https://williamson-ave.duckdns.org{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}
