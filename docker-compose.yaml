@@ -81,7 +81,7 @@ services:
     container_name: unifi
     restart: unless-stopped
     volumes: 
-      - ./unifi:/config
+      - ./.unifi:/config
     environment:
       - PGID=999
       - PUID=999
