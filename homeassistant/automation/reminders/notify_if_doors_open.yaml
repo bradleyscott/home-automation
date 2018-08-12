@@ -25,7 +25,14 @@ action:
           The front door is open. Remember to check the house belongings are secure
         {% endif %}
       data: 
-        url: https://williamson-ave.duckdns.org
+        url: >-
+          {% if is_state('binary_sensor.front_door_open', 'on') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% elif is_state('cover.garage_door', 'open') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+          {% else %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% endif %}  
         tag: ha-notify
         image: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}

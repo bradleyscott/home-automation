@@ -14,7 +14,7 @@ condition:
 action:
   - service: notify.html5
     data_template:
-      title: The house is unlocked and its getting late
+      title: The house is insecure and its getting late
       message: >-
         {% if is_state('cover.garage_door', 'open') and is_state('binary_sensor.front_door_open', 'on') %}
           The garage door is open and the front door is open
@@ -24,8 +24,23 @@ action:
           The front door is open
         {% endif %}
       data: 
-        url: https://williamson-ave.duckdns.org
+        url: >-
+          {% if is_state('binary_sensor.front_door_open', 'on') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% elif is_state('cover.garage_door', 'open') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+          {% else %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% endif %}  
         tag: ha-notify
+        image: >-
+          {% if is_state('binary_sensor.front_door_open', 'on') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% elif is_state('cover.garage_door', 'open') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+          {% else %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% endif %}  
         actions: 
         - title: Lock up     
           action: lock_up

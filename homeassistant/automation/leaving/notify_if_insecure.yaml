@@ -27,7 +27,14 @@ action:
           The front door is unlocked
         {% endif %}
       data: 
-        url: https://williamson-ave.duckdns.org
+        url: >-
+          {% if is_state('lock.front_door', 'unlocked') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% elif is_state('cover.garage_door', 'open') %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+          {% else %}
+            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% endif %}
         tag: ha-notify
         image: >-
           {% if is_state('lock.front_door', 'unlocked') %}
