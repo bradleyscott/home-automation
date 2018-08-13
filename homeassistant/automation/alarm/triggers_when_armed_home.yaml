@@ -51,15 +51,5 @@ action:
           {% elif is_state('binary_sensor.entrance', 'on') %}
             https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
           {% endif %}
-        url: >-
-          {% if is_state('binary_sensor.front_door_open', 'on') %}
-            https://williamson-ave.duckdns.org/api/camera_proxy_stream/camera.front_door_doorbell?token={{ state_attr('camera.front_door_doorbell', 'access_token') }}
-          {% elif is_state('cover.garage_door', 'Opening') %}
-            https://williamson-ave.duckdns.org/api/camera_proxy_stream/camera.garage_phone?token={{ state_attr('camera.garage_phone', 'access_token') }}
-          {% elif is_state('binary_sensor.garage_motion', 'on') %}
-            https://williamson-ave.duckdns.org/api/camera_proxy_stream/camera.garage_phone?token={{ state_attr('camera.garage_phone', 'access_token') }}
-          {% elif is_state('binary_sensor.entrance', 'on') %}
-            https://williamson-ave.duckdns.org/api/camera_proxy_stream/camera.entrance_phone?token={{ state_attr('camera.entrance_phone', 'access_token') }}
-          {% endif %}
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.alarm
