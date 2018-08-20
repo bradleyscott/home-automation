@@ -1,0 +1,34 @@
+cam_view:
+  view: yes
+  icon: mdi:camcorder
+  entities:
+    - doorbell_camera
+    - entrance_camera
+    - garage_camera
+    - pancam_camera
+    - cubecam_camera
+
+pancam_camera:
+  name: Living room camera
+  entities:
+    - camera.pan_cam
+
+cubecam_camera:
+  name: Bedroom camera
+  entities:
+    - camera.cube_cam
+
+doorbell_camera:
+  name: Doorbell camera
+  entities:
+    - camera.front_door_doorbell
+
+entrance_camera:
+  name: Entrance camera
+  entities:
+    - camera.entrance_phone
+
+garage_camera:
+  name: Garage camera
+  entities:
+    - camera.garage_phone

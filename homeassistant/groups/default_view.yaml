@@ -4,30 +4,12 @@ default_view:
   entities:
     - group.doors
     - group.alarm
-    - group.doorbell_camera
-    - group.entrance_camera
-    - group.garage_camera
     - device_tracker.diemrssv_walleye
     - device_tracker.diemrssv_jackpotlte
     - device_tracker.ac3743a35306
     - device_tracker.allynayrsiphone
     - device_tracker.ryansiphone
     - binary_sensor.home_occupied
-
-doorbell_camera:
-  name: Doorbell camera
-  entities:
-    - camera.front_door_doorbell
-
-entrance_camera:
-  name: Entrance camera
-  entities:
-    - camera.entrance_phone
-
-garage_camera:
-  name: Garage camera
-  entities:
-    - camera.garage_phone
 
 doors:
   name: Doors and locks
