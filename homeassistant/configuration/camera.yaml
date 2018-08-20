@@ -1,10 +1,10 @@
 - platform: ffmpeg
   name: Cube cam
-  input: rtsp://192.168.1.42:8554/unicast
+  input: -rtsp_transport tcp -i rtsp://192.168.1.42:8554/unicast
   username: !secret webcam_username
   password: !secret webcam_password
 - platform: ffmpeg
   name: Pan cam
-  input: rtsp://192.168.1.75:8554/unicast
+  input: -rtsp_transport tcp -i rtsp://192.168.1.75:8554/unicast
   username: !secret webcam_username
   password: !secret webcam_password
