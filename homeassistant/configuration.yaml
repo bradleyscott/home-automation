@@ -94,9 +94,11 @@ android_ip_webcam: !include configuration/android_ip_webcam.yaml
 august: !include configuration/august.yaml
 automation: !include_dir_list automation
 binary_sensor: !include_dir_list configuration/binary_sensors
+camera: !include configuration/camera.yaml
 cover: !include configuration/cover.yaml
 cloud: !include configuration/cloud.yaml
 device_tracker: !include configuration/device_tracker.yaml
+ffmpeg:
 group: !include_dir_merge_named groups
 history: !include configuration/history.yaml
 input_boolean: !include configuration/input_boolean.yaml
