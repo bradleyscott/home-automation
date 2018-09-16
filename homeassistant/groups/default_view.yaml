@@ -47,7 +47,6 @@ nest:
 motion_sensors:
   name: Motion sensors
   entities: 
-    - binary_sensor.front_door_doorbell_motion
     - binary_sensor.entrance
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
