@@ -15,6 +15,9 @@ condition:
   - condition: state
     entity_id: alarm_control_panel.alarm
     state: pending
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state: triggered
 action:
   - service: alarm_control_panel.alarm_disarm
     data:
