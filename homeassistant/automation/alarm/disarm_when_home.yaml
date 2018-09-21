@@ -20,6 +20,9 @@ action:
     data:
       entity_id: alarm_control_panel.alarm
       code: !secret alarm_code
+  - service: switch.turn_off
+    data:
+      entity_id: switch.buzzer
   - service: notify.html5
     data_template:
       title: Alarm disarmed

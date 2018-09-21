@@ -10,3 +10,6 @@ action:
   - service: switch.turn_off
     data:
       entity_id: switch.siren
+  - service: switch.turn_off
+    data:
+      entity_id: switch.buzzer
