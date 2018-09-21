@@ -7,6 +7,10 @@ action:
   - service: switch.turn_on
     data:
       entity_id: switch.siren
+  - service: group.set_visibility
+    entity_id: group.siren
+    data:
+      visible: True
   - service: switch.turn_off
     data:
       entity_id: switch.buzzer

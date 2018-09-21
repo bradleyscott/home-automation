@@ -2,6 +2,7 @@ default_view:
   view: yes
   icon: mdi:lock-outline
   entities:
+    - group.siren
     - group.doors
     - group.alarm
     - device_tracker.diemrssv_walleye
@@ -10,6 +11,11 @@ default_view:
     - device_tracker.allynayrsiphone
     - device_tracker.ryansiphone
     - binary_sensor.home_occupied
+
+siren:
+  name: Siren
+  entities:
+    - switch.siren
 
 doors:
   name: Doors and locks

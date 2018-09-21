@@ -6,3 +6,6 @@ group.climate_view:
 
 group.media_view:
   order: 3
+
+group.siren:
+  hidden: true
