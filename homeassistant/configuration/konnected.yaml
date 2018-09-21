@@ -6,6 +6,11 @@ devices:
       - zone: out
         name: 'Siren'
         activation: high
+      - zone: 4
+        name: 'Buzzer'
+        momentary: 65
+        pause: 55
+        repeat: -1
     binary_sensors:
       - pin: 1
         type: motion
