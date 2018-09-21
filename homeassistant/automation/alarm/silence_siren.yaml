@@ -10,10 +10,6 @@ action:
   - service: switch.turn_off
     data:
       entity_id: switch.siren
-  - service: group.set_visibility
-    entity_id: group.doorbell_camera
-    data:
-      visible: False
   - service: switch.turn_off
     data:
       entity_id: switch.buzzer
