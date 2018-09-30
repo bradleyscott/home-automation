@@ -1,0 +1,5 @@
+platform: mqtt
+name: ESP8266 Temperature
+state_topic: sensor/esp8266_0FB1F1/dht11
+unit_of_measurement: '°C'
+value_template: '{{ value_json.temperature }}'

@@ -1,0 +1,4 @@
+platform: mqtt
+name: ESP8266 Motion
+state_topic: sensor/esp8266_0FB1F1/motion
+device_class: motion
