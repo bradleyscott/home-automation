@@ -9,7 +9,7 @@ cam_view:
     - group.cubecam_camera
 
 pancam_camera:
-  name: Living room camera
+  name: Garage camera
   entities:
     - camera.pan_cam
 
@@ -29,6 +29,6 @@ entrance_camera:
     - camera.entrance_phone
 
 garage_camera:
-  name: Garage camera
+  name: Garage phone
   entities:
     - camera.garage_phone
