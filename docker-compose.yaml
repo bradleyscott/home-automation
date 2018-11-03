@@ -114,6 +114,7 @@ services:
       - ./.mosquitto/log:/mosquitto/log
   shinobi:
     build: ./ShinobiDocker
+    container_name: shinobi
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
