@@ -1,10 +1,10 @@
-alias: living_vacant
+alias: living_motion_stairs_off
 trigger:
   - platform: state
     entity_id: binary_sensor.living_room
     to: 'off'
     for:
-      minutes: 10
+      minutes: 2
 condition:
   - condition: state
     entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
@@ -13,6 +13,3 @@ action:
   - service: switch.turn_off
     data:
       entity_id: switch.aeotec_zw132_dual_nano_switch_switch_16 # Stairs
-  - service: switch.turn_off
-    data:
-      entity_id: switch.aeotec_zw116_nano_switch_switch # Dining room light

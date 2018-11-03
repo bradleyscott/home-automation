@@ -77,10 +77,10 @@ automation.living_motion_stairs_on:
   friendly_name: Turn stair lights on on living room motion
 
 automation.living_motion:
-  friendly_name: Turn lights on on living room motion
+  friendly_name: Turn lights on when motion in living room
 
-automation.living_vacant:
-  friendly_name: Turn stair lights off when living room vacant
+automation.living_motion_stairs_off:
+  friendly_name: Turn stair lights off when no motion in iving room
 
 automation.notify_on_arrival:
   friendly_name: Notify on arrival with option to open garage
@@ -121,3 +121,6 @@ script.toggle_living_room_heatpump:
 
 script.toggle_bedroom_heatpump:
   icon: mdi:fan
+
+automation.dining_off_during_day:
+  friendly_name: Turn off dining room light during the day

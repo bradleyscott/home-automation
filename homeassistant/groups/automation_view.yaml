@@ -27,7 +27,8 @@ lights_automation:
     - automation.upstairs_vacant
     - automation.living_motion
     - automation.living_motion_stairs_on
-    - automation.living_vacant
+    - automation.living_motion_stairs_off
+    - automation.dining_off_during_day
     - automation.downstairs_motion
     - automation.downstairs_vacant
     - automation.garage_lights_on
