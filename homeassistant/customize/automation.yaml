@@ -8,7 +8,10 @@ automation.triggers_when_armed_home:
   friendly_name: If Armed home, trigger on doors or downstairs motion
 
 automation.notify_if_doors_open:
-  friendly_name: Remind me that front doors are open
+  friendly_name: Remind me if front door is open
+
+automation.notify_if_garage_open:
+  friendly_name: Remind me if garage door is open
 
 automation.notify_if_insecure_when_late:
   friendly_name: Tell me if the house is insecure when its late

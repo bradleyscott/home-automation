@@ -1,40 +1,23 @@
 alias: notify_if_doors_open
 trigger:
   - platform: time
-    minutes: /120
+    minutes: /30
     seconds: 0
 condition:
-  condition: or
+  condition: and
   conditions:
   - condition: state
-    entity_id: cover.garage_door
-    state: open
+    entity_id: lock.front_door
+    state: 'unlocked'
   - condition: state
     entity_id: binary_sensor.front_door_open
     state: 'on'
 action:
   - service: notify.html5
     data_template:
-      title: Remember you have doors open
-      message: >-
-        {% if is_state('cover.garage_door', 'open') and is_state('binary_sensor.front_door_open', 'on') %}
-          Both the garage door and front doors are open. Remember to check the house belongings are secure
-        {% elif is_state('cover.garage_door', 'open') %}
-          The garage door is open. Remember to check the garage belongings are secure
-        {% else %}
-          The front door is open. Remember to check the house belongings are secure
-        {% endif %}
+      title: The front door is open
+      message: The front door is open. Remember to check the house belongings are secure
       data: 
         tag: ha-notify
         url: https://williamson-ave.duckdns.org
-        image: >-
-          {% if is_state('binary_sensor.front_door_open', 'on') %}
-            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
-          {% elif is_state('cover.garage_door', 'open') %}
-            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
-          {% else %}
-            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
-          {% endif %}    
-        actions: 
-        - title: Close garage   
-          action: close_garage
+        image: https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }} 

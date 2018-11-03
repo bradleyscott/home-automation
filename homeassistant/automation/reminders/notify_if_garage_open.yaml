@@ -1,0 +1,21 @@
+alias: notify_if_garage_open
+trigger:
+  - platform: time
+    minutes: /120
+    seconds: 0
+condition:
+  - condition: state
+    entity_id: cover.garage_door
+    state: open
+action:
+  - service: notify.html5
+    data_template:
+      title: Remember the garage door is open
+      message: The garage door is open. Remember to check the garage belongings are secure
+      data: 
+        tag: ha-notify
+        url: https://williamson-ave.duckdns.org
+        image: https://williamson-ave.duckdns.org{{ state_attr('camera.pan_cam', 'entity_picture') }}
+        actions: 
+        - title: Close garage   
+          action: close_garage
