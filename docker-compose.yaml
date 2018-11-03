@@ -117,9 +117,9 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - ./config:/config
-      - ./videos:/opt/shinobi/videos
-      - ./datadir:/var/lib/mysql
+      - ./.shinobi/config:/config
+      - ./.shinobi/videos:/opt/shinobi/videos
+      - ./.shinobi/datadir:/var/lib/mysql
       - /dev/shm/shinobiDockerTemp:/dev/shm/streams
     ports:
       - "8088:8080"
