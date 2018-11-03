@@ -112,4 +112,16 @@ services:
       - ./.mosquitto/config:/mosquitto/config
       - ./.mosquitto/data:/mosquitto/data
       - ./.mosquitto/log:/mosquitto/log
+  shinobi:
+    build: ./ShinobiDocker
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./config:/config
+      - ./videos:/opt/shinobi/videos
+      - ./datadir:/var/lib/mysql
+      - /dev/shm/shinobiDockerTemp:/dev/shm/streams
+    ports:
+      - "8088:8080"
+
 
