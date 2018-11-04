@@ -116,9 +116,9 @@ services:
     image: kerberos/kerberos
     container_name: entrance-cam
     volumes:
-      - ./kerberos/entrance-cam/.config:/etc/opt/kerberosio/config
+      - ./kerberos/entrance-cam/config:/etc/opt/kerberosio/config
       - ./kerberos/entrance-cam/:/etc/opt/kerberosio/capture
-      - ./kerberos/entrance-cam/.logs:/etc/opt/kerberosio/logs
+      - ./kerberos/entrance-cam/logs:/etc/opt/kerberosio/logs
     ports:
       - "880:80"
 
