@@ -112,17 +112,14 @@ services:
       - ./.mosquitto/config:/mosquitto/config
       - ./.mosquitto/data:/mosquitto/data
       - ./.mosquitto/log:/mosquitto/log
-  shinobi:
-    build: ./ShinobiDocker
-    container_name: shinobi
+  entrance-cam:
+    image: kerberos/kerberos
+    container_name: entrance-cam
     volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
-      - ./.shinobi/config:/config
-      - ./.shinobi/videos:/opt/shinobi/videos
-      - ./.shinobi/datadir:/var/lib/mysql
-      - /dev/shm/shinobiDockerTemp:/dev/shm/streams
+      - ./kerberos/entrance-cam/.config:/etc/opt/kerberosio/config
+      - ./kerberos/entrance-cam/:/etc/opt/kerberosio/capture
+      - ./kerberos/entrance-cam/.logs:/etc/opt/kerberosio/logs
     ports:
-      - "8088:8080"
+      - "880:80"
 
 
