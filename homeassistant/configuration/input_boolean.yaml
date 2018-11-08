@@ -3,7 +3,7 @@ house_motion:
   initial: off
   icon: mdi:timer
 
-auto_arm_alarm:
-  name: Arm the alarm when leaving home
-  initial: on
-  icon: mdi:alarm-bell
+guest_mode:
+  name: Guest mode
+  initial: off
+  icon: mdi:account-question

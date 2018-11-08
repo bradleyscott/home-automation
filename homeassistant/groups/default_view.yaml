@@ -26,7 +26,7 @@ alarm:
   name: Burglar alarm
   control: hidden
   entities:
-    - input_boolean.auto_arm_alarm
+    - input_boolean.guest_mode
     - alarm_control_panel.alarm
     - binary_sensor.front_door_doorbell_motion
     - binary_sensor.entrance
