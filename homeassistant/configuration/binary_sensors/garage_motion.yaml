@@ -3,6 +3,4 @@ name: Garage motion
 device_class: motion
 payload_on: 'on'
 state_topic: camera/garage/motion
-delay_off:
-  minutes: 2
-
+off_delay: 120
