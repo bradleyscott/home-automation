@@ -47,11 +47,6 @@ include:
     - sensor.entrance_phone_battery_voltage
     - sensor.entrance_phone_light_level
     - sensor.entrance_phone_motion
-    - sensor.garage_phone_battery_level
-    - sensor.garage_phone_battery_temperature
-    - sensor.garage_phone_battery_voltage
-    - sensor.garage_phone_light_level
-    - sensor.garage_phone_motion
     - sensor.garage_car_present
     - sensor.garage_status
     - sensor.living_room_nest_protect_battery_health
@@ -63,7 +58,6 @@ include:
     - sensor.owm_temperature
     - sensor.owm_wind_speed
     - switch.entrance_phone_video_recording
-    - switch.garage_phone_video_recording
     - switch.smart_switch
     - switch.siren # Alarm siren
     - light.level # Living room lights
