@@ -2,5 +2,5 @@
 #   name: Cube cam
 #   input: !secret cubecam_rstp
 - platform: ffmpeg
-  name: Pan cam
+  name: Garage camera
   input: !secret pancam_rstp

@@ -5,13 +5,12 @@ cam_view:
     - group.doorbell_camera
     - group.entrance_camera
     - group.garage_camera
-    - group.pancam_camera
     - group.cubecam_camera
 
-pancam_camera:
+garage_camera:
   name: Garage camera
   entities:
-    - camera.pan_cam
+    - camera.garage_camera
 
 cubecam_camera:
   name: Bedroom camera
@@ -27,8 +26,3 @@ entrance_camera:
   name: Entrance camera
   entities:
     - camera.entrance_phone
-
-garage_camera:
-  name: Garage phone
-  entities:
-    - camera.garage_phone
