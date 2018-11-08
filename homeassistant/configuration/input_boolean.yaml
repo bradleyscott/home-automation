@@ -6,4 +6,4 @@ house_motion:
 guest_mode:
   name: Guest mode
   initial: off
-  icon: mdi:account-question
+  icon: mdi:account-key
