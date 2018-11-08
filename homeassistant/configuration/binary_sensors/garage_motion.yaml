@@ -1,8 +1,8 @@
-platform: template
+platform: mqtt
 sensors:
   garage_motion:
     friendly_name: Garage motion
     device_class: motion
-    value_template: "{{ states('sensor.garage_phone_motion') | float > 750 }}"
+    state_topic: camera/garage/motion
     delay_off:
       minutes: 2
