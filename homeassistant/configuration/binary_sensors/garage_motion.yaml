@@ -1,8 +1,8 @@
 platform: mqtt
-sensors:
-  garage_motion:
-    friendly_name: Garage motion
-    device_class: motion
-    state_topic: camera/garage/motion
-    delay_off:
-      minutes: 2
+name: Garage motion
+device_class: motion
+payload_on: 'on'
+state_topic: camera/garage/motion
+delay_off:
+  minutes: 2
+
