@@ -116,29 +116,20 @@ services:
     image: kerberos/kerberos
     container_name: entrance-cam
     volumes:
-      - ./kerberos/entrance-cam/config:/etc/opt/kerberosio/config
-      - ./kerberos/entrance-cam/:/etc/opt/kerberosio/capture
-      - ./kerberos/entrance-cam/logs:/etc/opt/kerberosio/logs
+      - ./kerberos/config/entrance-cam:/etc/opt/kerberosio/config
+      - /media/bradley/external/security/entrance-cam:/etc/opt/kerberosio/capture
+      - ./kerberos/logs/entrance-cam:/etc/opt/kerberosio/logs
     ports:
       - "881:80"
-  garage-phone:
+  garage-cam:
     image: kerberos/kerberos
-    container_name: garage-phone
+    container_name: garage-cam
     volumes:
-      - ./kerberos/garage-phone/config:/etc/opt/kerberosio/config
-      - ./kerberos/garage-phone/:/etc/opt/kerberosio/capture
-      - ./kerberos/garage-phone/logs:/etc/opt/kerberosio/logs
+      - ./kerberos/config/garage-cam:/etc/opt/kerberosio/config
+      - /media/bradley/external/security/garage-cam:/etc/opt/kerberosio/capture
+      - ./kerberos/logs/garage-cam:/etc/opt/kerberosio/logs
     ports:
       - "882:80"
-  pan-cam:
-    image: kerberos/kerberos
-    container_name: pan-cam
-    volumes:
-      - ./kerberos/pan-cam/config:/etc/opt/kerberosio/config
-      - ./kerberos/pan-cam/:/etc/opt/kerberosio/capture
-      - ./kerberos/pan-cam/logs:/etc/opt/kerberosio/logs
-    ports:
-      - "883:80"
 
 
 
