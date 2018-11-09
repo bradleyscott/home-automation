@@ -15,7 +15,7 @@ garage_camera:
 cubecam_camera:
   name: Bedroom camera
   entities:
-    - camera.cube_cam
+    - camera.cube_camera
 
 doorbell_camera:
   name: Doorbell camera
