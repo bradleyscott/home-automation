@@ -1,6 +1,8 @@
-- platform: ffmpeg
+- platform: generic
   name: Cube cam
-  input: !secret cubecam_rstp
+  still_image_url: http://192.168.1.248/cgi-bin/currentpic.cgi
+  username: !secret webcam_username
+  password: !secret webcam_password
 - platform: ffmpeg
   name: Garage camera
   input: !secret pancam_rstp
