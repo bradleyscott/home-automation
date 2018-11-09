@@ -3,3 +3,4 @@ stop_cube_cam:
   url: https://192.168.1.248/cgi-bin/action.cgi?cmd=rtsp_stop
   username: !secret webcam_username
   password: !secret webcam_password
+  verify_ssl: false
