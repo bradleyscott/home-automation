@@ -4,4 +4,4 @@ trigger:
     entity_id: alarm_control_panel.alarm
     to: armed_away
 action:
-  - service: rest_command.start_cube_cam
+  - service: shell_command.start_cube_cam
