@@ -130,6 +130,15 @@ services:
       - ./kerberos/logs/garage-cam:/etc/opt/kerberosio/logs
     ports:
       - "882:80"
+  cube-cam:
+    image: kerberos/kerberos
+    container_name: cube-cam
+    volumes:
+      - ./kerberos/config/cube-cam:/etc/opt/kerberosio/config
+      - /media/bradley/external/security/cube-cam:/etc/opt/kerberosio/capture
+      - ./kerberos/logs/cube-cam:/etc/opt/kerberosio/logs
+    ports:
+      - "883:80"
 
 
 
