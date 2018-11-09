@@ -1,0 +1,7 @@
+alias: stop_camera_when_disarmed
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: disarmed
+action:
+  - service: rest_command.stop_cube_cam

@@ -55,6 +55,8 @@ alarm_automation:
     - automation.disarm_when_home
     - automation.triggers_when_armed_home
     - automation.triggers_when_armed_away
+    - automation.start_camera_when_armed_away
+    - automation.stop_camera_when_disarmed
 
 nest_automation:
   name: Smoke alarm

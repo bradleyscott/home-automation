@@ -1,0 +1,7 @@
+alias: start_camera_when_armed_away
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: armed_away
+action:
+  - service: rest_command.start_cube_cam
