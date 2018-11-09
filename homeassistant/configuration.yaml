@@ -109,7 +109,7 @@ mqtt: !include configuration/mqtt.yaml
 nest: !include configuration/nest.yaml
 notify: !include configuration/notify.yaml
 recorder: !include configuration/recorder.yaml
-rest_command: !include_dir_merge_named configuration/rest_command
+shell_command: !include_dir_merge_named configuration/shell_command
 script: !include_dir_merge_named scripts
 sensor: !include_dir_list configuration/sensors
 twilio: !include configuration/twilio.yaml
