@@ -45,7 +45,7 @@ def setup(hass, config):
         controller = IntesisHome(_user,_pass, hass.loop)
         controller.connect()
 
-    hass.async_add_job(async_load_platform(hass, 'climate', DOMAIN))
+    hass.async_add_job(async_load_platform(hass, 'climate', DOMAIN, {}, config))
 
     if controller.error_message:
         persistent_notification.create(hass, controller.error_message, "IntesisHome Error", 'intesishome')
