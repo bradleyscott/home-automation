@@ -15,7 +15,7 @@ action:
       data: 
         tag: ha-notify
         url: https://williamson-ave.duckdns.org
-        image: https://williamson-ave.duckdns.org{{ state_attr('camera.pan_cam', 'entity_picture') }}
+        image: https://williamson-ave.duckdns.org{{ state_attr('camera.garage_camera', 'entity_picture') }}
         actions: 
         - title: Close garage   
           action: close_garage
