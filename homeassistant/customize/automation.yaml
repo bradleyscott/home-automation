@@ -82,9 +82,6 @@ automation.living_motion:
 automation.living_motion_stairs_off:
   friendly_name: Turn stair lights off when no motion in iving room
 
-automation.notify_on_arrival:
-  friendly_name: Notify on arrival with option to open garage
-
 automation.turn_off_lights_when_leaving:
   friendly_name: Turn off all lights when leaving
 
