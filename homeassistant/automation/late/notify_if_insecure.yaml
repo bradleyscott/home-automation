@@ -25,7 +25,7 @@ action:
         {% endif %}
       data: 
         tag: ha-notify
-        url: https://williamson-ave.duckdns.org
+        url: /states/group.cam_view
         image: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}
             https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
