@@ -39,5 +39,4 @@ action:
         {% endif %}
       data:
         tag: ha-alarm
-        url: https://williamson-ave.duckdns.org
         image: https://williamson-ave.duckdns.org{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}

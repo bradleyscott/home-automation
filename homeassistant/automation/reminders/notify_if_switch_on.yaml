@@ -17,7 +17,7 @@ action:
       title: Remember the oil heater is on
       message: Check to make sure Nirupa hasn't started a fire
       data: 
-        url: https://williamson-ave.duckdns.org
+        url: /states/group.lights_view
         tag: ha-notify
         actions: 
         - title: Turn off 

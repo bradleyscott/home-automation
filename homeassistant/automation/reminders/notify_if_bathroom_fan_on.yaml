@@ -15,7 +15,7 @@ action:
       title: Bathroom fan on
       message: The bathroom fan is on. Don't forget to turn it off
       data: 
-        url: https://williamson-ave.duckdns.org
+        url: /states/group.lights_view
         tag: ha-notify
         actions: 
         - title: Turn off 

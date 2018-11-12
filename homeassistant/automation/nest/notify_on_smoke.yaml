@@ -14,4 +14,3 @@ action:
       message: The smoke alarm has detected a fire
       data: 
         tag: ha-notify
-        url: https://williamson-ave.duckdns.org

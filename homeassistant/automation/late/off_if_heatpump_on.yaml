@@ -16,4 +16,3 @@ action:
       message: I have turned the living room heatpump off for you
       data: 
         tag: ha-notify
-        url: https://williamson-ave.duckdns.org
