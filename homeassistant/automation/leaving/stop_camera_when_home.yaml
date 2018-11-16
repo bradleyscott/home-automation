@@ -1,0 +1,10 @@
+alias: stop_camera_when_home
+trigger:
+  - platform: state
+    entity_id: device_tracker.diemrssv_jackpotlte
+    to: 'home'
+  - platform: state
+    entity_id: device_tracker.diemrssv_walleye
+    to: 'home'
+action:
+  - service: shell_command.stop_cube_cam

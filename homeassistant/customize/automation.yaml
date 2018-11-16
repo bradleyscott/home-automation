@@ -122,11 +122,11 @@ script.toggle_bedroom_heatpump:
 automation.dining_off_during_day:
   friendly_name: Turn off dining room light during the day
 
-automation.start_camera_when_armed_away:
-  friendly_name: Start camera when armed away
+automation.start_camera_when_away:
+  friendly_name: Start bedroom camera when leaving
 
-automation.stop_camera_when_disarmed:
-  friendly_name: Stop camera when disarmed
+automation.stop_camera_when_home:
+  friendly_name: Stop bedroom camera when home
 
 
 
