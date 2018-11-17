@@ -8,9 +8,9 @@ toggle_bedroom_heatpump:
         operation_mode: >-
           {% if not(is_state('climate.bedroom_heat_pump', 'Off')) %}
             'Off'
-          {% elif states('sensor.aeotec_zw100_multisensor_6_temperature') | float > 25 %}
+          {% elif states('sensor.esp8266_temperature') | float > 25 %}
             'Cool'
-          {% elif states('sensor.aeotec_zw100_multisensor_6_temperature') | float < 20 %}
+          {% elif states('sensor.esp8266_temperature') | float < 20 %}
             'Heat'
           {%- else -%}
             'Fan'

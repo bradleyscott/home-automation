@@ -6,7 +6,7 @@ condition:
   condition: and
   conditions:
   - condition: numeric_state
-    entity_id: sensor.aeotec_zw100_multisensor_6_temperature
+    entity_id: sensor.esp8266_temperature
     below: '17'
   - condition: state
     entity_id: binary_sensor.home_occupied
@@ -20,10 +20,8 @@ condition:
       - fri
 action:
   - service: climate.set_operation_mode
-    data:
-      entity_id: climate.bedroom_heat_pump
+    entity_id: climate.bedroom_heat_pump
       operation_mode: 'Heat' 
   - service: climate.set_fan_mode
-    data:
       entity_id: climate.bedroom_heat_pump
       fan_mode: 'Quiet' 
