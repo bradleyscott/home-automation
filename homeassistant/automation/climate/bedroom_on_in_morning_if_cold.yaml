@@ -20,7 +20,7 @@ condition:
       - fri
 action:
   - service: climate.set_operation_mode
-    entity_id: climate.bedroom_heat_pump
+      entity_id: climate.bedroom_heat_pump
       operation_mode: 'Heat' 
   - service: climate.set_fan_mode
       entity_id: climate.bedroom_heat_pump
