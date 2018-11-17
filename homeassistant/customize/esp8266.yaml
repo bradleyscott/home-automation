@@ -1,0 +1,9 @@
+binary_sensor.esp8266_motion:
+  friendly_name: Bedroom motion
+
+sensor.esp8266_humidity:
+  friendly_name: Bedside humidity
+
+sensor.esp8266_temperature:
+  friendly_name: Bedside temperature
+
