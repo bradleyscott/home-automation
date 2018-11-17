@@ -7,7 +7,7 @@ notify_on_motion:
         title: Motion detected and alarm is armed
         message: "{{ trigger }} has triggered the alarm. The siren will sound unless you disarm"
         data:
-          url: "{{ url or 'https://williamson-ave.duckdns.org' }}"
+          url: "{{ url or '/states/group.cam_view' }}"
           image: "{{ image or null }}"
           tag: ha-alarm
           requireInteraction: "true"
@@ -26,7 +26,8 @@ panic_button:
         title: Panic button activated
         message: The Panic button has been pressed and the siren has been turned on
         data:
-          url: https://williamson-ave.duckdns.org
+          url: /states/group.cam_view
+          image: !secret pancan_image
           tag: ha-alarm
           renotify: "true"
           actions:
