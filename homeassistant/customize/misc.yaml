@@ -8,6 +8,9 @@ camera.entrance_phone:
 camera.front_door_doorbell:
   friendly_name: Doorbell camera
 
+camera.cube_camera:
+  friendly_name: Bedroom camera
+
 binary_sensor.front_door_doorbell_motion:
   friendly_name: Doorbell motion sensor
   device_class: motion
