@@ -27,7 +27,7 @@ panic_button:
         message: The Panic button has been pressed and the siren has been turned on
         data:
           url: /states/group.cam_view
-          image: !secret pancan_image
+          image: !secret pancam_image
           tag: ha-alarm
           renotify: "true"
           actions:
