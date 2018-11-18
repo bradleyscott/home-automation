@@ -5,5 +5,5 @@ house_motion:
 
 guest_mode:
   name: Guest mode
-  initial: off
+  initial: on
   icon: mdi:account-key
