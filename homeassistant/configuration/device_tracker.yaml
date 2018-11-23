@@ -6,11 +6,9 @@
     track_new_devices: false
     hide_if_away: true
   exclude:
-    - "192.168.1.167" # media-hub
+    - "192.168.1.250" # media-hub
     - "127.0.0.1"
 - platform: owntracks
   max_gps_accuracy: 200
   events_only: true
   consider_home: 300
-- platform: bluetooth_tracker
-  request_rssi: true
