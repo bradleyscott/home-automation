@@ -19,6 +19,7 @@ cubecam_camera:
   name: Bedroom camera
   entities:
     - camera.cube_camera
+    - switch.cubecam_night_mode
 
 doorbell_camera:
   name: Doorbell camera

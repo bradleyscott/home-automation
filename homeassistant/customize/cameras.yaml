@@ -37,3 +37,12 @@ cover.garagecamera_move_updown:
 
 switch.garagecamera_night_mode:
   friendly_name: Garage camera night mode
+
+binary_sensor.cubecam_motion_sensor:
+  friendly_name: Bedroom motion
+
+sensor.cubecam_light_sensor:
+  friendly_name: Bedroom light level
+
+switch.cubecam_night_mode:
+  friendly_name: Bedroom camera night mode
