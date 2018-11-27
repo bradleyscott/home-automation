@@ -1,7 +1,7 @@
 alias: garage_vacant
 trigger:
   - platform: state
-    entity_id: binary_sensor.garage_motion
+    entity_id: binary_sensor.garagecamera_motion_sensor
     to: 'off'
     for:
       minutes: 10

@@ -4,7 +4,7 @@ trigger:
     entity_id: cover.garage_door
     to: 'Opening'
   - platform: state
-    entity_id: binary_sensor.garage_motion
+    entity_id: binary_sensor.garagecamera_motion_sensor
     to: 'on'
 action:
   - service: switch.turn_on

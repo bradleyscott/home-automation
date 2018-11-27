@@ -11,6 +11,8 @@ garage_camera:
   name: Garage camera
   entities:
     - camera.garage_camera
+    - cover.garagecamera_move_leftright
+    - cover.garagecamera_move_updown
 
 cubecam_camera:
   name: Bedroom camera

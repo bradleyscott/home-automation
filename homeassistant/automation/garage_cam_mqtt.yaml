@@ -1,9 +1,0 @@
-alias: garage_cam_mqtt
-trigger:
-  - platform: mqtt
-    topic: camera/garage
-action:
-  - service: mqtt.publish
-    data:
-      topic: camera/garage/motion
-      payload: 'on'

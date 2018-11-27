@@ -14,16 +14,12 @@ include:
     - binary_sensor.entrance
     # - binary_sensor.esp8266_motion # Removing this until it stops false firing
     - binary_sensor.front_door_doorbell_motion
-    - binary_sensor.front_door_doorbell_ding
-    - binary_sensor.front_door_doorbell_online
     - binary_sensor.front_door_open
-    - binary_sensor.garage_motion
+    - binary_sensor.garagecamera_motion_sensor
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
     - binary_sensor.internet_connection
     - binary_sensor.living_room
-    - binary_sensor.living_room_nest_protect_online
-    - binary_sensor.williamson_avenue_away
     - climate.living_room_heat_pump
     - climate.bedroom_heat_pump
     - cover.garage_door
@@ -43,13 +39,11 @@ include:
     - sensor.esp8266_temperature
     - sensor.esp8266_humidity
     - sensor.entrance_phone_battery_level
-    - sensor.entrance_phone_battery_temperature
-    - sensor.entrance_phone_battery_voltage
     - sensor.entrance_phone_light_level
     - sensor.entrance_phone_motion
     - sensor.garage_car_present
     - sensor.garage_status
-    - sensor.living_room_nest_protect_battery_health
+    - sensor.garagecamera_light_sensor
     - sensor.living_room_nest_protect_co_status
     - sensor.living_room_nest_protect_smoke_status
     - sensor.owm_condition
@@ -57,7 +51,6 @@ include:
     - sensor.owm_rain
     - sensor.owm_temperature
     - sensor.owm_wind_speed
-    - switch.entrance_phone_video_recording
     - switch.smart_switch
     - switch.siren # Alarm siren
     - light.level # Living room lights

@@ -1,28 +1,3 @@
 switch.smart_switch:
   friendly_name: Oil heater
   icon: mdi:thermometer-lines
-
-camera.entrance_phone:
-  friendly_name: Entrance camera
-
-camera.front_door_doorbell:
-  friendly_name: Doorbell camera
-
-camera.cube_camera:
-  friendly_name: Bedroom camera
-
-binary_sensor.front_door_doorbell_motion:
-  friendly_name: Doorbell motion sensor
-  device_class: motion
-
-sensor.entrance_phone_battery_temperature:
-  unit_of_measurement: '°C'
-
-sensor.garage_phone_battery_temperature:
-  unit_of_measurement: '°C'
-
-sensor.entrance_phone_light_level:
-  unit_of_measurement: 'lux'
-
-sensor.garage_phone_light_level:
-  unit_of_measurement: 'lux'
