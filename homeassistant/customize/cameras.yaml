@@ -34,3 +34,6 @@ cover.garagecamera_move_leftright:
 
 cover.garagecamera_move_updown:
   friendly_name: Garage camera up/down
+
+switch.garagecamera_night_mode:
+  friendly_name: Garage camera night mode

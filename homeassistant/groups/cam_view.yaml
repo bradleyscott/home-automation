@@ -11,6 +11,7 @@ garage_camera:
   name: Garage camera
   entities:
     - camera.garage_camera
+    - switch.garagecamera_night_mode
     - cover.garagecamera_move_leftright
     - cover.garagecamera_move_updown
 

@@ -51,6 +51,7 @@ include:
     - sensor.owm_rain
     - sensor.owm_temperature
     - sensor.owm_wind_speed
+    - switch.garagecamera_night_mode
     - switch.smart_switch
     - switch.siren # Alarm siren
     - light.level # Living room lights
