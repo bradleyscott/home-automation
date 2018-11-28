@@ -33,8 +33,6 @@ bedroom:
     - climate.bedroom_heat_pump
     - sensor.esp8266_temperature
     - sensor.esp8266_humidity
-    - sensor.cubecam_light_sensor
-    - binary_sensor.cubecam_motion_sensor
 
 living_area:
   name: Living area
