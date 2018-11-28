@@ -66,6 +66,7 @@ services:
     network_mode: "host"
     depends_on: 
       - mosquitto
+      - mysql
     devices:
       - /dev/ttyACM0
     environment: 
@@ -78,6 +79,16 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - ./homeassistant:/config
     privileged: true
+  mysql:
+    image: mysql/mysql-server
+    container_name: mysql
+    restart: unless-stopped
+    volumes:
+      - ./.mysql/my.cnf:/etc/my.cnf
+      - ./.mysql/data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+      - "33060:33060"
   unifi:
     image: linuxserver/unifi
     container_name: unifi
