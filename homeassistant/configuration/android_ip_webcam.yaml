@@ -3,16 +3,13 @@
   username: !secret webcam_username
   password: !secret webcam_password
   sensors:
-    - audio_connections
     - battery_level
     - battery_temp
     - battery_voltage
     - light
     - motion
-    - pressure
-    - proximity
     - sound
-    - video_connections
   switches:
     - overlay
     - video_recording
+    - night_vision
