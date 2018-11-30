@@ -8,3 +8,7 @@
   exclude:
     - "192.168.1.250" # media-hub
     - "127.0.0.1"
+- platform: googlehome
+  host: 192.168.1.70
+- platform: googlehome
+  host: 192.168.1.12
