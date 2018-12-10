@@ -128,5 +128,6 @@ automation.start_camera_when_away:
 automation.stop_camera_when_home:
   friendly_name: Stop bedroom camera when home
 
-
+automation.ifttt_webhook_received:
+  friendly_name: Enable inbound API requests
 

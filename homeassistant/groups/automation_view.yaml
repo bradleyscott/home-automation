@@ -45,6 +45,7 @@ security_automation:
     - automation.notify_if_insecure_when_leaving
     - automation.notify_if_doors_open
     - automation.notify_if_garage_open
+    - automation.ifttt_webhook_received
 
 alarm_automation:
   name: Burglar alarm
