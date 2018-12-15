@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     environment:
       - PGID=999
-      - PUID=999
+      - PUID=1000
       - TZ=Pacific/Auckland
     volumes:
       - ./.couchpotato:/config
@@ -23,7 +23,7 @@ services:
     environment:
       - VERSION=latest
       - PGID=999
-      - PUID=999
+      - PUID=1000
       - TZ=Pacific/Auckland
     volumes:
       - ./.plex:/config
@@ -35,7 +35,7 @@ services:
     restart: unless-stopped
     environment:
       - PGID=999
-      - PUID=999
+      - PUID=1000
       - TZ=Pacific/Auckland
     volumes:
       - ./.transmission:/config
@@ -51,7 +51,7 @@ services:
     restart: unless-stopped
     environment:
       - PGID=999
-      - PUID=999
+      - PUID=1000
       - TZ=Pacific/Auckland
     volumes:
       - ./.sickrage:/config
@@ -86,7 +86,7 @@ services:
       - ./.unifi:/config
     environment:
       - PGID=999
-      - PUID=999
+      - PUID=1000
     ports:
       - "3478:3478/udp"
       - "10001:10001/udp"
