@@ -3,3 +3,11 @@ climate.bedroom_heat_pump:
 
 climate.living_room_heat_pump:
   icon: mdi:weather-snowy-rainy
+
+sensor.living_room_temp:
+  device_class: temperature
+  friendly_name: Living room temperature
+
+sensor.bedroom_temp:
+  device_class: temperature
+  friendly_name: Bedroom temperature
