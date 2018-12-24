@@ -1,8 +1,8 @@
 access_token: !secret konnected_token
-api_host: http://192.168.1.250:8123
+api_host: http://192.168.2.100:8123
 devices:
   - id: 18fe34e88a5f
-    host: 192.168.2.150
+    host: 192.168.2.121
     port: 23239
     discovery: true
     switches:
