@@ -78,22 +78,6 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - ./homeassistant:/config
     privileged: true
-  unifi:
-    image: linuxserver/unifi
-    container_name: unifi
-    restart: unless-stopped
-    volumes: 
-      - ./.unifi:/config
-    environment:
-      - PGID=999
-      - PUID=1000
-    ports:
-      - "3478:3478/udp"
-      - "10001:10001/udp"
-      - "8080:8080"
-      - "8081:8081"
-      - "8443:8443"
-      - "8880:8880"
   caddy:
     image: abiosoft/caddy:0.10.11
     container_name: caddy
