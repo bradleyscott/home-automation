@@ -1,4 +1,4 @@
-- host: 192.168.1.245
+- host: 192.168.2.245
   name: Entrance phone
   username: !secret webcam_username
   password: !secret webcam_password
