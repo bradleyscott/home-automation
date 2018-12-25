@@ -1,4 +1,4 @@
-- bedroom:
+bedroom:
   name: Bedroom
   entities: 
     - sensor.bedroom_temp
@@ -9,20 +9,20 @@
     - switch.aeotec_zw132_dual_nano_switch_switch_14 # Spotlights
     - media_player.bedroom_home_speaker
 
-- bathroom:
+bathroom:
   name: Bathroom 
   entities:
     - switch.switch_7 # Bathroom fan
     - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
     - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
 
-- bathroom_lights:
+bathroom_lights:
   name: Bathroom lights
   entities:
     - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
     - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
 
-- upstairs:
+upstairs:
   name: Upstairs
   entities:
     - switch.aeotec_zw132_dual_nano_switch_switch_16 # Stairway
@@ -33,7 +33,7 @@
     - sensor.aeotec_zw100_multisensor_6_temperature
     - switch.smart_switch
 
-- entrance:
+entrance:
   name: Entrance
   entities:
     - binary_sensor.front_door_open
@@ -44,7 +44,7 @@
     - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
     - camera.entrance_phone
 
-- garage:
+garage:
   name: Garage
   entities:
     - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
@@ -53,7 +53,7 @@
     - sensor.garage_car_present
     - camera.garage_camera
 
-- living:
+living:
   name: Living area
   entities:
     - light.level # Living room lights
@@ -67,7 +67,7 @@
     - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
     - media_player.compucast
 
-- living_area_lights:
+living_area_lights:
   name: Living area lights
   entities:
     - light.level # Living room lights
@@ -75,7 +75,7 @@
     - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
     - switch.aeotec_zw116_nano_switch_switch # Dining room light
 
-- kitchen:
+kitchen:
   name: Kitchen
   entities:
     - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
@@ -84,7 +84,7 @@
     - sensor.living_room_nest_protect_smoke_status
     - media_player.kitchen_speaker
 
-- motion_sensors:
+motion_sensors:
   name: Motion sensors
   entities: 
     - binary_sensor.entrance
