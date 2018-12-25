@@ -98,7 +98,7 @@ cover: !include configuration/cover.yaml
 cloud: !include configuration/cloud.yaml
 device_tracker: !include configuration/device_tracker.yaml
 ffmpeg:
-group: groups.yaml
+group: !include groups.yaml
 history: !include configuration/history.yaml
 input_boolean: !include configuration/input_boolean.yaml
 intesishome: !include configuration/intesishome.yaml
