@@ -1,0 +1,93 @@
+bedroom:
+  name: Bedroom
+  entities: 
+    - sensor.bedroom_temp
+    - climate.bedroom_heat_pump
+    - sensor.esp8266_temperature
+    - sensor.esp8266_humidity
+    - switch.aeotec_zw132_dual_nano_switch_switch_13 # Globes
+    - switch.aeotec_zw132_dual_nano_switch_switch_14 # Spotlights
+    - media_player.bedroom_home_speaker
+
+bathroom:
+  name: Bathroom 
+  entities:
+    - switch.switch_7 # Bathroom fan
+    - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
+
+bathroom_lights:
+  name: Bathroom lights
+  entities:
+    - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
+
+upstairs:
+  name: Upstairs
+  entities:
+    - switch.aeotec_zw132_dual_nano_switch_switch_16 # Stairway
+    - switch.aeotec_zw132_dual_nano_switch_switch_15 # Hallway
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor
+    - sensor.aeotec_zw100_multisensor_6_luminance
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity
+    - sensor.aeotec_zw100_multisensor_6_temperature
+    - switch.smart_switch
+
+entrance:
+  name: Entrance
+  entities:
+    - binary_sensor.front_door_open
+    - lock.front_door
+    - binary_sensor.entrance
+    - input_boolean.guest_mode
+    - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
+    - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
+    - camera.entrance_phone
+
+garage:
+  name: Garage
+  entities:
+    - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
+    - binary_sensor.garagecamera_motion_sensor
+    - cover.garage_door
+    - sensor.garage_car_present
+    - camera.garage_camera
+
+living:
+  name: Living area
+  entities:
+    - light.level # Living room lights
+    - sensor.living_room_temp
+    - script.toggle_living_room_heatpump
+    - sensor.living_room_temp
+    - climate.living_room_heat_pump
+    - binary_sensor.living_room
+    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
+    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door
+    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
+    - media_player.compucast
+
+living_area_lights:
+  name: Living area lights
+  entities:
+    - light.level # Living room lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
+    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
+    - switch.aeotec_zw116_nano_switch_switch # Dining room light
+
+kitchen:
+  name: Kitchen
+  entities:
+    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
+    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
+    - switch.aeotec_zw116_nano_switch_switch # Dining room light
+    - sensor.living_room_nest_protect_smoke_status
+    - media_player.kitchen_speaker
+
+motion_sensors:
+  name: Motion sensors
+  entities: 
+    - binary_sensor.entrance
+    - binary_sensor.guest_bedroom
+    - binary_sensor.living_room
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor

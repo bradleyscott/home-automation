@@ -15,7 +15,7 @@ action:
       title: Bathroom lights are on
       message: The bathroom lights are on. Don't forget to turn them off
       data: 
-        url: /states/group.lights_view
+        url: /lovelace/lights
         tag: ha-notify
         actions: 
         - title: Turn off 

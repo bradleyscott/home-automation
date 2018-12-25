@@ -1,8 +1,0 @@
-media_view:
-  view: yes
-  icon: mdi:music
-  entities:
-    - media_player.compucast
-    - media_player.bedroom_home_speaker
-    - media_player.kitchen_speaker
-    - configurator.plex_media_server

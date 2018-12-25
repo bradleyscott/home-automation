@@ -15,7 +15,7 @@ action:
       title: Bathroom fan on
       message: The bathroom fan is on. Don't forget to turn it off
       data: 
-        url: /states/group.lights_view
+        url: /lovelace/lights
         tag: ha-notify
         actions: 
         - title: Turn off 

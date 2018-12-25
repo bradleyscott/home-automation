@@ -19,5 +19,5 @@ action:
       message: The front door is open. Remember to check the house belongings are secure
       data: 
         tag: ha-notify
-        url: /states/group.cam_view
+        url: /lovelace/cameras
         image: https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }} 
