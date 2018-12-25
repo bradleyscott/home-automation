@@ -2,6 +2,7 @@ bedroom:
   name: Bedroom
   entities: 
     - sensor.bedroom_temp
+    - script.toggle_bedroom_heatpump
     - climate.bedroom_heat_pump
     - sensor.esp8266_temperature
     - sensor.esp8266_humidity
