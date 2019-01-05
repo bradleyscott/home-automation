@@ -1,0 +1,1 @@
+find /media/bradley/external/security -mtime +14 -type f
