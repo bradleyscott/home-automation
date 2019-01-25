@@ -1,6 +1,6 @@
 alias: notify_if_bathroom_fan_on
 trigger:
-  - platform: time
+  - platform: time_pattern
     minutes: /30
     seconds: 0
 condition:

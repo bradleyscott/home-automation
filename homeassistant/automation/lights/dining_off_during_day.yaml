@@ -1,6 +1,6 @@
 alias: dining_off_during_day
 trigger:
-  - platform: time
+  - platform: time_pattern
     minutes: /30
     seconds: 0
 condition:
