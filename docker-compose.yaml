@@ -126,6 +126,20 @@ services:
       - ./kerberos/kerberos.php:/var/www/web/config/kerberos.php
     ports:
       - "883:80"
+  open-vpn:
+    image: linuxserver/openvpn-as
+    container_name: openvpn 
+    restart: unless-stopped
+    environment:
+      - PGID=999
+      - PUID=1000
+      - TZ=Pacific/Auckland
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./.openvpn:/config
+    ports:
+      - "943:943"
 
 
 
