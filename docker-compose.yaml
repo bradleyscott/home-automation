@@ -128,7 +128,8 @@ services:
       - "883:80"
   open-vpn:
     image: linuxserver/openvpn-as
-    container_name: openvpn 
+    container_name: openvpn
+    network_mode: "host"
     restart: unless-stopped
     environment:
       - PGID=999
@@ -138,9 +139,5 @@ services:
       - NET_ADMIN
     volumes:
       - ./.openvpn:/config
-    ports:
-      - "943:943"
-      - "9443:9443"
-      - "1194:1194"
 
 
