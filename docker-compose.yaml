@@ -130,13 +130,12 @@ services:
     image: linuxserver/openvpn-as
     container_name: openvpn
     network_mode: "host"
+    privileged: true
     restart: unless-stopped
     environment:
       - PGID=999
       - PUID=1000
       - TZ=Pacific/Auckland
-    cap_add:
-      - NET_ADMIN
     volumes:
       - ./.openvpn:/config
 
