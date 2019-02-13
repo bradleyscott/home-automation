@@ -131,3 +131,5 @@ automation.stop_camera_when_home:
 automation.ifttt_webhook_received:
   friendly_name: Enable inbound API requests
 
+automation.bedroom_heatpump_off_in_morning:
+  friendly_name: Turn off heatpump cooling in the morning
