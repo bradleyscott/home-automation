@@ -1,5 +1,5 @@
 platform: mqtt
-name: garage-camera motion sensor
+name: garagecamera motion sensor
 state_topic: williamson-ave/garage-camera/motion
 device_class: motion
 payload_on: 'on'
