@@ -53,6 +53,8 @@ conversation:
 # Track the sun
 sun:
 
+system_health:
+
 weather:
   - platform: openweathermap
     api_key: !secret owm_api_key
