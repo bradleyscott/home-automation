@@ -23,7 +23,7 @@ sensor.entrance_phone_light_level:
 sensor.garage_phone_light_level:
   unit_of_measurement: 'lux'
 
-binary_sensor.garage_camera_motion_sensor:
+binary_sensor.garagecamera_motion_sensor:
   friendly_name: Garage motion
 
 sensor.garagecamera_light_sensor:

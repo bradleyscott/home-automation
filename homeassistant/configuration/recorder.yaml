@@ -16,7 +16,7 @@ include:
     # - binary_sensor.esp8266_motion # Removing this until it stops false firing
     - binary_sensor.front_door_doorbell_motion
     - binary_sensor.front_door_open
-    - binary_sensor.garage_camera_motion_sensor
+    - binary_sensor.garagecamera_motion_sensor
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
     - binary_sensor.internet_connection
