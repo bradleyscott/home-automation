@@ -48,8 +48,10 @@ try:
 except ImportError:
     # Python 3.4.3 and ealier has this as async
     # pylint: disable=unused-import
-    from asyncio import async
-    ensure_future = async
+    if hasattr(asyncio, 'ensure_future'):
+        ensure_future = asyncio.ensure_future
+    else:  # Deprecated since Python 3.4.4
+        ensure_future = getattr(asyncio, "async")
 
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
