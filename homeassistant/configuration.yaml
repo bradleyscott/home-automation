@@ -110,6 +110,7 @@ mqtt: !include configuration/mqtt.yaml
 nest: !include configuration/nest.yaml
 notify: !include configuration/notify.yaml
 owntracks: !include configuration/owntracks.yaml
+person: !include configuration/person.yaml
 recorder: !include configuration/recorder.yaml
 shell_command: !include_dir_merge_named configuration/shell_command
 script: !include_dir_merge_named scripts
