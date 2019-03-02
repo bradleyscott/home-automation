@@ -1,8 +1,19 @@
-platform: openweathermap
-api_key: !secret owm_api_key
-forecast: true
-monitored_conditions:
-  - weather
-  - temperature
-  - wind_speed
-  - rain
+    platform: darksky
+    api_key: !secret darksky_key
+    monitored_conditions:
+      - summary
+      - precip_type
+      - precip_intensity
+      - precip_probability
+      - temperature
+      - apparent_temperature
+      - wind_speed
+      - wind_bearing
+      - cloud_cover
+      - humidity
+      - pressure
+      - visibility
+      - temperature_high
+      - temperature_low
+      - precip_intensity_max
+      - uv_index

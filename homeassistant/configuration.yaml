@@ -58,33 +58,8 @@ system_health:
 weather:
   - platform: openweathermap
     api_key: !secret owm_api_key
-    monitored_conditions:
-      - weather
-      - temperature
-      - wind_speed
-      - humidity
-      - pressure
-      - clouds
-      - rain
   - platform: darksky
     api_key: !secret darksky_key
-    monitored_conditions:
-      - summary
-      - precip_type
-      - precip_intensity
-      - precip_probability
-      - temperature
-      - apparent_temperature
-      - wind_speed
-      - wind_bearing
-      - cloud_cover
-      - humidity
-      - pressure
-      - visibility
-      - temperature_high
-      - temperature_low
-      - precip_intensity_max
-      - uv_index
 
 # Text to speech
 tts:
