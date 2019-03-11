@@ -10,8 +10,8 @@ import voluptuous as vol
 
 from homeassistant.util import Throttle
 from datetime import timedelta
-from custom_components.climate import ClimateDevice, PLATFORM_SCHEMA
-from custom_components.climate.const import (
+from homeassistant.components.climate import ClimateDevice, PLATFORM_SCHEMA
+from homeassistant.components.climate.const import (
     ATTR_OPERATION_MODE, STATE_HEAT, STATE_FAN_ONLY, STATE_COOL,
     STATE_DRY, STATE_AUTO, SUPPORT_TARGET_TEMPERATURE,
     SUPPORT_OPERATION_MODE, SUPPORT_FAN_MODE, SUPPORT_SWING_MODE)
