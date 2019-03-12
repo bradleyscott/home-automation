@@ -80,7 +80,7 @@ automation.living_motion:
   friendly_name: Turn lights on when motion in living room
 
 automation.living_motion_stairs_off:
-  friendly_name: Turn stair lights off when no motion in iving room
+  friendly_name: Turn stair lights off when no motion in living room
 
 automation.turn_off_lights_when_leaving:
   friendly_name: Turn off all lights when leaving

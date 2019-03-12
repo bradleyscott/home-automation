@@ -4,12 +4,12 @@ trigger:
     at: '22:00:00'
 condition:
   - condition: template
-    value_template: "{{ not(is_state('climate.living_room_heat_pump', 'Off')) }}"
+    value_template: "{{ not(is_state('climate.living_room_heat_pump', 'off')) }}"
 action:
   - service: climate.set_operation_mode
     entity_id: climate.living_room_heat_pump      
     data:
-      operation_mode: 'Off'
+      operation_mode: 'off'
   - service: notify.html5
     data_template:
       title: The heat pump was on and it was getting late
