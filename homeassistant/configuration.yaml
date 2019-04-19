@@ -58,8 +58,6 @@ system_health:
 weather:
   - platform: openweathermap
     api_key: !secret owm_api_key
-  - platform: darksky
-    api_key: !secret darksky_key
 
 # Text to speech
 tts:
