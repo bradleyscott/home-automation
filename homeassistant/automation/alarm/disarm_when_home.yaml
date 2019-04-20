@@ -4,7 +4,7 @@ trigger:
     entity_id: device_tracker.diemrssv_jackpotlte
     to: 'home'
   - platform: state
-    entity_id: device_tracker.diemrssv_walleye
+    entity_id: device_tracker.bradley_pixel3
     to: 'home'
 condition:
   condition: or
@@ -30,7 +30,7 @@ action:
     data_template:
       title: Alarm disarmed
       message: >-
-        {% if is_state('device_tracker.diemrssv_jackpotlte', 'home') and is_state('device_tracker.diemrssv_walleye', 'home') %}
+        {% if is_state('device_tracker.diemrssv_jackpotlte', 'home') and is_state('device_tracker.bradley_pixel3', 'home') %}
           The alarm has disarmed because everyone is now home
         {% elif is_state('device_tracker.diemrssv_jackpotlte', 'home') %}
           The alarm has disarmed because Nirupa has arrived home

@@ -4,7 +4,7 @@ trigger:
     entity_id: device_tracker.diemrssv_jackpotlte
     to: 'home'
   - platform: state
-    entity_id: device_tracker.diemrssv_walleye
+    entity_id: device_tracker.bradley_pixel3
     to: 'home'
 action:
   - service: shell_command.stop_cube_cam

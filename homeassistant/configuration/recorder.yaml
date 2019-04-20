@@ -24,7 +24,7 @@ include:
     - climate.bedroom_heat_pump
     - cover.garage_door
     - device_tracker.diemrssv_jackpotlte # Nirupa
-    - device_tracker.diemrssv_walleye # Bradley
+    - device_tracker.bradley_pixel3
     - group.bathroom_lights
     - group.bedroom_lights
     - group.downstairs_lights
