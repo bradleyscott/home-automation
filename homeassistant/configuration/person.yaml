@@ -2,28 +2,19 @@
   id: laHquq
   user_id: 435777b0c71544e8bdcfc05bfd25e8b5
   device_trackers:
-    - device_tracker.diemrssv_walleye
-    - device_tracker.desktop8hcqfu2
-    - device_tracker.bsurface
+    - device_tracker.bradley_pixel3
 
 - name: Nirupa
   id: 8BHLuL
   user_id: 9250da588874443abce77c3facd8438d
   device_trackers:
-    - device_tracker.diemrssv_jackpotlte
-    - device_tracker.iphone
-    - device_tracker.5cg8243pvc
+    - device_tracker.nirupa_pixel3
 
 - name: Ryan
   id: 54Hyu3
   device_trackers:
     - device_tracker.ryansiphone
     
-- name: Ally
-  id: 43H9u8
-  device_trackers:
-    - device_tracker.allynayrsiphone
-
 - name: Nirusha
   id: N1U8t9
   device_trackers:

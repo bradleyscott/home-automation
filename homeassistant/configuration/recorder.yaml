@@ -23,7 +23,7 @@ include:
     - climate.living_room_heat_pump
     - climate.bedroom_heat_pump
     - cover.garage_door
-    - device_tracker.diemrssv_jackpotlte # Nirupa
+    - device_tracker.nirupa_pixel3 # Nirupa
     - device_tracker.bradley_pixel3
     - group.bathroom_lights
     - group.bedroom_lights
