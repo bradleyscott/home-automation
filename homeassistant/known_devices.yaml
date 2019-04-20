@@ -1,30 +1,3 @@
-augustconnect:
-  hide_if_away: false
-  icon:
-  mac: D8:61:62:9D:BB:08
-  name: august-connect
-  picture:
-  track: false
-  vendor: Wistron Neweb Corporation
-
-mediahub:
-  hide_if_away: false
-  icon:
-  mac: 80:C1:6E:EB:F3:A8
-  name: media-hub
-  picture:
-  track: false
-  vendor: Hewlett Packard
-
-googlehome:
-  hide_if_away: false
-  icon:
-  mac: F4:F5:D8:CE:0E:8E
-  name: Google-Home
-  picture:
-  track: false
-  vendor: Google, Inc.
-
 bmacbook:
   hide_if_away: true
   icon:
@@ -33,33 +6,6 @@ bmacbook:
   picture:
   track: true
   vendor: unknown
-
-94103e4bbd61:
-  hide_if_away: false
-  icon:
-  mac: 94:10:3E:4B:BD:61
-  name: Belkin Wemo
-  picture:
-  track: false
-  vendor: unknown
-
-ssdhcpclient:
-  hide_if_away: false
-  icon:
-  mac: DC:53:7C:5D:30:BC
-  name: SSDHCPCLIENT
-  picture:
-  track: false
-  vendor: Compal Broadband Networks, Inc.
-
-garagepi:
-  hide_if_away: false
-  icon:
-  mac: B8:27:EB:BE:A7:3C
-  name: garage-pi
-  picture:
-  track: false
-  vendor: Raspberry Pi Foundation
 
 desktop74b9v59:
   hide_if_away: false
@@ -88,38 +34,11 @@ ryansiphone:
   track: true
   vendor: Apple, Inc.
 
-konnectedsecuritye88a5f:
-  hide_if_away: false
-  icon:
-  mac: 18:FE:34:E8:8A:5F
-  name: Konnected smart alarm
-  picture:
-  track: false
-  vendor: Espressif Inc.
-
 iphone:
   hide_if_away: false
   icon:
   mac: 48:3B:38:7D:D3:F5
   name: Nirupa's work iPhone
-  picture:
-  track: true
-  vendor: Apple, Inc.
-
-androidec12ec55bfdcdb94:
-  hide_if_away: false
-  icon:
-  mac: C0:EE:FB:33:C8:45
-  name: OnePlusOne
-  picture:
-  track: false
-  vendor: OnePlus Tech (Shenzhen) Ltd
-
-allynayrsiphone:
-  hide_if_away: true
-  icon:
-  mac: 2C:33:61:94:F1:7E
-  name: Ally
   picture:
   track: true
   vendor: Apple, Inc.
@@ -142,49 +61,6 @@ bsurface:
   track: true
   vendor: Amazon Technologies Inc.
 
-device_0131ad:
-  hide_if_away: false
-  icon:
-  mac: CC:3F:1D:01:31:AD
-  name: Bedroom heat pump
-  picture:
-  track: false
-  vendor: unknown
-
-device_013162:
-  hide_if_away: false
-  icon:
-  mac: CC:3F:1D:01:31:62
-  name: Living room heatpump
-  picture:
-  track: false
-  vendor: unknown
-
-googlehomemini:
-  hide_if_away: true
-  icon:
-  mac: 20:DF:B9:14:6B:5C
-  name: Google-Home-Mini
-  picture:
-  track: false
-  vendor: Google, Inc.
-
-ccb8a8aca910:
-  hide_if_away: true
-  icon:
-  mac: CC:B8:A8:AC:A9:10
-  name: August doorbell
-  picture:
-  track: false
-
-18b430aad857:
-  hide_if_away: true
-  icon:
-  mac: 18:B4:30:AA:D8:57
-  name: Nest Protect
-  picture:
-  track: false
-
 bradley_pixel3:
   hide_if_away: false
   icon:
@@ -193,21 +69,13 @@ bradley_pixel3:
   picture: https://lh3.googleusercontent.com/-pTsbC6CliEM/AAAAAAAAAAI/AAAAAAAAsmA/hUx7kYrFmsU/photo.jpg
   track: true
 
-diemrssv_jackpotlte:
+nirupa_pixel3:
   hide_if_away: false
   icon:
   mac: 68:5A:CF:CF:93:F9
   name: Nirupa
   picture: https://lh3.googleusercontent.com/HejYlgKKEnjHz5mbrG0j71rNlQuwr3Op1QgfgWfmGhOpHvmF9HynZr4Oi0TDdvW4kAsToIOsyEljYpk=s3456-rw-no
   track: true
-
-android57b4ead1305ce198:
-  hide_if_away: true
-  icon:
-  mac: BC:F5:AC:F9:EB:A8
-  name: Garage phone
-  picture:
-  track: false
 
 5cg8243pvc:
   hide_if_away: true
@@ -216,72 +84,3 @@ android57b4ead1305ce198:
   name: Nirupa's work laptop
   picture:
   track: true
-
-garage_cam_local:
-  hide_if_away: true
-  icon:
-  mac: A4:DA:22:30:D0:C6
-  name: Garage Camera
-  picture:
-  track: false
-
-cube_cam_local:
-  hide_if_away: true
-  icon:
-  mac: A4:DA:22:29:90:F4
-  name: Cube Camera
-  picture:
-  track: false
-
-10_d0_7a_09_de_f4:
-  hide_if_away: true
-  icon:
-  mac: 10:D0:7A:09:DE:F4
-  name: DVB-T Tuner aerialBox
-  picture:
-  track: false
-  vendor: Ampak Technology, Inc.
-
-dc_4f_22_0f_b1_f1:
-  hide_if_away: true
-  icon:
-  mac: DC:4F:22:0F:B1:F1
-  name: Entrance gate switch
-  picture:
-  track: false
-  vendor: Espressif Inc.
-
-3c_28_6d_2b_64_9b:
-  hide_if_away: true
-  icon:
-  mac: 3C:28:6D:2B:64:9B
-  name: 3c 28 6d 2b 64 9b
-  picture:
-  track: false
-  vendor: Google, Inc.
-
-gateway:
-  hide_if_away: true
-  icon:
-  mac: 7C:2E:BD:8E:60:04
-  name: Google Wifi Gateway
-  picture:
-  track: false
-
-7c_2e_bd_8e_5f_e3:
-  hide_if_away: true
-  icon:
-  mac: 7C:2E:BD:8E:5F:E3
-  name: Google Wifi
-  picture:
-  track: false
-  vendor: Google, Inc.
-
-7c_2e_bd_8e_65_b0:
-  hide_if_away: true
-  icon:
-  mac: 7C:2E:BD:8E:65:B0
-  name: Google Wifi
-  picture:
-  track: false
-  vendor: Google, Inc.
