@@ -1,25 +1,7 @@
-rtn56u:
-  hide_if_away: false
-  icon:
-  mac: 14:DA:E9:F9:3E:59
-  name: RT-N56U
-  picture:
-  track: false
-  vendor: ASUSTek COMPUTER INC.
-
-ac374352d76c:
-  hide_if_away: false
-  icon:
-  mac: AC:37:43:52:D7:6C
-  name: Nirupa's Pixel
-  picture:
-  track: false
-  vendor: HTC Corporation
-
 augustconnect:
   hide_if_away: false
   icon:
-  mac: 28:24:FF:E1:B0:18
+  mac: D8:61:62:9D:BB:08
   name: august-connect
   picture:
   track: false
@@ -124,33 +106,6 @@ iphone:
   track: true
   vendor: Apple, Inc.
 
-esp_805edb:
-  hide_if_away: false
-  icon:
-  mac: DC:4F:22:80:5E:DB
-  name: Sonoff ESP 805EDB
-  picture:
-  track: false
-  vendor: unknown
-
-esp_9d3f7e:
-  hide_if_away: false
-  icon:
-  mac: 60:01:94:9D:3F:7E
-  name: Sonoff ESP 9D3F7E
-  picture:
-  track: false
-  vendor: unknown
-
-esp_59f085:
-  hide_if_away: false
-  icon:
-  mac: 5C:CF:7F:59:F0:85
-  name: Sonoff ESP 59F085
-  picture:
-  track: false
-  vendor: Espressif Inc.
-
 androidec12ec55bfdcdb94:
   hide_if_away: false
   icon:
@@ -169,24 +124,6 @@ allynayrsiphone:
   track: true
   vendor: Apple, Inc.
 
-ac3743a35306:
-  hide_if_away: true
-  icon:
-  mac: AC:37:43:A3:53:06
-  name: Nirusha
-  picture:
-  track: true
-  vendor: unknown
-
-f09fc2c80743:
-  hide_if_away: false
-  icon:
-  mac: F0:9F:C2:C8:07:43
-  name: Ubiquiti AP
-  picture:
-  track: false
-  vendor: Ubiquiti Networks Inc.
-
 bsurface:
   hide_if_away: false
   icon:
@@ -195,15 +132,6 @@ bsurface:
   picture:
   track: true
   vendor: Microsoft
-
-desktop8hcqfu2:
-  hide_if_away: false
-  icon:
-  mac: BC:83:85:2C:E5:20
-  name: B's FaceMe Surface Book
-  picture:
-  track: true
-  vendor: Microsoft Corporation
 
 50dce7b68c23:
   hide_if_away: true
@@ -257,7 +185,7 @@ ccb8a8aca910:
   picture:
   track: false
 
-diemrssv_walleye:
+bradley_pixel3:
   hide_if_away: false
   icon:
   mac: 40:4E:36:82:1E:2B
@@ -277,7 +205,7 @@ android57b4ead1305ce198:
   hide_if_away: true
   icon:
   mac: BC:F5:AC:F9:EB:A8
-  name: Garage camera
+  name: Garage phone
   picture:
   track: false
 
@@ -288,3 +216,72 @@ android57b4ead1305ce198:
   name: Nirupa's work laptop
   picture:
   track: true
+
+garage_cam_local:
+  hide_if_away: true
+  icon:
+  mac: A4:DA:22:30:D0:C6
+  name: Garage Camera
+  picture:
+  track: false
+
+cube_cam_local:
+  hide_if_away: true
+  icon:
+  mac: A4:DA:22:29:90:F4
+  name: Cube Camera
+  picture:
+  track: false
+
+10_d0_7a_09_de_f4:
+  hide_if_away: true
+  icon:
+  mac: 10:D0:7A:09:DE:F4
+  name: DVB-T Tuner aerialBox
+  picture:
+  track: false
+  vendor: Ampak Technology, Inc.
+
+dc_4f_22_0f_b1_f1:
+  hide_if_away: true
+  icon:
+  mac: DC:4F:22:0F:B1:F1
+  name: Entrance gate switch
+  picture:
+  track: false
+  vendor: Espressif Inc.
+
+3c_28_6d_2b_64_9b:
+  hide_if_away: true
+  icon:
+  mac: 3C:28:6D:2B:64:9B
+  name: 3c 28 6d 2b 64 9b
+  picture:
+  track: false
+  vendor: Google, Inc.
+
+gateway:
+  hide_if_away: true
+  icon:
+  mac: 7C:2E:BD:8E:60:04
+  name: Google Wifi Gateway
+  picture:
+  track: false
+
+7c_2e_bd_8e_5f_e3:
+  hide_if_away: true
+  icon:
+  mac: 7C:2E:BD:8E:5F:E3
+  name: Google Wifi
+  picture:
+  track: false
+  vendor: Google, Inc.
+
+7c_2e_bd_8e_65_b0:
+  hide_if_away: true
+  icon:
+  mac: 7C:2E:BD:8E:65:B0
+  name: Google Wifi
+  picture:
+  track: false
+  vendor: Google, Inc.
