@@ -28,11 +28,11 @@ action:
         url: /lovelace/cameras
         image: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}
-            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
           {% elif is_state('cover.garage_door', 'open') %}
-            https://williamson-ave.duckdns.org{{ state_attr('camera.garage_phone', 'entity_picture') }}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_phone', 'entity_picture') }}
           {% else %}
-            https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
           {% endif %}  
         actions: 
         - title: Lock up     

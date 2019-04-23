@@ -78,14 +78,6 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - ./homeassistant:/config
     privileged: true
-  caddy:
-    image: abiosoft/caddy:0.10.11
-    container_name: caddy
-    restart: unless-stopped
-    network_mode: "host"
-    volumes:
-      - ./Caddyfile:/etc/Caddyfile
-      - ./.caddy:/root/.caddy
   mosquitto:
     image: eclipse-mosquitto
     container_name: mosquitto

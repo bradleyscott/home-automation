@@ -26,10 +26,7 @@ http:
   # Secrets are defined in the file secrets.yaml
   # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: https://williamson-ave.duckdns.org
-  use_x_forwarded_for: true
-  trusted_proxies: 
-     - 127.0.0.1
+  base_url: https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa
 
 # Checks for available updates
 # Note: This component will send some information about your system to

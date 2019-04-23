@@ -20,4 +20,4 @@ action:
       data: 
         tag: ha-notify
         url: /lovelace/cameras
-        image: https://williamson-ave.duckdns.org{{ state_attr('camera.entrance_phone', 'entity_picture') }} 
+        image: https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }} 
