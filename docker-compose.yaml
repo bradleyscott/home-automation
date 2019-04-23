@@ -68,11 +68,6 @@ services:
       - mosquitto
     devices:
       - /dev/ttyACM0
-    environment: 
-      - VIRTUAL_PORT=8123
-      - VIRTUAL_HOST=williamson-ave.duckdns.org
-      - LETSENCRYPT_HOST=williamson-ave.duckdns.org
-      - LETSENCRYPT_EMAIL=bradley.s.scott@gmail.com
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
