@@ -6,3 +6,11 @@ owntracks:
   new_device_defaults:
     track_new_devices: true
     hide_if_away: false
+  region_mapping:
+    nirupa_pixel3_135_albert_st: 135_albert_st
+    nirupa_pixel3_hendry_ave: hendry_ave
+    nirupa_pixel3_home: home
+    bradley_pixel3_home: home
+    bradley_pixel3_hendry_ave: hendry_ave
+    bradley_pixel3_howick: howick
+    bradley_pixel3_faceme: faceme
