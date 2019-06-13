@@ -1,0 +1,11 @@
+alias: notify_action_open_gate_and_garage
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: open_gate_and_garage
+action:
+  - service: switch.toggle
+    entity_id: switch.vehicle_gate_opener
+  - service: cover.open_cover
+    entity_id: cover.garage_door

@@ -1,0 +1,9 @@
+alias: notify_action_open_gate
+trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: open_gate
+action:
+  - service: switch.toggle
+    entity_id: switch.vehicle_gate_opener
