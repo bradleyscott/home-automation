@@ -48,4 +48,4 @@ action:
     entity_id: alarm_control_panel.alarm
   - service: switch.turn_on
     data:
-      entity_id: switch.buzzer
+      entity_id: switch.buzzer_2
