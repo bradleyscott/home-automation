@@ -1,14 +1,14 @@
 alias: notify_on_arrival
 trigger:
   - platform: state
-    entity_id: device_tracker.bradley_pixel3
+    entity_id: person.bradley
     to: 'home'
 action:
   - service: notify.html5
     data_template:
       title: Welcome home
       message: >-
-        {% if is_state('device_tracker.nirupa_pixel3', 'home') %}
+        {% if is_state('person.nirupa', 'home') %}
           {% if is_state('sensor.garage_car_present', 'No') %}
             Nirupa is home and the garage is empty
           {% elif is_state('sensor.garage_car_present', 'Yes') %}

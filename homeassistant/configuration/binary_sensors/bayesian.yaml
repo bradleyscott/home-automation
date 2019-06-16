@@ -45,24 +45,34 @@ observations:
     to_state: 'home'
     prob_given_true: 0.95
     prob_given_false: 0.50
-  - entity_id: device_tracker.bradley_pixel3 # Bradley
+  - entity_id: device_tracker.bradley_pixel3 # Bradley by Nmap
     platform: 'state'
     to_state: 'home'
     prob_given_true: 0.9
-    prob_given_false: 0.4
+    prob_given_false: 0.5
+  - entity_id: device_tracker.bradley_pixel3_2 # Bradley by Owntracks
+    platform: 'state'
+    to_state: 'home'
+    prob_given_true: 0.9
+    prob_given_false: 0.2
   - entity_id: device_tracker.bradley_pixel3 # Bradley
     platform: 'state'
     to_state: 'FaceMe'
-    prob_given_true: 0.4
-  - entity_id: device_tracker.nirupa_pixel3 # Nirupa
+    prob_given_true: 0.2
+  - entity_id: device_tracker.nirupa_pixel3 # Nirupa by Nmap
     platform: 'state'
     to_state: 'home'
     prob_given_true: 0.9
-    prob_given_false: 0.4
+    prob_given_false: 0.5
+  - entity_id: device_tracker.nirupa_pixel3_2 # Nirupa by Owntracks
+    platform: 'state'
+    to_state: 'home'
+    prob_given_true: 0.9
+    prob_given_false: 0.2
   - entity_id: device_tracker.nirupa_pixel3 # Nirupa
     platform: 'state'
     to_state: '135 Albert St'
-    prob_given_true: 0.4
+    prob_given_true: 0.2
   - entity_id: media_player.compucast
     platform: 'state'
     to_state: 'off'

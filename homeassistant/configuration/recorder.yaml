@@ -11,32 +11,27 @@ include:
     - binary_sensor.aeotec_zw100_multisensor_6_sensor # Motion sensor
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left side deck door
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right side deck door
-    - binary_sensor.cubecam_motion_sensor
     - binary_sensor.entrance
-    - binary_sensor.front_door_doorbell_motion
     - binary_sensor.front_door_open
     - binary_sensor.garagecamera_motion_sensor
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
-    - binary_sensor.internet_connection
     - binary_sensor.living_room
     - climate.living_room_heat_pump
     - climate.bedroom_heat_pump
     - cover.garage_door
     - device_tracker.nirupa_pixel3 # Nirupa
     - device_tracker.bradley_pixel3
-    - group.bathroom_lights
-    - group.bedroom_lights
-    - group.downstairs_lights
-    - group.living_area_lights
+    - device_tracker.nirupa_pixel3_2
+    - device_tracker.bradley_pixel3_2
     - group.motion_sensors
-    - group.upstairs_lights
     - input_boolean.house_motion
     - lock.front_door
+    - person.bradley
+    - person.nirupa
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
     - sensor.aeotec_zw100_multisensor_6_temperature
-    - sensor.bedroom_temp
     - sensor.cubecam_light_sensor
     - sensor.entrance_temperature
     - sensor.entrance_humidity
@@ -45,16 +40,12 @@ include:
     - sensor.entrance_phone_motion
     - sensor.garage_car_present
     - sensor.garage_status
-    - sensor.garagecamera_light_sensor
     - sensor.living_room_temp
-    - sensor.living_room_nest_protect_co_status
-    - sensor.living_room_nest_protect_smoke_status
     - sensor.owm_condition
     - sensor.owm_forecast
     - sensor.owm_rain
     - sensor.owm_temperature
     - sensor.owm_wind_speed
-    - switch.garagecamera_night_mode
     - switch.smart_switch
     - switch.siren # Alarm siren
     - light.level # Living room lights

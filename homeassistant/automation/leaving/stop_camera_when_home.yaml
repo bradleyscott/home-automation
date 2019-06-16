@@ -1,10 +1,10 @@
 alias: stop_camera_when_home
 trigger:
   - platform: state
-    entity_id: device_tracker.nirupa_pixel3
+    entity_id: person.nirupa
     to: 'home'
   - platform: state
-    entity_id: device_tracker.bradley_pixel3
+    entity_id: person.bradley
     to: 'home'
 action:
   - service: shell_command.stop_cube_cam

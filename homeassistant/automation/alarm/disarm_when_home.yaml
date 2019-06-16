@@ -1,10 +1,10 @@
 alias: disarm_when_home
 trigger:
   - platform: state
-    entity_id: device_tracker.nirupa_pixel3
+    entity_id: person.bradley
     to: 'home'
   - platform: state
-    entity_id: device_tracker.bradley_pixel3
+    entity_id: person.nirupa
     to: 'home'
 condition:
   condition: or
@@ -30,9 +30,9 @@ action:
     data_template:
       title: Alarm disarmed
       message: >-
-        {% if is_state('device_tracker.nirupa_pixel3', 'home') and is_state('device_tracker.bradley_pixel3', 'home') %}
+        {% if is_state('person.nirupa', 'home') and is_state('person.bradley', 'home') %}
           The alarm has disarmed because everyone is now home
-        {% elif is_state('device_tracker.nirupa_pixel3', 'home') %}
+        {% elif is_state('person.nirupa', 'home') %}
           The alarm has disarmed because Nirupa has arrived home
         {% else %}
           The alarm has disarmed because Bradley has arrived home
