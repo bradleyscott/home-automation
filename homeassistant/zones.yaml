@@ -1,6 +1,6 @@
 - name: Home
-  latitude: -36.8593475
-  longitude: 174.7473242
+  latitude: !secret home_lat
+  longitude: !secret home_long
   radius: 25
   icon: mdi:home
 
