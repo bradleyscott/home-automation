@@ -6,7 +6,7 @@ condition:
   condition: and
   conditions:
   - condition: numeric_state
-    entity_id: sensor.esp8266_temperature
+    entity_id: sensor.bedroom_temp
     below: '17'
   - condition: state
     entity_id: binary_sensor.home_occupied
