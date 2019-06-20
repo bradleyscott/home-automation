@@ -45,9 +45,9 @@ action:
           {% if is_state('binary_sensor.front_door_open', 'on') %}
             https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}
           {% elif is_state('cover.garage_door', 'Opening') %}
-            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_phone', 'entity_picture') }}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
           {% elif is_state('binary_sensor.garage_motion', 'on') %}
-            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_phone', 'entity_picture') }}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
           {% elif is_state('binary_sensor.entrance', 'on') %}
             https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
           {% endif %}

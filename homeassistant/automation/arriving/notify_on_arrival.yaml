@@ -13,19 +13,23 @@ action:
             Nirupa is home and the garage is empty
           {% elif is_state('sensor.garage_car_present', 'Yes') %}
             Nirupa is home and has parked in the garage
+          {% else %}
+            Nirupa is home and the garage door is open
           {% endif %}
         {% else %}
           {% if is_state('sensor.garage_car_present', 'No') %}
             No one is home and the garage is empty
           {% elif is_state('sensor.garage_car_present', 'Yes') %}
             No one is home but the garage is occupied
+          {% else %}
+            No one is home but the garage door is open
           {% endif %}
         {% endif %}
       target: B's Pixel 3
       data: 
         tag: ha-notify
         url: /lovelace/cameras
-        image: https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_phone', 'entity_picture') }}
+        image: https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
         actions: 
         - title: Open gate and garage
           action: open_gate_and_garage
