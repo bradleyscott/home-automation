@@ -22,8 +22,8 @@ action:
   - service: climate.set_operation_mode
     data:
       entity_id: climate.bedroom_heat_pump
-      operation_mode: 'heat' 
+      operation_mode: 'Heat' 
   - service: climate.set_fan_mode
     data:
       entity_id: climate.bedroom_heat_pump
-      fan_mode: 'quiet' 
+      fan_mode: 'Quiet' 
