@@ -7,7 +7,7 @@ condition:
   conditions:
   - condition: numeric_state
     entity_id: sensor.aeotec_zw100_multisensor_6_temperature
-    below: '17'
+    below: '17.5'
   - condition: state
     entity_id: binary_sensor.home_occupied
     state: 'on'
