@@ -25,7 +25,6 @@ from homeassistant.components.climate.const import (ATTR_HVAC_MODE,
                                                     HVAC_MODE_HEAT_COOL,
                                                     HVAC_MODE_OFF,
                                                     SUPPORT_FAN_MODE,
-                                                    SUPPORT_PRESET_MODE,
                                                     SUPPORT_SWING_MODE,
                                                     SUPPORT_TARGET_TEMPERATURE,
                                                     SWING_BOTH,
@@ -33,7 +32,7 @@ from homeassistant.components.climate.const import (ATTR_HVAC_MODE,
                                                     SWING_OFF,
                                                     SWING_VERTICAL)
 from homeassistant.const import (ATTR_TEMPERATURE, CONF_PASSWORD,
-                                 CONF_USERNAME, STATE_OFF, STATE_UNKNOWN,
+                                 CONF_USERNAME, STATE_UNKNOWN,
                                  TEMP_CELSIUS)
 from homeassistant.exceptions import PlatformNotReady
 
@@ -113,11 +112,12 @@ class IntesisAC(ClimateDevice):
         self._devicename = ih_device.get('name')
         self._has_swing_control = IH_SWING_WIDGET in ih_device.get('widgets')
         self._connected = False
+        self._current_temp = None
 
         self._max_temp = None
         self._min_temp = None
         self._target_temp = None
-        self._current_temp = None
+
         self._run_hours = None
         self._rssi = None
         self._swing = None
@@ -135,8 +135,7 @@ class IntesisAC(ClimateDevice):
         self._fan_modes = [FAN_AUTO, IH_FAN_QUIET, FAN_LOW, FAN_MEDIUM,
                            FAN_HIGH]
 
-        self._support = (SUPPORT_TARGET_TEMPERATURE | SUPPORT_FAN_MODE |
-                         SUPPORT_PRESET_MODE)
+        self._support = (SUPPORT_TARGET_TEMPERATURE | SUPPORT_FAN_MODE)
 
         if self._has_swing_control:
             self._support |= SUPPORT_SWING_MODE
@@ -186,7 +185,7 @@ class IntesisAC(ClimateDevice):
     def set_hvac_mode(self, hvac_mode):
         """Set operation mode."""
         _LOGGER.debug("IntesisHome Set Mode=%s", hvac_mode)
-        if hvac_mode == STATE_OFF:
+        if hvac_mode == HVAC_MODE_OFF:
             self._controller.set_power_off(self._deviceid)
             self._power = False
         else:
@@ -358,7 +357,7 @@ class IntesisAC(ClimateDevice):
         """Return the current mode of operation if unit is on."""
         if self._power:
             return self._hvac_mode
-        return STATE_OFF
+        return HVAC_MODE_OFF
 
     @property
     def target_temperature(self):
