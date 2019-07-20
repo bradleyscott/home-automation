@@ -74,6 +74,7 @@ august: !include configuration/august.yaml
 automation: !include_dir_list automation
 binary_sensor: !include_dir_list configuration/binary_sensors
 camera: !include configuration/camera.yaml
+climate: configuration/climate.yaml
 cover: !include configuration/cover.yaml
 cloud: !include configuration/cloud.yaml
 device_tracker: !include configuration/device_tracker.yaml
@@ -81,7 +82,6 @@ ffmpeg:
 group: !include groups.yaml
 history: !include configuration/history.yaml
 input_boolean: !include configuration/input_boolean.yaml
-intesishome: !include configuration/intesishome.yaml
 logbook: !include configuration/logbook.yaml
 konnected: !include configuration/konnected.yaml
 mqtt: !include configuration/mqtt.yaml
