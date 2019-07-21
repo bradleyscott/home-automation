@@ -32,6 +32,7 @@ include:
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
     - sensor.aeotec_zw100_multisensor_6_temperature
+    - sensor.bedroom_temp
     - sensor.cubecam_light_sensor
     - sensor.entrance_temperature
     - sensor.entrance_humidity
@@ -57,8 +58,8 @@ include:
     - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs stairway
     - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
     - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
-    - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
+    - switch.aeon_labs_zw132_dual_nano_switch_switch # Downstairs hallway
+    - switch.aeon_labs_zw132_dual_nano_switch_switch_2 # Entrance and stairs
     - switch.aeotec_zw116_nano_switch_switch # Dining room light
     - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
     - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
