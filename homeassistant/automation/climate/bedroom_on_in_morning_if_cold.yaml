@@ -19,11 +19,11 @@ condition:
       - thu
       - fri
 action:
-  - service: climate.set_operation_mode
+  - service: climate.set_hvac_mode
     data:
       entity_id: climate.bedroom_heat_pump
-      operation_mode: 'Heat' 
+      hvac_mode: 'heat' 
   - service: climate.set_fan_mode
     data:
       entity_id: climate.bedroom_heat_pump
-      fan_mode: 'Quiet' 
+      fan_mode: 'quiet'

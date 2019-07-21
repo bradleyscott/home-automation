@@ -2,16 +2,16 @@ toggle_bedroom_heatpump:
   alias: Turn bedroom heatpump on
   sequence:
     - alias: Set bedroom heatpump mode
-      service: climate.set_operation_mode
+      service: climate.set_hvac_mode
       entity_id: climate.bedroom_heat_pump      
       data:
-        operation_mode: >-
+        hvac_mode: >-
           {% if not(is_state('climate.bedroom_heat_pump', 'Off')) %}
-            'Off'
+            'off'
           {% elif states('sensor.esp8266_temperature') | float > 25 %}
-            'Cool'
+            'cool'
           {% elif states('sensor.esp8266_temperature') | float < 20 %}
-            'Heat'
+            'heat'
           {%- else -%}
-            'Fan'
+            'fan'
           {%- endif %}

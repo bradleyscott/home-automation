@@ -2,26 +2,26 @@ get_house_ready:
   alias: I'm coming home. Get the house ready
   sequence:
     - alias: Set Living room heatpump mode
-      service: climate.set_operation_mode
+      service: climate.set_hvac_mode
       entity_id: climate.living_room_heat_pump      
       data:
-        operation_mode: >-
+        hvac_mode: >-
           {% if states('sensor.aeotec_zw100_multisensor_6_temperature') | float > 25 %}
-            'Cool'
+            'cool'
           {% elif states('sensor.aeotec_zw100_multisensor_6_temperature') | float < 20 %}
-            'Heat'
+            'heat'
           {%- else -%}
-            'Off'
+            'off'
           {%- endif %}
     - alias: Set bedroom heatpump mode
-      service: climate.set_operation_mode
+      service: climate.set_hvac_mode
       entity_id: climate.bedroom_heat_pump      
       data:
-        operation_mode: >-
+        hvac_mode: >-
           {% if states('sensor.aeotec_zw100_multisensor_6_temperature') | float > 25 %}
-            'Cool'
+            'cool'
           {% elif states('sensor.aeotec_zw100_multisensor_6_temperature') | float < 20 %}
-            'Heat'
+            'heat'
           {%- else -%}
-            'Off'
+            'off'
           {%- endif %}
