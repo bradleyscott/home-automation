@@ -68,6 +68,12 @@ ifttt:
 zwave:
   usb_path: /dev/ttyACM0
 
+# Wemo
+wemo:
+  discovery: true
+  static: 
+    - 192.168.2.123
+    
 alarm_control_panel: !include configuration/alarm_control_panel.yaml
 android_ip_webcam: !include configuration/android_ip_webcam.yaml
 august: !include configuration/august.yaml
@@ -95,5 +101,4 @@ sensor: !include_dir_list configuration/sensors
 shell_command: !include_dir_merge_named configuration/shell_command
 stream:
 twilio: !include configuration/twilio.yaml
-wemo:
 zone: !include zones.yaml
