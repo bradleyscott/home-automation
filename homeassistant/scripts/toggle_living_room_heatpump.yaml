@@ -13,5 +13,5 @@ toggle_living_room_heatpump:
           {% elif states('sensor.entrance_temperature') | float < 18 %}
             'heat'
           {%- else -%}
-            'fan'
+            'fan_only'
           {%- endif %}

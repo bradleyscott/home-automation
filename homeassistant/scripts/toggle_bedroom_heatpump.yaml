@@ -13,5 +13,5 @@ toggle_bedroom_heatpump:
           {% elif states('sensor.entrance_temperature') | float < 19 %}
             'heat'
           {%- else -%}
-            'fan'
+            'fan_only'
           {%- endif %}
