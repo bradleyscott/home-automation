@@ -5,9 +5,9 @@ trigger:
 condition:
   - condition: state
     entity_id: climate.bedroom_heat_pump
-    state: 'Cool'
+    state: 'cool'
 action:
   - service: climate.set_hvac_mode
-    entity_id: climate.bedroom_heat_pump
     data:
+      entity_id: climate.bedroom_heat_pump
       hvac_mode: 'off'
