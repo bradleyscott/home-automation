@@ -1,5 +1,5 @@
 # Presence detection
-name: In bed
+sensor_name: In bed
 platform: template
 device_class: presence
 value_template: >-
