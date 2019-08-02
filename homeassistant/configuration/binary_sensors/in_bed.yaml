@@ -1,9 +1,8 @@
-# Presence detection
-sensor_name: In bed
-platform: template
-device_class: presence
-value_template: >-
-  {{ is_state("binary_sensor.home_occupied", 'on') 
-    and is_state("group.all_lights", 'off')
-    and is_state("sun.sun", 'below_horizon')
-  }}
+in_bed: 
+  platform: template
+  device_class: presence
+  value_template: >-
+    {{ is_state("binary_sensor.home_occupied", 'on') 
+      and is_state("group.all_lights", 'off')
+      and is_state("sun.sun", 'below_horizon')
+    }}
