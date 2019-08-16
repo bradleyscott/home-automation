@@ -67,7 +67,7 @@ observations:
   - entity_id: device_tracker.nirupa_pixel3_2 # Nirupa by Owntracks
     platform: 'state'
     to_state: 'home'
-    prob_given_true: 0.9
+    prob_given_true: 0.5
     prob_given_false: 0.2
   - entity_id: device_tracker.nirupa_pixel3 # Nirupa
     platform: 'state'
