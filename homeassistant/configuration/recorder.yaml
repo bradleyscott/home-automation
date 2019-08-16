@@ -38,7 +38,6 @@ include:
     - sensor.entrance_humidity
     - sensor.entrance_phone_battery_level
     - sensor.entrance_phone_light_level
-    - sensor.entrance_phone_motion
     - sensor.garage_car_present
     - sensor.garage_status
     - sensor.living_room_temp
