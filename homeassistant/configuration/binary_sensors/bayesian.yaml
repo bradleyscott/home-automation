@@ -20,6 +20,16 @@ observations:
     to_state: 'locked'
     prob_given_true: 0.3
     prob_given_false: 0.8
+  - entity_id:  sensor.garage_car_present
+    platform: 'state'
+    to_state: 'Yes'
+    prob_given_true: 0.75
+    prob_given_false: 0.25
+  - entity_id:  sensor.garage_car_present
+    platform: 'state'
+    to_state: 'No'
+    prob_given_true: 0.3
+    prob_given_false: 0.8
   - entity_id: device_tracker.bradley_pixel3 # Bradley by Nmap
     platform: 'state'
     to_state: 'home'
