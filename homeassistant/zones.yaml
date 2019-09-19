@@ -1,13 +1,13 @@
 - name: Home
   latitude: !secret home_lat
   longitude: !secret home_long
-  radius: 200
+  radius: 100
   icon: mdi:home
 
-- name: FaceMe
-  latitude: -36.784419
-  longitude: 174.754380
-  radius: 250
+- name: UneeQ
+  latitude: -36.860267
+  longitude: 174.749717
+  radius: 50
   icon: mdi:briefcase-outline
 
 - name: 135 Albert St
