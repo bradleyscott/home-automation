@@ -2,7 +2,7 @@
   id: laHquq
   user_id: 435777b0c71544e8bdcfc05bfd25e8b5
   device_trackers:
-    - device_tracker.bradley_pixel3_2 # Owntracks location
+    - device_tracker.bradley_pixel3 # Wifi location
     
 - name: Nirupa
   id: 8BHLuL
