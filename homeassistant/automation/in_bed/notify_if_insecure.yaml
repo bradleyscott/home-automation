@@ -1,7 +1,8 @@
 alias: notify_if_insecure_when_late
 trigger:
-  - platform: time
-    at: '22:00:00'
+  - platform: state
+    entity_id: sensor.in_bed
+    to: 'on'
 condition:
   condition: or
   conditions:
