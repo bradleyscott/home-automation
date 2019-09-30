@@ -10,25 +10,25 @@ condition:
     entity_id: cover.garage_door
     state: open
   - condition: state
-    entity_id: binary_sensor.front_door_open
-    state: 'on'
+    entity_id: lock.front_door
+    state: unlocked
 action:
   - service: notify.html5
     data_template:
       title: The house is insecure and its getting late
       message: >-
-        {% if is_state('cover.garage_door', 'open') and is_state('binary_sensor.front_door_open', 'on') %}
-          The garage door is open and the front door is open
+        {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+          The garage door is open and the front door is unlocked
         {% elif is_state('cover.garage_door', 'open') %}
           The garage door is open
         {% else %}
-          The front door is open
+          The front door is unlocked
         {% endif %}
       data: 
         tag: ha-notify
         url: /lovelace/cameras
         image: >-
-          {% if is_state('binary_sensor.front_door_open', 'on') %}
+          {% if is_state('lock.front_door', 'unlocked') %}
             https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
           {% elif is_state('cover.garage_door', 'open') %}
             https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
