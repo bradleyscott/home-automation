@@ -4,10 +4,10 @@ trigger:
     at: '05:00:00'
 condition:
   - condition: state
-    entity_id: climate.bedroom_heat_pump
+    entity_id: climate.bedroom_heatpump
     state: 'cool'
 action:
   - service: climate.set_hvac_mode
     data:
-      entity_id: climate.bedroom_heat_pump
+      entity_id: climate.bedroom_heatpump
       hvac_mode: 'off'

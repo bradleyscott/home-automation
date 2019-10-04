@@ -21,9 +21,9 @@ condition:
 action:
   - service: climate.set_hvac_mode
     data:
-      entity_id: climate.bedroom_heat_pump
+      entity_id: climate.bedroom_heatpump
       hvac_mode: 'heat' 
   - service: climate.set_fan_mode
     data:
-      entity_id: climate.bedroom_heat_pump
-      fan_mode: 'quiet'
+      entity_id: climate.bedroom_heatpump
+      fan_mode: 'Low'

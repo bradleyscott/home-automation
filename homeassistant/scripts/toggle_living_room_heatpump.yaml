@@ -4,9 +4,9 @@ toggle_living_room_heatpump:
     - alias: Set Living room heatpump mode
       service: climate.set_hvac_mode
       data:
-        entity_id: climate.living_room_heat_pump      
+        entity_id: climate.living_room_heatpump      
         hvac_mode: >-
-          {% if not(is_state('climate.living_room_heat_pump', 'off')) %}
+          {% if not(is_state('climate.living_room_heatpump', 'off')) %}
             'off'
           {% elif states('sensor.entrance_temperature') | float > 22 %}
             'cool'

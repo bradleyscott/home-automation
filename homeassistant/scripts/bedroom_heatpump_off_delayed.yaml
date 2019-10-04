@@ -5,4 +5,4 @@ bedroom_heatpump_off_delayed:
       delay: '00:30:00'
     - alias: Turn off bedroom heatpump
       service: climate.turn_off
-      entity_id: climate.bedroom_heat_pump
+      entity_id: climate.bedroom_heatpump

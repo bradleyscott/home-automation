@@ -1,7 +1,7 @@
-climate.bedroom_heat_pump:
+climate.bedroom_heatpump:
   icon: mdi:weather-snowy-rainy
 
-climate.living_room_heat_pump:
+climate.living_room_heatpump:
   icon: mdi:weather-snowy-rainy
 
 sensor.living_room_temp:

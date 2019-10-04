@@ -3,8 +3,8 @@ sensors:
   bedroom_temp:
     friendly_name: Bedroom temperature
     unit_of_measurement: '°C'
-    value_template: "{{ state_attr('climate.bedroom_heat_pump', 'current_temperature') | float  }}"
+    value_template: "{{ state_attr('climate.bedroom_heatpump', 'current_temperature') | float  }}"
   living_room_temp:
     friendly_name: Living room temperature
     unit_of_measurement: '°C'
-    value_template: "{{ state_attr('climate.living_room_heat_pump', 'current_temperature') | float  }}"
+    value_template: "{{ state_attr('climate.living_room_heatpump', 'current_temperature') | float  }}"

@@ -4,9 +4,9 @@ toggle_bedroom_heatpump:
     - alias: Set bedroom heatpump mode
       service: climate.set_hvac_mode
       data:
-        entity_id: climate.bedroom_heat_pump      
+        entity_id: climate.bedroom_heatpump      
         hvac_mode: >-
-          {% if not(is_state('climate.bedroom_heat_pump', 'off')) %}
+          {% if not(is_state('climate.bedroom_heatpump', 'off')) %}
             'off'
           {% elif states('sensor.entrance_temperature') | float > 23 %}
             'cool'

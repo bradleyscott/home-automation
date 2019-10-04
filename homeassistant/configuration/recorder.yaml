@@ -17,8 +17,8 @@ include:
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
     - binary_sensor.living_room
-    - climate.living_room_heat_pump
-    - climate.bedroom_heat_pump
+    - climate.living_room_heatpump
+    - climate.bedroom_heatpump
     - cover.garage_door
     - device_tracker.nirupa_pixel3 # Nirupa
     - device_tracker.bradley_pixel3

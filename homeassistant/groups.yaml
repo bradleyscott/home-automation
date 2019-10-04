@@ -3,7 +3,7 @@ bedroom:
   entities: 
     - sensor.bedroom_temp
     - script.toggle_bedroom_heatpump
-    - climate.bedroom_heat_pump
+    - climate.bedroom_heatpump
     - sensor.esp8266_temperature
     - sensor.esp8266_humidity
     - switch.aeotec_zw132_dual_nano_switch_switch_13 # Globes
@@ -61,7 +61,7 @@ living:
     - sensor.living_room_temp
     - script.toggle_living_room_heatpump
     - sensor.living_room_temp
-    - climate.living_room_heat_pump
+    - climate.living_room_heatpump
     - binary_sensor.living_room
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door

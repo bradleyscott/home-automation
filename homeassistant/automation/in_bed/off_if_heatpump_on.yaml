@@ -5,10 +5,10 @@ trigger:
     to: 'on'
 condition:
   - condition: template
-    value_template: "{{ not(is_state('climate.living_room_heat_pump', 'off')) }}"
+    value_template: "{{ not(is_state('climate.living_room_heatpump', 'off')) }}"
 action:
   - service: climate.set_operation_mode
-    entity_id: climate.living_room_heat_pump      
+    entity_id: climate.living_room_heatpump      
     data:
       operation_mode: 'off'
   - service: notify.html5
