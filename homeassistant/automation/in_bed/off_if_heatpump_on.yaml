@@ -1,7 +1,7 @@
 alias: off_if_heatpump_on_when_late
 trigger:
   - platform: state
-    entity_id: sensor.in_bed
+    entity_id: binary_sensor.in_bed
     to: 'on'
 condition:
   - condition: template
