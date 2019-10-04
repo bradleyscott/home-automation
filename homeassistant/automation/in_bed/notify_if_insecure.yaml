@@ -1,7 +1,7 @@
 alias: notify_if_insecure_when_late
 trigger:
   - platform: state
-    entity_id: sensor.in_bed
+    entity_id: binary_sensor.in_bed
     to: 'on'
 condition:
   condition: or
