@@ -1,3 +1,0 @@
-platform: panasonic_ac
-username: !secret panasonic_user
-password: !secret panasonic_password

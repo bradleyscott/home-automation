@@ -1,3 +1,3 @@
-- platform: intesishome
-  username: !secret intesis_username
-  password: !secret intesis_password
+- platform: panasonic_ac
+  username: !secret panasonic_username
+  password: !secret panasonic_password
