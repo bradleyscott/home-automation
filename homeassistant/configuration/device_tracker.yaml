@@ -1,10 +1,10 @@
 - platform: nmap_tracker
-  hosts: 192.168.2.1/24
+  hosts: 192.168.1.1/24
   interval_seconds: 60
   consider_home: 300
   new_device_defaults:
     track_new_devices: false
     hide_if_away: true
   exclude:
-    - "192.168.2.100" # media-hub
+   - "192.168.1.35" # media-hub
     - "127.0.0.1"
