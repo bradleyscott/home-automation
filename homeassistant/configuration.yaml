@@ -58,7 +58,7 @@ zwave:
 wemo:
   discovery: true
   static: 
-    - 192.168.1.25
+    - 192.168.13.20
     
 alarm_control_panel: !include configuration/alarm_control_panel.yaml
 android_ip_webcam: !include configuration/android_ip_webcam.yaml
