@@ -1,5 +1,5 @@
 access_token: !secret konnected_token
-api_host: http://NODE-E88A5F:8123
+api_host: http://media-hub:8123
 devices:
   - id: 18fe34e88a5f
     host: NODE-E88A5F
