@@ -8,7 +8,7 @@ condition:
   conditions: 
   - condition: state
     entity_id: input_boolean.guest_mode
-    state: on
+    state: 'on'
   - condition: or
     conditions:
     - condition: state
