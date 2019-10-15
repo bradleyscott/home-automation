@@ -1,0 +1,49 @@
+alias: notify_if_insecure_when_late
+trigger:
+  - platform: state
+    entity_id: binary_sensor.in_bed
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: off
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: cover.garage_door
+          state: open
+        - condition: state
+          entity_id: lock.front_door
+          state: unlocked
+action:
+  - service: lock.lock
+    entity_id: lock.front_door
+  - service: cover.close_cover
+    entity_id: cover.garage_door
+  - service: notify.html5
+    data_template:
+      title: The house was been secured
+      message: >-
+        {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
+          The garage door is now shut and the front door is locked
+        {% elif is_state('cover.garage_door', 'open') %}
+          The garage door is now closed
+        {% else %}
+          The front door is now locked
+        {% endif %}
+      data: 
+        tag: ha-notify
+        url: /lovelace/cameras
+        image: >-
+          {% if is_state('lock.front_door', 'unlocked') %}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% elif is_state('cover.garage_door', 'open') %}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
+          {% else %}
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+          {% endif %}  
+        actions: 
+        - title: Lock up     
+          action: lock_up

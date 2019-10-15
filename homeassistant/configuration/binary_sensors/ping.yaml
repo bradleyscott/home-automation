@@ -1,4 +1,0 @@
-# External connectivity
-platform: ping
-host: google.com
-name: Internet connection

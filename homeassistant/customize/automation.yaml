@@ -133,6 +133,3 @@ automation.ifttt_webhook_received:
 
 automation.bedroom_heatpump_off_in_morning:
   friendly_name: Turn off heatpump cooling in the morning
-
-automation.notify_on_arrival:
-  friendly_name: Notify on arrival home
