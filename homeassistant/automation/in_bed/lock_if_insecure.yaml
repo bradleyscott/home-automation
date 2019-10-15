@@ -1,4 +1,4 @@
-alias: notify_if_insecure_when_late
+alias: lock_if_insecure_in_bed
 trigger:
   - platform: state
     entity_id: binary_sensor.in_bed

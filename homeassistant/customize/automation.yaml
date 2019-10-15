@@ -13,8 +13,11 @@ automation.notify_if_doors_open:
 automation.notify_if_garage_open:
   friendly_name: Remind me if garage door is open
 
-automation.notify_if_insecure_when_late:
-  friendly_name: Tell me if the house is insecure when its late
+automation.notify_if_insecure_in_bed:
+  friendly_name: Tell me if the house is insecure when in bed and there is guests
+
+automation.lock_if_insecure_in_bed:
+  friendly_name: Secure the house when in bed if there are no guests
 
 automation.notify_if_insecure_when_leaving:
   friendly_name: Tell me if house is insecure when leaving home
@@ -27,12 +30,6 @@ automation.off_if_heatpump_on_when_late:
 
 automation.turn_off_heatpumps_when_leaving:
   friendly_name: Turn off heatpumps when leaving home
-
-automation.notify_on_co2:
-  friendly_name: Notify if CO2 detected
-
-automation.notify_on_smoke:
-  friendly_name: Notify if smoke detected
 
 automation.notify_if_switch_on:
   friendly_name: Notify if oil heater is on
