@@ -4,14 +4,19 @@ trigger:
     entity_id: binary_sensor.in_bed
     to: 'on'
 condition:
-  condition: or
-  conditions:
+  condition: and
+  conditions: 
   - condition: state
-    entity_id: cover.garage_door
-    state: open
-  - condition: state
-    entity_id: lock.front_door
-    state: unlocked
+    entity_id: input_boolean.guest_mode
+    state: on
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: cover.garage_door
+      state: open
+    - condition: state
+      entity_id: lock.front_door
+      state: unlocked
 action:
   - service: notify.html5
     data_template:
