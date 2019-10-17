@@ -24,18 +24,13 @@ observations:
     platform: 'state'
     to_state: 'Yes'
     prob_given_true: 0.75
-    prob_given_false: 0.25
+    prob_given_false: 0.50
   - entity_id:  sensor.garage_car_present
     platform: 'state'
     to_state: 'No'
     prob_given_true: 0.3
-    prob_given_false: 0.8
+    prob_given_false: 0.5
   - entity_id: device_tracker.bradley_pixel3 # Bradley by Nmap
-    platform: 'state'
-    to_state: 'home'
-    prob_given_true: 0.7
-    prob_given_false: 0.05
-  - entity_id: device_tracker.bradley_pixel3_2 # Bradley by Owntracks
     platform: 'state'
     to_state: 'home'
     prob_given_true: 0.7
