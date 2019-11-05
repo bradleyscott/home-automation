@@ -1,4 +1,4 @@
-- host: 192.168.13.43
+- host: android-b13240de68399d6b
   name: Entrance phone
   username: !secret webcam_username
   password: !secret webcam_password
