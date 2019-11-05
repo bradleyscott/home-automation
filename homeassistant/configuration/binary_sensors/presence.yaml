@@ -14,7 +14,7 @@ observations:
     platform: 'state'
     to_state: 'unlocked'
     prob_given_true: 0.7
-    prob_given_false: 0.1
+    prob_given_false: 0.3
   - entity_id: lock.front_door
     platform: 'state'
     to_state: 'locked'
