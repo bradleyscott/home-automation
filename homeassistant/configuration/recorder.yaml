@@ -20,8 +20,8 @@ include:
     - climate.living_room_heatpump
     - climate.bedroom_heatpump
     - cover.garage_door
-    - device_tracker.nirupa_pixel3 # Nirupa
-    - device_tracker.bradley_pixel3
+    - device_tracker.nirupa_s_pixel_3 # Nirupa
+    - device_tracker.b_s_pixel_3
     - group.motion_sensors
     - input_boolean.house_motion
     - lock.front_door
