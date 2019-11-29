@@ -1,4 +1,4 @@
-- host: android-b13240de68399d6b
+- host: entrance-phone
   name: Entrance phone
   username: !secret webcam_username
   password: !secret webcam_password
