@@ -68,6 +68,7 @@ binary_sensor: !include_dir_list configuration/binary_sensors
 camera: !include configuration/camera.yaml
 climate: !include configuration/climate.yaml
 cover: !include configuration/cover.yaml
+cloud:
 device_tracker: !include configuration/device_tracker.yaml
 ffmpeg:
 group: !include groups.yaml
