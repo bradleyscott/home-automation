@@ -1,0 +1,132 @@
+automation.triggers_when_armed_away:
+  friendly_name: If Armed away, trigger on doors or motion
+
+automation.disarm_when_home:
+  friendly_name: Disarm when returning home
+
+automation.triggers_when_armed_home:
+  friendly_name: If Armed home, trigger on doors or downstairs motion
+
+automation.notify_if_doors_open:
+  friendly_name: Remind me if front door is open
+
+automation.notify_if_garage_open:
+  friendly_name: Remind me if garage door is open
+
+automation.notify_if_insecure_in_bed:
+  friendly_name: Tell me if the house is insecure when in bed and there is guests
+
+automation.lock_if_insecure_in_bed:
+  friendly_name: Secure the house when in bed if there are no guests
+
+automation.notify_if_insecure_when_leaving:
+  friendly_name: Tell me if house is insecure when leaving home
+
+automation.bedroom_on_in_morning_if_cold:
+  friendly_name: Turn on heatpump if its cold in the morning
+
+automation.off_if_heatpump_on_when_late:
+  friendly_name: Turn off the living room heatpump when its late
+
+automation.turn_off_heatpumps_when_leaving:
+  friendly_name: Turn off heatpumps when leaving home
+
+automation.notify_if_switch_on:
+  friendly_name: Notify if oil heater is on
+
+automation.turn_off_switch_when_leaving:
+  friendly_name: Turn off oil heater when leaving home
+
+automation.hide_entrance_camera:
+  friendly_name: Hide Entrance cam if unavailable
+
+automation.show_entrance_camera:
+  friendly_name: Show Entrance cam if available
+
+automation.show_doorbell_camera:
+  friendly_name: Show doorbell cam on movement
+
+automation.hide_doorbell_camera:
+  friendly_name: Hide doorbell cam if no movement
+
+automation.upstairs_motion:
+  friendly_name: Turn on upstairs lights on motion
+
+automation.upstairs_vacant:
+  friendly_name: Turn off upstairs light when vacant
+
+automation.garage_lights_on:
+  friendly_name: Turn on garage lights on motion
+
+automation.all_lights_off_at_sunrise:
+  friendly_name: After sunrise, turn all lights off
+
+script.get_house_ready:
+  icon: mdi:home-map-marker
+
+automation.downstairs_motion:
+  friendly_name: Turn on downstairs lights on motion and door
+
+automation.downstairs_vacant:
+  friendly_name: Turn off downstairs light when vacant
+
+automation.living_motion_stairs_on:
+  friendly_name: Turn stair lights on on living room motion
+
+automation.living_motion:
+  friendly_name: Turn lights on when motion in living room
+
+automation.living_motion_stairs_off:
+  friendly_name: Turn stair lights off when no motion in living room
+
+automation.turn_off_lights_when_leaving:
+  friendly_name: Turn off all lights when leaving
+
+automation.notify_if_bathroom_lights_on:
+  friendly_name: Notify if the bathroom lights are on
+
+automation.notify_if_bathroom_fan_on:
+  friendly_name: Notify if the bathroom fan is on
+
+script.bedroom_heatpump_off_delayed:
+  friendly_name: Turn the bedroom heatpump off in 30 mins
+  icon: mdi:av-timer
+
+script.panic_button:
+  icon: mdi:alarm-bell
+
+automation.notify_if_raining_and_door_open:
+  friendly_name: Notify if it rains and the deck doors are open
+
+automation.notify_if_rain_forecast_and_door_open:
+  friendly_name: Notify if rain forecast and deck doors are open
+
+automation.arm_alarm_when_leaving:
+  friendly_name: Arm the alarm when leaving home
+
+automation.sound_siren_on_alarm:
+  friendly_name: Sound siren on alarm
+
+automation.garage_vacant:
+  friendly_name: Turn garage lights off when vacant
+
+script.toggle_living_room_heatpump:
+  icon: mdi:fan
+
+script.toggle_bedroom_heatpump:
+  icon: mdi:fan
+
+automation.dining_off_during_day:
+  friendly_name: Turn off dining room light during the day
+
+automation.start_camera_when_away:
+  friendly_name: Start bedroom camera when leaving
+
+automation.stop_camera_when_home:
+  friendly_name: Stop bedroom camera when home
+
+automation.ifttt_webhook_received:
+  friendly_name: Enable inbound API requests
+
+automation.bedroom_heatpump_off_in_morning:
+  friendly_name: Turn off heatpump cooling in the morning
