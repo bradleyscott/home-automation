@@ -19,6 +19,7 @@ google_actions:
       - switch.aeotec_zw132_dual_nano_switch_switch_25 # Bathroom lights
       - switch.aeotec_zw132_dual_nano_switch_switch_26 # Kitchen lights
       - switch.aeotec_zw132_dual_nano_switch_switch_27 # Downstairs lights
+      - switch.vehicle_gate_opener
     include_domains:
       - cover
       - lock
