@@ -2,18 +2,6 @@ binary_sensor.aeotec_zw100_multisensor_6_sensor:
   friendly_name: Hallway motion sensor
   device_class: motion
 
-sensor.aeotec_zw100_multisensor_6_alarm_level:
-  friendly_name: Alarm level
-  hidden: true
-
-sensor.aeotec_zw100_multisensor_6_alarm_type:
-  friendly_name: Alarm type
-  hidden: true
-
-sensor.aeotec_zw100_multisensor_6_burglar:
-  friendly_name: Burglar alarm
-  hidden: true
-
 sensor.aeotec_zw100_multisensor_6_luminance:
   friendly_name: Lux sensor
   device_class: illuminance
