@@ -30,3 +30,4 @@ node_modules
 .plex/*
 .sickrage/*
 .transmission/*
+.vscode/*
