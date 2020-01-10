@@ -36,7 +36,7 @@ panic_button:
     - alias: Activate siren
       service: switch.turn_on
       data:
-        entity_id: switch.siren
+        entity_id: switch.siren_2
     - alias: Trigger alarm
       service: alarm_control_panel.alarm_trigger
       entity_id: alarm_control_panel.alarm

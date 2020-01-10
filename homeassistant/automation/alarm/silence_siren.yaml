@@ -9,7 +9,7 @@ trigger:
 action:
   - service: switch.turn_off
     data:
-      entity_id: switch.siren
+      entity_id: switch.siren_2
   - service: switch.turn_off
     data:
       entity_id: switch.buzzer_2
