@@ -2,13 +2,13 @@
   id: laHquq
   user_id: 435777b0c71544e8bdcfc05bfd25e8b5
   device_trackers:
-    - device_tracker.b_s_pixel_3 # Wifi location
+    - device_tracker.b_s_pixel3 # Wifi location
     
 - name: Nirupa
   id: 8BHLuL
   user_id: 9250da588874443abce77c3facd8438d
   device_trackers:
-    - device_tracker.nirupa_s_pixel_3 # Wifi location
+    - device_tracker.nirupa_s_pixel3 # Wifi location
 
 - name: Ryan
   id: 54Hyu3
