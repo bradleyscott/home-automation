@@ -78,7 +78,7 @@ logbook: !include configuration/logbook.yaml
 konnected: !include configuration/konnected.yaml
 mqtt: !include configuration/mqtt.yaml
 notify: !include configuration/notify.yaml
-person: #!include configuration/person.yaml
+person: 
 recorder: !include configuration/recorder.yaml
 script: !include_dir_merge_named scripts
 sensor: !include_dir_list configuration/sensors
