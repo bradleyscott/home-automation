@@ -1,12 +1,12 @@
 homeassistant:
   # Customization file
   customize: !include_dir_merge_named customize
-  packages:
-    dwains_theme: !include dwains-theme/configuration.yaml
+  # packages:
+  #   dwains_theme: !include dwains-theme/configuration.yaml
 
 # Enables the frontend
 frontend:
-  themes: !include_dir_merge_named themes/
+  # themes: !include_dir_merge_named themes/
 
 # Enables configuration UI
 config:
