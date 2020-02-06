@@ -1,0 +1,40 @@
+rooms:
+  - name: Entrance
+    icon: far:key
+    # light:
+    temperature: sensor.entrance_temperature
+    humidity: sensor.entrance_humidity
+    motion: binary_sensor.entrance
+    door: binary_sensor.front_door_open
+  - name: Garage
+    icon: far:garage-car
+    motion: binary_sensor.garage_camera_motion_sensor
+    cover: cover.garage_door
+  - name: Living room
+    icon: far:couch
+    light: group.living_area_lights
+    motion: binary_sensor.living_room
+    climate: climate.living_room_heatpump
+    # door:  
+    media_player: media_player.compucast
+  - name: Kitchen
+    icon: far:hat-chef
+    # light: 
+    media_player: media_player.compucast
+  - name: Bathroom
+    icon: far:toilet-paper
+    light: group.bathroom_lights
+  - name: Bedroom
+    icon: far:bed-alt
+    motion: binary_sensor.in_bed
+    climate: climate.bedroom_heatpump
+    media_player: media_player.bedroom_home_speaker
+    # light: 
+  - name: Upstairs
+    icon: far:window-frame
+    motion: binary_sensor.aeotec_zw100_multisensor_6_sensor
+    # light: 
+    temperature:  sensor.aeotec_zw100_multisensor_6_temperature
+    humidity:  sensor.aeotec_zw100_multisensor_6_relative_humidity
+
+

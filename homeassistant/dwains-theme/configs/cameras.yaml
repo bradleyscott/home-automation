@@ -1,0 +1,5 @@
+cameras:
+  - entity: camera.front_door_doorbell
+  - entity: camera.entrance_phone
+  - entity: camera.garage_camera
+  - entity: camera.cube_camera
