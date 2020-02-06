@@ -4,6 +4,9 @@ homeassistant:
 
 # Enables the frontend
 frontend:
+  themes: !include_dir_merge_named themes/
+  packages:
+    dwains_theme: !include dwains-theme/configuration.yaml
 
 # Enables configuration UI
 config:
