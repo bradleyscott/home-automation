@@ -7,10 +7,8 @@ condition:
   - condition: template
     value_template: "{{ not(is_state('climate.living_room_heatpump', 'off')) }}"
 action:
-  - service: climate.set_operation_mode
-    entity_id: climate.living_room_heatpump      
-    data:
-      operation_mode: 'off'
+  - service: climate.turn_off
+    entity_id: climate.living_room_heatpump
   - service: notify.html5
     data_template:
       title: The heat pump was on and it was getting late
