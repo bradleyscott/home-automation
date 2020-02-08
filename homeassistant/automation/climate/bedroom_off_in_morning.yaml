@@ -7,7 +7,5 @@ condition:
     entity_id: climate.bedroom_heatpump
     state: 'cool'
 action:
-  - service: climate.set_hvac_mode
-    data:
-      entity_id: climate.bedroom_heatpump
-      hvac_mode: 'off'
+  - service: climate.turn_off
+    entity_id: climate.bedroom_heatpump

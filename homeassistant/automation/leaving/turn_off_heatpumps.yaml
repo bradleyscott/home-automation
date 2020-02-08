@@ -13,11 +13,7 @@ condition:
   - condition: template
     value_template: "{% if is_state('climate.bedroom_heatpump', 'off') %}false{% else %}true{% endif %}"
 action:
-  - service: climate.set_operation_mode
+  - service: climate.turn_off
     entity_id: climate.bedroom_heatpump
-    data:
-      operation_mode: 'off'
-  - service: climate.set_operation_mode
-    entity_id: climate.living_room_heatpump      
-    data:
-      operation_mode: 'off'
+  - service: climate.turn_off
+    entity_id: climate.living_room_heatpump
