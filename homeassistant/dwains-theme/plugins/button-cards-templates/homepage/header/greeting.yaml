@@ -1,15 +1,17 @@
+# dwains_theme
+
 header_greeting:
-  icon: 'mdi:lock-open-variant-outline'
+  icon: '{{ _d_t_icons.alarm_disarmed|default('mdi:lock-open-variant-outline') }}'
   show_label: false
   show_icon: false
   label: >
     [[[
       if (entity.state == 'armed_away'){
-        return `Alarm system activated (Armed Away).`
+        return "{{ _d_t_trans.alarm.armed_away }}";
       } else if (entity.state == 'armed_home'){
-        return `Alarm system activated (Armed Home).`
+        return "{{ _d_t_trans.alarm.armed_home }}";
       } else {
-        return `Alarm system de-activated.`
+        return "{{ _d_t_trans.alarm.disarmed }}";
       }
     ]]]
   name: >
@@ -18,11 +20,11 @@ header_greeting:
       var curHr = today.getHours()
 
       if (curHr < 12) {
-        return 'Good Morning';
+        return "{{ _d_t_trans.greetings.good_morning }}";
       } else if (curHr < 18) {
-        return 'Good Afternoon';
+        return "{{ _d_t_trans.greetings.good_afternoon }}";
       } else {
-        return 'Good Evening';
+        return "{{ _d_t_trans.greetings.good_evening }}";
       }
     ]]]
   styles:
@@ -55,21 +57,21 @@ header_greeting:
       - align-self: end
   state:
     - value: pending
-      icon: 'mdi:home-lock'
+      icon: '{{ _d_t_icons.alarm_pending|default('mdi:home-lock') }}'
       styles:
         img_cell:
           - background-color: '#ffb94f'
         icon:
           - color: '#fcfcff'
     - value: armed_away
-      icon: 'mdi:home-lock'
+      icon: '{{ _d_t_icons.alarm_armed_away|default('mdi:home-lock') }}'
       styles: 
         img_cell:
           - background-color: '#ff5454'
         icon:
           - color: '#fcfcff'
     - value: armed_home
-      icon: 'mdi:home-lock'
+      icon: '{{ _d_t_icons.alarm_armed_home|default('mdi:home-lock') }}'
       styles: 
         img_cell:
           - background-color: '#ff5454'

@@ -11,7 +11,7 @@
     - !include
       - ../../partials/header.yaml
       - title: {{ room["name"] }}
-        subtitle: Rooms
+        subtitle: {{ _d_t_trans.home.title }}
         navigation_path: home  
     #Subheader with room information
     {% if room["motion"] or room["door"] or room["window"] %}
@@ -34,8 +34,11 @@
           - type: custom:button-card
             template: rooms_subheader
             entity: {{ room["motion"] }}
-            name: Motion
-            icon: 'far:walking'
+            name: {{ _d_t_trans.motion.title }}
+            icon: '{{ _d_t_icons.motion_off|default('far:walking') }}'
+            state:
+              - value: 'on'
+                icon: '{{ _d_t_icons.motion_on|default('mdi:motion-sensor') }}'
             tap_action:
               !include 
                 - ../../popups/more-info.yaml
@@ -52,26 +55,26 @@
                   var elapsed = current - previous;
 
                   if (elapsed < msPerMinute) {
-                      return Math.round(elapsed/1000) + ' sec ago';   
+                      return Math.round(elapsed/1000) + ' {{ _d_t_trans.history.sec_ago }}';   
                   }
                   else if (elapsed < msPerHour) {
-                      return Math.round(elapsed/msPerMinute) + ' min ago';   
+                      return Math.round(elapsed/msPerMinute) + ' {{ _d_t_trans.history.min_ago }}';   
                   }
                   else if (elapsed < msPerDay ) {
-                      return Math.round(elapsed/msPerHour ) + ' h ago';   
+                      return Math.round(elapsed/msPerHour ) + ' {{ _d_t_trans.history.h_ago }}';   
                   }
                   else if (elapsed < msPerMonth) {
-                      return Math.round(elapsed/msPerDay) + ' d ago';   
+                      return Math.round(elapsed/msPerDay) + ' {{ _d_t_trans.history.d_ago }}';   
                   }
                   else if (elapsed < msPerYear) {
-                      return Math.round(elapsed/msPerMonth) + ' m ago';   
+                      return Math.round(elapsed/msPerMonth) + ' {{ _d_t_trans.history.m_ago }}';   
                   }
                   else {
-                      return Math.round(elapsed/msPerYear ) + ' y ago';   
+                      return Math.round(elapsed/msPerYear ) + ' {{ _d_t_trans.history.y_ago }}';   
                   }
                 }
                 if(entity.state == 'on'){
-                  return 'Detected';
+                  return '{{ _d_t_trans.motion.motion_on }}';
                 } else {
                   return timeDifference(new Date(), new Date(entity.last_changed));
                 }
@@ -81,28 +84,28 @@
           - type: custom:button-card
             template: rooms_subheader
             entity: {{ room["door"] }}
-            icon: 'mdi:door-closed'
+            icon: '{{ _d_t_icons.door_closed|default('mdi:door-closed') }}'
             state:
               - value: 'on'
-                icon: 'mdi:door-open'
+                icon: '{{ _d_t_icons.door_open|default('mdi:door-open') }}'
             tap_action:
               !include 
                 - ../../popups/more-info.yaml
                 - entity: {{ room["door"] }}
             {% if room["door"].split('.')[0] == 'binary_sensor' %}
             # this room has only 1 door
-            name: Door
+            name: {{ _d_t_trans.door.title }}
             label: >
               [[[ 
                 if(entity.state == 'off'){
-                  return 'Closed';
+                  return '{{ _d_t_trans.door.closed }}';
                 } else {
-                  return 'Open';
+                  return '{{ _d_t_trans.door.open }}';
                 }
               ]]] 
             {% else %}
             # this room has group of doors
-            name: Doors
+            name: {{ _d_t_trans.door.title_plural }}
             label: >
               [[[
                 const entitiesFromGroup = states['{{ room["door"] }}'].attributes['entity_id'];
@@ -112,7 +115,7 @@
                     openDoors++;
                   }
                 });  
-                return ((openDoors >= 1) ? ((openDoors == 1) ? '1 door open' : openDoors + ' doors open') : 'Closed');
+                return ((openDoors >= 1) ? ((openDoors == 1) ? '1 {{ _d_t_trans.door.door_open }}' : openDoors + ' {{ _d_t_trans.door.doors_open }}') : '{{ _d_t_trans.door.closed }}');
               ]]]
             {% endif %}
           {% endif %}
@@ -120,28 +123,28 @@
           - type: custom:button-card
             template: rooms_subheader
             entity: {{ room["window"] }}
-            icon: 'mdi:window-closed-variant'
+            icon: '{{ _d_t_icons.window_closed|default('mdi:window-closed-variant') }}'
             state:
               - value: 'on'
-                icon: 'mdi:window-open-variant'
+                icon: '{{ _d_t_icons.window_open|default('mdi:window-open-variant') }}'
             tap_action:
               !include 
                 - ../../popups/more-info.yaml
                 - entity: {{ room["window"] }}
             {% if room["window"].split('.')[0] == 'binary_sensor' %}
             # this room has only 1 window
-            name: Window
+            name: {{ _d_t_trans.window.title }}
             label: >
               [[[ 
                 if(entity.state == 'off'){
-                  return 'Closed';
+                  return '{{ _d_t_trans.window.closed }}';
                 } else {
-                  return 'Open';
+                  return '{{ _d_t_trans.window.open }}';
                 }
               ]]] 
             {% else %}
             # this room has group of windows
-            name: Windows
+            name: {{ _d_t_trans.window.title_plural }}
             label: >
               [[[
                 const entitiesFromGroup = states['{{ room["window"] }}'].attributes['entity_id'];
@@ -151,7 +154,7 @@
                     openWindows++;
                   }
                 });  
-                return ((openWindows >= 1) ? ((openWindows == 1) ? '1 window open' : openWindows + ' windows open') : 'Closed');
+                return ((openWindows >= 1) ? ((openWindows == 1) ? '1 {{ _d_t_trans.window.window_open }}' : openWindows + ' {{ _d_t_trans.window.windows_open }}') : '{{ _d_t_trans.window.closed }}');
               ]]]
             {% endif %}
           {% endif %}
@@ -178,17 +181,17 @@
           - type: custom:button-card
             entity: {{ room["light"] }}
             template: rooms_child
-            icon: 'far:lightbulb'
+            icon: '{{ _d_t_icons.light_off|default('far:lightbulb') }}'
             styles:
               img_cell:
                 - padding-left: 5px
                 - width: 40px
             state:
               - value: 'on'
-                icon: 'fas:lightbulb'
+                icon: '{{ _d_t_icons.light_on|default('fas:lightbulb') }}'
             {% if room["light"].split('.')[0] == 'light' %}
-            # this room has only 1 light
-            name: Light
+            # this room has only 1 light (light entity)
+            name: {{ _d_t_trans.light.title }}
             double_tap_action:
               action: toggle
               haptic: light 
@@ -199,14 +202,28 @@
             label: >
               [[[ 
                 if(entity.state == 'off'){
-                  return 'Off';
+                  return '{{ _d_t_trans.light.off_text }}';
                 } else {
-                  return 'On ' + Math.round(((states['{{ room["light"] }}'].attributes.brightness/255)*100)) + '%';
+                  return '{{ _d_t_trans.light.on_text }}, ' + Math.round(((states['{{ room["light"] }}'].attributes.brightness/255)*100)) + '%';
+                }
+              ]]] 
+            {% elif room["light"].split('.')[0] == 'switch' %}
+            # this room has only 1 light (switch entity)
+            name: {{ _d_t_trans.light.title }}
+            tap_action:
+              action: toggle
+              haptic: light 
+            label: >
+              [[[ 
+                if(entity.state == 'off'){
+                  return '{{ _d_t_trans.light.off_text }}';
+                } else {
+                  return '{{ _d_t_trans.light.on_text }}';
                 }
               ]]] 
             {% else %}
             # this room has group of lights
-            name: Lights
+            name: {{ _d_t_trans.light.title_plural }}
             tap_action: 
               action: navigate
               navigation_path: {{ room["name"]|lower|replace(" ", "_") }}_lights
@@ -222,7 +239,7 @@
                     onLights++;
                   }
                 });  
-                return entitiesFromGroup.length + ' lights' + ((onLights >= 1) ? '<br>' + ((onLights == 1) ? '1 light on' : onLights + ' lights on') : '');
+                return entitiesFromGroup.length + ' {{ _d_t_trans.light.title_plural }}' + ((onLights >= 1) ? '<br>' + ((onLights == 1) ? '1 {{ _d_t_trans.light.light_on }}' : onLights + ' {{ _d_t_trans.light.lights_on }}') : '');
               ]]]
             {% endif %}
           {% endif %}
@@ -232,12 +249,12 @@
           - type: custom:button-card
             entity: {{ room["climate"] if room["climate"] else room["temperature"] }}
             template: rooms_child
-            icon: 'fas:thermometer-three-quarters'
+            icon: '{{ _d_t_icons.climate|default('fas:thermometer-three-quarters') }}'
             styles:
               img_cell:
                 - padding-left: 8px
                 - width: 37px
-            name: Temperature
+            name: {{ _d_t_trans.climate.title }}
             tap_action: 
               action: navigate
               navigation_path: {{ room["name"]|lower|replace(" ", "_") }}_climate
@@ -245,11 +262,11 @@
             label: >
               [[[ 
                 if (entity.attributes.hvac_action  == 'idle')
-                  return entity.attributes.current_temperature + '° <br>Stand-by';
+                  return entity.attributes.current_temperature + '° <br>{{ _d_t_trans.climate.idle }}';
                 else if(entity.attributes.hvac_action == 'heating')
-                  return entity.attributes.current_temperature + '° <br>Heating to ' + entity.attributes.temperature + '°';
+                  return entity.attributes.current_temperature + '° <br>{{ _d_t_trans.climate.heating }} ' + entity.attributes.temperature + '°';
                 else if(entity.attributes.hvac_action == 'off')
-                  return entity.attributes.current_temperature + '° <br>Off';
+                  return entity.attributes.current_temperature + '° <br>{{ _d_t_trans.climate.off_text }}';
               ]]] 
             {% else %}
             label: >
@@ -264,22 +281,22 @@
           - type: custom:button-card
             entity: {{ room["cover"] }}
             template: rooms_child
-            icon: 'mdi:window-shutter'
+            icon: '{{ _d_t_icons.cover|default('mdi:window-shutter') }}'
             tap_action: 
               action: navigate
               navigation_path: {{ room["name"]|lower|replace(" ", "_") }}_cover
             {% if room["cover"].split('.')[0] == 'cover' %}
-            name: Cover
+            name: {{ _d_t_trans.cover.title }}
             label: >
               [[[ 
                 if(entity.state == 'closed'){
-                  return 'Closed';
+                  return '{{ _d_t_trans.cover.cover_closed }}';
                 } else {
-                  return 'Open ' + states['{{ room["cover"] }}'].attributes.current_position + '%';
+                  return '{{ _d_t_trans.cover.cover_open }} ' + states['{{ room["cover"] }}'].attributes.current_position + '%';
                 }
               ]]] 
             {% else %}
-            name: Covers
+            name: {{ _d_t_trans.cover.title_plural }}
             label: >
               [[[ 
                 const entitiesFromGroup = states['{{ room["cover"] }}'].attributes['entity_id'];
@@ -288,10 +305,10 @@
                 entitiesFromGroup.forEach(function(entity){
                   if(states[entity].state == 'open'){
                     openCovers++;
-                    stateText += '<br>1 open ' + states[entity].attributes.current_position + '%';
+                    stateText += '<br>1 {{ _d_t_trans.cover.cover_open }} ' + states[entity].attributes.current_position + '%';
                   }
                 });  
-                return entitiesFromGroup.length + ' covers' + ((openCovers >= 1) ? stateText : '');
+                return entitiesFromGroup.length + ' {{ _d_t_trans.cover.title_plural }}' + ((openCovers >= 1) ? stateText : '');
               ]]]      
             {% endif %}
           {% endif %}
@@ -301,21 +318,21 @@
           - type: custom:button-card
             entity: {{ room["device"] }}
             template: rooms_child
-            icon: 'mdi:power-plug'
+            icon: '{{ _d_t_icons.device|default('mdi:power-plug') }}'
             {% if room["device"].split('.')[0] == 'light' %}
             # this room has only 1 device
-            name: Device
+            name: {{ _d_t_trans.device.title }}
             label: >
               [[[ 
                 if(entity.state == 'off'){
-                  return 'Off';
+                  return '{{ _d_t_trans.device.off_text }}';
                 } else {
-                  return 'On';
+                  return '{{ _d_t_trans.device.on_text }}';
                 }
               ]]] 
             {% else %}
             # this room has group of devices
-            name: Devices
+            name: {{ _d_t_trans.device.title_plural }}
             label: >
               [[[
                 const entitiesFromGroup = states['{{ room["device"] }}'].attributes['entity_id'];
@@ -325,7 +342,7 @@
                     onDevices++;
                   }
                 });  
-                return entitiesFromGroup.length + ' devices' + ((onDevices >= 1) ? '<br>' + ((onDevices == 1) ? '1 device on' : onDevices + ' devices on') : '');
+                return entitiesFromGroup.length + ' {{ _d_t_trans.device.title_plural }}' + ((onDevices >= 1) ? '<br>' + ((onDevices == 1) ? '1 {{ _d_t_trans.device.device_on }}' : onDevices + ' {{ _d_t_trans.device.devices_on }}') : '');
               ]]]
             tap_action: 
               action: navigate
@@ -338,10 +355,10 @@
           - type: custom:button-card
             entity: {{ room["media_player"] }}
             template: rooms_child
-            icon: 'fas:tv'
+            icon: '{{ _d_t_icons.media_player|default('fas:play') }}'
             {% if room["media_player"].split('.')[0] == 'media_player' %}
             # this room has only 1 media player
-            name: Media player
+            name: {{ _d_t_trans.media_player.title }}
             tap_action:
               !include 
                 - ../../popups/more-info.yaml
@@ -352,7 +369,7 @@
               ]]] 
             {% else %}
             # this room has group of media players
-            name: Media players
+            name: {{ _d_t_trans.media_player.title_plural }}
             label: >
               [[[
                 const entitiesFromGroup = states['{{ room["media_player"] }}'].attributes['entity_id'];
@@ -362,7 +379,7 @@
                     onDevices++;
                   }
                 });  
-                return entitiesFromGroup.length + ' media players' + ((onDevices >= 1) ? '<br>' + ((onDevices == 1) ? '1 media player on' : onDevices + ' media players on') : '');
+                return entitiesFromGroup.length + ' {{ _d_t_trans.media_player.title_plural }}' + ((onDevices >= 1) ? '<br>' + ((onDevices == 1) ? '1 {{ _d_t_trans.media_player.media_player_on }}' : onDevices + ' {{ _d_t_trans.media_player.media_players_on }}') : '');
               ]]]
             tap_action: 
               action: navigate
@@ -375,8 +392,8 @@
           - type: custom:button-card
             entity: {{ room["vacuum"]["entity"] }}
             template: rooms_child
-            name: Vacuum
-            icon: 'mdi:robot-vacuum'
+            name: {{ _d_t_trans.vacuum.title }}
+            icon: '{{ _d_t_icons.vacuum|default('mdi:robot-vacuum') }}'
             tap_action: 
               action: navigate
               navigation_path: {{ room["name"]|lower|replace(" ", "_") }}_vacuum
@@ -384,7 +401,6 @@
               [[[ 
                 return entity.state;
               ]]]
-            
           {% endif %}
 
           #Card for plants (dwains-theme/plugins/button-cards-templates/rooms/child.yaml)
@@ -392,10 +408,10 @@
           - type: custom:button-card
             entity: {{ room["plant"] }}
             template: rooms_child
-            icon: 'far:leaf'
+            icon: '{{ _d_t_icons.plant|default('fas:leaf') }}'
             {% if room["plant"].split('.')[0] == 'plant' %}
             # this room has only 1 plant
-            name: Plant
+            name: {{ _d_t_trans.plant.title }}
             tap_action:
               !include 
                 - ../../popups/more-info.yaml
@@ -405,8 +421,35 @@
                 return entity.state;
               ]]] 
             {% else %}
-            # this room has group of windows
-            name: Plants
+            # this room has group of plants
+            name: {{ _d_t_trans.plant.title_plural }}
+            label: >
+              [[[
+                const entitiesFromGroup = states['{{ room["plant"] }}'].attributes['entity_id'];
+                var problemPlants = 0;
+                entitiesFromGroup.forEach(function(entity){
+                  if(states[entity].state == 'problem'){
+                    problemPlants++;
+                  }
+                });  
+                return entitiesFromGroup.length + ' media players' + ((problemPlants >= 1) ? '<br>' + ((problemPlants == 1) ? '1 media player on' : problemPlants + ' media players on') : '');
+              ]]]
+            tap_action: 
+              action: navigate
+              navigation_path: {{ room["name"]|lower|replace(" ", "_") }}_plants
             {% endif %}
+          {% endif %}
+
+          #Card for room addons
+          {% if room["addons"] %}
+          {% for addon in room["addons"] %}
+          - type: custom:button-card
+            template: rooms_child
+            icon: {{ addon["icon"]|default('fas:puzzle-piece') }}
+            name: {{ addon["name"] }}
+            tap_action: 
+              action: navigate
+              navigation_path: {{ room["name"]|lower|replace(" ", "_") }}_addon_{{ addon["name"]|lower|replace(" ", "_") }}
+          {% endfor %}
           {% endif %}
 {% endfor %}

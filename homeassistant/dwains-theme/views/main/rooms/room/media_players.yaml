@@ -4,13 +4,13 @@
 
 {% for room in _d_t_config.rooms %}
 {% if room["media_player"] %}
-- title: {{ room["name"] }}
+- title: {{ room["name"] }} {{ _d_t_trans.media_player.title_plural }}
   path: {{ room["name"]|lower|replace(" ", "_") }}_media_players
   cards:   
     #Header
     - !include
       - ../../../partials/header.yaml
-      - title: Media players
+      - title: {{ _d_t_trans.media_player.title_plural }}
         subtitle: {{ room["name"] }}
         navigation_path: {{ room["name"]|lower|replace(" ", "_") }}  
     #Start for room media_players content page

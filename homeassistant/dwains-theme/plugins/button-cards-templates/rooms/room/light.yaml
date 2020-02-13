@@ -1,3 +1,5 @@
+# dwains_theme
+
 room_light:
   show_name: true
   show_icon: true
@@ -11,11 +13,15 @@ room_light:
         if ('brightness' in entity.attributes) { 
           if (entity.attributes && (entity.attributes.brightness <= 255)) { 
             var bri = Math.round(entity.attributes.brightness / 2.55); 
-            return 'On, ' + (bri ? bri : '0') + '%'; 
-          } 
-        } 
+            return '{{ _d_t_trans.light.on_text }}, ' + (bri ? bri : '0') + '%'; 
+          } else {
+            return '{{ _d_t_trans.light.on_text }}';
+          }
+        } else {
+          return '{{ _d_t_trans.light.on_text }}';
+        }
       } else {
-        return 'Off';
+        return '{{ _d_t_trans.light.off_text }}';
       }
     ]]]
   state:

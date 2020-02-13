@@ -3,6 +3,6 @@
   "name": "Dwains Theme Component",
   "documentation": "",
   "dependencies": ["lovelace"],
-  "codeowners": ["Dwain Scheeren"],
+  "codeowners": [],
   "requirements": ["jinja2"]
 }

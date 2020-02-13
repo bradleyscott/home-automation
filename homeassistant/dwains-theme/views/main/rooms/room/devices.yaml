@@ -4,13 +4,13 @@
 
 {% for room in _d_t_config.rooms %}
 {% if room["device"] %}
-- title: {{ room["name"] }}
+- title: {{ room["name"] }} {{ _d_t_trans.device.title_plural }}
   path: {{ room["name"]|lower|replace(" ", "_") }}_devices
   cards:   
     #Header
     - !include
       - ../../../partials/header.yaml
-      - title: Devices
+      - title: {{ _d_t_trans.device.title_plural }}
         subtitle: {{ room["name"] }}
         navigation_path: {{ room["name"]|lower|replace(" ", "_") }}  
     #Start for room devices content page

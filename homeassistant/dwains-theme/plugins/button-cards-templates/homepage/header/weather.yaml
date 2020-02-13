@@ -1,8 +1,30 @@
+# dwains_theme
+
 header_weather:
   layout: icon_name_state2nd
   show_state: true
   show_label: true
-  name: '[[[ return `${entity.attributes.temperature} ° outside` ]]]' 
+  name: '[[[ return `${entity.attributes.temperature} ° {{ _d_t_trans.climate.outside }}` ]]]' 
+  entity: {{ _d_t_config.global["weather"] }}
+  tap_action:
+    !include 
+      - ../../../../views/popups/weather.yaml
+      - entity: {{ _d_t_config.global["weather"] }}
+  #lets see if we can add a inside temperature
+  {% if _d_t_config.global["inside_temperature"] %}
+  label: >
+    [[[ 
+      {% if _d_t_config.global["inside_temperature"].split('.')[0] == 'sensor' %}
+        return (Math.round(states['{{ _d_t_config.global["inside_temperature"] }}'].state * 10) / 10) + '° {{ _d_t_trans.climate.inside }}';
+      {% elif _d_t_config.global["inside_temperature"].split('.')[0] == 'climate' %}
+        return states['{{ _d_t_config.global["inside_temperature"] }}'].attributes.current_temperature + '° {{ _d_t_trans.climate.inside }}'; 
+      {% else %}
+        return 'NaN';
+      {% endif %}
+    ]]]
+  {% else %}
+  label: '&nbsp;'
+  {% endif %}
   state:
     - value: clear-night
       icon: mdi:weather-night
@@ -34,8 +56,6 @@ header_weather:
       icon: mdi:weather-windy
     - value: windy-variant
       icon: mdi:weather-windy-variant
-  tap_action: 
-    action: more-info
   styles:
     grid:
       - grid-template-areas: '"i s""i n""i l"'

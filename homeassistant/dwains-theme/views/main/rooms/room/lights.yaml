@@ -4,13 +4,13 @@
 
 {% for room in _d_t_config.rooms %}
 {% if room["light"] %}
-- title: {{ room["name"] }}
+- title: {{ room["name"] }} {{ _d_t_trans.light.title_plural }}
   path: {{ room["name"]|lower|replace(" ", "_") }}_lights
   cards:   
     #Header
     - !include
       - ../../../partials/header.yaml
-      - title: Lights
+      - title: {{ _d_t_trans.light.title_plural }}
         subtitle: {{ room["name"] }}
         navigation_path: {{ room["name"]|lower|replace(" ", "_") }}  
     #Start for room lights content page
@@ -28,8 +28,7 @@
         - type: custom:auto-entities
           filter:
             include:
-              - domain: light
-                group: {{ room["light"] }}
+              - group: {{ room["light"] }}
                 options:
                   type: custom:button-card
                   template: room_light
@@ -37,8 +36,6 @@
                     !include 
                       - ../../../popups/light.yaml
                       - entity: this.entity_id
-            exclude:
-              - state: unavailable
           sort:
             method: name
             ignore_case: true

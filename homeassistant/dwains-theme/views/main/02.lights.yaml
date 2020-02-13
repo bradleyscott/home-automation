@@ -1,16 +1,16 @@
 # dwains_theme
 
 - path: lights
-  icon: 'mdi:lightbulb-group'
-  title: All Lights
+  icon: {{ _d_t_icons.menu_lights|default('mdi:lightbulb-group') }}
+  title: {{ _d_t_trans.all_lights.title }}
   badges: []
   cards:
     #Header
     - !include
       - ../partials/header.yaml
-      - title: All lights
-    #Start for menu page
-    #Cameras
+      - title: {{ _d_t_trans.all_lights.title }}
+    #Start for all lights page
+    #All lights
     - type: vertical-stack
       cards:
         {% for room in _d_t_config.rooms %}
@@ -19,8 +19,8 @@
         - !include
           - ../partials/heading.yaml
           - title: {{ room["name"] }}
-        {% if room["light"].split('.')[0] == 'light' %}
-        # this room has only 1 light
+        {% if room["light"].split('.')[0] == 'light' or room["light"].split('.')[0] == 'switch' %}
+        # this room has only 1 light (light or switch entity)
         - type: custom:mod-card
           style: |
             ha-card {
@@ -32,10 +32,12 @@
               - type: custom:button-card
                 template: room_light
                 entity: {{ room["light"] }}
+                {% if room["light"].split('.')[0] == 'light' %}
                 tap_action:
                   !include 
                     - ../popups/light.yaml
                     - entity: {{ room["light"] }}
+                {% endif %}
               - type: custom:button-card
                 color_type: blank-card
                 aspect_ratio: 1/1
@@ -50,8 +52,7 @@
             type: custom:auto-entities
             filter:
               include:
-                - domain: light
-                  group: {{ room["light"] }}
+                - group: {{ room["light"] }}
                   options:
                     type: custom:button-card
                     template: room_light
@@ -59,8 +60,6 @@
                       !include 
                         - ../popups/light.yaml
                         - entity: this.entity_id
-              exclude:
-                - state: unavailable
             sort:
               method: name
               ignore_case: true

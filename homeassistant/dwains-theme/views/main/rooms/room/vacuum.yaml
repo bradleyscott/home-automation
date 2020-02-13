@@ -4,13 +4,13 @@
 
 {% for room in _d_t_config.rooms %}
 {% if room["vacuum"] %}
-- title: {{ room["name"] }}
+- title: {{ room["name"] }} {{ _d_t_trans.vacuum.title }}
   path: {{ room["name"]|lower|replace(" ", "_") }}_vacuum
   cards:   
     #Header
     - !include
       - ../../../partials/header.yaml
-      - title: Vacuum
+      - title: {{ _d_t_trans.vacuum.title }}
         subtitle: {{ room["name"] }}
         navigation_path: {{ room["name"]|lower|replace(" ", "_") }}  
     #Start for room vacuum content page

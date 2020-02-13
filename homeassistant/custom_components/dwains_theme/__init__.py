@@ -1,3 +1,6 @@
+# This is a fork from lovelace_gen
+# Many thanks to Thomasloven! :D
+
 import os
 import logging
 import json
@@ -12,10 +15,16 @@ from homeassistant.exceptions import HomeAssistantError
 
 _LOGGER = logging.getLogger(__name__)
 
+def fromjson(value):
+    return json.loads(value)
+
 jinja = jinja2.Environment(loader=jinja2.FileSystemLoader("/"))
+
+jinja.filters['fromjson'] = fromjson
 
 dwains_theme_config = {}
 dwains_theme_translations = {}
+dwains_theme_icons = {}
 
 def load_yaml(fname, args={}):
     try:
@@ -25,7 +34,12 @@ def load_yaml(fname, args={}):
                 ll_gen = True
 
         if ll_gen:
-            stream = io.StringIO(jinja.get_template(fname).render({**args, "_d_t_config": dwains_theme_config, "_d_t_trans": dwains_theme_translations}))
+            stream = io.StringIO(jinja.get_template(fname).render({
+                **args, 
+                "_d_t_config": dwains_theme_config, 
+                "_d_t_trans": dwains_theme_translations,
+                "_d_t_icons": dwains_theme_icons
+                }))
             stream.name = fname
             return loader.yaml.load(stream, Loader=loader.SafeLineLoader) or OrderedDict()
         else:
@@ -56,11 +70,18 @@ loader.load_yaml = load_yaml
 loader.yaml.SafeLoader.add_constructor("!include", _include_yaml)
 
 async def async_setup(hass, config):
+    #Load main config
     dwains_theme_config.update(config.get("dwains_theme")["configuration"]);
 
     #Load translations
     language = dwains_theme_config["global"]["language"];
     dwains_theme_translations.update(config.get("dwains_theme")["translations"][language]);
+
+    #Load icons
+    if ("icons" in config.get("dwains_theme")):
+        icons_config = config.get("dwains_theme")["icons"]["icons"];
+        dwains_theme_icons.update(icons_config);
+
     return True
 
 # Allow redefinition of node anchors

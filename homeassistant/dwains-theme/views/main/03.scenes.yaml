@@ -1,13 +1,13 @@
 # dwains_theme
 
-- title: Scenes
+- title: {{ _d_t_trans.scenes.title }}
   path: scenes
-  icon: 'mdi:play-circle-outline'
+  icon: {{ _d_t_icons.menu_scenes|default('mdi:play-circle-outline') }}
   cards:
     #Header
     - !include
       - ../partials/header.yaml
-      - title: Scenes
+      - title: {{ _d_t_trans.scenes.title }}
     #Start for scenes page
     #Scenes
     - type: custom:mod-card
@@ -37,5 +37,5 @@
                   - background: '{{ scene["background"] }}'
           {% else %}
           - type: markdown
-            content: No scenes defined
+            content: {{ _d_t_trans.scenes.not_defined }}
           {% endfor %}

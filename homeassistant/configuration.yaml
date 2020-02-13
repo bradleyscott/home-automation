@@ -1,8 +1,9 @@
 homeassistant:
   # Customization file
   customize: !include_dir_merge_named customize
-  # packages:
-  #   dwains_theme: !include dwains-theme/configuration.yaml
+
+  # Enabled Dwains theme
+  packages: !include_dir_named packages/ # Comment this whole line if you want to disable Dwains Theme
 
 # Enables the frontend
 frontend:

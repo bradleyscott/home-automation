@@ -13,4 +13,4 @@ style: |
   .markdown {
     padding: 0px 16px 0px 16px;
   }
-content: '{{ title }}'
+content: "{{ title }}"

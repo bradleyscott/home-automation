@@ -4,13 +4,13 @@
 
 {% for room in _d_t_config.rooms %}
 {% if room["cover"] %}
-- title: {{ room["name"] }}
+- title: {{ room["name"] }} {{ _d_t_trans.cover.title_plural }}
   path: {{ room["name"]|lower|replace(" ", "_") }}_cover
   cards:   
     #Header
     - !include
       - ../../../partials/header.yaml
-      - title: Covers
+      - title: {{ _d_t_trans.cover.title_plural }}
         subtitle: {{ room["name"] }}
         navigation_path: {{ room["name"]|lower|replace(" ", "_") }}  
     {% if room["cover"].split('.')[0] == 'cover' %}
@@ -26,7 +26,7 @@
     - type: custom:mod-card
       style: |
         ha-card {
-          padding: 0px 8px 20px 8px;
+          padding: 8px 8px 20px 8px;
         }
       card:
         type: custom:auto-entities

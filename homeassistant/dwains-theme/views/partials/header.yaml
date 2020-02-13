@@ -44,6 +44,6 @@ style: |
     {% endif %}
   }
 content: |
-  {% if navigation_path %}[<ha-icon icon="far:chevron-left"></ha-icon>](/lovelace/{{ navigation_path }}){% endif %}
+  {% if navigation_path %}[<ha-icon icon="{{ _d_t_icons.menu_back|default('fas:chevron-left') }}"></ha-icon>](/lovelace/{{ navigation_path }}){% endif %}
   <h3>{{ subtitle }}</h3>
   <h1>{{ title }}</h1>
