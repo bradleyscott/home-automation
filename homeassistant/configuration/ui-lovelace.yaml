@@ -2,15 +2,15 @@
 #If you like to install plugins manual the path can be different, so change it down here
 #Also if you want to extend dwains theme you can add own recourses in the list below
 resources: 
-  #Some theme resources
+  #Some dwains theme resources
   - type: css
     url: 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap'
   - type: css
-    url: /local/dwains-theme/style.css?v=1.0.0
+    url: /local/dwains-theme/style.css?v=1.1.0
 
-  #Plugins resources
+  #Plugins resources (dwains theme)
   - type: module
-    url: /local/dwains-theme/plugins/cover-card.js?v=15
+    url: /local/dwains-theme/plugins/cover-card.js?v=1
   - type: module
     url: /community_plugin/weather-card/weather-card.js
   - type: module
@@ -29,6 +29,11 @@ resources:
     url: /community_plugin/custom-header/custom-header.js
   - type: module 
     url: /community_plugin/lovelace-more-info-card/more-info-card.js
+  - type: module
+    url: /community_plugin/lovelace-state-switch/state-switch.js
+  
+  #Plugins resources which are not required if you dont have a rooted roborock or a house calendar
+  #you can comment these out
   - type: module
     url: /community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js    
   - type: module
@@ -58,3 +63,4 @@ background: var(--background-image)
 views:
   !include_dir_merge_list dwains-theme/views/main/
 # End of the dwains theme ui-lovelace.yaml part
+######
