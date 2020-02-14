@@ -1,7 +1,0 @@
-persons: 
-  - name: Bradley
-    track: person.bradley
-    picture_path: 'bradley.jpg'
-  - name: Nirupa
-    track: person.nirupa
-    picture_path: 'nirupa.jpg'

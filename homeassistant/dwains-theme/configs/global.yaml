@@ -1,7 +1,0 @@
-global:
-  language: en
-  weather: weather.openweathermap
-  outside_temperature: sensor.entrance_temperature
-  outside_humidity: sensor.owm_humidity
-  alarm: alarm_control_panel.alarm
-  inside_temperature: sensor.aeotec_zw100_multisensor_6_temperature
