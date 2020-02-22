@@ -30,12 +30,12 @@ observations:
     to_state: 'No'
     prob_given_true: 0.3
     prob_given_false: 0.5
-  - entity_id: device_tracker.b_s_pixel_3 # Bradley by Nmap
+  - entity_id: device_tracker.bradley_app
     platform: 'state'
     to_state: 'home'
     prob_given_true: 0.7
     prob_given_false: 0.05
-  - entity_id: device_tracker.nirupa_s_pixel_3 # Nirupa by Nmap
+  - entity_id: device_tracker.nirupa_app
     platform: 'state'
     to_state: 'home'
     prob_given_true: 0.7
