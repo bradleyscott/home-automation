@@ -9,10 +9,3 @@
   exclude:
     - "192.168.13.5" # media-hub
     - "127.0.0.1"
-- platform: tesla
-  hide_if_away: false
-  icon: mdi:car
-  mac:
-  name: Tesla
-  picture:
-  track: true

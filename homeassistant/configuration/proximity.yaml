@@ -1,5 +1,4 @@
-home_tesla:
-  zone: home
+home:
   devices:
     - device_tracker.tesla_location
   tolerance: 5
