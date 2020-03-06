@@ -8,6 +8,6 @@ trigger:
 action:
   - service: device_tracker.see
     data_template:
-      dev_id: tesla_location
+      dev_id: casper_location_tracker
       location_name: not_home
       gps: [ '{{ states.sensor.tesla_latitude.state }}', '{{ states.sensor.tesla_longitude.state }}' ]
