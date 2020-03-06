@@ -1,0 +1,5 @@
+platform: mqtt
+name: tesla_estimated_range
+state_topic: "teslamate/cars/1/est_battery_range_km"
+unit_of_measurement: 'km'
+icon: mdi:map-marker-path

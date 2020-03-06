@@ -1,0 +1,5 @@
+platform: mqtt
+name: tesla_inside_temp
+state_topic: "teslamate/cars/1/inside_temp"
+unit_of_measurement: °C
+icon: mdi:thermometer-lines

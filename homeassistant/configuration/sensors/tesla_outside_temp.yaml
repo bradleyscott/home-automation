@@ -1,0 +1,5 @@
+platform: mqtt
+name: tesla_outside_temp
+state_topic: "teslamate/cars/1/outside_temp"
+unit_of_measurement: °C
+icon: mdi:thermometer-lines
