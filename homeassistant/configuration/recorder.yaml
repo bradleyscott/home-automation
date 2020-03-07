@@ -22,6 +22,7 @@ include:
     - cover.garage_door
     - device_tracker.nirupa_s_pixel_3 # Nirupa
     - device_tracker.b_s_pixel_3
+    - device_tracker.casper_location_tracker
     - group.motion_sensors
     - input_boolean.house_motion
     - lock.front_door
@@ -30,6 +31,9 @@ include:
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
     - sensor.aeotec_zw100_multisensor_6_temperature
+    - sensor.casper_temperature_sensor_inside
+    - sensor.casper_temperature_sensor_outside
+    - sensor.casper_battery_sensor
     - sensor.entrance_temperature
     - sensor.entrance_humidity
     - sensor.garage_car_present
