@@ -30,5 +30,16 @@ observations:
     to_state: 'off'
     prob_given_true: 0.6
     prob_given_false: 0.05
+  - platform: template
+    value_template: >
+      {{ is_state('device_tracker.bradley_app', 'home') and is_state('device_tracker.nirupa_app', 'home') }}
+    prob_given_true: 0.9
+    prob_given_false: 0.5
+  - platform: template
+    value_template: >
+      {{ (not is_state('device_tracker.bradley_app', 'home')) and (not is_state('device_tracker.nirupa_app', 'home')) }}
+    prob_given_true: 0.2
+    prob_given_false: 0.5
+
 
 
