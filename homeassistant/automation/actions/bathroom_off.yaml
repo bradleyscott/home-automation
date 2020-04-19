@@ -5,6 +5,5 @@ trigger:
     event_data:
       action: bathroom_off
 action:
-  - service: switch.turn_off
-    data:
-      entity_id: group.bathroom
+  - service: homeassistant.turn_off
+    entity_id: group.bathroom

@@ -92,3 +92,17 @@ motion_sensors:
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
+
+house_lights:
+  name: House lights
+  entities:
+    - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
+    - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
+    - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
+    - group.living_area_lights
+    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs Stairway
+    - switch.aeotec_zw132_dual_nano_switch_switch_15 # Upstairs Hallway
+    - group.bathroom_lights
+    - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bed globes
+    - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bed spotlights
