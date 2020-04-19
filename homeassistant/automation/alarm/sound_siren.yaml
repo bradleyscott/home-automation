@@ -6,10 +6,10 @@ trigger:
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.siren_2
+      entity_id: switch.siren
   - service: switch.turn_off
     data:
-      entity_id: switch.buzzer_2
+      entity_id: switch.buzzer
   - service: notify.phone
     data:
       message: "Hello. The alarm at home has been triggered and the siren is ringing. The siren will ring for at least 2 minutes. You can turn it off sooner using Home Assistant or by using the kill switch in the garage. Goodbye"

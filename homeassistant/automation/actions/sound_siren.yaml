@@ -7,4 +7,4 @@ trigger:
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.siren_2
+      entity_id: switch.siren
