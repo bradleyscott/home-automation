@@ -44,7 +44,7 @@ include:
     - sensor.garage_car_present
     - sensor.garage_status
     - sensor.left_side_deck_door_battery_level
-    - sensor.right_side_deck_door_battery_level	
+    - sensor.right_side_deck_door_battery_level
     - sensor.upstairs_hallway_sensor_battery_level
     - sensor.owm_temperature
     - switch.smart_switch
