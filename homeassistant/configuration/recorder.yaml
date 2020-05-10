@@ -1,5 +1,4 @@
 purge_keep_days: 3
-purge_interval: 1
 include:
   domains:
     - automation
@@ -16,18 +15,23 @@ include:
     - binary_sensor.garagecamera_motion_sensor
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
+    - binary_sensor.in_bed
     - binary_sensor.living_room
     - climate.living_room_heatpump
     - climate.bedroom_heatpump
     - cover.garage_door
     - device_tracker.nirupa_s_pixel_3 # Nirupa
+    - device_tracker.nirupa_app
     - device_tracker.b_s_pixel_3
+    - device_tracker.bradley_app
     - device_tracker.casper_location_tracker
+    - group.house_lights
     - group.motion_sensors
     - input_boolean.house_motion
     - lock.front_door
     - person.bradley
     - person.nirupa
+    - proximity.home
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
     - sensor.aeotec_zw100_multisensor_6_temperature
@@ -36,25 +40,29 @@ include:
     - sensor.casper_battery_sensor
     - sensor.entrance_temperature
     - sensor.entrance_humidity
+    - sensor.front_door_battery
     - sensor.garage_car_present
     - sensor.garage_status
-    - sensor.owm_condition
-    - sensor.owm_rain
+    - sensor.left_side_deck_door_battery_level
+    - sensor.right_side_deck_door_battery_level	
+    - sensor.upstairs_hallway_sensor_battery_level
     - sensor.owm_temperature
     - switch.smart_switch
     - light.level # Living room lights
+    - switch.aeotec_zw116_nano_switch_switch # Dining room light
+    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
+    - switch.aeon_labs_zw132_dual_nano_switch_switch # Downstairs hallway
+    - switch.aeon_labs_zw132_dual_nano_switch_switch_2 # Entrance and stairs
     - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bedroom globes
     - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bedroom spotlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
     - switch.aeotec_zw132_dual_nano_switch_switch_15 # Upstairs hallway
     - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs stairway
     - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
     - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
-    - switch.aeon_labs_zw132_dual_nano_switch_switch # Downstairs hallway
-    - switch.aeon_labs_zw132_dual_nano_switch_switch_2 # Entrance and stairs
-    - switch.aeotec_zw116_nano_switch_switch # Dining room light
+    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
+    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
     - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
-    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
-    - switch.vehicle_gate_opener
+    - switch.buzzer
+    - switch.siren
+    - switch.smart_switch # Oil heater
     - switch.switch_7 # Bathroom fan
