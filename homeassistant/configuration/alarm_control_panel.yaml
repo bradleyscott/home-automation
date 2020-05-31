@@ -1,8 +1,8 @@
 platform: manual
 name: Alarm
 code: !secret alarm_code
-pending_time: 30 # secs to leave after arm
+arming_time: 30 # secs to leave after arm
 delay_time: 30 # secs to disarm 
 armed_home: 
-  pending_time: 0
+  arming_time: 0
   delay_time: 0
