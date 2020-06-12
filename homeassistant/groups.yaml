@@ -48,7 +48,7 @@ entrance:
 garage:
   name: Garage
   entities:
-    - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
+    - switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
     - binary_sensor.garagecamera_motion_sensor
     - cover.garage_door
     - sensor.garage_car_present
@@ -98,7 +98,6 @@ house_lights:
   entities:
     - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
     - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
-    - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
     - group.living_area_lights
     - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
     - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs Stairway
@@ -106,3 +105,6 @@ house_lights:
     - group.bathroom_lights
     - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bed globes
     - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bed spotlights
+    - switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
+    - switch.aeon_labs_zw116_nano_switch_switch # Spare room lights
+    - swithc.aeon_labs_zw116_nano_switch_switch_3 # Guest bedroom lights

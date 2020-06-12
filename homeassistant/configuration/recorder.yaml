@@ -61,8 +61,10 @@ include:
     - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
     - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
     - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
-    - switch.aeotec_zw116_nano_switch_switch_3 # Garage lights
     - switch.buzzer
     - switch.siren
     - switch.smart_switch # Oil heater
     - switch.switch_7 # Bathroom fan
+    - switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
+    - switch.aeon_labs_zw116_nano_switch_switch # Spare room lights
+    - swithc.aeon_labs_zw116_nano_switch_switch_3 # Guest bedroom lights
