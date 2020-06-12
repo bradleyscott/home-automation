@@ -12,7 +12,7 @@ include:
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right side deck door
     - binary_sensor.entrance
     - binary_sensor.front_door_open
-    - binary_sensor.garagecamera_motion_sensor
+    - binary_sensor.garage_camera_motion_sensor
     - binary_sensor.guest_bedroom
     - binary_sensor.home_occupied
     - binary_sensor.in_bed
