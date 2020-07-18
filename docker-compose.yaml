@@ -11,7 +11,7 @@ services:
       - TZ=Pacific/Auckland
     volumes:
       - ./.couchpotato:/config
-      - /media/bradley/external/downloads:/downloads
+      - /media/bradley/external/downloads/complete:/downloads
       - /media/bradley/external/movies:/movies
     ports:
       - "5050:5050"
@@ -28,7 +28,6 @@ services:
     volumes:
       - ./.plex:/config
       - /media/bradley/external/movies:/movies
-      - /media/bradley/external/tv:/tvshows
   transmission:
     image: linuxserver/transmission
     container_name: transmission
@@ -55,7 +54,7 @@ services:
       - TZ=Pacific/Auckland
     volumes:
       - ./.sickrage:/config
-      - /media/bradley/external/downloads:/downloads
+      - /media/bradley/external/downloads/complete:/downloads
       - /media/bradley/external/tv:/tv
     ports:
       - "8082:8081"
