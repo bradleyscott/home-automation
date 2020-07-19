@@ -28,6 +28,7 @@ services:
     volumes:
       - ./.plex:/config
       - /media/bradley/external/movies:/movies
+      - /media/bradley/external/tv:/tv
   transmission:
     image: linuxserver/transmission
     container_name: transmission
