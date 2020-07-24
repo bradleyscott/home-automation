@@ -15,20 +15,19 @@ services:
       - /media/bradley/external/movies:/movies
     ports:
       - "5050:5050"
-  plex:
-    image: linuxserver/plex
-    container_name: plex
+  jellyfin:
+    image: linuxserver/jellyfin
+    container_name: jellyfin
     network_mode: "host"
     restart: unless-stopped
     environment:
-      - VERSION=latest
-      - PGID=999
       - PUID=1000
+      - PGID=999
       - TZ=Pacific/Auckland
     volumes:
-      - ./.plex:/config
-      - /media/bradley/external/movies:/movies
-      - /media/bradley/external/tv:/tv
+      - ./.jellyfin:/config
+      - /media/bradley/external/tv:/data/tvshows
+      - /media/bradley/external/movies:/data/movies
   transmission:
     image: linuxserver/transmission
     container_name: transmission
