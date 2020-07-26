@@ -88,29 +88,29 @@ services:
     image: kerberos/kerberos
     container_name: entrance-cam
     volumes:
-      - ./kerberos/config/entrance-cam:/etc/opt/kerberosio/config
+      - ./.kerberos/config/entrance-cam:/etc/opt/kerberosio/config
       - /media/bradley/external/security/entrance-cam:/etc/opt/kerberosio/capture
-      - ./kerberos/logs/entrance-cam:/etc/opt/kerberosio/logs
-      - ./kerberos/kerberos.php:/var/www/web/config/kerberos.php
+      - ./.kerberos/logs/entrance-cam:/etc/opt/kerberosio/logs
+      - ./.kerberos/kerberos.php:/var/www/web/config/kerberos.php
     ports:
       - "881:80"
   garage-cam:
     image: kerberos/kerberos
     container_name: garage-cam
     volumes:
-      - ./kerberos/config/garage-cam:/etc/opt/kerberosio/config
+      - ./.kerberos/config/garage-cam:/etc/opt/kerberosio/config
       - /media/bradley/external/security/garage-cam:/etc/opt/kerberosio/capture
-      - ./kerberos/logs/garage-cam:/etc/opt/kerberosio/logs
-      - ./kerberos/kerberos.php:/var/www/web/config/kerberos.php
+      - ./.kerberos/logs/garage-cam:/etc/opt/kerberosio/logs
+      - ./.kerberos/kerberos.php:/var/www/web/config/kerberos.php
     ports:
       - "882:80"
   cube-cam:
     image: kerberos/kerberos
     container_name: cube-cam
     volumes:
-      - ./kerberos/config/cube-cam:/etc/opt/kerberosio/config
+      - ./.kerberos/config/cube-cam:/etc/opt/kerberosio/config
       - /media/bradley/external/security/cube-cam:/etc/opt/kerberosio/capture
-      - ./kerberos/logs/cube-cam:/etc/opt/kerberosio/logs
-      - ./kerberos/kerberos.php:/var/www/web/config/kerberos.php
+      - ./.kerberos/logs/cube-cam:/etc/opt/kerberosio/logs
+      - ./.kerberos/kerberos.php:/var/www/web/config/kerberos.php
     ports:
       - "883:80"
