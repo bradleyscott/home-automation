@@ -28,6 +28,7 @@ services:
       - ./.jellyfin:/config
       - /media/bradley/external/tv:/data/tvshows
       - /media/bradley/external/movies:/data/movies
+      - /media/bradley/external/dvr:/data/dvr
   transmission:
     image: linuxserver/transmission
     container_name: transmission
