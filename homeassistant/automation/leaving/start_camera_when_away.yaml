@@ -6,4 +6,9 @@ trigger:
     for: 
       minutes: 5
 action:
-  - service: shell_command.start_cube_cam
+  - service: switch.turn_on
+    data:
+      entity_id: switch.garage_camera_h264_rtsp_server
+  - service: switch.turn_on
+    data:
+      entity_id: switch.cube_cam_h264_rtsp_server
