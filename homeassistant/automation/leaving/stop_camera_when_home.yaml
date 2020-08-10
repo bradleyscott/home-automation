@@ -10,7 +10,7 @@ action:
   - service: switch.turn_off
     data:
       entity_id: switch.garage_camera_h264_rtsp_server
-  - service: switch.turn_on
+  - service: switch.turn_off
     data:
       entity_id: switch.cube_cam_h264_rtsp_server
   
