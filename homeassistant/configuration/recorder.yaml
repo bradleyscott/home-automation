@@ -68,3 +68,5 @@ include:
     - switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
     - switch.aeon_labs_zw116_nano_switch_switch # Spare room lights
     - swithc.aeon_labs_zw116_nano_switch_switch_3 # Guest bedroom lights
+    - switch.garage_camera_h264_rtsp_server
+    - switch.cube_cam_h264_rtsp_server
