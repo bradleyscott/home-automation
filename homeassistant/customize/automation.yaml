@@ -130,3 +130,10 @@ automation.ifttt_webhook_received:
 
 automation.bedroom_heatpump_off_in_morning:
   friendly_name: Turn off heatpump cooling in the morning
+
+  automation.stop_camera_when_closed:
+    friendly_name: Turn off garage camera when closed
+  
+    automation.start_camera_when_open:
+      friendly_name: Turn on garage camera when open
+    
