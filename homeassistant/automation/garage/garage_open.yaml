@@ -1,0 +1,9 @@
+alias: start_camera_when_open
+trigger:
+  - platform: state
+    entity_id: cover.garage_door
+    to: 'open'
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.garage_camera_h264_rtsp_server

@@ -2,7 +2,7 @@ alias: triggers_when_armed_home
 trigger:
   - platform: state
     entity_id: cover.garage_door
-    to: 'Opening'
+    to: 'open'
   - platform: state
     entity_id: binary_sensor.front_door_open
     to: 'on'
@@ -30,7 +30,7 @@ action:
         trigger: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}
             The front door opening
-          {% elif is_state('cover.garage_door', 'Opening') %}
+          {% elif is_state('cover.garage_door', 'open') %}
             The garage door opening
           {% elif is_state('binary_sensor.garage_motion', 'on') %}
             Movement in the garage
@@ -44,7 +44,7 @@ action:
         image: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}
             https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}
-          {% elif is_state('cover.garage_door', 'Opening') %}
+          {% elif is_state('cover.garage_door', 'open') %}
             https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
           {% elif is_state('binary_sensor.garage_motion', 'on') %}
             https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}

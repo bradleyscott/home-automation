@@ -2,7 +2,7 @@ alias: garage_lights_on
 trigger:
   - platform: state
     entity_id: cover.garage_door
-    to: 'Opening'
+    to: 'open'
   - platform: state
     entity_id: binary_sensor.garage_camera_motion_sensor
     to: 'on'

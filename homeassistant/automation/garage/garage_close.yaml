@@ -1,0 +1,9 @@
+alias: stop_camera_when_closed
+trigger:
+  - platform: state
+    entity_id: cover.garage_door
+    to: 'closed'
+action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.garage_camera_h264_rtsp_server
