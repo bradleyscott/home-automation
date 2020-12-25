@@ -6,4 +6,4 @@ trigger:
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.garage_camera_h264_rtsp_server
+      entity_id: switch.garage_camera_rtsp_server
