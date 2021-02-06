@@ -71,7 +71,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - ./homeassistant:/config
-    privileged: true
   mosquitto:
     image: eclipse-mosquitto:1.6.13
     container_name: mosquitto
@@ -117,6 +116,7 @@ services:
   zwavejs2mqtt:
     image: zwavejs/zwavejs2mqtt
     container_name: zwavejs
+    privileged: true
     depends_on: 
       - mosquitto
     devices:
