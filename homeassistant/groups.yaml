@@ -1,33 +1,30 @@
 bedroom:
   name: Bedroom
   entities: 
-    - sensor.bedroom_temp
     - script.toggle_bedroom_heatpump
     - climate.bedroom_heatpump
-    - sensor.esp8266_temperature
-    - sensor.esp8266_humidity
-    - switch.aeotec_zw132_dual_nano_switch_switch_13 # Globes
-    - switch.aeotec_zw132_dual_nano_switch_switch_14 # Spotlights
+    - switch.bed_globes
+    - switch.dresser_spotlights
     - media_player.bedroom_home_speaker
 
 bathroom:
   name: Bathroom 
   entities:
-    - switch.switch_7 # Bathroom fan
-    - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
+    - switch.bathroom_fan
+    - switch.shower_downlights
+    - switch.bathroom_spotlights
 
 bathroom_lights:
   name: Bathroom lights
   entities:
-    - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
+    - switch.shower_downlights
+    - switch.bathroom_spotlights
 
 upstairs:
   name: Upstairs
   entities:
-    - switch.aeotec_zw132_dual_nano_switch_switch_16 # Stairway
-    - switch.aeotec_zw132_dual_nano_switch_switch_15 # Hallway
+    - switch.upstairs_stairs_light
+    - switch.upstairs_hallway_lights
     - binary_sensor.aeotec_zw100_multisensor_6_sensor
     - sensor.aeotec_zw100_multisensor_6_luminance
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
@@ -41,14 +38,14 @@ entrance:
     - lock.front_door
     - binary_sensor.entrance
     - input_boolean.guest_mode
-    - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
-    - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
+    - switch.downstairs_hallway_lights
+    - switch.entrance_light
     - camera.entrance_phone
 
 garage:
   name: Garage
   entities:
-    - switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
+    - switch.garage_lights
     - binary_sensor.garagecamera_motion_sensor
     - cover.garage_door
     - sensor.garage_car_present
@@ -57,32 +54,29 @@ garage:
 living:
   name: Living area
   entities:
-    - light.level # Living room lights
-    - sensor.living_room_temp
+    - light.living_room_lights
     - script.toggle_living_room_heatpump
-    - sensor.living_room_temp
     - climate.living_room_heatpump
     - binary_sensor.living_room
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
     - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door
-    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
+    - switch.deck_lights
     - media_player.compucast
 
 living_area_lights:
   name: Living area lights
   entities:
-    - light.level # Living room lights
-    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
-    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
-    - switch.aeotec_zw116_nano_switch_switch # Dining room light
+    - light.living_room_lights
+    - switch.kitchen_bench_lights
+    - switch.kitchen_downlights
+    - switch.dining_room_light
 
 kitchen:
   name: Kitchen
   entities:
-    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
-    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
-    - switch.aeotec_zw116_nano_switch_switch # Dining room light
-    - sensor.living_room_nest_protect_smoke_status
+    - switch.kitchen_bench_lights
+    - switch.kitchen_downlights
+    - switch.dining_room_light
     - media_player.kitchen_speaker
 
 motion_sensors:
@@ -96,15 +90,15 @@ motion_sensors:
 house_lights:
   name: House lights
   entities:
-    - switch.aeotec_zw132_dual_nano_switch_switch_21 # Downstairs hallway
-    - switch.aeotec_zw132_dual_nano_switch_switch_22 # Entrance and stairs
+    - switch.downstairs_hallway_lights
+    - switch.entrance_light
     - group.living_area_lights
-    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
-    - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs Stairway
-    - switch.aeotec_zw132_dual_nano_switch_switch_15 # Upstairs Hallway
+    - switch.deck_lights
+    - switch.upstairs_stairs_light
+    - switch.upstairs_hallway_lights
     - group.bathroom_lights
-    - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bed globes
-    - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bed spotlights
-    - switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
-    - switch.aeon_labs_zw116_nano_switch_switch # Spare room lights
-    - switch.aeon_labs_zw116_nano_switch_switch_3 # Guest bedroom lights
+    - switch.bed_globes
+    - switch.dresser_spotlights
+    - switch.garage_lights
+    - switch.spare_room_lights
+    - switch.guest_bedroom_lights

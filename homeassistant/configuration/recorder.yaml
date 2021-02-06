@@ -47,26 +47,26 @@ include:
     - sensor.right_side_deck_door_battery_level
     - sensor.upstairs_hallway_sensor_battery_level
     - sensor.owm_temperature
+    - light.living_room_lights
     - switch.smart_switch
-    - light.level # Living room lights
-    - switch.aeotec_zw116_nano_switch_switch # Dining room light
-    - switch.aeotec_zw116_nano_switch_switch_2 # Deck lights
-    - switch.aeon_labs_zw132_dual_nano_switch_switch # Downstairs hallway
-    - switch.aeon_labs_zw132_dual_nano_switch_switch_2 # Entrance and stairs
-    - switch.aeotec_zw132_dual_nano_switch_switch_13 # Bedroom globes
-    - switch.aeotec_zw132_dual_nano_switch_switch_14 # Bedroom spotlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_15 # Upstairs hallway
-    - switch.aeotec_zw132_dual_nano_switch_switch_16 # Upstairs stairway
-    - switch.aeotec_zw132_dual_nano_switch_switch_17 # Bathroom spotlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_18 # Shower downlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_19 # Kitchen spotlights
-    - switch.aeotec_zw132_dual_nano_switch_switch_20 # Kitchen bench lamps
+    - switch.dining_table_light
+    - switch.deck_lights
+    - switch.downstairs_hallway_lights
+    - switch.entrance_light
+    - switch.bed_globes
+    - switch.dresser_spotlights
+    - switch.upstairs_hallway_lights
+    - switch.upstairs_stairs_light
+    - switch.bathroom_spotlights
+    - switch.shower_downlights
+    - switch.kitchen_downlights
+    - switch.kitchen_bench_lights
+    - switch.bathroom_fan
+    - switch.garage_lights
+    - switch.spare_room_lights
+    - switch.guest_bedroom_lights
+    - switch.garage_camera_rtsp_server
     - switch.buzzer
     - switch.siren
     - switch.smart_switch # Oil heater
-    - switch.switch_7 # Bathroom fan
-    - switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
-    - switch.aeon_labs_zw116_nano_switch_switch # Spare room lights
-    - switch.aeon_labs_zw116_nano_switch_switch_3 # Guest bedroom lights
-    - switch.garage_camera_rtsp_server
     - switch.cube_cam_rtsp_server
