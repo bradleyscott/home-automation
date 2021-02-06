@@ -22,7 +22,7 @@ include:
     - cover.garage_door
     - device_tracker.nirupa_s_pixel_3 # Nirupa
     - device_tracker.nirupa_app
-    - device_tracker.b_s_pixel_3
+    - device_tracker.b_pixel_5
     - device_tracker.bradley_app
     - device_tracker.casper_location_tracker
     - group.house_lights
