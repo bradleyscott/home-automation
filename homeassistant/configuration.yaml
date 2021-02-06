@@ -47,10 +47,6 @@ tts:
 # IFTT automation
 ifttt:
   key: !secret ifttt_key
-  
-# Z Wave configuration
-zwave:
-  usb_path: /dev/ttyACM0
 
 # Wemo
 wemo:
