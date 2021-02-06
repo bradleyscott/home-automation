@@ -66,15 +66,14 @@ services:
     network_mode: "host"
     depends_on: 
       - mosquitto
-    devices:
-      - /dev/ttyACM0
+      - zwavejs2mqtt
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - ./homeassistant:/config
     privileged: true
   mosquitto:
-    image: eclipse-mosquitto
+    image: eclipse-mosquitto:1.6.13
     container_name: mosquitto
     restart: unless-stopped
     volumes:
@@ -115,3 +114,15 @@ services:
       - ./.kerberos/kerberos.php:/var/www/web/config/kerberos.php
     ports:
       - "883:80"
+  zwavejs2mqtt:
+    image: zwavejs/zwavejs2mqtt
+    container_name: zwavejs
+    depends_on: 
+      - mosquitto
+    devices:
+      - /dev/ttyACM0
+    volumes:
+      - ./.zwavejs:/usr/src/app/store
+    ports:
+      - "8091:8091"
+      - "3000:3000"
