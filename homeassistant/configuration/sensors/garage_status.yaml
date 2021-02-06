@@ -4,13 +4,13 @@ sensors:
     friendly_name: Garage status
     value_template: >-
       {% if is_state("cover.garage_door", "open") %}
-        {% if is_state("switch.aeon_labs_zw116_nano_switch_switch_2", "off") %}
+        {% if is_state("switch.garage_lights", "off") %}
             open-garage-off
         {% else %}
             open-garage
         {% endif %}
       {% else %}
-        {% if is_state("switch.aeon_labs_zw116_nano_switch_switch_2", "off") %}
+        {% if is_state("switch.garage_lights", "off") %}
           {% if is_state("sensor.garage_car_present", "Yes") %}
             closed-garage-off
           {% else %}
