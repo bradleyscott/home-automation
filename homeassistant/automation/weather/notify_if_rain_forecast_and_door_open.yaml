@@ -6,19 +6,19 @@ condition:
   condition: or
   conditions:
   - condition: state
-    entity_id: binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
+    entity_id: binary_sensor.left_deck_door
     state: 'on'
   - condition: state
-    entity_id: binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door
+    entity_id: binary_sensor.right_deck_door
     state: 'on'
 action:
   - service: notify.html5
     data_template:
       title: Rain is forecast and the deck doors are open
       message: >-
-        {% if is_state('binary_sensor.aeotec_zw112_door_window_sensor_6_sensor', 'on') and is_state('binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2', 'on') %}
+        {% if is_state('binary_sensor.left_deck_door', 'on') and is_state('binary_sensor.right_deck_door', 'on') %}
           Both the left side and the right side deck doors are open
-        {% elif is_state('binary_sensor.aeotec_zw112_door_window_sensor_6_sensor', 'on') %}
+        {% elif is_state('binary_sensor.left_deck_door', 'on') %}
           The left side deck door is open
         {% else %}
           The right side deck door is open

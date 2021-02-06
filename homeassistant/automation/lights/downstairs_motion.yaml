@@ -10,7 +10,7 @@ condition:
   condition: or
   conditions:
     - condition: numeric_state
-      entity_id: sensor.aeotec_zw100_multisensor_6_luminance
+      entity_id: sensor.upstairs_light_level
       below: 50
     - condition: numeric_state
       entity_id: sun.sun

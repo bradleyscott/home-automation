@@ -7,9 +7,9 @@ include:
     - media_player
   entities:
     - alarm_control_panel.alarm
-    - binary_sensor.aeotec_zw100_multisensor_6_sensor # Motion sensor
-    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left side deck door
-    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right side deck door
+    - binary_sensor.upstairs_motion
+    - binary_sensor.left_deck_door
+    - binary_sensor.right_deck_door
     - binary_sensor.entrance
     - binary_sensor.front_door_open
     - binary_sensor.garage_camera_motion_sensor
@@ -32,9 +32,9 @@ include:
     - person.bradley
     - person.nirupa
     - proximity.home
-    - sensor.aeotec_zw100_multisensor_6_luminance
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity
-    - sensor.aeotec_zw100_multisensor_6_temperature
+    - sensor.upstairs_light_level
+    - sensor.upstairs_humidity
+    - sensor.upstairs_temperature
     - sensor.casper_temperature_sensor_inside
     - sensor.casper_temperature_sensor_outside
     - sensor.casper_battery_sensor

@@ -5,9 +5,9 @@ trigger:
     seconds: 0
 condition:
     - condition: numeric_state
-      entity_id: sensor.aeotec_zw100_multisensor_6_luminance
+      entity_id: sensor.upstairs_light_level
       above: 50
 action:
   - service: switch.turn_off
     data:
-      entity_id: switch.aeotec_zw116_nano_switch_switch # Dining room light
+      entity_id: switch.dining_table_light

@@ -1,19 +1,15 @@
-binary_sensor.aeotec_zw100_multisensor_6_sensor:
+binary_sensor.upstairs_motion:
   friendly_name: Hallway motion sensor
   device_class: motion
-
-sensor.aeotec_zw100_multisensor_6_luminance:
-  friendly_name: Lux sensor
-  device_class: illuminance
-
-sensor.aeotec_zw100_multisensor_6_relative_humidity:
+  
+sensor.upstairs_humidity:
   friendly_name: Hallway humidity
   device_class: humidity
 
-sensor.aeotec_zw100_multisensor_6_temperature:
+sensor.upstairs_temperature:
   friendly_name: Hallway temperature
   device_class: temperature
 
-sensor.aeotec_zw100_multisensor_6_ultraviolet:
-  friendly_name: UV
+sensor.upstairs_light_level:
   icon: mdi:sunglasses
+  device_class: illuminance

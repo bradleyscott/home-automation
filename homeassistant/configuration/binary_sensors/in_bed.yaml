@@ -7,7 +7,7 @@ sensors:
         and is_state("group.living_area_lights", 'off')
         and is_state("group.kitchen", 'off')
         and is_state("group.bathroom_lights", 'off')
-        and is_state("switch.aeotec_zw132_dual_nano_switch_switch_14", 'off')
-        and is_state("switch.aeotec_zw132_dual_nano_switch_switch_13", 'off')
+        and is_state("switch.entrance_light", 'off')
+        and is_state("switch.downstairs_hallway_lights", 'off')
         and is_state("sun.sun", 'below_horizon')
       }}

@@ -25,10 +25,10 @@ upstairs:
   entities:
     - switch.upstairs_stairs_light
     - switch.upstairs_hallway_lights
-    - binary_sensor.aeotec_zw100_multisensor_6_sensor
-    - sensor.aeotec_zw100_multisensor_6_luminance
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity
-    - sensor.aeotec_zw100_multisensor_6_temperature
+    - binary_sensor.upstairs_motion
+    - sensor.upstairs_light_level
+    - sensor.upstairs_humidity
+    - sensor.upstairs_temperature
     - switch.smart_switch
 
 entrance:
@@ -58,8 +58,8 @@ living:
     - script.toggle_living_room_heatpump
     - climate.living_room_heatpump
     - binary_sensor.living_room
-    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
-    - binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door
+    - binary_sensor.left_deck_door
+    - binary_sensor.right_deck_door
     - switch.deck_lights
     - media_player.compucast
 
@@ -85,7 +85,7 @@ motion_sensors:
     - binary_sensor.entrance
     - binary_sensor.guest_bedroom
     - binary_sensor.living_room
-    - binary_sensor.aeotec_zw100_multisensor_6_sensor
+    - binary_sensor.upstairs_motion
 
 house_lights:
   name: House lights

@@ -20,10 +20,10 @@ condition:
     - condition: and
       conditions:
       - condition: state
-        entity_id: binary_sensor.aeotec_zw112_door_window_sensor_6_sensor # Left hand deck door 
+        entity_id: binary_sensor.left_deck_door
         state: 'off'
       - condition: state
-        entity_id: binary_sensor.aeotec_zw112_door_window_sensor_6_sensor_2 # Right hand deck door
+        entity_id: binary_sensor.right_deck_door
         state: 'off'
 action:
   - service: script.turn_on
