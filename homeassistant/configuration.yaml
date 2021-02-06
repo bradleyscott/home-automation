@@ -44,10 +44,6 @@ tts:
   - platform: google_translate
     service_name: google_say
 
-# IFTT automation
-ifttt:
-  key: !secret ifttt_key
-
 # Wemo
 wemo:
   discovery: true
