@@ -5,7 +5,7 @@ trigger:
     seconds: 0
 condition:
   - condition: state
-    entity_id: switch.switch_7 # Bathroom fan
+    entity_id: switch.bathroom_fan
     state: 'on'
     for:
       minutes: 45
