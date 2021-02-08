@@ -9,4 +9,4 @@ trigger:
 action:
   - service: switch.turn_on
     data:
-      entity_id: switch.aeon_labs_zw116_nano_switch_switch_2 # Garage lights
+      entity_id: switch.garage_lights
