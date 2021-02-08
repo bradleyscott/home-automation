@@ -4,6 +4,10 @@ trigger:
     event_type: html5_notification.clicked
     event_data:
       action: sound_siren
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: sound_siren
 action:
   - service: switch.turn_on
     data:

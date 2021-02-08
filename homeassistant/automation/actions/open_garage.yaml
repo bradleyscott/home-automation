@@ -4,6 +4,10 @@ trigger:
     event_type: html5_notification.clicked
     event_data:
       action: open_garage
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: open_garage
 action:
   - service: cover.open_cover
     entity_id: cover.garage_door

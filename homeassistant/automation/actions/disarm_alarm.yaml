@@ -4,6 +4,10 @@ trigger:
     event_type: html5_notification.clicked
     event_data:
       action: disarm_alarm
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: disarm_alarm
 action:
   - service: alarm_control_panel.alarm_disarm
     data:

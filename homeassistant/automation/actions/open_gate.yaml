@@ -4,6 +4,10 @@ trigger:
     event_type: html5_notification.clicked
     event_data:
       action: open_gate
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: open_gate
 action:
   - service: switch.toggle
     entity_id: switch.vehicle_gate_opener

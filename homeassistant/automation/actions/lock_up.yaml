@@ -4,6 +4,10 @@ trigger:
     event_type: html5_notification.clicked
     event_data:
       action: lock_up
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: lock_up
 action:
   - service: cover.close_cover
     entity_id: cover.garage_door
