@@ -16,3 +16,16 @@ action:
       target:
         - "+6421538400"
         - "+64210512656"
+  - service: notify.mobile_apps
+    data_template:
+        title: The siren has been activated
+        message: TTS
+        data:
+          clickAction: /lovelace/alarm
+          actions: 
+          - title: Disarm   
+            action: disarm_alarm
+          data:
+            ttl: 0
+            priority: high
+            channel: alarm_Stream

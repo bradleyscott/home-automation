@@ -1,13 +1,13 @@
 notify_on_motion:
   alias: Notify on motion
   sequence:
-  - alias: Send push notification
+  - alias: Send html5 notification
     service: notify.html5
     data_template:
         title: Motion detected and alarm is armed
         message: "{{ trigger }} has triggered the alarm. The siren will sound unless you disarm"
         data:
-          url: "{{ url or '/lovelace/cameras' }}"
+          url: "{{ url or '/lovelace/alarm' }}"
           image: "{{ image or null }}"
           tag: ha-alarm
           requireInteraction: "true"
@@ -16,11 +16,27 @@ notify_on_motion:
             action: disarm_alarm
           - title: Sound siren
             action: sound_siren
+  - alias: Send app notification
+    service: notify.mobile_apps
+    data_template:
+        title: Motion detected and alarm is armed
+        message: "{{ trigger }} has triggered the alarm. The siren will sound unless you disarm"
+        data:
+          clickAction: "{{ url or '/lovelace/alarm' }}"
+          image: "{{ image or null }}"
+          actions: 
+          - title: Disarm   
+            action: disarm_alarm
+          - title: Sound siren
+            action: sound_siren
+          data:
+            ttl: 0
+            priority: high
 
 panic_button:
   alias: Panic button
   sequence:
-    - alias: Send push notification
+    - alias: Send html5 notification
       service: notify.html5
       data_template:
         title: Panic button activated
@@ -33,6 +49,21 @@ panic_button:
           actions:
           - title: Silence siren
             action: silence_siren
+    - alias: Send app notification
+      service: notify.mobile_apps
+      data_template:
+        title: Panic button activated
+        message: TTS
+        data:
+          clickAction: /lovelace/cameras
+          image: /api/camera_proxy/camera.cube_camera
+          actions:
+          - title: Silence siren
+            action: silence_siren
+          data:
+            ttl: 0
+            priority: high
+            channel: alarm_stream
     - alias: Activate siren
       service: switch.turn_on
       data:
