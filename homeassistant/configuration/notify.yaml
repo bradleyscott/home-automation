@@ -9,5 +9,5 @@
 - name: mobile_apps
   platform: group
   services:
-    - service: notify.mobile_app_b_s_pixel_5
-    - service: notify.mobile_app_nirupa_s_pixel_3
+    - service: mobile_app_b_s_pixel_5
+    - service: mobile_app_nirupa_s_pixel_3
