@@ -43,13 +43,13 @@ action:
           {% endif %}
         image: >-
           {% if is_state('binary_sensor.front_door_open', 'on') %}
-            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}
+            /api/camera_proxy/camera.front_door_doorbell
           {% elif is_state('cover.garage_door', 'open') %}
-            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
+            /api/camera_proxy/camera.garage_camera
           {% elif is_state('binary_sensor.garage_motion', 'on') %}
-            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
+            /api/camera_proxy/camera.garage_camera
           {% elif is_state('binary_sensor.entrance', 'on') %}
-            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+            /api/camera_proxy/camera.entrance_phone
           {% endif %}
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.alarm

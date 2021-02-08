@@ -42,7 +42,7 @@ action:
           {% endif %}
         image: >-
           {% if is_state('binary_sensor.entrance', 'on') %}
-            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
+            /api/camera_proxy/camera.entrance_phone
           {% endif %}
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.alarm

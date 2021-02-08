@@ -39,4 +39,4 @@ action:
         {% endif %}
       data:
         tag: ha-alarm
-        image: https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.front_door_doorbell', 'entity_picture') }}
+        image: /api/camera_proxy/camera.front_door_doorbell
