@@ -18,7 +18,7 @@ action:
         - "+64210512656"
   - service: notify.mobile_apps
     data_template:
-        title: The siren has been activated
+        title: The siren at Williamson Avenue has been activated
         message: TTS
         data:
           clickAction: /lovelace/alarm
