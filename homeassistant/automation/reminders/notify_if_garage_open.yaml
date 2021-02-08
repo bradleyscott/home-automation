@@ -20,3 +20,14 @@ action:
         actions: 
         - title: Close garage   
           action: close_garage
+  - service: notify.mobile_apps
+    data_template:
+      title: Remember the garage door is open
+      message: The garage door is open. Remember to check the garage belongings are secure
+      data: 
+        clickAction: /lovelace/camera
+        image: /api/camera_proxy/camera.garage_camera
+        actions: 
+        - title: Close garage   
+          action: close_garage
+                    

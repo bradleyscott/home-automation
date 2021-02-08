@@ -22,3 +22,12 @@ action:
         actions: 
         - title: Turn off 
           action: switch_off
+  - service: notify.mobile_apps
+    data_template:
+      title: Remember the oil heater is on
+      message: Check to make sure Nirupa hasn't started a fire
+      data: 
+        clickAction: /lovelace/lights
+        actions: 
+        - title: Turn off 
+          action: switch_off
