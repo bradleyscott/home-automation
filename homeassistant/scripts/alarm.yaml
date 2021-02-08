@@ -53,7 +53,7 @@ panic_button:
       service: notify.mobile_apps
       data_template:
         title: Panic button activated
-        message: TTS
+        message: The Panic button has been pressed and the siren has been turned on
         data:
           clickAction: /lovelace/cameras
           image: /api/camera_proxy/camera.cube_camera
