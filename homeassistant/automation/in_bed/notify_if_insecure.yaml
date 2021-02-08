@@ -34,9 +34,9 @@ action:
         url: /lovelace/cameras
         image: >-
           {% if is_state('cover.garage_door', 'open') %}
-            /api/camera_proxy/camera.garage_camera
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
           {% else %}
-            /api/camera_proxy/camera.entrance_phone
+            https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
           {% endif %}  
         actions: 
         - title: Lock up     

@@ -43,7 +43,6 @@ panic_button:
         message: The Panic button has been pressed and the siren has been turned on
         data:
           url: /lovelace/cameras
-          image: /api/camera_proxy/camera.cube_camera
           tag: ha-alarm
           renotify: "true"
           actions:
@@ -56,7 +55,6 @@ panic_button:
         message: The Panic button has been pressed and the siren has been turned on
         data:
           clickAction: /lovelace/cameras
-          image: /api/camera_proxy/camera.cube_camera
           actions:
           - title: Silence siren
             action: silence_siren
