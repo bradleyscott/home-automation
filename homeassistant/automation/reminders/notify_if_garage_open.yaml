@@ -16,7 +16,6 @@ action:
       data: 
         tag: ha-notify
         url: /lovelace/cameras
-        image: https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.garage_camera', 'entity_picture') }}
         actions: 
         - title: Close garage   
           action: close_garage

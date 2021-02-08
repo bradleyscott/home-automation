@@ -20,7 +20,6 @@ action:
       data: 
         tag: ha-notify
         url: /lovelace/cameras
-        image: https://ti8au3j9khhkqc282u9frizwjfelxkag.ui.nabu.casa{{ state_attr('camera.entrance_phone', 'entity_picture') }}
   - service: notify.mobile_apps
     data_template:
       title: The front door is open
