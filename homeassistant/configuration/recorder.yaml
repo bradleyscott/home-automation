@@ -47,6 +47,8 @@ include:
     - sensor.right_side_deck_door_battery_level
     - sensor.upstairs_hallway_sensor_battery_level
     - sensor.owm_temperature
+    - sensor.tesla_outside_temp
+    - sensor.tesla_inside_temp
     - light.living_room_lights
     - switch.smart_switch
     - switch.dining_table_light

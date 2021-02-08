@@ -1,4 +1,0 @@
-platform: mqtt
-name: tesla_longitude
-state_topic: "teslamate/cars/1/longitude"
-icon: mdi:crosshairs-gps

@@ -1,3 +1,9 @@
 switch.smart_switch:
   friendly_name: Oil heater
   icon: mdi:thermometer-lines
+
+sensor.tesla_inside_temp:
+  friendly_name: Car interior temperature
+
+sensor.tesla_outside_temp:
+  friendly_name: Car outside temperature
