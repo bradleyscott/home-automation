@@ -4,6 +4,10 @@ trigger:
     event_type: html5_notification.clicked
     event_data:
       action: bathroom_off
+  - platform: event
+    event_type: mobile_app_notification_action
+    event_data:
+      action: bathroom_off
 action:
   - service: homeassistant.turn_off
     entity_id: group.bathroom
