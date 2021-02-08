@@ -47,6 +47,7 @@ action:
           action: lock_up
   - service: notify.mobile_apps
     data_template:
+      title: The house has been secured
       message: >-
         {% if is_state('cover.garage_door', 'open') and is_state('lock.front_door', 'unlocked') %}
           The garage door is now shut and the front door is locked
