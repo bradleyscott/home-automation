@@ -4,6 +4,8 @@ switch.smart_switch:
 
 sensor.tesla_inside_temp:
   friendly_name: Car interior temperature
+  icon: mdi:car
 
 sensor.tesla_outside_temp:
   friendly_name: Car outside temperature
+  icon: mdi:garage
