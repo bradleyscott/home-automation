@@ -15,3 +15,7 @@ action:
       message: I have turned the living room heatpump off for you
       data: 
         tag: ha-notify
+  - service: notify.mobile_apps
+    data_template:
+      title: The heat pump was on and it was getting late
+      message: I have turned the living room heatpump off for you
