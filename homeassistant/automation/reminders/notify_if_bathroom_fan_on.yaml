@@ -20,3 +20,12 @@ action:
         actions: 
         - title: Turn off 
           action: bathroom_off
+  - service: notify.mobile_apps
+    data_template:
+      title: Bathroom fan on
+      message: The bathroom fan is on. Don't forget to turn it off
+      data: 
+        clickAction: /lovelace/lights
+        actions: 
+        - title: Turn off 
+          action: bathroom_off

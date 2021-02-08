@@ -21,3 +21,10 @@ action:
         tag: ha-notify
         url: /lovelace/cameras
         image: /api/camera_proxy/camera.entrance_phone
+  - service: notify.mobile_apps
+    data_template:
+      title: The front door is open
+      message: The front door is open. Remember to check the house belongings are secure
+      data: 
+        clickAction: /lovelace/camera
+        image: /api/camera_proxy/camera.entrance_phone
