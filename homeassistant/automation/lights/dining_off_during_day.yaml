@@ -6,7 +6,7 @@ trigger:
 condition:
     - condition: numeric_state
       entity_id: sensor.entrance_phone_light_level
-      above: 50
+      above: 30
 action:
   - service: switch.turn_off
     data:

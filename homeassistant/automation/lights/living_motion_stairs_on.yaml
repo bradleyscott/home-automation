@@ -8,7 +8,7 @@ condition:
   conditions:
     - condition: numeric_state
       entity_id: sensor.entrance_phone_light_level
-      below: 50
+      below: 30
     - condition: numeric_state
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
