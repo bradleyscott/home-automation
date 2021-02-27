@@ -1,20 +1,20 @@
 version: '2'
 
 services:
-  couchpotato:
-    image: linuxserver/couchpotato
-    container_name: couchpotato
+  radarr:
+    image: linuxserver/radarr
+    container_name: radarr
     restart: unless-stopped
     environment:
       - PGID=999
       - PUID=1000
       - TZ=Pacific/Auckland
     volumes:
-      - ./.couchpotato:/config
-      - /media/bradley/external/downloads/complete:/downloads
+      - ./.radarr:/config
+      - /media/bradley/external/downloads:/downloads
       - /media/bradley/external/movies:/movies
     ports:
-      - "5050:5050"
+      - "7878:7878"
   jellyfin:
     image: linuxserver/jellyfin
     container_name: jellyfin
@@ -45,20 +45,20 @@ services:
       - "9091:9091"
       - "51413:51413"
       - "51413:51413/udp"
-  sickrage:
-    image: linuxserver/sickrage
-    container_name: sickrage 
+  sonarr:
+    image: linuxserver/sonarr
+    container_name: sonarr
     restart: unless-stopped
     environment:
       - PGID=999
       - PUID=1000
       - TZ=Pacific/Auckland
     volumes:
-      - ./.sickrage:/config
-      - /media/bradley/external/downloads/complete:/downloads
+      - ./.sonarr:/config
+      - /media/bradley/external/downloads:/downloads
       - /media/bradley/external/tv:/tv
     ports:
-      - "8082:8081"
+      - "8989:8989"
   home-assistant:
     image: homeassistant/home-assistant
     container_name: hass
